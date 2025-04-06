@@ -19,7 +19,8 @@ interface CategoriesSectionProps {
 
 export function CategoriesSection({ title, categories, viewAllLink }: CategoriesSectionProps) {
   return (
-    <div className="container py-8">
+    <section className="w-full py-8">
+      <div className="container mx-auto px-4">
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-3xl font-bold">{title}</h2>
         <Link href={viewAllLink} className="text-[#9d84ff] hover:text-[#8a6dff] font-medium flex items-center">
@@ -57,7 +58,7 @@ export function CategoriesSection({ title, categories, viewAllLink }: Categories
         <CarouselPrevious className="left-2" />
         <CarouselNext className="right-2" />
       </Carousel>
-    </div>
+      </div>
+    </section>
   )
 }
-

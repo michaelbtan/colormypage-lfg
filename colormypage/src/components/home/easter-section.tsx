@@ -39,7 +39,8 @@ const easterPages = [
 
 export function EasterSection() {
   return (
-    <div className="container py-8">
+    <section className="w-full py-8">
+      <div className="container mx-auto px-4">
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-3xl font-bold text-[#e4a5bd]">Easter</h2>
         <Link href="/topics/easter" className="text-[#e4a5bd] hover:text-[#d989a9] font-medium flex items-center">
@@ -77,7 +78,7 @@ export function EasterSection() {
         <CarouselPrevious className="left-2" />
         <CarouselNext className="right-2" />
       </Carousel>
-    </div>
+      </div>
+    </section>
   )
 }
-

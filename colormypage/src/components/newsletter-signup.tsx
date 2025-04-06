@@ -30,7 +30,8 @@ export function NewsletterSignup() {
   }
 
   return (
-    <section className="container py-16">
+    <section className="w-full py-16">
+      <div className="container mx-auto px-4">
       <div className="relative bg-[#f2f0ff] rounded-3xl p-8 md:p-12 overflow-hidden">
         {/* Star icon in top left */}
         <div className="absolute top-6 left-6 bg-[#9d84ff] rounded-xl p-3">
@@ -82,7 +83,7 @@ export function NewsletterSignup() {
           <p className="text-gray-500 text-sm mt-6">We respect your privacy. Unsubscribe at any time.</p>
         </div>
       </div>
+      </div>
     </section>
   )
 }
-

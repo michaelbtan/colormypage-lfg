@@ -3,8 +3,8 @@ import { Palette, Mail, Instagram, Facebook, Twitter } from "lucide-react"
 
 export function Footer() {
   return (
-    <footer className="border-t bg-background">
-      <div className="container py-8 md:py-12">
+    <footer className="w-full border-t bg-background">
+      <div className="container mx-auto px-4 py-8 md:py-12">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {/* Logo and Description */}
           <div className="flex flex-col gap-2">
@@ -129,4 +129,3 @@ export function Footer() {
     </footer>
   )
 }
-

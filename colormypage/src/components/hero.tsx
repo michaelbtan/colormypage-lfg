@@ -3,8 +3,8 @@ import { Button } from "@/components/ui/button"
 
 export function Hero() {
   return (
-    <section className="bg-gradient-to-b from-[#f2f0ff] to-white py-10 md:py-16">
-      <div className="container">
+    <section className="w-full bg-gradient-to-b from-[#f2f0ff] to-white py-10 md:py-16">
+      <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
           <div className="space-y-4 animate-in fade-in duration-700">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">
@@ -49,4 +49,3 @@ export function Hero() {
     </section>
   )
 }
-
