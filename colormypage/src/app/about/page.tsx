@@ -13,7 +13,7 @@ export default function AboutPage() {
     <div>
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-[#f2f0ff] to-white py-16 md:py-20">
-        <div className="container">
+        <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               About <span className="text-[#9d84ff]">ColorMyPage</span>
@@ -27,7 +27,7 @@ export default function AboutPage() {
 
       {/* Our Story & What We Do */}
       <section className="py-16">
-        <div className="container">
+        <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="relative h-64 md:h-80 rounded-xl overflow-hidden shadow-lg">
               <Image
@@ -59,7 +59,7 @@ export default function AboutPage() {
 
       {/* What Makes Us Special - Simplified */}
       <section className="py-16 bg-[#f2f0ff]">
-        <div className="container">
+        <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-10 text-center">What Makes Us Special</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -104,7 +104,7 @@ export default function AboutPage() {
 
       {/* Call to Action - Simplified */}
       <section className="py-16 bg-gradient-to-r from-[#9d84ff] to-[#5bbce4] text-white">
-        <div className="container">
+        <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6">Ready to Start Coloring?</h2>
             <p className="text-xl mb-8">Explore our collection of free, high-quality coloring pages today.</p>

@@ -78,19 +78,15 @@ export function ShareModal({ isOpen, onClose, title, imageUrl, pageUrl }: ShareM
     try {
       await navigator.clipboard.writeText(fullPageUrl)
       setCopied(true)
-      // toast({
-      //   title: "Link copied!",
-      //   description: "The link has been copied to your clipboard.",
-      // })
-
+      toast("Link copied!", {
+        description: "The link has been copied to your clipboard.",
+      })
       // Reset the copied state after 2 seconds
       setTimeout(() => setCopied(false), 2000)
     } catch (err) {
-      // toast({
-      //   title: "Failed to copy",
-      //   description: "Please try again or copy the link manually.",
-      //   variant: "destructive",
-      // })
+      toast("Failed to copy", {
+        description: "Please try again or copy the link manually.",
+      })
     }
   }
 

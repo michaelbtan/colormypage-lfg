@@ -14,7 +14,7 @@ export default function FaqPage() {
     <div>
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-[#9d84ff] to-[#5bbce4] text-white py-16 md:py-20">
-        <div className="container">
+        <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Frequently Asked Questions</h1>
             <p className="text-xl opacity-90 mb-8">
@@ -26,7 +26,7 @@ export default function FaqPage() {
 
       {/* Main Content */}
       <section className="py-12 md:py-16">
-        <div className="container">
+        <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
             {/* FAQ Content */}
             <div className="lg:col-span-2 order-2 lg:order-1">
@@ -71,7 +71,7 @@ export default function FaqPage() {
 
       {/* Still Have Questions */}
       <section className="py-12 md:py-16 bg-[#f2f0ff]">
-        <div className="container">
+        <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <div className="bg-white rounded-xl shadow-md p-8 md:p-10 border border-gray-100">
               <div className="w-16 h-16 bg-[#9d84ff]/10 rounded-full flex items-center justify-center mx-auto mb-6">

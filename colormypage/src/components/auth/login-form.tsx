@@ -1,23 +1,36 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { useRouter } from "next/navigation"
-import Link from "next/link"
-import { useForm } from "react-hook-form"
-import { zodResolver } from "@hookform/resolvers/zod"
-import { EyeIcon, EyeOffIcon, Mail, Lock, ArrowRight, Loader2 } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Checkbox } from "@/components/ui/checkbox"
-import { useToast } from "@/hooks/use-toast"
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
-import { login, loginSchema, type LoginFormValues } from "@/lib/auth"
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import {
+  EyeIcon,
+  EyeOffIcon,
+  Mail,
+  Lock,
+  ArrowRight,
+  Loader2,
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Checkbox } from "@/components/ui/checkbox";
+import { toast } from "sonner";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
+import { login, loginSchema, type LoginFormValues } from "@/lib/auth";
 
 export function LoginForm() {
-  const [showPassword, setShowPassword] = useState(false)
-  const [isLoading, setIsLoading] = useState(false)
-  const { toast } = useToast()
-  const router = useRouter()
+  const [showPassword, setShowPassword] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const router = useRouter();
 
   // Initialize form for login
   const form = useForm<LoginFormValues>({
@@ -27,44 +40,41 @@ export function LoginForm() {
       password: "",
       rememberMe: false,
     },
-  })
+  });
 
   const onSubmit = async (data: LoginFormValues) => {
     try {
-      setIsLoading(true)
+      setIsLoading(true);
 
-      const result = await login(data)
+      const result = await login(data);
 
       if (result.error) {
-        toast({
-          title: "Login Failed",
+        toast("Login Failed", {
           description: result.error,
-          variant: "destructive",
-        })
-        return
+        });
+        return;
       }
 
-      toast({
-        title: "Login Successful",
-        description: "Welcome back to ColorMyPage!",
-      })
+      toast("Login Successful", {
+        description: "Welcome back to ColorMyPage!"
+      });
 
       // Refresh the page to update the auth state
-      router.refresh()
+      router.refresh();
 
       // Redirect to the dashboard or home page
-      router.push("/favorites")
+      router.push("/favorites");
     } catch (error) {
-      console.error("Login error:", error)
+      console.error("Login error:", error);
       toast({
         title: "Something went wrong",
         description: "Please try again later",
         variant: "destructive",
-      })
+      });
     } finally {
-      setIsLoading(false)
+      setIsLoading(false);
     }
-  }
+  };
 
   return (
     <Form {...form}>
@@ -78,7 +88,12 @@ export function LoginForm() {
               <div className="relative">
                 <Mail className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 h-5 w-5" />
                 <FormControl>
-                  <Input placeholder="your@email.com" className="pl-10" disabled={isLoading} {...field} />
+                  <Input
+                    placeholder="your@email.com"
+                    className="pl-10"
+                    disabled={isLoading}
+                    {...field}
+                  />
                 </FormControl>
               </div>
               <FormMessage />
@@ -109,7 +124,11 @@ export function LoginForm() {
                   onClick={() => setShowPassword(!showPassword)}
                   disabled={isLoading}
                 >
-                  {showPassword ? <EyeOffIcon className="h-5 w-5" /> : <EyeIcon className="h-5 w-5" />}
+                  {showPassword ? (
+                    <EyeOffIcon className="h-5 w-5" />
+                  ) : (
+                    <EyeIcon className="h-5 w-5" />
+                  )}
                 </button>
               </div>
               <FormMessage />
@@ -124,13 +143,22 @@ export function LoginForm() {
             render={({ field }) => (
               <FormItem className="flex flex-row items-center space-x-2 space-y-0">
                 <FormControl>
-                  <Checkbox checked={field.value} onCheckedChange={field.onChange} disabled={isLoading} />
+                  <Checkbox
+                    checked={field.value}
+                    onCheckedChange={field.onChange}
+                    disabled={isLoading}
+                  />
                 </FormControl>
-                <FormLabel className="text-sm font-normal cursor-pointer">Remember me</FormLabel>
+                <FormLabel className="text-sm font-normal cursor-pointer">
+                  Remember me
+                </FormLabel>
               </FormItem>
             )}
           />
-          <Link href="/forgot-password" className="text-sm text-[#9d84ff] hover:underline">
+          <Link
+            href="/forgot-password"
+            className="text-sm text-[#9d84ff] hover:underline"
+          >
             Forgot password?
           </Link>
         </div>
@@ -152,6 +180,5 @@ export function LoginForm() {
         </Button>
       </form>
     </Form>
-  )
+  );
 }
-

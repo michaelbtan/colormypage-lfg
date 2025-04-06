@@ -5,7 +5,6 @@ import { useState } from "react"
 import { Share2, Heart } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { ShareModal } from "@/components/share-modal"
-import { useToast } from "@/hooks/use-toast"
 
 interface CategoryHeaderProps {
   title: string
@@ -17,16 +16,9 @@ interface CategoryHeaderProps {
 export function CategoryHeader({ title, description, imageCount, featuredImage }: CategoryHeaderProps) {
   const [isFavorited, setIsFavorited] = useState(false)
   const [isShareModalOpen, setIsShareModalOpen] = useState(false)
-  const { toast } = useToast()
 
   const handleFavorite = () => {
     setIsFavorited(!isFavorited)
-    toast({
-      title: isFavorited ? "Removed from favorites" : "Added to favorites",
-      description: isFavorited
-        ? `${title} category has been removed from your favorites.`
-        : `${title} category has been added to your favorites.`,
-    })
   }
 
   const handleShare = () => {
@@ -52,7 +44,7 @@ export function CategoryHeader({ title, description, imageCount, featuredImage }
       </div>
 
       {/* Content */}
-      <div className="container absolute inset-0 flex flex-col justify-center text-white">
+      <div className="container mx-auto px-4 absolute inset-0 flex flex-col justify-center text-white">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between">
           <div>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">{title}</h1>

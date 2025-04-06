@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
-import { useToast } from "@/hooks/use-toast"
+import { toast } from "sonner"
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters" }),
@@ -22,7 +22,6 @@ type FormValues = z.infer<typeof formSchema>
 
 export function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const { toast } = useToast()
 
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
@@ -41,11 +40,10 @@ export function ContactForm() {
     await new Promise((resolve) => setTimeout(resolve, 1500))
 
     // Show success message
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for contacting us. We'll get back to you soon.",
-    })
-
+      toast("Message Sent!", {
+        description: "Thank you for contacting us. We'll get back to you soon.",
+      })
+      
     // Reset form
     form.reset()
     setIsSubmitting(false)

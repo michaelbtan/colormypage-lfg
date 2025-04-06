@@ -123,8 +123,8 @@ export default function CategoriesPage() {
 
   return (
     <div className="bg-gray-50 py-8">
-      <div className="container">
-        <h1 className="text-3xl font-bold mb-8">All Categories</h1>
+      <div className="container mx-auto px-4">
+      <h1 className="text-3xl font-bold mb-8">All Categories</h1>
 
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Main content - categories grid */}

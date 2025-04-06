@@ -99,7 +99,7 @@ export default function CategoryPage({ params }: { params: { categoryId: string 
         featuredImage={category.featuredImage}
       />
 
-      <div className="container py-12">
+      <div className="container mx-auto px-4 py-12">
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Main content - coloring pages grid */}
           <div className="w-full lg:w-4/5">
