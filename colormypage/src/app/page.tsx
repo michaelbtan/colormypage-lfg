@@ -31,9 +31,9 @@ export default function Page() {
   return (
     <div>
       <HeroSection />
-      <CategoriesSection title="Popular Categories" categories={popularCategories} viewAllLink="/categories/popular" />
+      <CategoriesSection title="Trending Coloring Pages" categories={popularCategories} viewAllLink="/categories/popular" />
       <NewsletterSection />
-      <CategoriesSection title="New Categories" categories={newCategories} viewAllLink="/categories/new" />
+      <CategoriesSection title="New Coloring Pages" categories={newCategories} viewAllLink="/categories/new" />
       {/* <EasterSection /> */}
     </div>
   )
