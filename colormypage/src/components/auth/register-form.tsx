@@ -29,7 +29,6 @@ const FormSchema = z
 
 export function RegisterForm() {
   const [showPassword, setShowPassword] = useState(false)
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
 
   const form = useForm<z.infer<typeof FormSchema>>({
@@ -163,7 +162,7 @@ export function RegisterForm() {
               <div className="relative">
                 <FormControl>
                   <Input
-                    type={showConfirmPassword ? "text" : "password"}
+                    type={showPassword ? "text" : "password"}
                     placeholder="Confirm your password"
                     className="pl-10 py-6 border-gray-200"
                     disabled={isLoading}
@@ -191,10 +190,10 @@ export function RegisterForm() {
                 <button
                   type="button"
                   className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
-                  onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                  onClick={() => setShowPassword(!showPassword)}
                   disabled={isLoading}
                 >
-                  {showConfirmPassword ? <EyeOffIcon className="h-5 w-5" /> : <EyeIcon className="h-5 w-5" />}
+                  {showPassword ? <EyeOffIcon className="h-5 w-5" /> : <EyeIcon className="h-5 w-5" />}
                 </button>
               </div>
               <FormMessage />
@@ -234,7 +233,7 @@ export function RegisterForm() {
 
         <Button
           type="submit"
-          className="w-full rounded-full py-6 h-auto bg-[#9d84ff] hover:bg-[#8a6dff] text-white font-medium"
+          className="w-full rounded-full py-6 h-auto bg-[#9d84ff] hover:bg-[#8a6dff] text-white font-medium cursor-pointer"
           disabled={isLoading}
         >
           {isLoading ? (

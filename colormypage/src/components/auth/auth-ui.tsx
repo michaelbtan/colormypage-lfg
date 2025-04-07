@@ -52,7 +52,7 @@ export function AuthUI() {
             <div className="flex mb-6 border-b">
               <button
                 onClick={() => handleTabChange("login")}
-                className={`flex-1 py-4 text-center font-medium transition-colors ${
+                className={`flex-1 py-4 text-center font-medium transition-colors cursor-pointer ${
                   activeTab === "login" ? "text-[#9d84ff] border-b-2 border-[#9d84ff]" : "text-gray-500"
                 }`}
               >
@@ -60,7 +60,7 @@ export function AuthUI() {
               </button>
               <button
                 onClick={() => handleTabChange("signup")}
-                className={`flex-1 py-4 text-center font-medium transition-colors ${
+                className={`flex-1 py-4 text-center font-medium transition-colors cursor-pointer ${
                   activeTab === "signup" ? "text-[#9d84ff] border-b-2 border-[#9d84ff]" : "text-gray-500"
                 }`}
               >
@@ -77,7 +77,7 @@ export function AuthUI() {
                     Don't have an account?{" "}
                     <button
                       onClick={() => handleTabChange("signup")}
-                      className="text-[#9d84ff] hover:underline font-medium"
+                      className="text-[#9d84ff] hover:underline font-medium cursor-pointer"
                     >
                       Sign up
                     </button>
@@ -87,7 +87,7 @@ export function AuthUI() {
                     Already have an account?{" "}
                     <button
                       onClick={() => handleTabChange("login")}
-                      className="text-[#9d84ff] hover:underline font-medium"
+                      className="text-[#9d84ff] hover:underline font-medium cursor-pointer"
                     >
                       Sign in
                     </button>
