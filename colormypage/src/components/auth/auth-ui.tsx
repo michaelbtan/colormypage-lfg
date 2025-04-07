@@ -1,23 +1,27 @@
 "use client"
 
-import { useState, useEffect } from "react"
 import Link from "next/link"
+import { useState, useEffect } from "react"
+import { useSearchParams, useRouter } from "next/navigation"
 import { Palette } from "lucide-react"
 import { LoginForm } from "@/components/auth/login-form"
 import { RegisterForm } from "@/components/auth/register-form"
 
 export function AuthUI() {
-  const [isLogin, setIsLogin] = useState(true)
+  const searchParams = useSearchParams()
+  const router = useRouter()
+  const tabParam = searchParams.get("tab")
+  const [activeTab, setActiveTab] = useState(tabParam === "signup" ? "signup" : "login")
 
   useEffect(() => {
-    // Check if we should show the signup tab based on localStorage
-    const authTab = localStorage.getItem("auth_tab")
-    if (authTab === "signup") {
-      setIsLogin(false)
-      // Clear the value so it doesn't persist on refresh
-      localStorage.removeItem("auth_tab")
+    router.push(`?tab=${activeTab}`, { scroll: false })
+  }, [activeTab, router])
+
+  const handleTabChange = (value: string) => {
+    if (value === "login" || value === "signup") {
+      setActiveTab(value)
     }
-  }, [])
+  }
 
   return (
     <div className="flex min-h-screen bg-gradient-to-b from-[#f2f0ff] to-white">
@@ -34,9 +38,9 @@ export function AuthUI() {
                 </h1>
               </div>
             </Link>
-            <h2 className="text-2xl font-bold">{isLogin ? "Welcome Back!" : "Create an Account"}</h2>
+            <h2 className="text-2xl font-bold">{activeTab === "login" ? "Welcome Back!" : "Create an Account"}</h2>
             <p className="mt-2 text-gray-600">
-              {isLogin
+              {activeTab === "login"
                 ? "Sign in to access your favorite coloring pages"
                 : "Join our community for free coloring pages"}
             </p>
@@ -47,17 +51,17 @@ export function AuthUI() {
             {/* Tabs */}
             <div className="flex mb-6 border-b">
               <button
-                onClick={() => setIsLogin(true)}
+                onClick={() => handleTabChange("login")}
                 className={`flex-1 py-4 text-center font-medium transition-colors ${
-                  isLogin ? "text-[#9d84ff] border-b-2 border-[#9d84ff]" : "text-gray-500"
+                  activeTab === "login" ? "text-[#9d84ff] border-b-2 border-[#9d84ff]" : "text-gray-500"
                 }`}
               >
                 Sign In
               </button>
               <button
-                onClick={() => setIsLogin(false)}
+                onClick={() => handleTabChange("signup")}
                 className={`flex-1 py-4 text-center font-medium transition-colors ${
-                  !isLogin ? "text-[#9d84ff] border-b-2 border-[#9d84ff]" : "text-gray-500"
+                  activeTab === "signup" ? "text-[#9d84ff] border-b-2 border-[#9d84ff]" : "text-gray-500"
                 }`}
               >
                 Sign Up
@@ -65,20 +69,26 @@ export function AuthUI() {
             </div>
 
             <div className="px-6 pb-8">
-              {isLogin ? <LoginForm /> : <RegisterForm />}
+              {activeTab === "login" ? <LoginForm /> : <RegisterForm />}
 
               <div className="mt-8 text-center text-sm text-gray-500">
-                {isLogin ? (
+                {activeTab === "login" ? (
                   <p>
                     Don't have an account?{" "}
-                    <button onClick={() => setIsLogin(false)} className="text-[#9d84ff] hover:underline font-medium">
+                    <button
+                      onClick={() => handleTabChange("signup")}
+                      className="text-[#9d84ff] hover:underline font-medium"
+                    >
                       Sign up
                     </button>
                   </p>
                 ) : (
                   <p>
                     Already have an account?{" "}
-                    <button onClick={() => setIsLogin(true)} className="text-[#9d84ff] hover:underline font-medium">
+                    <button
+                      onClick={() => handleTabChange("login")}
+                      className="text-[#9d84ff] hover:underline font-medium"
+                    >
                       Sign in
                     </button>
                   </p>

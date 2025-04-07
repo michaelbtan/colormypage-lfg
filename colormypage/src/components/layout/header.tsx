@@ -90,7 +90,7 @@ export function Header() {
                   </Link>
                 </SheetClose>
                 <SheetClose asChild>
-                  <Link href="/login" className="w-full">
+                  <Link href="/account" className="w-full">
                     <Button variant="outline" className="w-full justify-start gap-2">
                       <LogIn className="h-5 w-5" />
                       Sign in
