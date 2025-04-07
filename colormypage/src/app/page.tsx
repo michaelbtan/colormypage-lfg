@@ -27,14 +27,47 @@ const newCategories = [
   { id: 108, title: "Seasons", imageUrl: "/placeholder.svg?height=550&width=425", imageCount: 30 },
 ]
 
+const easterPages = [
+  {
+    id: "easter-bunny",
+    title: "Easter Bunny Coloring Pages",
+    imageUrl: "/placeholder.svg?height=300&width=400&text=Easter+Bunny+Coloring+Pages",
+    imageCount: 24,
+  },
+  {
+    id: "easter-eggs",
+    title: "Easter Egg Templates",
+    imageUrl: "/placeholder.svg?height=300&width=400&text=Easter+Egg+Templates",
+    imageCount: 18,
+  },
+  {
+    id: "easter-disney",
+    title: "Disney Easter Coloring Pages",
+    imageUrl: "/placeholder.svg?height=300&width=400&text=Disney+Easter+Coloring+Pages",
+    imageCount: 15,
+  },
+  {
+    id: "easter-religious",
+    title: "Religious Easter Pages",
+    imageUrl: "/placeholder.svg?height=300&width=400&text=Religious+Easter+Pages",
+    imageCount: 12,
+  },
+  {
+    id: "easter-spring",
+    title: "Spring Easter Designs",
+    imageUrl: "/placeholder.svg?height=300&width=400&text=Spring+Easter+Designs",
+    imageCount: 20,
+  },
+]
+
 export default function Page() {
   return (
     <div>
       <HeroSection />
-      <CategoriesSection title="Trending Coloring Pages" categories={popularCategories} viewAllLink="/categories/popular" />
+      <CategoriesSection title="Trending Coloring Pages" categories={popularCategories} viewAllLink="/categories" />
       <NewsletterSection />
-      <CategoriesSection title="New Coloring Pages" categories={newCategories} viewAllLink="/categories/new" />
-      {/* <EasterSection /> */}
+      <CategoriesSection title="New Coloring Pages" categories={newCategories} viewAllLink="/categories" />
+      {/* <EasterSection easterPages={easterPages} /> */}
     </div>
   )
 }

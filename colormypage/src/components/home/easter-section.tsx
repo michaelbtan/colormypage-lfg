@@ -1,43 +1,17 @@
+
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
 import { CategoryCard } from "@/components/category-card"
 import Link from "next/link"
 import { ChevronRight } from "lucide-react"
 
-// Sample Easter coloring pages data
-const easterPages = [
-  {
-    id: "easter-bunny",
-    title: "Easter Bunny Coloring Pages",
-    imageUrl: "/placeholder.svg?height=300&width=400&text=Easter+Bunny+Coloring+Pages",
-    imageCount: 24,
-  },
-  {
-    id: "easter-eggs",
-    title: "Easter Egg Templates",
-    imageUrl: "/placeholder.svg?height=300&width=400&text=Easter+Egg+Templates",
-    imageCount: 18,
-  },
-  {
-    id: "easter-disney",
-    title: "Disney Easter Coloring Pages",
-    imageUrl: "/placeholder.svg?height=300&width=400&text=Disney+Easter+Coloring+Pages",
-    imageCount: 15,
-  },
-  {
-    id: "easter-religious",
-    title: "Religious Easter Pages",
-    imageUrl: "/placeholder.svg?height=300&width=400&text=Religious+Easter+Pages",
-    imageCount: 12,
-  },
-  {
-    id: "easter-spring",
-    title: "Spring Easter Designs",
-    imageUrl: "/placeholder.svg?height=300&width=400&text=Spring+Easter+Designs",
-    imageCount: 20,
-  },
-]
+interface EasterPage {
+  id: string;
+  title: string;
+  imageUrl: string;
+  imageCount: number;
+}
 
-export function EasterSection() {
+export function EasterSection({ easterPages }: { easterPages: EasterPage[] }) {
   return (
     <section className="w-full py-8">
       <div className="container mx-auto px-4">
@@ -49,7 +23,6 @@ export function EasterSection() {
         </Link>
       </div>
 
-      {/* Carousel for all screen sizes */}
       <Carousel
         opts={{
           align: "start",

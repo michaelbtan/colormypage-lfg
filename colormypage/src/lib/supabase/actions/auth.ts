@@ -45,7 +45,6 @@ export async function signup(values: AuthValues): Promise<{ success: boolean; er
   const { error } = await supabase.auth.signUp(data)
   
   if (error) {
-    console.error('Signup error:', error)
     return { success: false, error: error.message }
   }
 

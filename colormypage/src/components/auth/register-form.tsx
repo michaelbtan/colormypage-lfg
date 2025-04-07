@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import { useRouter } from "next/navigation";
 import Link from "next/link"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
@@ -30,6 +31,7 @@ const FormSchema = z
 export function RegisterForm() {
   const [showPassword, setShowPassword] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
+  const router = useRouter()
 
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
@@ -54,9 +56,12 @@ export function RegisterForm() {
         return
       }
 
-      toast("Registration Successful", {
-        description: "Welcome to ColorMyPage! Your account has been created.",
-      })
+      if (result.success) {
+        toast("Registration Successful", {
+          description: "Please check your email to verify your account.",
+        })
+        router.push("/check-email")
+      }
 
       // Reset the form
       form.reset()

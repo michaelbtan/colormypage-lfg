@@ -1,29 +1,36 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { useRouter } from "next/navigation"
-import Link from "next/link"
-import { useForm } from "react-hook-form"
-import { zodResolver } from "@hookform/resolvers/zod"
-import * as z from "zod"
-import { EyeIcon, EyeOffIcon, ArrowRight, Loader2 } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Checkbox } from "@/components/ui/checkbox"
-import { toast } from "sonner"
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
-import { login } from "@/lib/supabase/actions/auth"
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as z from "zod";
+import { EyeIcon, EyeOffIcon, ArrowRight, Loader2 } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Checkbox } from "@/components/ui/checkbox";
+import { toast } from "sonner";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
+import { login } from "@/lib/supabase/actions/auth";
 
 const FormSchema = z.object({
   emailAddress: z.string().email(),
   password: z.string().min(8),
   rememberMe: z.boolean().optional().default(false),
-})
+});
 
 export function LoginForm() {
-  const [showPassword, setShowPassword] = useState(false)
-  const [isLoading, setIsLoading] = useState(false)
-  const router = useRouter()
+  const [showPassword, setShowPassword] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const router = useRouter();
 
   // Initialize form for login
   const form = useForm<z.infer<typeof FormSchema>>({
@@ -33,39 +40,38 @@ export function LoginForm() {
       password: "",
       rememberMe: false,
     },
-  })
+  });
 
   const onSubmit = async (data: z.infer<typeof FormSchema>) => {
     try {
-      setIsLoading(true)
+      setIsLoading(true);
 
-      const result = await login(data)
+      const { success } = await login(data);
 
-      if (result.error) {
-        toast("Login Failed", {
-          description: result.error,
-        })
-        return
+      if (success) {
+        toast("Login Successful", {
+          description: "Welcome back to ColorMyPage!",
+        });
+        // Refresh the page to update the auth state
+        router.refresh()
+
+        // Redirect to the dashboard or home page
+        router.push("/dashboard")
+      } else {
+        // Handle login failure (e.g., show an error message)
+        toast("Login failed", {
+          description: "There was an error logging in. Please try again.",
+        });      
       }
-
-      toast("Login Successful", {
-        description: "Welcome back to ColorMyPage!",
-      })
-
-      // Refresh the page to update the auth state
-      router.refresh()
-
-      // Redirect to the dashboard or home page
-      router.push("/favorites")
     } catch (error) {
-      console.error("Login error:", error)
+      console.error("Login error:", error);
       toast("Something went wrong", {
         description: "Please try again later",
-      })
+      });
     } finally {
-      setIsLoading(false)
+      setIsLoading(false);
     }
-  }
+  };
 
   return (
     <Form {...form}>
@@ -86,7 +92,13 @@ export function LoginForm() {
                   />
                 </FormControl>
                 <div className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
                     <path
                       d="M3 8L10.89 13.26C11.2187 13.4793 11.6049 13.5963 12 13.5963C12.3951 13.5963 12.7813 13.4793 13.11 13.26L21 8M5 19H19C19.5304 19 20.0391 18.7893 20.4142 18.4142C20.7893 18.0391 21 17.5304 21 17V7C21 6.46957 20.7893 5.96086 20.4142 5.58579C20.0391 5.21071 19.5304 5 19 5H5C4.46957 5 3.96086 5.21071 3.58579 5.58579C3.21071 5.96086 3 6.46957 3 7V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19Z"
                       stroke="currentColor"
@@ -107,7 +119,9 @@ export function LoginForm() {
           name="password"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-gray-800 font-medium">Password</FormLabel>
+              <FormLabel className="text-gray-800 font-medium">
+                Password
+              </FormLabel>
               <div className="relative">
                 <FormControl>
                   <Input
@@ -119,7 +133,13 @@ export function LoginForm() {
                   />
                 </FormControl>
                 <div className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
                     <path
                       d="M19 11H5V21H19V11Z"
                       stroke="currentColor"
@@ -142,7 +162,11 @@ export function LoginForm() {
                   onClick={() => setShowPassword(!showPassword)}
                   disabled={isLoading}
                 >
-                  {showPassword ? <EyeOffIcon className="h-5 w-5" /> : <EyeIcon className="h-5 w-5" />}
+                  {showPassword ? (
+                    <EyeOffIcon className="h-5 w-5" />
+                  ) : (
+                    <EyeIcon className="h-5 w-5" />
+                  )}
                 </button>
               </div>
               <FormMessage />
@@ -164,11 +188,16 @@ export function LoginForm() {
                     className="border-[#9d84ff] data-[state=checked]:bg-[#9d84ff] data-[state=checked]:text-white"
                   />
                 </FormControl>
-                <FormLabel className="text-gray-800 font-normal cursor-pointer">Remember me</FormLabel>
+                <FormLabel className="text-gray-800 font-normal cursor-pointer">
+                  Remember me
+                </FormLabel>
               </FormItem>
             )}
           />
-          <Link href="/forgot-password" className="text-[#9d84ff] hover:underline">
+          <Link
+            href="/forgot-password"
+            className="text-[#9d84ff] hover:underline"
+          >
             Forgot password?
           </Link>
         </div>
@@ -190,6 +219,5 @@ export function LoginForm() {
         </Button>
       </form>
     </Form>
-  )
+  );
 }
-
