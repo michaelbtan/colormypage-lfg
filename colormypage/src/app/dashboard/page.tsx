@@ -1,18 +1,17 @@
 import { DashboardHeader } from "@/components/dashboard/dashboard-header"
 import { FavoriteCategories } from "@/components/dashboard/favorite-categories"
-import { FavoritePages } from "@/components/dashboard/favorite-pages"
+import { FavoriteColoringPages } from "@/components/dashboard/favorite-coloring-pages"
+import { createClient } from "@/lib/supabase/server"
 
-export default function DashboardPage() {
-  // TEMPORARY: Using mock data for development
-  // In production, this would fetch real user data
+export default async function DashboardPage() {
+  const supabase = await createClient()
 
-  // Mock user for UI display purposes
-  const mockUser = {
-    id: "mock-user-id",
-    email: "demo@colormypage.com",
-  }
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
 
-  // Simplified stats data - only keeping favorites count
+
+  // Fetch favorite pages and categories and then total
   const stats = {
     totalFavorites: 12,
   }
@@ -22,7 +21,7 @@ export default function DashboardPage() {
       <DashboardHeader
         title="My Coloring Pages"
         description="Manage your favorite coloring pages and categories"
-        user={mockUser}
+        user={user}
       />
 
       {/* Favorite Pages Section */}
@@ -33,7 +32,7 @@ export default function DashboardPage() {
             {stats.totalFavorites} pages
           </span>
         </div>
-        <FavoritePages />
+        <FavoriteColoringPages />
       </div>
 
       {/* Favorite Categories Section */}

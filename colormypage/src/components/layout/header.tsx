@@ -8,6 +8,8 @@ export async function Header() {
   const supabase = await createClient();
   const { data } = await supabase.auth.getUser();
 
+  console.log("User data:", data.user);
+
   let isLoggedIn;
   if (data.user != null) {
     isLoggedIn = true;
@@ -18,6 +20,7 @@ export async function Header() {
     { name: "Categories", href: "/categories", icon: <Palette /> },
     { name: "Favorites", href: "/favorites", icon: <Heart /> },
   ];
+
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">

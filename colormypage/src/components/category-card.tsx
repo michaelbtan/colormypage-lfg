@@ -1,7 +1,6 @@
 "use client"
 
 import type React from "react"
-
 import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
@@ -90,7 +89,7 @@ export function CategoryCard({
           <div className="absolute top-3 right-3 flex gap-2">
             <button
               onClick={handleShare}
-              className="rounded-full bg-white/80 backdrop-blur-sm p-2 hover:bg-white transition-colors shadow-sm"
+              className="rounded-full bg-white/80 backdrop-blur-sm p-2 hover:bg-white transition-colors shadow-sm cursor-pointer"
               aria-label="Share"
             >
               <Share2 className="h-4 w-4 text-gray-700" />
@@ -98,7 +97,7 @@ export function CategoryCard({
             <button
               onClick={handleFavorite}
               className={cn(
-                "rounded-full p-2 transition-colors shadow-sm",
+                "rounded-full p-2 transition-colors shadow-sm cursor-pointer",
                 favorited
                   ? "bg-[#9d84ff] text-white hover:bg-[#8a6dff]"
                   : "bg-white/80 backdrop-blur-sm text-gray-700 hover:bg-white",

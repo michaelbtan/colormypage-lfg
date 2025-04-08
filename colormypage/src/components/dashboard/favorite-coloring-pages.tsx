@@ -37,7 +37,7 @@ const favoritePages = [
   },
 ]
 
-export function FavoritePages() {
+export function FavoriteColoringPages() {
   // Function to format date
   const formatDate = (dateString: string) => {
     const date = new Date(dateString)

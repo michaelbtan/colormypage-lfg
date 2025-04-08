@@ -52,8 +52,6 @@ export async function signup(values: AuthValues): Promise<{ success: boolean; er
   return { success: true }
 }
 
-
-
 export async function logout(): Promise<void> {
   const supabase = await createClient()
 
