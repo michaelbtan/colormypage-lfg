@@ -3,52 +3,6 @@ import { CategoriesSection } from "@/components/home/categories-section"
 import { NewsletterSection } from "@/components/home/newsletter-section"
 // import { EasterSection } from "@/components/home/easter-section"
 import { createClient } from "@/lib/supabase/server"
-import { cookies } from "next/headers"
-
-// Sample new category data
-const newCategories = [
-  { id: 101, title: "Space", imageUrl: "/placeholder.svg?height=550&width=425", imageCount: 28 },
-  { id: 102, title: "Ocean Life", imageUrl: "/placeholder.svg?height=550&width=425", imageCount: 34 },
-  { id: 103, title: "Fantasy", imageUrl: "/placeholder.svg?height=550&width=425", imageCount: 45 },
-  { id: 104, title: "Mandalas", imageUrl: "/placeholder.svg?height=550&width=425", isFavorited: true, imageCount: 50 },
-  { id: 105, title: "Sports", imageUrl: "/placeholder.svg?height=550&width=425", imageCount: 22 },
-  { id: 106, title: "Food", imageUrl: "/placeholder.svg?height=550&width=425", imageCount: 18 },
-  { id: 107, title: "Insects", imageUrl: "/placeholder.svg?height=550&width=425", imageCount: 24 },
-  { id: 108, title: "Seasons", imageUrl: "/placeholder.svg?height=550&width=425", imageCount: 30 },
-]
-
-const easterPages = [
-  {
-    id: "easter-bunny",
-    title: "Easter Bunny Coloring Pages",
-    imageUrl: "/placeholder.svg?height=300&width=400&text=Easter+Bunny+Coloring+Pages",
-    imageCount: 24,
-  },
-  {
-    id: "easter-eggs",
-    title: "Easter Egg Templates",
-    imageUrl: "/placeholder.svg?height=300&width=400&text=Easter+Egg+Templates",
-    imageCount: 18,
-  },
-  {
-    id: "easter-disney",
-    title: "Disney Easter Coloring Pages",
-    imageUrl: "/placeholder.svg?height=300&width=400&text=Disney+Easter+Coloring+Pages",
-    imageCount: 15,
-  },
-  {
-    id: "easter-religious",
-    title: "Religious Easter Pages",
-    imageUrl: "/placeholder.svg?height=300&width=400&text=Religious+Easter+Pages",
-    imageCount: 12,
-  },
-  {
-    id: "easter-spring",
-    title: "Spring Easter Designs",
-    imageUrl: "/placeholder.svg?height=300&width=400&text=Spring+Easter+Designs",
-    imageCount: 20,
-  },
-]
 
 export default async function Home() {
   const supabase = await createClient()
@@ -61,7 +15,7 @@ export default async function Home() {
   // Fetch categories from Supabase
   const { data: categoriesData } = await supabase
     .from("categories")
-    .select("")
+    .select("id, created_at, title, image_url, image_count")
     .order("created_at", { ascending: false })
     .limit(8)
 
@@ -100,9 +54,9 @@ export default async function Home() {
   return (
     <div>
       <HeroSection />
-      <CategoriesSection title="Trending Coloring Pages" categories={categories} userId={user.id} viewAllLink="/categories" />
+      <CategoriesSection title="Trending Coloring Pages" categories={categories} userId={user?.id || null} viewAllLink="/categories" />
       <NewsletterSection />
-      <CategoriesSection title="New Coloring Pages" categories={newCategories} viewAllLink="/categories" />
+      <CategoriesSection title="New Coloring Pages" categories={categories} userId={user?.id || null} viewAllLink="/categories" />
       {/* <EasterSection easterPages={easterPages} /> */}
     </div>
   )
