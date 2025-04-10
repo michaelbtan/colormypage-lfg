@@ -5,21 +5,60 @@ import { useState } from "react"
 import { Share2, Heart } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { ShareModal } from "@/components/share-modal"
+import { toast } from "sonner"
+import{ createClient } from "@/lib/supabase/client"
 
 interface CategoryHeaderProps {
+  id: string
+  userId: string | null
   title: string
   description: string
   imageCount: number
   featuredImage?: string
+  categoryFavorited?: boolean
 }
 
-export function CategoryHeader({ title, description, imageCount, featuredImage }: CategoryHeaderProps) {
-  const [isFavorited, setIsFavorited] = useState(false)
+export function CategoryHeader({ id, title, description, imageCount, featuredImage, categoryFavorited, userId }: CategoryHeaderProps) {
+  const supabase = createClient()
+  const [isFavorited, setIsFavorited] = useState(categoryFavorited)
   const [isShareModalOpen, setIsShareModalOpen] = useState(false)
 
-  const handleFavorite = () => {
-    setIsFavorited(!isFavorited)
-  }
+  const handleFavorite = async (e: React.MouseEvent) => {
+    e.preventDefault()
+    e.stopPropagation()
+    if (!userId) {
+      toast("Must be logged in to favorite", {
+        description: "Please log in to favorite this category.",
+      })
+      return
+    }
+
+    if (isFavorited) {
+      // If experience is already saved, remove it
+      const { error } = await supabase
+        .from("favorited_categories")
+        .delete()
+        .eq("category_id", id)
+        .eq("user_id", userId)
+
+      if (error) {
+        console.log("error deleting saved experience", error)
+      } else {
+        setIsFavorited(!isFavorited)
+      }
+    } else {
+      // If experience is not saved, save it
+      const { error } = await supabase.from("favorited_categories").insert({
+        category_id: id,
+        user_id: userId,
+      })
+
+      if (error) {
+        console.log("error favoriting experience", error)
+      } else {
+        setIsFavorited(!isFavorited)
+      }
+    }  }
 
   const handleShare = () => {
     setIsShareModalOpen(true)

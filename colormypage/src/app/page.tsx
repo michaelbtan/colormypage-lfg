@@ -39,13 +39,13 @@ export default async function Home() {
     // Map through categories and add isFavorited flag
     categories = categories.map((category) => ({
       ...category,
-      isFavorited: favoritedCategoryIds.has(category.id),
+      categoryFavorited: favoritedCategoryIds.has(category.id),
     }))
   } else {
     // If no user is logged in, mark all as not favorited
     categories = categories.map((category) => ({
       ...category,
-      isFavorited: false,
+      categoryFavorited: false,
     }))
   }
 

@@ -11,7 +11,7 @@ interface CategoriesSectionProps {
     title: string
     image_url: string
     image_count?: number
-    isFavorited?: boolean
+    categoryFavorited?: boolean
   }[]
   viewAllLink: string
   userId: string | null
@@ -46,7 +46,7 @@ export function CategoriesSection({ title, categories, viewAllLink, userId }: Ca
                   title={category.title}
                   imageUrl={category.image_url}
                   imageCount={category.image_count}
-                  isFavorited={category.isFavorited}
+                  categoryFavorited={category.categoryFavorited}
                   userId={userId}
                 />
               </div>

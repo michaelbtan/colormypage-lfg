@@ -1,21 +1,34 @@
-import { InfiniteCategoriesGrid, type Category } from "@/components/categories/infinite-categories-grid"
-import { AdPlaceholder } from "@/components/ad-placeholder"
+import {
+  InfiniteCategoriesGrid,
+  type Category,
+} from "@/components/categories/infinite-categories-grid";
+import { createClient } from "@/lib/supabase/server";
+
+import { AdPlaceholder } from "@/components/ad-placeholder";
 
 // Mock categories data for initial load
 const initialCategories: Category[] = [
   {
     id: "animals",
     title: "Animals",
-    description: "Explore our collection of animal coloring pages featuring pets, wildlife, and more.",
+    description:
+      "Explore our collection of animal coloring pages featuring pets, wildlife, and more.",
     imageCount: 48,
     featuredImage: "/placeholder.svg?height=300&width=300&text=Animals",
-    subcategories: ["Farm Animals", "Pets", "Wildlife", "Sea Creatures", "Birds"],
+    subcategories: [
+      "Farm Animals",
+      "Pets",
+      "Wildlife",
+      "Sea Creatures",
+      "Birds",
+    ],
     isPopular: true,
   },
   {
     id: "dinosaurs",
     title: "Dinosaurs",
-    description: "Discover prehistoric creatures with our dinosaur coloring pages.",
+    description:
+      "Discover prehistoric creatures with our dinosaur coloring pages.",
     imageCount: 36,
     featuredImage: "/placeholder.svg?height=300&width=300&text=Dinosaurs",
     subcategories: ["T-Rex", "Triceratops", "Stegosaurus", "Pterodactyl"],
@@ -24,10 +37,16 @@ const initialCategories: Category[] = [
   {
     id: "easter",
     title: "Easter",
-    description: "Celebrate Easter with our collection of bunnies, eggs, and spring-themed coloring pages.",
+    description:
+      "Celebrate Easter with our collection of bunnies, eggs, and spring-themed coloring pages.",
     imageCount: 42,
     featuredImage: "/placeholder.svg?height=300&width=300&text=Easter",
-    subcategories: ["Easter Bunny", "Easter Eggs", "Easter Baskets", "Spring Flowers"],
+    subcategories: [
+      "Easter Bunny",
+      "Easter Eggs",
+      "Easter Baskets",
+      "Spring Flowers",
+    ],
     isSeasonal: true,
   },
   {
@@ -36,7 +55,12 @@ const initialCategories: Category[] = [
     description: "Magical princess coloring pages for fairy tale lovers.",
     imageCount: 30,
     featuredImage: "/placeholder.svg?height=300&width=300&text=Princesses",
-    subcategories: ["Disney Princesses", "Fairy Tales", "Castles", "Prince & Princess"],
+    subcategories: [
+      "Disney Princesses",
+      "Fairy Tales",
+      "Castles",
+      "Prince & Princess",
+    ],
     isPopular: true,
   },
   {
@@ -77,10 +101,17 @@ const initialCategories: Category[] = [
   {
     id: "holidays",
     title: "Holidays",
-    description: "Celebrate special occasions with holiday-themed coloring pages.",
+    description:
+      "Celebrate special occasions with holiday-themed coloring pages.",
     imageCount: 65,
     featuredImage: "/placeholder.svg?height=300&width=300&text=Holidays",
-    subcategories: ["Christmas", "Halloween", "Thanksgiving", "Valentine's Day", "4th of July"],
+    subcategories: [
+      "Christmas",
+      "Halloween",
+      "Thanksgiving",
+      "Valentine's Day",
+      "4th of July",
+    ],
     isSeasonal: true,
   },
   {
@@ -107,29 +138,46 @@ const initialCategories: Category[] = [
     description: "Intricate mandala designs for relaxation and mindfulness.",
     imageCount: 50,
     featuredImage: "/placeholder.svg?height=300&width=300&text=Mandalas",
-    subcategories: ["Simple", "Intermediate", "Advanced", "Geometric", "Floral"],
+    subcategories: [
+      "Simple",
+      "Intermediate",
+      "Advanced",
+      "Geometric",
+      "Floral",
+    ],
     isPopular: true,
   },
-]
+];
 
 export const metadata = {
   title: "Browse All Categories - ColorMyPage",
-  description: "Explore our complete collection of coloring page categories for all ages and interests.",
-}
+  description:
+    "Explore our complete collection of coloring page categories for all ages and interests.",
+};
 
-export default function CategoriesPage() {
+export default async function CategoriesPage() {
+  const supabase = await createClient();
+
+  // Fetch the initial categories from the database
+  const { data: categories } = await supabase
+    .from("categories")
+    .select("id, created_at, title, image_url, image_count");
+
   // In a real app, this would fetch the initial categories from an API
-  const hasMore = true // Indicate that there are more categories to load
+  const hasMore = true; // Indicate that there are more categories to load
 
   return (
     <div className="bg-gray-50 py-8">
       <div className="container mx-auto px-4">
-      <h1 className="text-3xl font-bold mb-8">All Categories</h1>
+        <h1 className="text-3xl font-bold mb-8">All Categories</h1>
 
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Main content - categories grid */}
           <div className="w-full lg:w-3/4">
-            <InfiniteCategoriesGrid initialCategories={initialCategories} initialHasMore={hasMore} />
+            <InfiniteCategoriesGrid
+              initialCategories={initialCategories}
+              initialHasMore={hasMore}
+            />
           </div>
 
           {/* Sidebar - Ad space */}
@@ -141,6 +189,5 @@ export default function CategoriesPage() {
         </div>
       </div>
     </div>
-  )
+  );
 }
-

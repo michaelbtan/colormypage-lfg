@@ -16,7 +16,7 @@ interface CategoryCardProps {
   title: string
   imageUrl: string
   imageCount?: number
-  isFavorited?: boolean
+  categoryFavorited?: boolean
   categoryLink?: string
   userId?: string | null
 }
@@ -26,13 +26,13 @@ export function CategoryCard({
   title,
   imageUrl,
   imageCount,
-  isFavorited = false,
+  categoryFavorited = false,
   categoryLink,
   userId
 }: CategoryCardProps) {
   const supabase = createClient()
   const [isHovered, setIsHovered] = useState(false)
-  const [favorited, setFavorited] = useState(isFavorited)
+  const [isFavorited, setIsFavorited] = useState(categoryFavorited)
   const [isShareModalOpen, setIsShareModalOpen] = useState(false)
 
   const handleFavorite = async (e: React.MouseEvent) => {
@@ -45,7 +45,7 @@ export function CategoryCard({
       return
     }
 
-    if (favorited) {
+    if (isFavorited) {
       // If experience is already saved, remove it
       const { error } = await supabase
         .from("favorited_categories")
@@ -56,7 +56,7 @@ export function CategoryCard({
       if (error) {
         console.log("error deleting saved experience", error)
       } else {
-        setFavorited(!favorited)
+        setIsFavorited(!isFavorited)
       }
     } else {
       // If experience is not saved, save it
@@ -68,7 +68,7 @@ export function CategoryCard({
       if (error) {
         console.log("error favoriting experience", error)
       } else {
-        setFavorited(!favorited)
+        setIsFavorited(!isFavorited)
       }
     }
   }
@@ -126,13 +126,13 @@ export function CategoryCard({
               onClick={handleFavorite}
               className={cn(
                 "rounded-full p-2 transition-colors shadow-sm cursor-pointer",
-                favorited
+                isFavorited
                   ? "bg-[#9d84ff] text-white hover:bg-[#8a6dff]"
                   : "bg-white/80 backdrop-blur-sm text-gray-700 hover:bg-white",
               )}
-              aria-label={favorited ? "Remove from favorites" : "Add to favorites"}
+              aria-label={isFavorited ? "Remove from favorites" : "Add to favorites"}
             >
-              <Star className="h-4 w-4" fill={favorited ? "currentColor" : "none"} />
+              <Star className="h-4 w-4" fill={isFavorited ? "currentColor" : "none"} />
             </button>
           </div>
 
