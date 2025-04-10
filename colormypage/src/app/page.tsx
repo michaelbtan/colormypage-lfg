@@ -1,19 +1,9 @@
 import { HeroSection } from "@/components/home/hero-section"
 import { CategoriesSection } from "@/components/home/categories-section"
 import { NewsletterSection } from "@/components/home/newsletter-section"
-import { EasterSection } from "@/components/home/easter-section"
-
-// Sample popular category data
-const popularCategories = [
-  { id: 1, title: "Animals", imageUrl: "/placeholder.svg?height=550&width=425", imageCount: 48 },
-  { id: 2, title: "Flowers", imageUrl: "/placeholder.svg?height=550&width=425", imageCount: 32 },
-  { id: 3, title: "Dinosaurs", imageUrl: "/placeholder.svg?height=550&width=425", isFavorited: true, imageCount: 36 },
-  { id: 4, title: "Vehicles", imageUrl: "/placeholder.svg?height=550&width=425", imageCount: 38 },
-  { id: 5, title: "Princesses", imageUrl: "/placeholder.svg?height=550&width=425", imageCount: 30 },
-  { id: 6, title: "Superheroes", imageUrl: "/placeholder.svg?height=550&width=425", imageCount: 40 },
-  { id: 7, title: "Holidays", imageUrl: "/placeholder.svg?height=550&width=425", imageCount: 65 },
-  { id: 8, title: "Alphabet", imageUrl: "/placeholder.svg?height=550&width=425", imageCount: 26 },
-]
+// import { EasterSection } from "@/components/home/easter-section"
+import { createClient } from "@/lib/supabase/server"
+import { cookies } from "next/headers"
 
 // Sample new category data
 const newCategories = [
@@ -60,15 +50,60 @@ const easterPages = [
   },
 ]
 
-export default function Page() {
+export default async function Home() {
+  const supabase = await createClient()
+
+  // Get the current user
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
+
+  // Fetch categories from Supabase
+  const { data: categoriesData } = await supabase
+    .from("categories")
+    .select("")
+    .order("created_at", { ascending: false })
+    .limit(8)
+
+  let categories = categoriesData || []
+
+  // Only check for favorites if user is logged in
+  if (user) {
+    // Get category IDs from the fetched categories
+    const categoryIds = categories.map((category) => category.id)
+
+    // Fetch only the favorited categories for the current user that match our category list
+    const { data: favoritedCategories } = await supabase
+      .from("favorited_categories")
+      .select("category_id")
+      .eq("user_id", user.id)
+      .in("category_id", categoryIds)
+
+    // Create a set of favorited category IDs for faster lookup
+    const favoritedCategoryIds = new Set(favoritedCategories?.map((item) => item.category_id) || [])
+
+    // Map through categories and add isFavorited flag
+    categories = categories.map((category) => ({
+      ...category,
+      isFavorited: favoritedCategoryIds.has(category.id),
+    }))
+  } else {
+    // If no user is logged in, mark all as not favorited
+    categories = categories.map((category) => ({
+      ...category,
+      isFavorited: false,
+    }))
+  }
+
+  console.log("Categories with favorited status:", categories)
+
   return (
     <div>
       <HeroSection />
-      <CategoriesSection title="Trending Coloring Pages" categories={popularCategories} viewAllLink="/categories" />
+      <CategoriesSection title="Trending Coloring Pages" categories={categories} userId={user.id} viewAllLink="/categories" />
       <NewsletterSection />
       <CategoriesSection title="New Coloring Pages" categories={newCategories} viewAllLink="/categories" />
       {/* <EasterSection easterPages={easterPages} /> */}
     </div>
   )
 }
-

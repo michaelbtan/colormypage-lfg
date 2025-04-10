@@ -1,5 +1,3 @@
-"use client"
-
 import Link from "next/link"
 import { ChevronRight } from "lucide-react"
 import { CategoryCard } from "@/components/category-card"
@@ -9,15 +7,17 @@ interface CategoriesSectionProps {
   title: string
   categories: {
     id: string | number
+    created_at: string
     title: string
-    imageUrl: string
-    imageCount?: number
+    image_url: string
+    image_count?: number
     isFavorited?: boolean
   }[]
   viewAllLink: string
+  userId: string | null
 }
 
-export function CategoriesSection({ title, categories, viewAllLink }: CategoriesSectionProps) {
+export function CategoriesSection({ title, categories, viewAllLink, userId }: CategoriesSectionProps) {
   return (
     <section className="w-full py-8">
       <div className="container mx-auto px-4">
@@ -44,12 +44,10 @@ export function CategoriesSection({ title, categories, viewAllLink }: Categories
                 <CategoryCard
                   id={category.id}
                   title={category.title}
-                  imageUrl={category.imageUrl}
-                  imageCount={category.imageCount}
+                  imageUrl={category.image_url}
+                  imageCount={category.image_count}
                   isFavorited={category.isFavorited}
-                  onFavorite={(id) => console.log(`Toggled favorite for category ${id}`)}
-                  onShare={(id) => console.log(`Shared category ${id}`)}
-                  isHorizontal={true}
+                  userId={userId}
                 />
               </div>
             </CarouselItem>

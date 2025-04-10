@@ -8,8 +8,6 @@ export async function Header() {
   const supabase = await createClient();
   const { data } = await supabase.auth.getUser();
 
-  console.log("User data:", data.user);
-
   let isLoggedIn;
   if (data.user != null) {
     isLoggedIn = true;
@@ -74,7 +72,7 @@ export async function Header() {
         </nav>
 
         {/* Mobile Menu */}
-        <MobileMenu loggedin={isLoggedIn} />
+        <MobileMenu loggedin={isLoggedIn} navigationItems={navigationItems} />
       </div>
     </header>
   );

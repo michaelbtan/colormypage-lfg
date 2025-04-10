@@ -57,7 +57,7 @@ export function CategoryHeader({ title, description, imageCount, featuredImage }
             <Button
               onClick={handleFavorite}
               variant="secondary"
-              className="rounded-full bg-white/20 hover:bg-white/30 text-white border-white/30"
+              className="rounded-full bg-[#9d84ff] text-white hover:bg-[#8a6dff] cursor-pointer"
             >
               <Heart className="mr-2 h-4 w-4" fill={isFavorited ? "currentColor" : "none"} />
               {isFavorited ? "Favorited" : "Favorite"}
@@ -66,7 +66,7 @@ export function CategoryHeader({ title, description, imageCount, featuredImage }
             <Button
               onClick={handleShare}
               variant="secondary"
-              className="rounded-full bg-white/20 hover:bg-white/30 text-white border-white/30"
+              className="rounded-full bg-[#9d84ff] text-white hover:bg-[#8a6dff] cursor-pointer"
             >
               <Share2 className="mr-2 h-4 w-4" />
               Share

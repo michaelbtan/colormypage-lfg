@@ -7,6 +7,8 @@ import Link from "next/link"
 import { Share2, Star } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { ShareModal } from "@/components/share-modal"
+import { createClient } from "@/lib/supabase/client"
+import { toast } from "sonner"
 
 // Update the interface to include imageCount
 interface CategoryCardProps {
@@ -15,40 +17,66 @@ interface CategoryCardProps {
   imageUrl: string
   imageCount?: number
   isFavorited?: boolean
-  onFavorite?: (id: string | number) => void
-  onShare?: (id: string | number) => void
-  isHorizontal?: boolean
-  categoryLink?: string // Add this prop
+  categoryLink?: string
+  userId?: string | null
 }
 
-// Update the function parameters to include imageCount
 export function CategoryCard({
   id,
   title,
   imageUrl,
   imageCount,
   isFavorited = false,
-  onFavorite,
-  onShare,
-  isHorizontal = false,
   categoryLink,
+  userId
 }: CategoryCardProps) {
+  const supabase = createClient()
   const [isHovered, setIsHovered] = useState(false)
   const [favorited, setFavorited] = useState(isFavorited)
   const [isShareModalOpen, setIsShareModalOpen] = useState(false)
 
-  const handleFavorite = (e: React.MouseEvent) => {
+  const handleFavorite = async (e: React.MouseEvent) => {
     e.preventDefault()
     e.stopPropagation()
-    setFavorited(!favorited)
-    if (onFavorite) onFavorite(id)
+    if (!userId) {
+      toast("Must be logged in to favorite", {
+        description: "Please log in to favorite this category.",
+      })
+      return
+    }
+
+    if (favorited) {
+      // If experience is already saved, remove it
+      const { error } = await supabase
+        .from("favorited_categories")
+        .delete()
+        .eq("category_id", id)
+        .eq("user_id", userId)
+
+      if (error) {
+        console.log("error deleting saved experience", error)
+      } else {
+        setFavorited(!favorited)
+      }
+    } else {
+      // If experience is not saved, save it
+      const { error } = await supabase.from("favorited_categories").insert({
+        category_id: id,
+        user_id: userId,
+      })
+
+      if (error) {
+        console.log("error favoriting experience", error)
+      } else {
+        setFavorited(!favorited)
+      }
+    }
   }
 
   const handleShare = (e: React.MouseEvent) => {
     e.preventDefault()
     e.stopPropagation()
     setIsShareModalOpen(true)
-    if (onShare) onShare(id)
   }
 
   // Update the title overlay to include the image count
