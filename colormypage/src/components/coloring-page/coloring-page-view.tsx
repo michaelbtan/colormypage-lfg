@@ -5,27 +5,71 @@ import Image from "next/image";
 import Link from "next/link";
 import { Download, Heart, Share2, Printer, ChevronLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { RecommendedPages } from "@/components/coloring-page/recommended-pages";
+// import { RecommendedPages } from "@/components/coloring-page/recommended-pages";
 import { AdPlaceholder } from "@/components/coloring-page/ad-placeholder";
 import { ShareModal } from "@/components/share-modal";
 import { toast } from "sonner";
-import type { ColoringPage } from "@/lib/coloring-pages";
+import { createClient } from "@/lib/supabase/client";
+
+export interface ColoringPage {
+  id: string
+  title: string
+  description?: string
+  image_url: string
+}
 
 interface ColoringPageViewProps {
   coloringPage: ColoringPage;
+  userId: string | null;
   recommendedPages: ColoringPage[];
 }
 
 export function ColoringPageView({
   coloringPage,
-  recommendedPages,
+  userId,
+  // recommendedPages,
 }: ColoringPageViewProps) {
+  const supabase = createClient();
   const [isFavorited, setIsFavorited] = useState(false);
   const [isShareModalOpen, setIsShareModalOpen] = useState(false);
 
-  const handleFavorite = () => {
-    setIsFavorited(!isFavorited);
-  };
+  const handleFavorite = async (e: React.MouseEvent) => {
+    e.preventDefault()
+    e.stopPropagation()
+    if (!userId) {
+      toast("Must be logged in to favorite", {
+        description: "Please log in to favorite this coloring page.",
+      })
+      return
+    }
+
+    if (isFavorited) {
+      // If experience is already saved, remove it
+      const { error } = await supabase
+        .from("favorited_coloring_pages")
+        .delete()
+        .eq("coloring_page_id", coloringPage.id)
+        .eq("user_id", userId)
+
+      if (error) {
+        console.log("error deleting saved experience", error)
+      } else {
+        setIsFavorited(!isFavorited)
+      }
+    } else {
+      // If experience is not saved, save it
+      const { error } = await supabase.from("favorited_coloring_pages").insert({
+        coloring_page_id: coloringPage.id,
+        user_id: userId,
+      })
+
+      if (error) {
+        console.log("error favoriting experience", error)
+      } else {
+        setIsFavorited(!isFavorited)
+      }
+    }
+  }
 
   const handleDownload = () => {
     toast("Download started", {
@@ -44,13 +88,13 @@ export function ColoringPageView({
   return (
     <div className="container py-8 md:py-12">
       <div className="mb-6">
-        <Link
+        {/* <Link
           href={`/categories/${coloringPage.categoryId}`}
           className="inline-flex items-center text-sm text-gray-600 hover:text-[#9d84ff]"
         >
           <ChevronLeft className="h-4 w-4 mr-1" />
           Back to {coloringPage.categoryName}
-        </Link>
+        </Link> */}
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -63,21 +107,21 @@ export function ColoringPageView({
               </h1>
 
               <div className="flex flex-wrap gap-2 mb-6">
-                {coloringPage.tags.map((tag) => (
+                {/* {coloringPage.tags.map((tag) => (
                   <span
                     key={tag}
                     className="inline-block bg-gray-100 rounded-full px-3 py-1 text-sm font-medium text-gray-700"
                   >
                     {tag}
                   </span>
-                ))}
+                ))} */}
               </div>
 
               {/* Image container with print-friendly styling */}
               <div className="relative bg-white rounded-lg border border-gray-200 mb-6 print:border-0 print:shadow-none">
                 <div className="aspect-[8.5/11] relative">
                   <Image
-                    src={coloringPage.imageUrl || "/placeholder.svg"}
+                    src={coloringPage.image_url || "/placeholder.svg"}
                     alt={coloringPage.title}
                     fill
                     className="object-contain"
@@ -106,7 +150,7 @@ export function ColoringPageView({
                 </Button>
 
                 <Button
-                  onClick={handleFavorite}
+                  onClick={() => handleFavorite}
                   variant="outline"
                   className={`rounded-full ${
                     isFavorited
@@ -163,7 +207,7 @@ export function ColoringPageView({
           <AdPlaceholder />
 
           {/* Recommended coloring pages */}
-          <RecommendedPages pages={recommendedPages} />
+          {/* <RecommendedPages pages={recommendedPages} /> */}
         </div>
       </div>
 
@@ -172,7 +216,7 @@ export function ColoringPageView({
         isOpen={isShareModalOpen}
         onClose={() => setIsShareModalOpen(false)}
         title={coloringPage.title}
-        imageUrl={coloringPage.imageUrl}
+        imageUrl={coloringPage.image_url}
         pageUrl={`/coloring-page/${coloringPage.id}`}
       />
     </div>

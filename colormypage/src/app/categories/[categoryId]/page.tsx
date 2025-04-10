@@ -36,6 +36,12 @@ export default async function CategoryPage({ params }: { params: { categoryId: s
     isFavorited = !!favorited
   }
 
+  // Fetch coloring pages for the category
+  const { data: pages } = await supabase
+    .from("coloring_pages")
+    .select("*")
+    .eq("category_id", categoryId)
+
   return (
     <div>
       <CategoryHeader
