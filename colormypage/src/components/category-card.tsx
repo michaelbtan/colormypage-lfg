@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils"
 import { ShareModal } from "@/components/share-modal"
 import { createClient } from "@/lib/supabase/client"
 import { toast } from "sonner"
+import { Button } from "@/components/ui/button"
 
 // Update the interface to include imageCount
 interface CategoryCardProps {
@@ -28,7 +29,7 @@ export function CategoryCard({
   imageCount,
   categoryFavorited = false,
   categoryLink,
-  userId
+  userId,
 }: CategoryCardProps) {
   const supabase = createClient()
   const [isHovered, setIsHovered] = useState(false)
@@ -47,11 +48,7 @@ export function CategoryCard({
 
     if (isFavorited) {
       // If experience is already saved, remove it
-      const { error } = await supabase
-        .from("favorited_categories")
-        .delete()
-        .eq("category_id", id)
-        .eq("user_id", userId)
+      const { error } = await supabase.from("favorited_categories").delete().eq("category_id", id).eq("user_id", userId)
 
       if (error) {
         console.log("error deleting saved experience", error)
@@ -115,25 +112,29 @@ export function CategoryCard({
 
           {/* Action buttons - in top right */}
           <div className="absolute top-3 right-3 flex gap-2">
-            <button
+            <Button
               onClick={handleShare}
-              className="rounded-full bg-white/80 backdrop-blur-sm p-2 hover:bg-white transition-colors shadow-sm cursor-pointer"
+              size="icon"
+              variant="outline"
+              className="h-8 w-8 rounded-full bg-white/80 backdrop-blur-sm hover:bg-white shadow-sm"
               aria-label="Share"
             >
               <Share2 className="h-4 w-4 text-gray-700" />
-            </button>
-            <button
+            </Button>
+            <Button
               onClick={handleFavorite}
+              size="icon"
+              variant={isFavorited ? "default" : "outline"}
               className={cn(
-                "rounded-full p-2 transition-colors shadow-sm cursor-pointer",
+                "h-8 w-8 rounded-full shadow-sm",
                 isFavorited
-                  ? "bg-[#9d84ff] text-white hover:bg-[#8a6dff]"
+                  ? "bg-[#9d84ff] hover:bg-[#8a6dff]"
                   : "bg-white/80 backdrop-blur-sm text-gray-700 hover:bg-white",
               )}
               aria-label={isFavorited ? "Remove from favorites" : "Add to favorites"}
             >
               <Star className="h-4 w-4" fill={isFavorited ? "currentColor" : "none"} />
-            </button>
+            </Button>
           </div>
 
           {/* Add a badge showing the number of pages (visible even when not hovering) */}
@@ -156,4 +157,3 @@ export function CategoryCard({
     </>
   )
 }
-

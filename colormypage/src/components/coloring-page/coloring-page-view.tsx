@@ -134,7 +134,7 @@ export function ColoringPageView({
               <div className="flex flex-wrap gap-3 print:hidden">
                 <Button
                   onClick={handleDownload}
-                  className="bg-[#9d84ff] hover:bg-[#8a6dff] rounded-full"
+                  className="bg-[#9d84ff] cursor-pointer hover:bg-[#8a6dff] rounded-full"
                 >
                   <Download className="mr-2 h-4 w-4" />
                   Download PDF
@@ -143,16 +143,16 @@ export function ColoringPageView({
                 <Button
                   onClick={handlePrint}
                   variant="outline"
-                  className="rounded-full"
+                  className="rounded-full cursor-pointer "
                 >
                   <Printer className="mr-2 h-4 w-4" />
                   Print
                 </Button>
 
                 <Button
-                  onClick={() => handleFavorite}
+                  onClick={handleFavorite}
                   variant="outline"
-                  className={`rounded-full ${
+                  className={`rounded-full cursor-pointer ${
                     isFavorited
                       ? "bg-[#9d84ff]/10 text-[#9d84ff] border-[#9d84ff]"
                       : ""
@@ -168,7 +168,7 @@ export function ColoringPageView({
                 <Button
                   onClick={handleShare}
                   variant="outline"
-                  className="rounded-full"
+                  className="rounded-full cursor-pointer "
                 >
                   <Share2 className="mr-2 h-4 w-4" />
                   Share
