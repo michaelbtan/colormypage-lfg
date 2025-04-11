@@ -116,6 +116,8 @@ export function ColoringPageView({
   }
 
   const handleShare = () => {
+    e.preventDefault()
+    e.stopPropagation()
     setIsShareModalOpen(true)
   }
 

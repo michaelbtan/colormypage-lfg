@@ -1,12 +1,10 @@
-import type { User } from "@supabase/supabase-js"
-
 interface DashboardHeaderProps {
   title: string
   description?: string
-  user?: User | null
+  userEmail: string | null
 }
 
-export function DashboardHeader({ title, description, user }: DashboardHeaderProps) {
+export function DashboardHeader({ title, description, userEmail }: DashboardHeaderProps) {
   return (
     <div className="flex flex-col md:flex-row md:items-center md:justify-between">
       <div>
@@ -14,10 +12,10 @@ export function DashboardHeader({ title, description, user }: DashboardHeaderPro
         {description && <p className="mt-1 text-gray-500">{description}</p>}
       </div>
 
-      {user && (
+      {userEmail && (
         <div className="mt-4 md:mt-0">
           <p className="text-sm text-gray-500">
-            Logged in as <span className="font-medium text-gray-900">{user.email}</span>
+            Logged in as <span className="font-medium text-gray-900">{userEmail}</span>
           </p>
         </div>
       )}

@@ -11,6 +11,21 @@ export default async function DashboardPage() {
   } = await supabase.auth.getUser()
 
 
+  // Fetch favorite pages and categories
+  const { data: favoritePages } = await supabase
+    .from("favorited_coloring_pages")
+    .select("*, coloring_pages(*)")
+    .eq("user_id", user?.id)
+
+  const { data: favoriteCategories } = await supabase
+    .from("favorited_categories")
+    .select("*, categories(*)")
+    .eq("user_id", user?.id)
+
+    console.log("favoriteCategories", favoriteCategories)
+
+
+
   // Fetch favorite pages and categories and then total
   const stats = {
     totalFavorites: 12,
@@ -21,7 +36,7 @@ export default async function DashboardPage() {
       <DashboardHeader
         title="My Coloring Pages"
         description="Manage your favorite coloring pages and categories"
-        user={user}
+        userEmail={user?.email || null}
       />
 
       {/* Favorite Pages Section */}
@@ -32,7 +47,7 @@ export default async function DashboardPage() {
             {stats.totalFavorites} pages
           </span>
         </div>
-        <FavoriteColoringPages />
+        <FavoriteColoringPages favoritePages={favoritePages} userId={user.id || null} />
       </div>
 
       {/* Favorite Categories Section */}

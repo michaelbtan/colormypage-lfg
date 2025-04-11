@@ -90,6 +90,14 @@ export function ShareModal({ isOpen, onClose, title, imageUrl, pageUrl }: ShareM
     }
   }
 
+  // Create a shortened version of the URL for display
+  const displayUrl = (url: string) => {
+    if (url.length > 40) {
+      return url.substring(0, 37) + "..."
+    }
+    return url
+  }
+
   return (
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
       <DialogContent className="sm:max-w-md max-w-[95vw] p-4 sm:p-6">
@@ -102,9 +110,11 @@ export function ShareModal({ isOpen, onClose, title, imageUrl, pageUrl }: ShareM
           <div className="relative h-16 w-24 flex-shrink-0 overflow-hidden rounded-md border">
             <Image src={imageUrl || "/placeholder.svg"} alt={title} fill className="object-cover" />
           </div>
-          <div className="flex-1 min-w-0">
+          <div className="flex-1 min-w-0 overflow-hidden">
             <h3 className="text-sm font-medium text-gray-900 truncate">{title}</h3>
-            <p className="text-xs text-gray-500 truncate mt-1">{fullPageUrl}</p>
+            <p className="text-xs text-gray-500 truncate mt-1" title={fullPageUrl}>
+              {displayUrl(fullPageUrl)}
+            </p>
           </div>
         </div>
 
@@ -121,13 +131,15 @@ export function ShareModal({ isOpen, onClose, title, imageUrl, pageUrl }: ShareM
           ))}
         </div>
 
-        <div className="flex items-center space-x-2 mt-2">
-          <div className="grid w-full flex-1 gap-2">
-            <div className="flex items-center justify-between rounded-md border px-3 py-2 overflow-hidden">
-              <div className="w-[calc(100%-40px)] overflow-hidden">
-                <span className="text-xs sm:text-sm text-gray-500 truncate block">{fullPageUrl}</span>
+        <div className="flex items-center mt-2">
+          <div className="w-full">
+            <div className="flex items-center justify-between rounded-md border px-3 py-2">
+              <div className="flex-grow overflow-hidden mr-2">
+                <p className="text-xs sm:text-sm text-gray-500 truncate" title={fullPageUrl}>
+                  {fullPageUrl}
+                </p>
               </div>
-              <Button variant="ghost" size="sm" onClick={copyToClipboard} className="h-8 w-8 p-0 flex-shrink-0 ml-2">
+              <Button variant="ghost" size="sm" onClick={copyToClipboard} className="h-8 w-8 p-0 flex-shrink-0">
                 {copied ? <Check className="h-4 w-4 text-green-500" /> : <Copy className="h-4 w-4" />}
                 <span className="sr-only">Copy link</span>
               </Button>
@@ -138,4 +150,3 @@ export function ShareModal({ isOpen, onClose, title, imageUrl, pageUrl }: ShareM
     </Dialog>
   )
 }
-

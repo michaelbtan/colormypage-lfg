@@ -11,7 +11,6 @@ import { createClient } from "@/lib/supabase/client"
 import { toast } from "sonner"
 import { Button } from "@/components/ui/button"
 
-// Update the interface to include imageCount
 interface CategoryCardProps {
   id: string | number
   title: string
