@@ -49,8 +49,6 @@ export default async function Home() {
     }))
   }
 
-  console.log("Categories with favorited status:", categories)
-
   return (
     <div>
       <HeroSection />

@@ -22,14 +22,13 @@ export default async function DashboardPage() {
     .select("*, categories(*)")
     .eq("user_id", user?.id)
 
-    console.log("favoriteCategories", favoriteCategories)
-
-
 
   // Fetch favorite pages and categories and then total
   const stats = {
     totalFavorites: 12,
   }
+
+  console.log("favoriteCat", favoriteCategories)
 
   return (
     <div className="space-y-8">
@@ -53,7 +52,7 @@ export default async function DashboardPage() {
       {/* Favorite Categories Section */}
       <div className="bg-white rounded-xl shadow-md p-6 border border-gray-100">
         <h2 className="text-xl font-bold mb-6">Favorite Categories</h2>
-        <FavoriteCategories />
+        <FavoriteCategories favoriteCategories={favoriteCategories} userId={user.id || null} />
       </div>
     </div>
   )
