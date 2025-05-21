@@ -1,0 +1,7 @@
+{
+  "prompt": "A children's book drawing of a veterinarian using a stethoscope to listen to the heartbeat of a baby otter.",
+  "batchSize": 1,
+  "outDir": "images",
+  "model": "gpt-image-1",
+  "size": "1024x1024"    
+}

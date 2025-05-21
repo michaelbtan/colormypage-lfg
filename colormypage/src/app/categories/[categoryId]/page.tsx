@@ -1,46 +1,68 @@
-import { notFound } from "next/navigation"
-import { CategoryHeader } from "@/components/categories/category-header"
-import { ColoringPageGrid } from "@/components/categories/coloring-page-grid"
-import { OurFavorites } from "@/components/categories/our-favorites"
-import { AdPlaceholder } from "@/components/coloring-page/ad-placeholder"
-import { createClient } from "@/lib/supabase/server"
+import { notFound } from "next/navigation";
+import { CategoryHeader } from "@/components/categories/category-header";
+import { ColoringPageGrid } from "@/components/categories/coloring-page-grid";
+import { OurFavorites } from "@/components/categories/our-favorites";
+import { AdPlaceholder } from "@/components/coloring-page/ad-placeholder";
+import { createClient } from "@/lib/supabase/server";
 
-export default async function CategoryPage({ params }: { params: { categoryId: string } }) {
-  const { categoryId } = params
-  const supabase = await createClient()
+export default async function CategoryPage({
+  params,
+}: {
+  params: { categoryId: string };
+}) {
+  const { categoryId } = params;
+  const supabase = await createClient();
 
   const {
     data: { user },
-  } = await supabase.auth.getUser()
+  } = await supabase.auth.getUser();
 
   // Fetch category data
   const { data: category } = await supabase
     .from("categories")
     .select("*")
     .eq("id", categoryId)
-    .single()
+    .single();
 
   if (!category) {
-    notFound()
+    notFound();
   }
 
   // Check if category is favorited by the current user
-  let isFavorited = false
+  let isFavorited = false;
   if (user) {
     const { data: favorited } = await supabase
       .from("favorited_categories")
       .select("*")
       .eq("category_id", categoryId)
       .eq("user_id", user.id)
-      .single()
-    isFavorited = !!favorited
+      .single();
+    isFavorited = !!favorited;
   }
 
-  // Fetch coloring pages for the category
-  const { data: pages } = await supabase
-    .from("coloring_pages")
-    .select("*")
+  // Fetch coloring pages for the category with related coloring_pages data
+  const { data: pages, count } = await supabase
+    .from("coloring_page_categories")
+    .select(
+      `
+    *,
+    coloring_pages:coloring_page_id(
+      id,
+      title,
+      description,
+      image_url,
+      file_name,
+      is_published
+    )
+  `,
+      { count: "exact" }
+    )
     .eq("category_id", categoryId)
+    .order("created_at", { ascending: false })
+    .range(0, 11); // Get first 12 items (0-11)
+
+  // Calculate if there are more pages
+  const hasMore = count ? pages.length < count : false;
 
   return (
     <div>
@@ -58,12 +80,13 @@ export default async function CategoryPage({ params }: { params: { categoryId: s
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Main content - coloring pages grid */}
           <div className="w-full lg:w-4/5">
-            {/* <ColoringPageGrid
+            <ColoringPageGrid
+              userId={user?.id || null}
               categoryId={categoryId}
-              initialPages={initialData.pages}
-              initialHasMore={initialData.hasMore}
-              totalPages={initialData.total}
-            /> */}
+              initialPages={pages || []}
+              initialHasMore={hasMore}
+              totalPages={count || 0}
+            />
           </div>
 
           {/* Sidebar - Our Favorites (hidden on mobile) */}
@@ -77,5 +100,5 @@ export default async function CategoryPage({ params }: { params: { categoryId: s
         </div>
       </div>
     </div>
-  )
+  );
 }

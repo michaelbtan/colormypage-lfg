@@ -1,62 +1,101 @@
 "use client"
 
 import { useState, useEffect, useRef } from "react"
-import { Loader2 } from "lucide-react"
-import { ColoringPageCard } from "@/components/categories/coloring-page-card"
+import { Loader2 } from 'lucide-react'
+import { CategoryColoringPageCard } from "@/components/categories/category-coloring-page-card"
+import { createClient } from "@/lib/supabase/client"
 
+// Updated interface to match the Supabase data model
+export interface ColoringPageCategory {
+  id: number
+  created_at: string
+  coloring_page_id: string
+  category_id: string
+  coloring_pages: {
+    id: string
+    title: string
+    description: string
+    image_url: string
+    file_name: string
+    is_published: boolean
+  }
+}
+
+// Simplified interface for the card component
 export interface ColoringPage {
   id: string
   title: string
   imageUrl: string
-  downloadUrl: string
-  tags: string[]
-  isFeatured?: boolean
+  description: string
+  fileName: string
 }
 
 interface ColoringPageGridProps {
+  userId: string | null
   categoryId: string
-  initialPages: ColoringPage[]
+  initialPages: ColoringPageCategory[]
   initialHasMore: boolean
   totalPages: number
+
 }
 
-// Mock function to get more coloring pages (client-side)
-async function fetchMoreColoringPages(
-  categoryId: string,
-  page: number,
-  limit = 12,
-): Promise<{
-  pages: ColoringPage[]
-  hasMore: boolean
-}> {
-  // Simulate API delay
-  await new Promise((resolve) => setTimeout(resolve, 800))
-
-  // In a real app, this would be an API call
-  const basePages = Array.from({ length: 100 }, (_, i) => ({
-    id: `${categoryId}-${i + 1}`,
-    title: `${categoryId.charAt(0).toUpperCase() + categoryId.slice(1)} Coloring Page ${i + 1}`,
-    imageUrl: `/placeholder.svg?height=550&width=425&text=${categoryId}-${i + 1}`,
-    downloadUrl: `#download-${categoryId}-${i + 1}`,
-    tags: ["kids", categoryId, i % 2 === 0 ? "easy" : "intermediate"],
-    isFeatured: i < 5,
-  }))
-
-  const startIndex = (page - 1) * limit
-  const endIndex = startIndex + limit
-
-  return {
-    pages: basePages.slice(startIndex, endIndex),
-    hasMore: endIndex < basePages.length,
-  }
-}
-
-export function ColoringPageGrid({ categoryId, initialPages, initialHasMore, totalPages }: ColoringPageGridProps) {
-  const [pages, setPages] = useState<ColoringPage[]>(initialPages)
+export function ColoringPageGrid({ 
+  userId,
+  categoryId, 
+  initialPages, 
+  initialHasMore, 
+  totalPages 
+}: ColoringPageGridProps) {
+  const [pages, setPages] = useState<ColoringPageCategory[]>(initialPages)
   const [page, setPage] = useState(1)
   const [loading, setLoading] = useState(false)
   const [hasMore, setHasMore] = useState(initialHasMore)
   const loaderRef = useRef<HTMLDivElement>(null)
+  const limit = 12
+
+  // Fetch more coloring pages from Supabase
+  const fetchMoreColoringPages = async (
+    categoryId: string,
+    page: number,
+    limit = 12,
+  ): Promise<{
+    pages: ColoringPageCategory[]
+    hasMore: boolean
+  }> => {
+    const supabase = createClient()
+    
+    // Calculate pagination
+    const from = (page - 1) * limit
+    const to = from + limit - 1
+    
+    // Query Supabase for more pages
+    const { data, error, count } = await supabase
+      .from("coloring_page_categories")
+      .select(`
+        *,
+        coloring_pages:coloring_page_id(
+          id,
+          title,
+          description,
+          image_url,
+          file_name,
+          is_published
+        )
+      `, { count: 'exact' })
+      .eq("category_id", categoryId)
+      .range(from, to)
+      .order('created_at', { ascending: false })
+    
+    if (error) {
+      console.error("Error fetching coloring pages:", error)
+      throw error
+    }
+    
+    return {
+      pages: data || [],
+      hasMore: count ? from + data.length < count : false,
+    }
+  }
 
   // Handle infinite scroll with Intersection Observer
   useEffect(() => {
@@ -89,7 +128,7 @@ export function ColoringPageGrid({ categoryId, initialPages, initialHasMore, tot
     const nextPage = page + 1
 
     try {
-      const result = await fetchMoreColoringPages(categoryId, nextPage)
+      const result = await fetchMoreColoringPages(categoryId, nextPage, limit)
       setPages((prevPages) => [...prevPages, ...result.pages])
       setHasMore(result.hasMore)
       setPage(nextPage)
@@ -100,11 +139,22 @@ export function ColoringPageGrid({ categoryId, initialPages, initialHasMore, tot
     }
   }
 
+  // Transform the data for the ColoringPageCard component
+  const transformedPages = pages
+    .filter(page => page.coloring_pages && page.coloring_pages.is_published)
+    .map(page => ({
+      id: page.coloring_pages.id,
+      title: page.coloring_pages.title,
+      imageUrl: page.coloring_pages.image_url,
+      description: page.coloring_pages.description,
+      fileName: page.coloring_pages.file_name
+    }))
+
   return (
     <div>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6">
-        {pages.map((coloringPage) => (
-          <ColoringPageCard key={coloringPage.id} page={coloringPage} />
+        {transformedPages.map((coloringPage) => (
+          <CategoryColoringPageCard key={coloringPage.id} page={coloringPage} userId={userId} />
         ))}
       </div>
 
@@ -119,11 +169,10 @@ export function ColoringPageGrid({ categoryId, initialPages, initialHasMore, tot
 
         {!hasMore && pages.length > 0 && (
           <p className="text-gray-500">
-            You've reached the end! {pages.length} of {totalPages} coloring pages loaded.
+            You&apos;ve reached the end! {transformedPages.length} of {totalPages} coloring pages loaded.
           </p>
         )}
       </div>
     </div>
   )
 }
-

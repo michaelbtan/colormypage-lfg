@@ -1,62 +1,69 @@
 "use client"
 
 import { useState, useEffect, useRef } from "react"
-import { Loader2 } from "lucide-react"
+import { Loader2 } from 'lucide-react'
 import { CategoryCard } from "@/components/category-card"
+import { createClient } from "@/lib/supabase/client"
 
+// Updated interface to match Supabase data structure
 export interface Category {
   id: string
+  created_at: string
   title: string
-  description: string
-  imageCount: number
-  featuredImage: string
-  subcategories: string[]
-  isPopular?: boolean
-  isSeasonal?: boolean
-  isEducational?: boolean
+  image_url: string
+  image_count: number
+  description?: string // Optional as it's not in your current data
 }
 
 interface InfiniteCategoriesGridProps {
   initialCategories: Category[]
   initialHasMore: boolean
+  totalCount: number
 }
 
-// Mock function to fetch more categories (in a real app, this would be an API call)
-async function fetchMoreCategories(
-  page: number,
-  limit = 12,
-): Promise<{
-  categories: Category[]
-  hasMore: boolean
-}> {
-  // Simulate API delay
-  await new Promise((resolve) => setTimeout(resolve, 800))
-
-  // Generate mock categories
-  const mockCategories = Array.from({ length: limit }, (_, i) => {
-    const index = (page - 1) * limit + i
-    return {
-      id: `category-${index + 1}`,
-      title: `Category ${index + 1}`,
-      description: `This is a description for category ${index + 1}.`,
-      imageCount: Math.floor(Math.random() * 50) + 10, // Random number between 10-60
-      featuredImage: `/placeholder.svg?height=300&width=300&text=Category+${index + 1}`,
-      subcategories: ["Subcategory 1", "Subcategory 2", "Subcategory 3"],
-    }
-  })
-
-  return {
-    categories: mockCategories,
-    hasMore: page < 5, // Limit to 5 pages for demo purposes
-  }
-}
-
-export function InfiniteCategoriesGrid({ initialCategories, initialHasMore }: InfiniteCategoriesGridProps) {
+export function InfiniteCategoriesGrid({ 
+  initialCategories, 
+  initialHasMore,
+  totalCount
+}: InfiniteCategoriesGridProps) {
   const [categories, setCategories] = useState<Category[]>(initialCategories)
   const [page, setPage] = useState(1)
   const [loading, setLoading] = useState(false)
   const [hasMore, setHasMore] = useState(initialHasMore)
   const loaderRef = useRef<HTMLDivElement>(null)
+  const limit = 12
+
+  // Fetch more categories from Supabase
+  const fetchMoreCategories = async (
+    page: number,
+    limit = 12,
+  ): Promise<{
+    categories: Category[]
+    hasMore: boolean
+  }> => {
+    const supabase = createClient()
+    
+    // Calculate pagination
+    const from = page * limit
+    const to = from + limit - 1
+    
+    // Query Supabase for more categories
+    const { data, error, count } = await supabase
+      .from("categories")
+      .select("id, created_at, title, image_url, image_count", { count: 'exact' })
+      .order('created_at', { ascending: false })
+      .range(from, to)
+    
+    if (error) {
+      console.error("Error fetching categories:", error)
+      throw error
+    }
+    
+    return {
+      categories: data || [],
+      hasMore: count ? from + data.length < count : false,
+    }
+  }
 
   // Handle infinite scroll with Intersection Observer
   useEffect(() => {
@@ -89,7 +96,7 @@ export function InfiniteCategoriesGrid({ initialCategories, initialHasMore }: In
     const nextPage = page + 1
 
     try {
-      const result = await fetchMoreCategories(nextPage)
+      const result = await fetchMoreCategories(nextPage, limit)
       setCategories((prevCategories) => [...prevCategories, ...result.categories])
       setHasMore(result.hasMore)
       setPage(nextPage)
@@ -108,8 +115,8 @@ export function InfiniteCategoriesGrid({ initialCategories, initialHasMore }: In
             key={category.id}
             id={category.id}
             title={category.title}
-            imageUrl={category.featuredImage}
-            imageCount={category.imageCount}
+            imageUrl={category.image_url}
+            imageCount={category.image_count}
             onFavorite={(id) => console.log(`Toggled favorite for category ${id}`)}
             onShare={(id) => console.log(`Shared category ${id}`)}
           />
@@ -126,10 +133,11 @@ export function InfiniteCategoriesGrid({ initialCategories, initialHasMore }: In
         )}
 
         {!hasMore && categories.length > 0 && (
-          <p className="text-gray-500">You've reached the end! No more categories to load.</p>
+          <p className="text-gray-500">
+            You've reached the end! {categories.length} of {totalCount} categories loaded.
+          </p>
         )}
       </div>
     </div>
   )
 }
-
