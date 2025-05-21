@@ -12,7 +12,7 @@ const cfg = JSON.parse(fs.readFileSync(CONFIG_PATH, "utf-8"));
 
 const {
   prompt,
-  batchSize = 5,
+  batchSize = 1,
   outDir = "images",
   model = "gpt-image-1",
   size
@@ -29,7 +29,6 @@ async function generateImages() {
   const { data } = await openai.images.generate({
     model,
     prompt,
-    tools: [{type: "image_generation"}],
     n: batchSize,
     response_format: "b64_json",
     ...(size ? { size } : {})   // only include if defined
