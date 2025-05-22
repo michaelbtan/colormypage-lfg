@@ -4,14 +4,15 @@
   "description": "",
   "license": "ISC",
   "author": "",
-  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "generate": "node generate_images.js"
+    "generate": "node generate_images.js",
+    "frame": "node make_coloring_pages.js"
   },
   "dependencies": {
     "dotenv": "^16.5.0",
-    "openai": "^4.98.0"
+    "openai": "^4.98.0",
+    "sharp": "^0.34.2"
   }
 }
