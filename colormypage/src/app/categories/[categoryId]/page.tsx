@@ -90,13 +90,13 @@ export default async function CategoryPage({
           </div>
 
           {/* Sidebar - Our Favorites (hidden on mobile) */}
-          <div className="hidden lg:block lg:w-1/5">
-            {/* Add the ad placeholder above the favorites */}
+          {/* Add the ad placeholder above the favorites */}
+          {/* <div className="hidden lg:block lg:w-1/5">
             <AdPlaceholder />
             <div className="mt-6">
-              {/* <OurFavorites categoryId={categoryId} favorites={favorites} /> */}
+              <OurFavorites categoryId={categoryId} favorites={favorites} />
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

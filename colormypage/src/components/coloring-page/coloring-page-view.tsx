@@ -7,12 +7,9 @@ import Image from "next/image"
 import { Download, Heart, Share2, Printer } from "lucide-react"
 import { Button } from "@/components/ui/button"
 // import { RecommendedPages } from "@/components/coloring-page/recommended-pages";
-import { AdPlaceholder } from "@/components/coloring-page/ad-placeholder"
 import { ShareModal } from "@/components/share-modal"
 import { toast } from "sonner"
 import { createClient } from "@/lib/supabase/client"
-import { jsPDF } from "jspdf"
-import html2canvas from "html2canvas"
 
 export interface ColoringPage {
   id: string
@@ -24,7 +21,7 @@ export interface ColoringPage {
 interface ColoringPageViewProps {
   coloringPage: ColoringPage
   userId: string | null
-  recommendedPages: ColoringPage[]
+  recommendedPages?: ColoringPage[]
 }
 
 export function ColoringPageView({
@@ -75,47 +72,21 @@ export function ColoringPageView({
     }
   }
 
-  const handleDownload = async () => {
+  const handleDownload = () => {
+    // Create a temporary anchor element
+    const link = document.createElement('a')
+    link.href = coloringPage.image_url
+    link.download = `${coloringPage.title.replace(/\s+/g, "-").toLowerCase()}.png`
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+
     toast("Download started", {
-      description: "Your coloring page is being downloaded.",
+      description: "Your coloring page image is being downloaded.",
     })
-
-    try {
-      if (coloringImageRef.current) {
-        // Create a canvas from the coloring page image
-        const canvas = await html2canvas(coloringImageRef.current, {
-          scale: 2, // Higher scale for better quality
-          backgroundColor: "#ffffff",
-          logging: false,
-        })
-
-        // Create PDF with correct aspect ratio
-        const imgData = canvas.toDataURL("image/png")
-        const pdf = new jsPDF({
-          orientation: "portrait",
-          unit: "mm",
-          format: "a4",
-        })
-
-        const imgWidth = 210 // A4 width in mm
-        const imgHeight = (canvas.height * imgWidth) / canvas.width
-
-        pdf.addImage(imgData, "PNG", 0, 0, imgWidth, imgHeight)
-        pdf.save(`${coloringPage.title.replace(/\s+/g, "-").toLowerCase()}.pdf`)
-
-        toast("Download complete", {
-          description: "Your coloring page has been downloaded successfully.",
-        })
-      }
-    } catch (error) {
-      console.error("Error downloading coloring page:", error)
-      toast("Download failed", {
-        description: "There was an error downloading your coloring page. Please try again.",
-      })
-    }
   }
 
-  const handleShare = () => {
+  const handleShare = (e: React.MouseEvent) => {
     e.preventDefault()
     e.stopPropagation()
     setIsShareModalOpen(true)
@@ -192,7 +163,7 @@ export function ColoringPageView({
   }
 
   return (
-    <div className="container py-8 md:py-12">
+    <div className="container py-8 md:py-12 max-w-5xl mx-auto">
       <div className="mb-6">
         {/* <Link
           href={`/categories/${coloringPage.categoryId}`}
@@ -203,10 +174,8 @@ export function ColoringPageView({
         </Link> */}
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        {/* Left column - Coloring page details */}
-        <div className="lg:col-span-2">
-          <div className="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100">
+      <div className="grid grid-cols-1 gap-8">
+        <div className="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100">
             <div className="p-6 md:p-8">
               <h1 className="text-2xl md:text-3xl font-bold mb-2">{coloringPage.title}</h1>
 
@@ -236,17 +205,12 @@ export function ColoringPageView({
 
               {/* Action buttons */}
               <div className="flex flex-wrap gap-3">
-                <Button
-                  onClick={handleDownload}
+
+                <Button onClick={handlePrint}
                   className="bg-[#9d84ff] cursor-pointer hover:bg-[#8a6dff] rounded-full"
                 >
-                  <Download className="mr-2 h-4 w-4" />
-                  Download PDF
-                </Button>
-
-                <Button onClick={handlePrint} variant="outline" className="rounded-full cursor-pointer">
                   <Printer className="mr-2 h-4 w-4" />
-                  Print
+                  Print Coloring Page
                 </Button>
 
                 <Button
@@ -286,16 +250,6 @@ export function ColoringPageView({
               </div>
             </div>
           </div>
-        </div>
-
-        {/* Right column - Recommended pages and ads */}
-        <div className="space-y-6">
-          {/* Ad placeholder */}
-          <AdPlaceholder />
-
-          {/* Recommended coloring pages */}
-          {/* <RecommendedPages pages={recommendedPages} /> */}
-        </div>
       </div>
 
       {/* Share Modal */}

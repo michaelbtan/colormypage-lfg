@@ -38,12 +38,12 @@ export default async function CategoriesPage() {
             />
           </div>
 
-          {/* Sidebar - Ad space */}
-          <div className="w-full lg:w-1/4">
+          {/* Sidebar - Ad space, add in when we have ads */}
+          {/* <div className="w-full lg:w-1/4">
             <div className="sticky top-24">
               <AdPlaceholder />
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

@@ -1,8 +1,10 @@
 import Link from "next/link";
-import { Palette, Heart, LogIn, UserRound } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Palette, Heart, LogIn, LogOut } from "lucide-react";
 import { SearchBar } from "./search-bar";
 import { MobileMenu } from "./mobile-menu";
 import { createClient } from "@/lib/supabase/server";
+import { logout } from "@/lib/supabase/actions/auth";
 
 export async function Header() {
   const supabase = await createClient();
@@ -16,9 +18,8 @@ export async function Header() {
   }
   const navigationItems = [
     { name: "Categories", href: "/categories", icon: <Palette /> },
-    { name: "Favorites", href: "/favorites", icon: <Heart /> },
+    { name: "Favorites", href: "/dashboard", icon: <Heart /> },
   ];
-
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -49,15 +50,25 @@ export async function Header() {
             </Link>
           ))}
           {isLoggedIn ? (
-            <Link
-              href="/dashboard"
-              className="text-sm font-medium hover:text-primary transition-colors hover:underline"
-            >
-              <div className="flex items-center gap-2">
-                <UserRound />
-                Account
-              </div>
-            </Link>
+            // <Link
+            //   href="/dashboard"
+            //   className="text-sm font-medium hover:text-primary transition-colors hover:underline"
+            // >
+            //   <div className="flex items-center gap-2">
+            //     <UserRound />
+            //     Account
+            //   </div>
+            // </Link>
+            <form action={logout} className="contents">
+              <Button
+                variant="outline"
+                type="submit"
+                className="text-sm font-medium hover:text-primary transition-colors hover:underline cursor-pointer"
+              >
+                <LogOut />
+                Logout
+              </Button>
+            </form>
           ) : (
             <Link
               href="/account"
