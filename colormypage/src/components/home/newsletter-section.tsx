@@ -3,7 +3,7 @@
 import type React from "react"
 
 import { useState } from "react"
-import { Mail, Send, Sparkles } from "lucide-react"
+import { Mail, Send } from "lucide-react"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 
@@ -33,11 +33,6 @@ export function NewsletterSection() {
     <section className="w-full py-16">
       <div className="container mx-auto px-4">
       <div className="relative bg-[#f2f0ff] rounded-3xl p-8 md:p-12 overflow-hidden">
-        {/* Star icon in top left */}
-        <div className="absolute top-6 left-6 bg-[#9d84ff] rounded-xl p-3">
-          <Sparkles className="h-5 w-5 text-white" />
-        </div>
-
         <div className="max-w-3xl mx-auto text-center mt-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             <span className="text-[#9d84ff]">Join</span> Our Coloring Community
@@ -61,14 +56,15 @@ export function NewsletterSection() {
             </div>
             <Button
               type="submit"
-              className="bg-[#9d84ff] hover:bg-[#8a6dff] text-white rounded-full py-6 px-8"
+              className="bg-[#9d84ff] hover:bg-[#8a6dff] text-white rounded-full py-6 px-8 cursor-pointer"
               disabled={isSubmitting}
             >
               {isSubmitting ? (
                 "Signing Up..."
               ) : (
                 <>
-                  Sign Up <Send className="ml-2 h-4 w-4" />
+                  Sign Up
+                  <Send className="ml-2 h-4 w-4" />
                 </>
               )}
             </Button>
