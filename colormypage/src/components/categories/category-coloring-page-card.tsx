@@ -22,6 +22,21 @@ export function CategoryColoringPageCard({ page, userId }: ColoringPageCardProps
   const [isFavorited, setIsFavorited] = useState(false)
   const [isShareModalOpen, setIsShareModalOpen] = useState(false)
 
+  useEffect(() => {
+    const checkIfFavorited = async () => {
+      if (userId) {
+        const { data: favorited } = await supabase
+          .from("favorited_coloring_pages")
+          .select("coloring_page_id, user_id")
+          .eq("coloring_page_id", page.id)
+          .eq("user_id", userId)
+          .single()
+        setIsFavorited(!!favorited)
+      }
+    }
+    checkIfFavorited()
+  }, [userId, page.id, supabase])
+
   const handleFavorite = async (e: React.MouseEvent) => {
     e.preventDefault()
     e.stopPropagation()

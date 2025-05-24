@@ -2,9 +2,9 @@
 
 import type React from "react"
 
-import { useState, useRef } from "react"
+import { useState, useRef, useEffect } from "react"
 import Image from "next/image"
-import { Download, Heart, Share2, Printer } from "lucide-react"
+import { Heart, Share2, Printer } from "lucide-react"
 import { Button } from "@/components/ui/button"
 // import { RecommendedPages } from "@/components/coloring-page/recommended-pages";
 import { ShareModal } from "@/components/share-modal"
@@ -33,6 +33,21 @@ export function ColoringPageView({
   const [isFavorited, setIsFavorited] = useState(false)
   const [isShareModalOpen, setIsShareModalOpen] = useState(false)
   const coloringImageRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const checkIfFavorited = async () => {
+      if (userId) {
+        const { data: favorited } = await supabase
+          .from("favorited_coloring_pages")
+          .select("coloring_page_id, user_id")
+          .eq("coloring_page_id", coloringPage.id)
+          .eq("user_id", userId)
+          .single()
+        setIsFavorited(!!favorited)
+      }
+    }
+    checkIfFavorited()
+  }, [userId, coloringPage.id, supabase])
 
   const handleFavorite = async (e: React.MouseEvent) => {
     e.preventDefault()
@@ -242,7 +257,7 @@ export function ColoringPageView({
               <div className="mt-8 bg-[#f2f0ff] rounded-lg p-4">
                 <h2 className="text-lg font-bold mb-2">Coloring Tips</h2>
                 <ul className="list-disc list-inside text-gray-700 space-y-1">
-                  <li>Print on standard letter-sized paper (8.5" x 11")</li>
+                  <li>Print on standard letter-sized paper (8.5&quot; x 11&quot;)</li>
                   <li>Use colored pencils, crayons, or markers</li>
                   <li>Start with lighter colors and gradually add darker shades</li>
                   <li>Take your time and enjoy the process!</li>
