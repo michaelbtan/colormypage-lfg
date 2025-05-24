@@ -1,4 +1,4 @@
-import { HeroSection } from "@/components/home/hero-section"
+import { ImageCarousel } from "@/components/home/image-carousel"
 import { CategoriesSection } from "@/components/home/categories-section"
 import { NewsletterSection } from "@/components/home/newsletter-section"
 // import { EasterSection } from "@/components/home/easter-section"
@@ -51,10 +51,20 @@ export default async function Home() {
 
   return (
     <div>
-      <HeroSection />
-      <CategoriesSection title="Trending Coloring Pages" categories={categories} userId={user?.id || null} viewAllLink="/categories" />
+      <ImageCarousel />
+      <CategoriesSection
+        title="Trending Coloring Pages"
+        categories={categories}
+        userId={user?.id || null}
+        viewAllLink="/categories"
+      />
       <NewsletterSection />
-      <CategoriesSection title="New Coloring Pages" categories={categories} userId={user?.id || null} viewAllLink="/categories" />
+      <CategoriesSection
+        title="New Coloring Pages"
+        categories={categories}
+        userId={user?.id || null}
+        viewAllLink="/categories"
+      />
       {/* <EasterSection easterPages={easterPages} /> */}
     </div>
   )
