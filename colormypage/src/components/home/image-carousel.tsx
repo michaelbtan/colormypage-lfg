@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { ChevronLeft, ChevronRight } from "lucide-react"
+import { ChevronLeft, ChevronRight, Play, Pause } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 
@@ -145,7 +145,7 @@ export function ImageCarousel() {
           className="bg-white/80 hover:bg-white/90 text-gray-800 px-3 py-1 rounded-full text-xs md:text-sm font-medium transition-colors"
           aria-label={isAutoPlaying ? "Pause autoplay" : "Resume autoplay"}
         >
-          {isAutoPlaying ? "Pause" : "Play"}
+          {isAutoPlaying ? <Pause /> : <Play />}
         </button>
       </div>
     </div>

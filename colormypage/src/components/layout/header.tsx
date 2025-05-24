@@ -9,25 +9,22 @@ import { logout } from "@/lib/supabase/actions/auth";
 export async function Header() {
   const supabase = await createClient();
   const { data } = await supabase.auth.getUser();
+  const isLoggedIn = data.user != null;
 
-  let isLoggedIn;
-  if (data.user != null) {
-    isLoggedIn = true;
-  } else {
-    isLoggedIn = false;
-  }
   const navigationItems = [
-    { name: "Categories", href: "/categories", icon: <Palette /> },
-    { name: "Favorites", href: "/dashboard", icon: <Heart /> },
+    { name: "Categories", href: "/categories", icon: <Palette className="h-6 w-6" /> },
+    { name: "Favorites", href: "/dashboard",  icon: <Heart   className="h-6 w-6" /> },
   ];
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto px-4 flex h-16 items-center justify-between">
+      {/* increased h-24 and extra py */}
+      <div className="container mx-auto px-4 flex h-24 items-center justify-between py-2">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2">
-          <Palette className="h-6 w-6 text-primary" />
-          <span className="hidden font-bold text-xl sm:inline-block">
+        <Link href="/" className="flex items-center gap-3">
+          <Palette className="h-8 w-8 text-blue-500" />
+          {/* bumped from text-xl to text-3xl */}
+          <span className="hidden text-3xl font-extrabold sm:inline-block text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-yellow-500 via-green-500 via-blue-500 to-purple-500">
             ColorMyPage
           </span>
         </Link>
@@ -36,48 +33,36 @@ export async function Header() {
         <SearchBar />
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-4">
-          {navigationItems.map((item) => (
+        <nav className="hidden md:flex items-center gap-6">
+          {navigationItems.map(({ name, href, icon }) => (
             <Link
-              key={item.name}
-              href={item.href}
-              className="text-sm font-medium hover:text-primary transition-colors hover:underline"
+              key={name}
+              href={href}
+              className="text-lg font-semibold hover:text-primary transition-colors hover:underline flex items-center gap-2"
             >
-              <div className="flex items-center gap-2">
-                {item?.icon}
-                {item.name}
-              </div>
+              {icon}
+              {name}
             </Link>
           ))}
+
           {isLoggedIn ? (
-            // <Link
-            //   href="/dashboard"
-            //   className="text-sm font-medium hover:text-primary transition-colors hover:underline"
-            // >
-            //   <div className="flex items-center gap-2">
-            //     <UserRound />
-            //     Account
-            //   </div>
-            // </Link>
             <form action={logout} className="contents">
               <Button
                 variant="outline"
                 type="submit"
-                className="text-sm font-medium hover:text-primary transition-colors hover:underline cursor-pointer"
+                className="text-lg font-semibold hover:text-primary transition-colors hover:underline flex items-center gap-2"
               >
-                <LogOut />
+                <LogOut className="h-6 w-6" />
                 Logout
               </Button>
             </form>
           ) : (
             <Link
               href="/account"
-              className="text-sm font-medium hover:text-primary transition-colors hover:underline"
+              className="text-lg font-semibold hover:text-primary transition-colors hover:underline flex items-center gap-2"
             >
-              <div className="flex items-center gap-2">
-                <LogIn />
-                Sign in
-              </div>
+              <LogIn className="h-6 w-6" />
+              Sign in
             </Link>
           )}
         </nav>

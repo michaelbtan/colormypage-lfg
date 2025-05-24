@@ -1,11 +1,15 @@
 import type React from "react"
 import "@/app/globals.css"
-import { Inter } from "next/font/google"
+import { Fredoka } from "next/font/google" // Updated font
 import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
 import { Toaster } from "@/components/ui/sonner"
 
-const inter = Inter({ subsets: ["latin"] })
+// Import Fredoka with desired options (e.g., weights, subsets)
+const fredoka = Fredoka({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"], // Adjust weights as needed
+})
 
 export const metadata = {
   title: "ColorMyPage - Free Printable Coloring Pages",
@@ -19,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} min-h-screen flex flex-col`}>
+      <body className={`${fredoka.className} min-h-screen flex flex-col`}>
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
