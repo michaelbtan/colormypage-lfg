@@ -47,7 +47,7 @@ export function AuthUI() {
           </div>
 
           {/* Form Container with Tabs */}
-          <div className="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300">
+          <div className="rounded-xl shadow-md border border-gray-100 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
             {/* Tabs */}
             <div className="flex mb-6 border-b">
               <button

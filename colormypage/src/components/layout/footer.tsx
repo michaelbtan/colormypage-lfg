@@ -9,7 +9,7 @@ export function Footer() {
           {/* Logo and Description */}
           <div className="flex flex-col gap-2">
             <Link href="/" className="inline-block">
-              <div className="flex items-center justify-center gap-2">
+              <div className="flex items-center gap-2">
                 <Palette className="h-6 w-6 text-[#9d84ff]" />
                 <h1 className="text-3xl font-bold">
                   <span className="text-[#9d84ff]">Color</span>

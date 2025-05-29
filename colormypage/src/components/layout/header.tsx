@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Palette, Heart, LogIn, LogOut } from "lucide-react";
-import { SearchBar } from "./search-bar";
+// import { SearchBar } from "./search-bar";
 import { MobileMenu } from "./mobile-menu";
 import { createClient } from "@/lib/supabase/server";
 import { logout } from "@/lib/supabase/actions/auth";
@@ -41,7 +41,7 @@ export async function Header() {
         </Link>
 
         {/* Search Component */}
-        <SearchBar />
+        {/* <SearchBar /> */}
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-6">
@@ -59,9 +59,8 @@ export async function Header() {
           {isLoggedIn ? (
             <form action={logout} className="contents">
               <Button
-                variant="outline"
                 type="submit"
-                className="text-lg font-semibold hover:text-primary transition-colors hover:underline flex items-center gap-2"
+                className="text-lg text-white font-semibold bg-[#9d84ff] hover:bg-[#8a6dff] flex items-center gap-2 cursor-pointer"
               >
                 <LogOut className="h-6 w-6" />
                 Logout

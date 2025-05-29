@@ -27,7 +27,7 @@ export default function ContactPage() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             {/* Contact Form */}
-            <div className="bg-white rounded-xl shadow-md p-6 md:p-8 border border-gray-100">
+            <div className="p-6 md:p-8 rounded-xl shadow-md border border-gray-100 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
               <div className="flex items-center mb-6">
                 <div className="bg-[#9d84ff]/10 p-3 rounded-full mr-4">
                   <MessageSquare className="h-5 w-5 text-[#9d84ff]" />

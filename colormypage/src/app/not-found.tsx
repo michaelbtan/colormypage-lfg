@@ -74,7 +74,10 @@ export default function NotFound() {
             </Link>
           </Button>
 
-          <Button asChild variant="outline" className="rounded-full">
+          <Button
+            asChild
+            className="bg-[#9d84ff] hover:bg-[#8a6dff] rounded-full"
+          >
             <Link href="/categories">
               <Palette className="mr-2 h-4 w-4" />
               Browse Coloring Pages
@@ -82,7 +85,7 @@ export default function NotFound() {
           </Button>
         </div>
 
-        <div className="mt-12 p-4 bg-[#f2f0ff] rounded-lg">
+        <div className="mt-12 p-4 rounded-lg">
           <p className="text-gray-700 italic">
             &quot;Why did the coloring page cross the road? To get to the other{" "}
             <span className="line-through">side</span> site!&quot;

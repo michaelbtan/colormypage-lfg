@@ -12,11 +12,14 @@ export default function AboutPage() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-[#f2f0ff] to-white py-16 md:py-20">
+      <section className="py-16 md:py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              About <span className="text-[#9d84ff]">ColorMyPage</span>
+              About{" "}
+              <span className="text-[#9d84ff]">Color</span>
+              <span className="text-gray-800">My</span>
+              <span className="text-gray-800">Page</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8">
               We're on a mission to bring joy, creativity, and learning through the simple pleasure of coloring.
@@ -58,13 +61,13 @@ export default function AboutPage() {
       </section>
 
       {/* What Makes Us Special - Simplified */}
-      <section className="py-16 bg-[#f2f0ff]">
+      <section className="py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold mb-10 text-center">What Makes Us Special</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Feature 1 */}
-            <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+            <div className="p-6 rounded-xl shadow-md border border-gray-100 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
               <div className="w-12 h-12 bg-[#9d84ff]/10 rounded-full flex items-center justify-center mb-4">
                 <Palette className="h-6 w-6 text-[#9d84ff]" />
               </div>
@@ -76,7 +79,7 @@ export default function AboutPage() {
             </div>
 
             {/* Feature 2 */}
-            <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+            <div className="p-6 rounded-xl shadow-md border border-gray-100 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
               <div className="w-12 h-12 bg-[#5bbce4]/10 rounded-full flex items-center justify-center mb-4">
                 <PenTool className="h-6 w-6 text-[#5bbce4]" />
               </div>
@@ -88,7 +91,7 @@ export default function AboutPage() {
             </div>
 
             {/* Feature 3 */}
-            <div className="bg-white p-6 rounded-xl shadow-md border border-gray-100">
+            <div className="p-6 rounded-xl shadow-md border border-gray-100 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
               <div className="w-12 h-12 bg-[#ffb380]/10 rounded-full flex items-center justify-center mb-4">
                 <Heart className="h-6 w-6 text-[#ffb380]" />
               </div>

@@ -126,7 +126,7 @@ export default function FavoriteColoringPageCard({
       </Link>
 
       <div className="mt-2">
-        <h3 className="text-sm font-medium text-gray-900 truncate">
+        <h3 className="text-xl font-medium text-gray-900 truncate">
           {page.title}
         </h3>
       </div>
