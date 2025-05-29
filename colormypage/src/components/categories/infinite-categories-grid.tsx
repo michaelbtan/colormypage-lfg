@@ -13,18 +13,21 @@ export interface Category {
   image_url: string
   image_count: number
   description?: string // Optional as it's not in your current data
+  categoryFavorited?: boolean // Optional, added for favorited state
 }
 
 interface InfiniteCategoriesGridProps {
   initialCategories: Category[]
   initialHasMore: boolean
   totalCount: number
+  userId?: string | null
 }
 
 export function InfiniteCategoriesGrid({ 
   initialCategories, 
   initialHasMore,
-  totalCount
+  totalCount,
+  userId = null
 }: InfiniteCategoriesGridProps) {
   const [categories, setCategories] = useState<Category[]>(initialCategories)
   const [page, setPage] = useState(1)
@@ -117,8 +120,8 @@ export function InfiniteCategoriesGrid({
             title={category.title}
             imageUrl={category.image_url}
             imageCount={category.image_count}
-            onFavorite={(id) => console.log(`Toggled favorite for category ${id}`)}
-            onShare={(id) => console.log(`Shared category ${id}`)}
+            categoryFavorited={category.categoryFavorited}
+            userId={userId}
           />
         ))}
       </div>
