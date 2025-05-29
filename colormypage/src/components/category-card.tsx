@@ -115,7 +115,7 @@ export function CategoryCard({
               onClick={handleShare}
               size="icon"
               variant="outline"
-              className="h-8 w-8 rounded-full bg-white/80 backdrop-blur-sm hover:bg-white shadow-sm"
+              className="h-8 w-8 rounded-full bg-white/80 backdrop-blur-sm hover:bg-white shadow-sm cursor-pointer"
               aria-label="Share"
             >
               <Share2 className="h-4 w-4 text-gray-700" />
@@ -125,7 +125,7 @@ export function CategoryCard({
               size="icon"
               variant={isFavorited ? "default" : "outline"}
               className={cn(
-                "h-8 w-8 rounded-full shadow-sm",
+                "h-8 w-8 rounded-full shadow-sm cursor-pointer",
                 isFavorited
                   ? "bg-[#9d84ff] hover:bg-[#8a6dff]"
                   : "bg-white/80 backdrop-blur-sm text-gray-700 hover:bg-white",

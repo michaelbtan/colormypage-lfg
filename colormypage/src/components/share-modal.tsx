@@ -83,7 +83,7 @@ export function ShareModal({ isOpen, onClose, title, imageUrl, pageUrl }: ShareM
       })
       // Reset the copied state after 2 seconds
       setTimeout(() => setCopied(false), 2000)
-    } catch (err) {
+    } catch {
       toast("Failed to copy", {
         description: "Please try again or copy the link manually.",
       })
@@ -100,7 +100,7 @@ export function ShareModal({ isOpen, onClose, title, imageUrl, pageUrl }: ShareM
 
   return (
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
-      <DialogContent className="sm:max-w-md max-w-[95vw] p-4 sm:p-6">
+      <DialogContent className="sm:max-w-md w-full max-w-[95vw] p-4 sm:p-6">
         <DialogHeader>
           <DialogTitle>Share Coloring Page</DialogTitle>
           <DialogDescription>Share this coloring page with friends and family</DialogDescription>
@@ -118,7 +118,7 @@ export function ShareModal({ isOpen, onClose, title, imageUrl, pageUrl }: ShareM
           </div>
         </div>
 
-        <div className="grid grid-cols-3 sm:grid-cols-5 gap-2 py-4">
+        <div className="grid grid-cols-3 sm:grid-cols-5 gap-3 py-4">
           {shareOptions.map((option) => (
             <button
               key={option.name}
@@ -133,9 +133,9 @@ export function ShareModal({ isOpen, onClose, title, imageUrl, pageUrl }: ShareM
 
         <div className="flex items-center mt-2">
           <div className="w-full">
-            <div className="flex items-center justify-between rounded-md border px-3 py-2">
-              <div className="flex-grow overflow-hidden mr-2">
-                <p className="text-xs sm:text-sm text-gray-500 truncate" title={fullPageUrl}>
+            <div className="flex items-center justify-between rounded-md border px-3 py-2 gap-2">
+              <div className="flex-grow overflow-hidden">
+                <p className="text-xs sm:text-sm text-gray-500 truncate w-full" title={fullPageUrl}>
                   {fullPageUrl}
                 </p>
               </div>
