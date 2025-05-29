@@ -12,8 +12,16 @@ export async function Header() {
   const isLoggedIn = data.user != null;
 
   const navigationItems = [
-    { name: "Categories", href: "/categories", icon: <Palette className="h-6 w-6" /> },
-    { name: "Favorites", href: "/dashboard",  icon: <Heart   className="h-6 w-6" /> },
+    {
+      name: "Categories",
+      href: "/categories",
+      icon: <Palette className="h-6 w-6" />,
+    },
+    {
+      name: "Favorites",
+      href: "/dashboard",
+      icon: <Heart className="h-6 w-6" />,
+    },
   ];
 
   return (
@@ -22,11 +30,14 @@ export async function Header() {
       <div className="container mx-auto px-4 flex h-24 items-center justify-between py-2">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3">
-          <Palette className="h-8 w-8 text-blue-500" />
-          {/* bumped from text-xl to text-3xl */}
-          <span className="hidden text-3xl font-extrabold sm:inline-block text-transparent bg-clip-text bg-gradient-to-r from-red-500 via-yellow-500 via-green-500 via-blue-500 to-purple-500">
-            ColorMyPage
-          </span>
+          <div className="flex items-center justify-center gap-2">
+            <Palette className="h-6 w-6 text-[#9d84ff]" />
+            <h1 className="text-3xl font-bold">
+              <span className="text-[#9d84ff]">Color</span>
+              <span className="text-gray-800">My</span>
+              <span className="text-gray-800">Page</span>
+            </h1>
+          </div>
         </Link>
 
         {/* Search Component */}

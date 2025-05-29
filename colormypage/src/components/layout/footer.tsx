@@ -8,9 +8,15 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {/* Logo and Description */}
           <div className="flex flex-col gap-2">
-            <Link href="/" className="flex items-center gap-2">
-              <Palette className="h-6 w-6 text-primary" />
-              <span className="font-bold text-xl">ColorMyPage</span>
+            <Link href="/" className="inline-block">
+              <div className="flex items-center justify-center gap-2">
+                <Palette className="h-6 w-6 text-[#9d84ff]" />
+                <h1 className="text-3xl font-bold">
+                  <span className="text-[#9d84ff]">Color</span>
+                  <span className="text-gray-800">My</span>
+                  <span className="text-gray-800">Page</span>
+                </h1>
+              </div>
             </Link>
             <p className="text-sm text-muted-foreground mt-2">
               Free, high-quality coloring pages for kids, parents, and teachers.

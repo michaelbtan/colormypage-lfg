@@ -39,7 +39,7 @@ export default async function DashboardPage() {
       />
 
       {/* Favorite Pages Section */}
-      <div className="bg-white rounded-xl shadow-md p-6 border border-gray-100 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="rounded-xl shadow-md p-6 border border-gray-100 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-xl font-bold">Favorite Coloring Pages</h2>
           <span className="bg-[#9d84ff]/10 text-[#9d84ff] text-sm font-medium px-2.5 py-1 rounded-full">
@@ -50,7 +50,7 @@ export default async function DashboardPage() {
       </div>
 
       {/* Favorite Categories Section */}
-      <div className="bg-white rounded-xl shadow-md p-6 border border-gray-100 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="rounded-xl shadow-md p-6 border border-gray-100 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <h2 className="text-xl font-bold mb-6">Favorite Categories</h2>
         <FavoriteCategories favoriteCategories={favoriteCategories} userId={user.id || null} />
       </div>
