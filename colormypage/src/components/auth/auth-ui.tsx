@@ -24,7 +24,7 @@ export function AuthUI() {
   }
 
   return (
-    <div className="flex min-h-screen bg-gradient-to-b from-[#f2f0ff] to-white">
+    <div className="flex min-h-screen">
       <div className="flex flex-col items-center justify-center w-full p-6">
         <div className="w-full max-w-md">
           <div className="mb-8 text-center">

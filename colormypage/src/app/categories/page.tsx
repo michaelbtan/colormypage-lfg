@@ -24,7 +24,7 @@ export default async function CategoriesPage() {
   const hasMore = count ? (categories?.length || 0) < count : false;
 
   return (
-    <div className="bg-gray-50 py-8">
+    <div className="py-8">
       <div className="container mx-auto px-4">
         <h1 className="text-3xl font-bold mb-8">All Categories</h1>
 

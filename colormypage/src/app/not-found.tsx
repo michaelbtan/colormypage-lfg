@@ -2,11 +2,11 @@
 
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Home, Search, Palette, RefreshCw } from "lucide-react";
+import { Home, Palette } from "lucide-react";
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center p-4 bg-gradient-to-b from-[#f2f0ff] to-white">
+    <div className="min-h-screen flex flex-col items-center justify-center p-4">
       <div className="max-w-md w-full text-center">
         {/* Funny 404 illustration */}
         <div className="relative h-64 w-full mb-6">
