@@ -1,43 +1,37 @@
-import { notFound } from "next/navigation";
-import { CategoryHeader } from "@/components/categories/category-header";
-import { ColoringPageGrid } from "@/components/categories/coloring-page-grid";
-import { OurFavorites } from "@/components/categories/our-favorites";
-import { AdPlaceholder } from "@/components/coloring-page/ad-placeholder";
-import { createClient } from "@/lib/supabase/server";
+import { notFound } from "next/navigation"
+import { CategoryHeader } from "@/components/categories/category-header"
+import { ColoringPageGrid } from "@/components/categories/coloring-page-grid"
+import { createClient } from "@/lib/supabase/server"
 
 export default async function CategoryPage({
   params,
 }: {
-  params: { categoryId: string };
+  params: { categoryId: string }
 }) {
-  const { categoryId } = params;
-  const supabase = await createClient();
+  const { categoryId } = params
+  const supabase = await createClient()
 
   const {
     data: { user },
-  } = await supabase.auth.getUser();
+  } = await supabase.auth.getUser()
 
   // Fetch category data
-  const { data: category } = await supabase
-    .from("categories")
-    .select("*")
-    .eq("id", categoryId)
-    .single();
+  const { data: category } = await supabase.from("categories").select("*").eq("id", categoryId).single()
 
   if (!category) {
-    notFound();
+    notFound()
   }
 
   // Check if category is favorited by the current user
-  let isFavorited = false;
+  let isFavorited = false
   if (user) {
     const { data: favorited } = await supabase
       .from("favorited_categories")
       .select("*")
       .eq("category_id", categoryId)
       .eq("user_id", user.id)
-      .single();
-    isFavorited = !!favorited;
+      .single()
+    isFavorited = !!favorited
   }
 
   // Fetch coloring pages for the category with related coloring_pages data
@@ -55,14 +49,14 @@ export default async function CategoryPage({
       is_published
     )
   `,
-      { count: "exact" }
+      { count: "exact" },
     )
     .eq("category_id", categoryId)
     .order("created_at", { ascending: false })
-    .range(0, 11); // Get first 12 items (0-11)
+    .range(0, 11) // Get first 12 items (0-11)
 
   // Calculate if there are more pages
-  const hasMore = count ? pages.length < count : false;
+  const hasMore = count ? pages.length < count : false
 
   return (
     <div>
@@ -100,5 +94,5 @@ export default async function CategoryPage({
         </div>
       </div>
     </div>
-  );
+  )
 }

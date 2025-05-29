@@ -100,49 +100,72 @@ export function ShareModal({ isOpen, onClose, title, imageUrl, pageUrl }: ShareM
 
   return (
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
-      <DialogContent className="sm:max-w-md w-full max-w-[95vw] p-4 sm:p-6">
-        <DialogHeader>
-          <DialogTitle>Share Coloring Page</DialogTitle>
-          <DialogDescription>Share this coloring page with friends and family</DialogDescription>
-        </DialogHeader>
-
-        <div className="flex items-center space-x-4 py-4">
-          <div className="relative h-16 w-24 flex-shrink-0 overflow-hidden rounded-md border">
-            <Image src={imageUrl || "/placeholder.svg"} alt={title} fill className="object-cover" />
-          </div>
-          <div className="flex-1 min-w-0 overflow-hidden">
-            <h3 className="text-sm font-medium text-gray-900 truncate">{title}</h3>
-            <p className="text-xs text-gray-500 truncate mt-1" title={fullPageUrl}>
-              {displayUrl(fullPageUrl)}
-            </p>
-          </div>
+      <DialogContent className="sm:max-w-xl w-full max-w-[95vw] p-0 overflow-hidden bg-gradient-to-br from-cyan-50 to-blue-100 border-0 shadow-2xl">
+        <div className="bg-gradient-to-r from-purple-400 to-purple-500 p-6 text-white">
+          <DialogHeader>
+            <DialogTitle className="text-xl font-bold text-white">Share Coloring Page</DialogTitle>
+            <DialogDescription className="text-purple-100">
+              Share this coloring page with friends and family
+            </DialogDescription>
+          </DialogHeader>
         </div>
 
-        <div className="grid grid-cols-3 sm:grid-cols-5 gap-3 py-4">
-          {shareOptions.map((option) => (
-            <button
-              key={option.name}
-              onClick={() => handleShare(option)}
-              className="flex flex-col items-center justify-center gap-1 rounded-lg p-2 hover:bg-gray-100 transition-colors"
-            >
-              <option.icon className="h-5 w-5" style={{ color: option.color }} />
-              <span className="text-xs">{option.name}</span>
-            </button>
-          ))}
-        </div>
+        <div className="p-4 sm:p-6">
+          <div className="flex items-center space-x-4 py-4 bg-white rounded-2xl p-4 shadow-sm border border-purple-100">
+            <div className="relative h-16 w-24 flex-shrink-0 overflow-hidden rounded-xl border-2 border-purple-200">
+              <Image src={imageUrl || "/placeholder.svg"} alt={title} fill className="object-cover" />
+            </div>
+            <div className="flex-1 min-w-0 overflow-hidden">
+              <h3 className="text-sm font-semibold text-gray-800 truncate">{title}</h3>
+              <p className="text-xs text-purple-600 truncate mt-1" title={fullPageUrl}>
+                {displayUrl(fullPageUrl)}
+              </p>
+            </div>
+          </div>
 
-        <div className="flex items-center mt-2">
-          <div className="w-full">
-            <div className="flex items-center justify-between rounded-md border px-3 py-2 gap-2">
-              <div className="flex-grow overflow-hidden">
-                <p className="text-xs sm:text-sm text-gray-500 truncate w-full" title={fullPageUrl}>
-                  {fullPageUrl}
-                </p>
+          <div className="grid grid-cols-2 sm:grid-cols-5 gap-2 py-6">
+            {shareOptions.map((option) => (
+              <button
+                key={option.name}
+                onClick={() => handleShare(option)}
+                className="flex flex-col items-center justify-center gap-1 rounded-2xl p-2 bg-white hover:bg-purple-50 transition-all duration-200 shadow-sm border border-purple-100 hover:border-purple-200 hover:shadow-md transform hover:scale-105"
+              >
+                <div
+                  className="w-7 h-7 rounded-full flex items-center justify-center"
+                  style={{ backgroundColor: `${option.color}15` }}
+                >
+                  <option.icon className="h-4 w-4" style={{ color: option.color }} />
+                </div>
+                <span className="text-xs font-medium text-gray-700 text-center leading-tight">{option.name}</span>
+              </button>
+            ))}
+          </div>
+
+          <div className="mt-4">
+            <div className="bg-white rounded-2xl border-2 border-purple-200 overflow-hidden shadow-sm">
+              <div className="flex items-center justify-between px-2 py-2 gap-2">
+                <div className="flex-grow overflow-hidden min-w-0">
+                  <p
+                    className="text-xs sm:text-sm text-gray-600 truncate w-full font-medium break-all"
+                    title={fullPageUrl}
+                  >
+                    {fullPageUrl}
+                  </p>
+                </div>
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={copyToClipboard}
+                  className="h-7 w-7 p-0 flex-shrink-0 rounded-xl hover:bg-purple-100 transition-colors"
+                >
+                  {copied ? (
+                    <Check className="h-3.5 w-3.5 text-green-500" />
+                  ) : (
+                    <Copy className="h-3.5 w-3.5 text-purple-600" />
+                  )}
+                  <span className="sr-only">Copy link</span>
+                </Button>
               </div>
-              <Button variant="ghost" size="sm" onClick={copyToClipboard} className="h-8 w-8 p-0 flex-shrink-0">
-                {copied ? <Check className="h-4 w-4 text-green-500" /> : <Copy className="h-4 w-4" />}
-                <span className="sr-only">Copy link</span>
-              </Button>
             </div>
           </div>
         </div>

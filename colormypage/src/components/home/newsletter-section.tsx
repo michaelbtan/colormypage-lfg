@@ -56,7 +56,7 @@ export function NewsletterSection() {
             </div>
             <Button
               type="submit"
-              className="bg-[#9d84ff] hover:bg-[#8a6dff] text-white rounded-full py-6 px-8 cursor-pointer"
+              className="bg-[#9d84ff] hover:bg-[#9d84ff] text-white rounded-full py-6 px-8 cursor-pointer transition-transform hover:scale-105"
               disabled={isSubmitting}
             >
               {isSubmitting ? (

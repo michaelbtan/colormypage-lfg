@@ -140,13 +140,13 @@ export function ImageCarousel() {
 
       {/* Auto-play indicator */}
       <div className="absolute top-4 right-4">
-        <button
+        <Button
           onClick={() => setIsAutoPlaying(!isAutoPlaying)}
-          className="bg-white/80 hover:bg-white/90 text-gray-800 px-3 py-1 rounded-full text-xs md:text-sm font-medium transition-colors"
           aria-label={isAutoPlaying ? "Pause autoplay" : "Resume autoplay"}
+          className="cursor-pointer bg-[#9d84ff]/20 backdrop-blur-sm hover:bg-[#9d84ff]/30 border border-[#9d84ff]/30 text-[#9d84ff] hover:text-white"
         >
           {isAutoPlaying ? <Pause /> : <Play />}
-        </button>
+        </Button>
       </div>
     </div>
   )
