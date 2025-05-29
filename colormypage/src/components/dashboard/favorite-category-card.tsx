@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { cn } from "@/lib/utils"
 import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight, Star, Share2 } from "lucide-react";
@@ -98,30 +99,33 @@ export function FavoriteCategoryCard({
           </p>
         </div>
         <div className="flex items-center gap-2">
-          <Button
-            size="sm"
-            variant="ghost"
-            className="rounded-full h-8 w-8 p-0"
-            title="Share"
-            onClick={handleShare}
-          >
-            <Share2 className="h-4 w-4 text-gray-400 hover:text-gray-600" />
-            <span className="sr-only">Share</span>
-          </Button>
-          <Button
-            size="sm"
-            variant="ghost"
-            className={`rounded-full ${
-              isFavorited
-                ? "bg-[#9d84ff] text-white border-[#9d84ff]/40 hover:bg-[#8a6dff]"
-                : "bg-white/80 text-gray-700 border-white/40 hover:bg-white/90"
-            } h-8 w-8 p-0`}
-            title="Favorited"
-            onClick={handleFavorite}
-          >
-            <Star className={`h-4 w-4 ${isFavorited ? "fill-white" : ""}`} />
-            <span className="sr-only">Favorited</span>
-          </Button>
+              <Button
+                onClick={handleShare}
+                size="icon"
+                variant="outline"
+                className="h-8 w-8 rounded-full bg-[#9d84ff]/20 backdrop-blur-sm hover:bg-[#9d84ff]/30 shadow-sm cursor-pointer border border-[#9d84ff]/30"
+                aria-label="Share"
+              >
+                <Share2 className="h-4 w-4 text-[#9d84ff]" />
+                <span className="sr-only">Share</span>
+              </Button>
+              <Button
+                onClick={handleFavorite}
+                size="icon"
+                variant="outline"
+                className={cn(
+                  "h-8 w-8 rounded-full shadow-sm cursor-pointer",
+                  isFavorited
+                    ? "bg-[#9d84ff] hover:bg-[#8a6dff] text-white hover:text-white"
+                    : "bg-[#9d84ff]/20 backdrop-blur-sm hover:bg-[#9d84ff]/30 border border-[#9d84ff]/30 text-[#9d84ff] hover:text-white",
+                )}
+                aria-label={isFavorited ? "Remove from favorites" : "Add to favorites"}
+              >
+                <Star className="h-4 w-4" />
+                <span className="sr-only">
+                  {isFavorited ? "Remove from favorites" : "Add to favorites"}
+                </span>
+              </Button>
           <ChevronRight className="h-4 w-4 text-gray-400" />
         </div>
       </Link>

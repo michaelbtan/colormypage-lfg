@@ -118,21 +118,21 @@ export function CategoryCard({
               <Button
                 onClick={handleFavorite}
                 size="icon"
-                variant={isFavorited ? "default" : "outline"}
+                variant="outline"
                 className={cn(
                   "h-8 w-8 rounded-full shadow-sm cursor-pointer",
                   isFavorited
-                    ? "bg-[#9d84ff] hover:bg-[#8a6dff]"
-                    : "bg-white/80 backdrop-blur-sm text-gray-700 hover:bg-white"
+                    ? "bg-[#9d84ff] hover:bg-[#8a6dff] text-white hover:text-white"
+                    : "bg-[#9d84ff]/20 backdrop-blur-sm hover:bg-[#9d84ff]/30 border border-[#9d84ff]/30 text-[#9d84ff] hover:text-white"
                 )}
                 aria-label={
                   isFavorited ? "Remove from favorites" : "Add to favorites"
                 }
               >
-                <Star
-                  className="h-4 w-4"
-                  fill={isFavorited ? "currentColor" : "none"}
-                />
+                <Star className="h-4 w-4" />
+                <span className="sr-only">
+                  {isFavorited ? "Remove from favorites" : "Add to favorites"}
+                </span>
               </Button>
             </div>
 
