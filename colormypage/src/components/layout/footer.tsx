@@ -56,6 +56,22 @@ const policyLinks = [
   },
 ];
 
+// Help & Support Links Mapping
+const helpLinks = [
+  {
+    href: "/about",
+    label: "About Us",
+  },
+  {
+    href: "/faq",
+    label: "FAQ",
+  },
+  {
+    href: "/contact",
+    label: "Contact Us",
+  },
+];
+
 export function Footer() {
   return (
     <footer className="w-full border-t bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -63,7 +79,7 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {/* Logo and Description */}
           <div className="flex flex-col gap-2">
-            <Link href="/" className="inline-block">
+            <Link href="/" className="inline-block transition-transform duration-300 hover:scale-110">
               <div className="flex items-center gap-2">
                 <Image
                   src={logo}
@@ -127,30 +143,16 @@ export function Footer() {
           <div>
             <h3 className="mb-3 text-lg font-medium">Help & Support</h3>
             <ul className="space-y-2 text-sm">
-              <li>
-                <Link
-                  href="/about"
-                  className="text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/faq"
-                  className="text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  FAQ
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/contact"
-                  className="text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  Contact Us
-                </Link>
-              </li>
+              {helpLinks.map((link, index) => (
+                <li key={index}>
+                  <Link
+                    href={link.href}
+                    className="text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -166,17 +168,13 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  {social.icon ? (
-                    <Image
-                      src={social.icon}
-                      alt={social.label}
-                      width={25}
-                      height={25}
-                      className="h-7 w-7"
-                    />
-                  ) : (
-                    social.component
-                  )}
+                  <Image
+                    src={social.icon}
+                    alt={social.label}
+                    width={25}
+                    height={25}
+                    className="h-7 w-7 transition-transform duration-300 hover:scale-110"
+                  />
                   <span className="sr-only">{social.label}</span>
                 </Link>
               ))}
