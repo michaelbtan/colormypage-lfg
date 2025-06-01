@@ -1,8 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { Mail, RefreshCw, ArrowLeft, Clock } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { Mail, ArrowLeft, Clock } from "lucide-react"
 
 export default function CheckEmailClient() {
   return (

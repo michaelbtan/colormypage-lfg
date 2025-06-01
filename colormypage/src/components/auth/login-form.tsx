@@ -204,7 +204,7 @@ export function LoginForm() {
 
         <Button
           type="submit"
-          className="w-full rounded-full py-6 h-auto bg-[#9d84ff] hover:bg-[#8a6dff] text-white font-medium cursor-pointer"
+          className="w-full rounded-full py-6 h-auto bg-[#9d84ff] hover:bg-[#8a6dff] text-white font-medium cursor-pointer transition-transform duration-300 hover:scale-105"
           disabled={isLoading}
         >
           {isLoading ? (

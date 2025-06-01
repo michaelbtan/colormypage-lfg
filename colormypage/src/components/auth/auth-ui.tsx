@@ -1,11 +1,12 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { useState, useEffect } from "react"
 import { useSearchParams, useRouter } from "next/navigation"
-import { Palette } from "lucide-react"
 import { LoginForm } from "@/components/auth/login-form"
 import { RegisterForm } from "@/components/auth/register-form"
+import logo from "@/assets/logo.png"
 
 export function AuthUI() {
   const searchParams = useSearchParams()
@@ -30,7 +31,7 @@ export function AuthUI() {
           <div className="mb-8 text-center">
             <Link href="/" className="inline-block mb-6">
               <div className="flex items-center justify-center gap-2">
-                <Palette className="h-6 w-6 text-[#9d84ff]" />
+            <Image src={logo} alt="Logo" width={40} height={40} className="h-10 w-10 object-contain" />
                 <h1 className="text-3xl font-bold">
                   <span className="text-[#9d84ff]">Color</span>
                   <span className="text-gray-800">My</span>
