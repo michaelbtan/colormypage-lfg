@@ -77,7 +77,7 @@ export default function FavoriteColoringPageCard({
   };
 
   return (
-    <div className="group relative">
+    <div className="group relative transition-transform duration-300 hover:scale-105">
       <Link href={`/coloring-page/${page.id}`} className="block">
         <div
           className="relative overflow-hidden rounded-lg border border-gray-200 bg-white"

@@ -77,7 +77,7 @@ export function FavoriteCategoryCard({
   };
 
   return (
-    <div className="rounded-lg shadow-sm overflow-hidden bg-[#9d84ff]/20 hover:bg-[#9d84ff]/20 backdrop-blur-sm border border-[#9d84ff]/30 text-[#9d84ff] transition-transform hover:scale-105">
+    <div className="rounded-lg shadow-sm overflow-hidden bg-[#9d84ff]/20 hover:bg-[#9d84ff]/20 backdrop-blur-sm border border-[#9d84ff]/30 text-[#9d84ff] transition-transform duration-300 hover:scale-105">
       <Link
         href={`/categories/${category_id}`}
         className="flex items-center p-3"

@@ -81,7 +81,7 @@ export function CategoryCard({
 
   return (
     <>
-      <div className="flex flex-col w-full">
+      <div className="flex flex-col w-full transition-transform duration-300 hover:scale-105">
         <Link
           href={categoryLink ? `${categoryLink}/${id}` : `/categories/${id}`}
         >
@@ -100,7 +100,7 @@ export function CategoryCard({
                 src={imageUrl || "/placeholder.svg"}
                 alt={title}
                 fill
-                className="object-cover transition-transform duration-300 group-hover:scale-105"
+                className="object-cover"
               />
             </div>
 

@@ -28,10 +28,9 @@ export async function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      {/* increased h-24 and extra py */}
       <div className="container mx-auto px-4 flex h-24 items-center justify-between py-2">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3 transition-transform hover:scale-105">
+        <Link href="/" className="flex items-center gap-3 transition-transform duration-300 hover:scale-105">
           <div className="flex items-center justify-center gap-2">
             <Image src={logo} alt="Logo" width={40} height={40} className="h-10 w-10 object-contain" />
             <h1 className="text-3xl font-bold">
@@ -51,7 +50,7 @@ export async function Header() {
             <Link
               key={name}
               href={href}
-              className="text-lg font-semibold transition-transform hover:scale-110 flex items-center gap-2"
+              className="text-lg font-semibold transition-transform duration-300 hover:scale-110 flex items-center gap-2"
             >
               {icon}
               {name}
@@ -62,7 +61,7 @@ export async function Header() {
             <form action={logout} className="contents">
               <Button
                 type="submit"
-                className="text-lg font-semibold cursor-pointer bg-[#9d84ff]/20 hover:bg-[#9d84ff]/20 backdrop-blur-sm border border-[#9d84ff]/30 text-[#9d84ff] transition-transform hover:scale-105"
+                className="text-lg font-semibold cursor-pointer bg-[#9d84ff]/20 hover:bg-[#9d84ff]/20 backdrop-blur-sm border border-[#9d84ff]/30 text-[#9d84ff] transition-transform duration-300 hover:scale-105"
               >
                 <LogOut className="h-6 w-6" />
                 Logout
@@ -70,7 +69,7 @@ export async function Header() {
             </form>
           ) : (
             <Link href="/account">
-              <Button className="text-lg font-semibold cursor-pointer bg-[#9d84ff]/20 hover:bg-[#9d84ff]/20 backdrop-blur-sm border border-[#9d84ff]/30 text-[#9d84ff] transition-transform hover:scale-105">
+              <Button className="text-lg font-semibold cursor-pointer bg-[#9d84ff]/20 hover:bg-[#9d84ff]/20 backdrop-blur-sm border border-[#9d84ff]/30 text-[#9d84ff] transition-transform duration-300 hover:scale-105">
                 <LogIn className="h-6 w-6" />
                 Sign in / Register
               </Button>

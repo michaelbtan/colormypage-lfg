@@ -23,7 +23,7 @@ export function CategoriesSection({ title, categories, viewAllLink, userId }: Ca
       <div className="container mx-auto px-4">
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-3xl font-bold">{title}</h2>
-        <Link href={viewAllLink} className="font-medium flex items-center">
+        <Link href={viewAllLink} className="font-medium flex items-center transition-transform duration-300 hover:scale-105">
           View All
           <ChevronRight className="h-4 w-4 ml-1" />
         </Link>

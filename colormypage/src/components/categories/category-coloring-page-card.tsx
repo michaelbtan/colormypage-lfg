@@ -87,7 +87,7 @@ export function CategoryColoringPageCard({
 
   return (
     <>
-      <div className="flex flex-col w-full">
+      <div className="flex flex-col w-full transition-transform duration-300 hover:scale-105">
         <div
           className="group relative w-full overflow-hidden rounded-lg shadow-md bg-white border border-gray-100"
           onMouseEnter={() => setIsHovered(true)}
@@ -104,7 +104,7 @@ export function CategoryColoringPageCard({
                 src={page.imageUrl || "/placeholder.svg"}
                 alt={page.title}
                 fill
-                className="object-cover transition-transform duration-300 group-hover:scale-105"
+                className="object-cover"
               />
             </div>
           </Link>
