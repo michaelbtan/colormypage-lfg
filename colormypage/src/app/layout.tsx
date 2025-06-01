@@ -5,6 +5,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Toaster } from "@/components/ui/sonner";
 import CloudBackground from "@/components/layout/cloud-background";
+import { title } from "process";
 
 // Import Fredoka with desired options (e.g., weights, subsets)
 const fredoka = Fredoka({
@@ -13,7 +14,10 @@ const fredoka = Fredoka({
 });
 
 export const metadata = {
-  title: "ColorMyPage - Free Printable Coloring Pages",
+  title: {
+    title: "ColorMyPage • Free Printable Coloring Pages",
+    template: "%s • ColorMyPage",
+  },
   description:
     "Download high-quality, free coloring pages for kids, parents, and teachers.",
 };

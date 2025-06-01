@@ -3,7 +3,7 @@ import { createClient } from "@/lib/supabase/server";
 import { AdPlaceholder } from "@/components/ad-placeholder";
 
 export const metadata = {
-  title: "Browse All Categories - ColorMyPage",
+  title: "Browse All Coloring Page Categories",
   description:
     "Explore our complete collection of coloring page categories for all ages and interests.",
 };

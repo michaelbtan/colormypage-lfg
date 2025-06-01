@@ -3,7 +3,7 @@ import { ContactForm } from "@/components/contact/contact-form"
 import { SocialLinks } from "@/components/contact/social-links"
 
 export const metadata = {
-  title: "Contact Us - ColorMyPage",
+  title: "Contact Us",
   description: "Get in touch with the ColorMyPage team. We'd love to hear from you!",
 }
 

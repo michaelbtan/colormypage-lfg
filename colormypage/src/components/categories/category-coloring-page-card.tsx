@@ -155,6 +155,7 @@ export function CategoryColoringPageCard({
         isOpen={isShareModalOpen}
         onClose={() => setIsShareModalOpen(false)}
         title={page.title}
+        description={`Check out free downloadable ${page.title} coloring pages`}
         imageUrl={page.imageUrl}
         pageUrl={`/coloring-page/${page.id}`}
       />

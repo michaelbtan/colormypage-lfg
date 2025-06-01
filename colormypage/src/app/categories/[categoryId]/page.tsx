@@ -1,7 +1,36 @@
 import { notFound } from "next/navigation"
+import type { Metadata } from "next"
 import { CategoryBlog } from "@/components/categories/category-blog"
 import { ColoringPageGrid } from "@/components/categories/coloring-page-grid"
 import { createClient } from "@/lib/supabase/server"
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ categoryId: string }>
+}): Promise<Metadata> {
+  const id = (await params).categoryId
+  const supabase = await createClient()
+
+  const { data: category, error } = await supabase
+    .from("categories")
+    .select("title, description")
+    .eq("id", id)
+    .single()
+
+  if (error) {
+    console.error("Error fetching category for metadata", error)
+    return {
+      title: "Category Not Found",
+      description: "Unable to load category information",
+    }
+  }
+
+  return {
+    title: category.title,
+    description: category.description,
+  }
+}
 
 export default async function CategoryPage({
   params,

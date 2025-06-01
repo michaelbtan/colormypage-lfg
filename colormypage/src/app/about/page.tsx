@@ -4,7 +4,7 @@ import { Download, Heart, Palette, PenTool } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export const metadata = {
-  title: "About Us - ColorMyPage",
+  title: "About Us",
   description: "Learn about ColorMyPage, our mission, and the team behind your favorite coloring pages.",
 }
 

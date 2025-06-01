@@ -3,6 +3,12 @@ import { FavoriteCategories } from "@/components/dashboard/favorite-categories"
 import { FavoriteColoringPages } from "@/components/dashboard/favorite-coloring-pages"
 import { createClient } from "@/lib/supabase/server"
 
+export const metadata = {
+  title: "Dashboard",
+  description: "Get in touch with the ColorMyPage team. We'd love to hear from you!",
+}
+
+
 export default async function DashboardPage() {
   const supabase = await createClient()
 

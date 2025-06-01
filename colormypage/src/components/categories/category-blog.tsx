@@ -225,6 +225,7 @@ export function CategoryBlog({
         isOpen={isShareModalOpen}
         onClose={() => setIsShareModalOpen(false)}
         title={`${title} Coloring Pages`}
+        description={`Check out free downloadable ${title} coloring pages`}
         imageUrl={featuredImage || "/placeholder.svg"}
         pageUrl={`/categories/${encodeURIComponent(
           title.toLowerCase().replace(/\s+/g, "-")

@@ -5,7 +5,7 @@ import { FaqAccordion } from "@/components/faq/faq-accordion"
 import { FaqCategories } from "@/components/faq/faq-categories"
 
 export const metadata = {
-  title: "Frequently Asked Questions - ColorMyPage",
+  title: "Frequently Asked Questions",
   description: "Find answers to common questions about ColorMyPage, our coloring pages, and how to use our website.",
 }
 
