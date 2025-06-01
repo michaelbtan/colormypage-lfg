@@ -1,8 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import logo from "@/assets/logo.png";
+import about from "@/assets/about.png";
 import { Download, Heart, Palette, PenTool } from "lucide-react";
 import { Button } from "@/components/ui/button";
+
 
 export const metadata = {
   title: "About Us",
@@ -44,8 +46,8 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="relative h-64 md:h-80 rounded-xl overflow-hidden shadow-lg">
               <Image
-                src="/placeholder.svg?height=500&width=700&text=Our+Story"
-                alt="ColorMyPage story"
+                src={about}
+                alt="ColorMyPage about us image of kids drawing on the sidewalk with chalk"
                 fill
                 className="object-cover"
               />
@@ -138,7 +140,7 @@ export default function AboutPage() {
               size="lg"
               className="rounded-full bg-white text-[#9d84ff] hover:bg-gray-100"
             >
-              <Link href="/categories">
+              <Link href="/categories" className="transition-transform duration-300 hover:scale-105">
                 <Download className="mr-2 h-5 w-5" />
                 Browse Coloring Pages
               </Link>

@@ -1,11 +1,47 @@
-import { MessageSquare } from "lucide-react"
-import { ContactForm } from "@/components/contact/contact-form"
-import { SocialLinks } from "@/components/contact/social-links"
+import Link from "next/link";
+import Image from "next/image";
+import { MessageSquare } from "lucide-react";
+import { ContactForm } from "@/components/contact/contact-form";
+import facebook from "@/assets/social/facebook.svg";
+import instagram from "@/assets/social/instagram.svg";
+import x from "@/assets/social/x.svg";
+import pinterest from "@/assets/social/pinterest.svg";
+import email from "@/assets/social/email.svg";
+
+// Social Links Mapping
+const socialLinks = [
+  {
+    href: "https://instagram.com",
+    label: "Instagram",
+    icon: instagram,
+  },
+  {
+    href: "https://facebook.com",
+    label: "Facebook",
+    icon: facebook,
+  },
+  {
+    href: "https://x.com",
+    label: "X (Twitter)",
+    icon: x,
+  },
+  {
+    href: "https://pinterest.com",
+    label: "Pinterest",
+    icon: pinterest,
+  },
+  {
+    href: "mailto:contact@colormypage.com",
+    label: "Email",
+    icon: email,
+  },
+];
 
 export const metadata = {
   title: "Contact Us",
-  description: "Get in touch with the ColorMyPage team. We'd love to hear from you!",
-}
+  description:
+    "Get in touch with the ColorMyPage team. We'd love to hear from you!",
+};
 
 export default function ContactPage() {
   return (
@@ -16,7 +52,8 @@ export default function ContactPage() {
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
             <p className="text-xl opacity-90 mb-8">
-              Have questions, suggestions, or feedback? We'd love to hear from you!
+              Have questions, suggestions, or feedback? We'd love to hear from
+              you!
             </p>
           </div>
         </div>
@@ -38,9 +75,28 @@ export default function ContactPage() {
               <ContactForm />
 
               <div className="mt-8 pt-6 border-t">
-                <h3 className="font-medium text-gray-900 mb-3 text-center">Connect With Us</h3>
-                <div className="flex justify-center">
-                  <SocialLinks />
+                <h3 className="font-medium text-gray-900 mb-3 text-center">
+                  Connect With Us
+                </h3>
+                <div className="flex justify-center space-x-4">
+                  {socialLinks.map((social, index) => (
+                    <Link
+                      key={index}
+                      href={social.href}
+                      className="text-muted-foreground hover:text-foreground transition-colors"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Image
+                        src={social.icon}
+                        alt={social.label}
+                        width={25}
+                        height={25}
+                        className="h-7 w-7 transition-transform duration-300 hover:scale-110"
+                      />
+                      <span className="sr-only">{social.label}</span>
+                    </Link>
+                  ))}
                 </div>
               </div>
             </div>
@@ -48,6 +104,5 @@ export default function ContactPage() {
         </div>
       </section>
     </div>
-  )
+  );
 }
-

@@ -188,7 +188,7 @@ export function Footer() {
         {/* Bottom Section */}
         <div className="mt-8 border-t pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs text-muted-foreground">
-            &copy; {new Date().getFullYear()} ColorMyPage. All rights reserved.
+            &copy; {new Date().getFullYear()} ColorMyPage Inc. All rights reserved.
           </p>
           <div className="flex flex-wrap gap-4 text-xs justify-center">
             {policyLinks.map((policy, index) => (
