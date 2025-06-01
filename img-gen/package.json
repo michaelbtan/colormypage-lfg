@@ -7,11 +7,14 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "generate": "node generate_images.js",
-    "frame": "node make_coloring_pages.js"
+    "generate": "node scripts/generate_images.js",
+    "frame": "node scripts/frame_coloring_pages.js",
+    "upload": "node scripts/upload_to_supabase.js"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.49.8",
     "dotenv": "^16.5.0",
+    "mime": "^4.0.7",
     "openai": "^4.98.0",
     "sharp": "^0.34.2"
   }
