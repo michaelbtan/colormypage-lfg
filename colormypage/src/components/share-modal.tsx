@@ -1,17 +1,21 @@
 "use client"
 
 import type React from "react"
-
 import { useState } from "react"
 import Image from "next/image"
-import { Twitter, Facebook, Mail, Copy, Check, PinIcon as Pinterest, PhoneIcon as WhatsApp } from "lucide-react"
+import { Copy, Check } from "lucide-react"
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog"
 import { Button } from "@/components/ui/button"
 import { toast } from "sonner"
+import facebook from "@/assets/social/facebook.svg"
+import instagram from "@/assets/social/instagram.svg"
+import x from "@/assets/social/x.svg"
+import pinterest from "@/assets/social/pinterest.svg"
+import email from "@/assets/social/email.svg"
 
 interface ShareOption {
   name: string
-  icon: React.ElementType
+  icon: any 
   color: string
   getShareUrl: (url: string, title: string) => string
 }
@@ -28,7 +32,6 @@ interface ShareModalProps {
 export function ShareModal({ isOpen, onClose, title, description, imageUrl, pageUrl }: ShareModalProps) {
   const [copied, setCopied] = useState(false)
 
-  // Ensure we have the full URL
   const fullPageUrl = pageUrl.startsWith("http")
     ? pageUrl
     : `${process.env.NEXT_PUBLIC_APP_URL || window.location.origin}${pageUrl}`
@@ -36,21 +39,21 @@ export function ShareModal({ isOpen, onClose, title, description, imageUrl, page
   const shareOptions: ShareOption[] = [
     {
       name: "Facebook",
-      icon: Facebook,
+      icon: facebook,
       color: "#1877F2",
       getShareUrl: (url, title) =>
         `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&quote=${encodeURIComponent(title)}`,
     },
     {
       name: "Twitter",
-      icon: Twitter,
+      icon: x,
       color: "#1DA1F2",
       getShareUrl: (url, title) =>
         `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(title)}`,
     },
     {
       name: "Pinterest",
-      icon: Pinterest,
+      icon: pinterest,
       color: "#E60023",
       getShareUrl: (url, title) =>
         `https://pinterest.com/pin/create/button/?url=${encodeURIComponent(url)}&media=${encodeURIComponent(
@@ -59,13 +62,13 @@ export function ShareModal({ isOpen, onClose, title, description, imageUrl, page
     },
     {
       name: "Instagram",
-      icon: WhatsApp, // Keep the same icon for now since there's no Instagram icon imported
+      icon: instagram,
       color: "#E4405F",
-      getShareUrl: (url, title) => `https://www.instagram.com/`,
+      getShareUrl: () => `https://www.instagram.com/`,
     },
     {
       name: "Email",
-      icon: Mail,
+      icon: email,
       color: "#9d84ff",
       getShareUrl: (url, title) =>
         `mailto:?subject=${encodeURIComponent(`Check out this coloring page: ${title}`)}&body=${encodeURIComponent(
@@ -86,21 +89,12 @@ export function ShareModal({ isOpen, onClose, title, description, imageUrl, page
       toast("Link copied!", {
         description: "The link has been copied to your clipboard.",
       })
-      // Reset the copied state after 2 seconds
       setTimeout(() => setCopied(false), 2000)
     } catch {
       toast("Failed to copy", {
         description: "Please try again or copy the link manually.",
       })
     }
-  }
-
-  // Create a shortened version of the URL for display
-  const displayUrl = (url: string) => {
-    if (url.length > 40) {
-      return url.substring(0, 37) + "..."
-    }
-    return url
   }
 
   return (
@@ -133,13 +127,13 @@ export function ShareModal({ isOpen, onClose, title, description, imageUrl, page
               <button
                 key={option.name}
                 onClick={() => handleShare(option)}
-                className="flex flex-col items-center justify-center gap-1 rounded-2xl p-2 bg-white hover:bg-purple-50 transition-all duration-200 shadow-sm border border-purple-100 hover:border-purple-200 hover:shadow-md transform hover:scale-105"
+                className="flex flex-col items-center justify-center gap-1 rounded-2xl p-2 cursor-pointer bg-white hover:bg-purple-50 transition-all duration-200 shadow-sm border border-purple-100 hover:border-purple-200 hover:shadow-md transform hover:scale-105"
               >
                 <div
                   className="w-7 h-7 rounded-full flex items-center justify-center"
                   style={{ backgroundColor: `${option.color}15` }}
                 >
-                  <option.icon className="h-4 w-4" style={{ color: option.color }} />
+                  <Image src={option.icon} alt={option.name} width={20} height={20} />
                 </div>
                 <span className="text-xs font-medium text-gray-700 text-center leading-tight">{option.name}</span>
               </button>

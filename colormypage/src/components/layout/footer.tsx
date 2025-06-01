@@ -1,5 +1,60 @@
-import Link from "next/link"
-import { Palette, Mail, Instagram, Facebook, Twitter } from "lucide-react"
+import Link from "next/link";
+import Image from "next/image";
+import { Palette } from "lucide-react";
+import facebook from "@/assets/social/facebook.svg";
+import instagram from "@/assets/social/instagram.svg";
+import x from "@/assets/social/x.svg";
+import pinterest from "@/assets/social/pinterest.svg";
+import email from "@/assets/social/email.svg";
+
+// Social Links Mapping
+const socialLinks = [
+  {
+    href: "https://instagram.com",
+    label: "Instagram",
+    icon: instagram,
+  },
+  {
+    href: "https://facebook.com",
+    label: "Facebook",
+    icon: facebook,
+  },
+  {
+    href: "https://x.com",
+    label: "X (Twitter)",
+    icon: x,
+  },
+  {
+    href: "https://pinterest.com",
+    label: "Pinterest",
+    icon: pinterest,
+  },
+  {
+    href: "mailto:contact@colormypage.com",
+    label: "Email",
+    icon: email,
+  },
+];
+
+// Policy Links Mapping
+const policyLinks = [
+  {
+    href: "/privacy-policy",
+    label: "Privacy Policy",
+  },
+  {
+    href: "/terms-and-conditions",
+    label: "Terms & Conditions",
+  },
+  {
+    href: "/takedown-policy",
+    label: "Takedown Policy",
+  },
+  {
+    href: "/licensing",
+    label: "Licensing",
+  },
+];
 
 export function Footer() {
   return (
@@ -76,34 +131,28 @@ export function Footer() {
           <div>
             <h3 className="mb-3 text-lg font-medium">Connect With Us</h3>
             <div className="flex space-x-4 mb-4">
-              <Link
-                href="https://instagram.com"
-                className="text-muted-foreground hover:text-foreground transition-colors"
-              >
-                <Instagram className="h-5 w-5" />
-                <span className="sr-only">Instagram</span>
-              </Link>
-              <Link
-                href="https://facebook.com"
-                className="text-muted-foreground hover:text-foreground transition-colors"
-              >
-                <Facebook className="h-5 w-5" />
-                <span className="sr-only">Facebook</span>
-              </Link>
-              <Link
-                href="https://twitter.com"
-                className="text-muted-foreground hover:text-foreground transition-colors"
-              >
-                <Twitter className="h-5 w-5" />
-                <span className="sr-only">Twitter</span>
-              </Link>
-              <Link
-                href="mailto:contact@colormypage.com"
-                className="text-muted-foreground hover:text-foreground transition-colors"
-              >
-                <Mail className="h-5 w-5" />
-                <span className="sr-only">Email</span>
-              </Link>
+              {socialLinks.map((social, index) => (
+                <Link
+                  key={index}
+                  href={social.href}
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {social.icon ? (
+                    <Image
+                      src={social.icon}
+                      alt={social.label}
+                      width={25}
+                      height={25}
+                      className="h-7 w-7"
+                    />
+                  ) : (
+                    social.component
+                  )}
+                  <span className="sr-only">{social.label}</span>
+                </Link>
+              ))}
             </div>
             <p className="text-sm text-muted-foreground">
               Subscribe to our newsletter for updates and new coloring pages.
@@ -117,21 +166,18 @@ export function Footer() {
             &copy; {new Date().getFullYear()} ColorMyPage. All rights reserved.
           </p>
           <div className="flex flex-wrap gap-4 text-xs justify-center">
-            <Link href="/privacy" className="text-muted-foreground hover:text-foreground transition-colors">
-              Privacy Policy
-            </Link>
-            <Link href="/terms" className="text-muted-foreground hover:text-foreground transition-colors">
-              Terms of Service
-            </Link>
-            <Link href="/cookies" className="text-muted-foreground hover:text-foreground transition-colors">
-              Cookie Policy
-            </Link>
-            <Link href="/takedown" className="text-muted-foreground hover:text-foreground transition-colors">
-              Takedown Policy and Licensing
-            </Link>
+            {policyLinks.map((policy, index) => (
+              <Link
+                key={index}
+                href={policy.href}
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
+                {policy.label}
+              </Link>
+            ))}
           </div>
         </div>
       </div>
     </footer>
-  )
+  );
 }
