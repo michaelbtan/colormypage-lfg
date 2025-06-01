@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation"
-import { CategoryHeader } from "@/components/categories/category-header"
+import { CategoryBlog } from "@/components/categories/category-blog"
 import { ColoringPageGrid } from "@/components/categories/coloring-page-grid"
 import { createClient } from "@/lib/supabase/server"
 
@@ -60,14 +60,17 @@ export default async function CategoryPage({
 
   return (
     <div>
-      <CategoryHeader
+      <CategoryBlog
         id={category.id}
         title={category.title}
         description={category.description}
+        excerpt={category.excerpt}
         imageCount={category.image_count}
         featuredImage={category.featured_image || undefined}
         categoryFavorited={isFavorited}
         userId={user?.id || null}
+        createdAt={category.created_at}
+        author={category.author || "Jasmine"}
       />
 
       <div className="container mx-auto px-4 py-12">

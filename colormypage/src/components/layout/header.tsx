@@ -60,7 +60,7 @@ export async function Header() {
             <form action={logout} className="contents">
               <Button
                 type="submit"
-                className="text-lg font-semibold cursor-pointer bg-[#9d84ff]/20 backdrop-blur-sm border border-[#9d84ff]/30 text-[#9d84ff] transition-transform hover:scale-105"
+                className="text-lg font-semibold cursor-pointer bg-[#9d84ff]/20 hover:bg-[#9d84ff]/20 backdrop-blur-sm border border-[#9d84ff]/30 text-[#9d84ff] transition-transform hover:scale-105"
               >
                 <LogOut className="h-6 w-6" />
                 Logout
