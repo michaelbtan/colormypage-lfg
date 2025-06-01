@@ -1,9 +1,11 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import Link from "next/link"
 import { ChevronLeft, ChevronRight, Play, Pause } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
+import JUNGLEBANNER from "@/assets/junglebanner.png"
 
 interface CarouselImage {
   id: number
@@ -11,36 +13,41 @@ interface CarouselImage {
   alt: string
   title?: string
   subtitle?: string
+  href: string
 }
 
 const carouselImages: CarouselImage[] = [
   {
     id: 1,
-    src: "/placeholder.svg?height=400&width=1200&query=colorful children coloring book pages spread",
+    src: JUNGLEBANNER.src,
     alt: "Featured Coloring Pages",
     title: "Discover Amazing Coloring Pages",
     subtitle: "Unleash your creativity with our collection",
+    href: "/coloring-pages",
   },
   {
     id: 2,
-    src: "/placeholder.svg?height=400&width=1200&query=artistic mandala coloring designs",
+    src: "/placeholder.svg?height=1024&width=1536&query=artistic mandala coloring designs",
     alt: "Mandala Collection",
     title: "Beautiful Mandala Designs",
     subtitle: "Find peace through intricate patterns",
+    href: "/coloring-pages/mandalas",
   },
   {
     id: 3,
-    src: "/placeholder.svg?height=400&width=1200&query=nature animals coloring book illustrations",
+    src: "/placeholder.svg?height=1024&width=1536&query=nature animals coloring book illustrations",
     alt: "Nature & Animals",
     title: "Nature & Wildlife",
     subtitle: "Explore the beauty of the natural world",
+    href: "/coloring-pages/nature-animals",
   },
   {
     id: 4,
-    src: "/placeholder.svg?height=400&width=1200&query=fantasy characters coloring pages",
+    src: "/placeholder.svg?height=1024&width=1536&query=fantasy characters coloring pages",
     alt: "Fantasy Characters",
     title: "Fantasy Adventures",
     subtitle: "Bring magical characters to life",
+    href: "/coloring-pages/fantasy",
   },
 ]
 
@@ -48,13 +55,12 @@ export function ImageCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isAutoPlaying, setIsAutoPlaying] = useState(true)
 
-  // Auto-play functionality
   useEffect(() => {
     if (!isAutoPlaying) return
 
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex === carouselImages.length - 1 ? 0 : prevIndex + 1))
-    }, 3000) // Change slide every 5 seconds
+    }, 3000)
 
     return () => clearInterval(interval)
   }, [isAutoPlaying])
@@ -75,14 +81,14 @@ export function ImageCarousel() {
   }
 
   return (
-    <div className="relative w-full h-[300px] md:h-[400px] lg:h-[500px] overflow-hidden bg-gradient-to-r from-purple-100 to-pink-100">
+    <div className="relative w-full aspect-[6/2] overflow-hidden bg-gradient-to-r from-purple-100 to-pink-100">
       {/* Images */}
       <div
         className="flex transition-transform duration-500 ease-in-out h-full"
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
         {carouselImages.map((image) => (
-          <div key={image.id} className="relative w-full h-full flex-shrink-0">
+          <Link href={image.href} key={image.id} className="relative w-full h-full flex-shrink-0">
             <Image
               src={image.src || "/placeholder.svg"}
               alt={image.alt}
@@ -90,16 +96,21 @@ export function ImageCarousel() {
               className="object-cover"
               priority={image.id === 1}
             />
-            {/* Overlay with text */}
             <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
               <div className="text-center text-white px-4">
                 {image.title && (
-                  <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-2 drop-shadow-lg">{image.title}</h2>
+                  <h2 className="text-xl md:text-3xl lg:text-4xl font-bold mb-1 drop-shadow-lg">
+                    {image.title}
+                  </h2>
                 )}
-                {image.subtitle && <p className="text-sm md:text-lg lg:text-xl drop-shadow-lg">{image.subtitle}</p>}
+                {image.subtitle && (
+                  <p className="text-xs md:text-base lg:text-lg drop-shadow-lg">
+                    {image.subtitle}
+                  </p>
+                )}
               </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
 

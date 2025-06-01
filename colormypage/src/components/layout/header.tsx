@@ -1,10 +1,12 @@
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Palette, Heart, LogIn, LogOut } from "lucide-react"
+import { Heart, Palette, LogIn, LogOut } from "lucide-react"
 // import { SearchBar } from "./search-bar";
 import { MobileMenu } from "./mobile-menu"
 import { createClient } from "@/lib/supabase/server"
 import { logout } from "@/lib/supabase/actions/auth"
+import logo from "@/assets/logo.png"
 
 export async function Header() {
   const supabase = await createClient()
@@ -15,7 +17,7 @@ export async function Header() {
     {
       name: "Categories",
       href: "/categories",
-      icon: <Palette className="h-6 w-6" />,
+      icon: <Palette className="h-6 w-6" />, 
     },
     {
       name: "Favorites",
@@ -31,7 +33,7 @@ export async function Header() {
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 transition-transform hover:scale-105">
           <div className="flex items-center justify-center gap-2">
-            <Palette className="h-6 w-6 text-[#9d84ff]" />
+            <Image src={logo} alt="Logo" width={40} height={40} className="h-10 w-10 object-contain" />
             <h1 className="text-3xl font-bold">
               <span className="text-[#9d84ff]">Color</span>
               <span className="text-gray-800">My</span>

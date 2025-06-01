@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Palette } from "lucide-react";
+import logo from "@/assets/logo.png";
 import facebook from "@/assets/social/facebook.svg";
 import instagram from "@/assets/social/instagram.svg";
 import x from "@/assets/social/x.svg";
@@ -65,7 +65,13 @@ export function Footer() {
           <div className="flex flex-col gap-2">
             <Link href="/" className="inline-block">
               <div className="flex items-center gap-2">
-                <Palette className="h-6 w-6 text-[#9d84ff]" />
+                <Image
+                  src={logo}
+                  alt="Logo"
+                  width={40}
+                  height={40}
+                  className="h-10 w-10 object-contain"
+                />
                 <h1 className="text-3xl font-bold">
                   <span className="text-[#9d84ff]">Color</span>
                   <span className="text-gray-800">My</span>
@@ -83,22 +89,34 @@ export function Footer() {
             <h3 className="mb-3 text-lg font-medium">Quick Links</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/categories" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link
+                  href="/categories"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
                   Categories
                 </Link>
               </li>
               <li>
-                <Link href="/favorites" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link
+                  href="/favorites"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
                   Favorites
                 </Link>
               </li>
               <li>
-                <Link href="/new" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link
+                  href="/new"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
                   New Additions
                 </Link>
               </li>
               <li>
-                <Link href="/popular" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link
+                  href="/popular"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
                   Popular Pages
                 </Link>
               </li>
@@ -110,17 +128,26 @@ export function Footer() {
             <h3 className="mb-3 text-lg font-medium">Help & Support</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/about" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link
+                  href="/about"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/faq" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link
+                  href="/faq"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
                   FAQ
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-muted-foreground hover:text-foreground transition-colors">
+                <Link
+                  href="/contact"
+                  className="text-muted-foreground hover:text-foreground transition-colors"
+                >
                   Contact Us
                 </Link>
               </li>

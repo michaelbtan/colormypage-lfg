@@ -1,12 +1,14 @@
-import Image from "next/image"
-import Link from "next/link"
-import { Download, Heart, Palette, PenTool } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import Image from "next/image";
+import Link from "next/link";
+import logo from "@/assets/logo.png";
+import { Download, Heart, Palette, PenTool } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export const metadata = {
   title: "About Us",
-  description: "Learn about ColorMyPage, our mission, and the team behind your favorite coloring pages.",
-}
+  description:
+    "Learn about ColorMyPage, our mission, and the team behind your favorite coloring pages.",
+};
 
 export default function AboutPage() {
   return (
@@ -15,14 +17,22 @@ export default function AboutPage() {
       <section className="py-16 md:py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 flex items-center justify-center gap-2">
               About{" "}
+              <Image
+                src={logo}
+                alt="Logo"
+                width={40}
+                height={40}
+                className="h-10 w-10 object-contain"
+              />
               <span className="text-[#9d84ff]">Color</span>
               <span className="text-gray-800">My</span>
               <span className="text-gray-800">Page</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8">
-              We're on a mission to bring joy, creativity, and learning through the simple pleasure of coloring.
+              We're on a mission to bring joy, creativity, and learning through
+              the simple pleasure of coloring.
             </p>
           </div>
         </div>
@@ -43,17 +53,21 @@ export default function AboutPage() {
             <div>
               <h2 className="text-3xl font-bold mb-6">Our Story</h2>
               <p className="text-gray-600 mb-4">
-                ColorMyPage began with a simple idea: to create a place where everyone could access high-quality
-                coloring pages for free. What started as a personal collection quickly grew into something bigger.
+                ColorMyPage began with a simple idea: to create a place where
+                everyone could access high-quality coloring pages for free. What
+                started as a personal collection quickly grew into something
+                bigger.
               </p>
               <p className="text-gray-600 mb-4">
-                In 2023, we decided to share our collection with the world, and ColorMyPage was born. Our team of
-                artists, educators, and developers work together to create and curate coloring pages that are not just
-                fun, but also educational and inclusive.
+                In 2023, we decided to share our collection with the world, and
+                ColorMyPage was born. Our team of artists, educators, and
+                developers work together to create and curate coloring pages
+                that are not just fun, but also educational and inclusive.
               </p>
               <p className="text-gray-600">
-                Today, we're proud to offer thousands of free coloring pages across dozens of categories, helping people
-                of all ages express their creativity through coloring.
+                Today, we're proud to offer thousands of free coloring pages
+                across dozens of categories, helping people of all ages express
+                their creativity through coloring.
               </p>
             </div>
           </div>
@@ -63,7 +77,9 @@ export default function AboutPage() {
       {/* What Makes Us Special - Simplified */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-10 text-center">What Makes Us Special</h2>
+          <h2 className="text-3xl font-bold mb-10 text-center">
+            What Makes Us Special
+          </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Feature 1 */}
@@ -73,8 +89,8 @@ export default function AboutPage() {
               </div>
               <h3 className="text-xl font-bold mb-3">High-Quality Designs</h3>
               <p className="text-gray-600">
-                Every coloring page is carefully designed by our team of artists to ensure the perfect balance of detail
-                and simplicity.
+                Every coloring page is carefully designed by our team of artists
+                to ensure the perfect balance of detail and simplicity.
               </p>
             </div>
 
@@ -85,8 +101,9 @@ export default function AboutPage() {
               </div>
               <h3 className="text-xl font-bold mb-3">Educational Value</h3>
               <p className="text-gray-600">
-                Many of our coloring pages are designed with learning in mind, helping children develop fine motor
-                skills, focus, and creativity.
+                Many of our coloring pages are designed with learning in mind,
+                helping children develop fine motor skills, focus, and
+                creativity.
               </p>
             </div>
 
@@ -97,8 +114,9 @@ export default function AboutPage() {
               </div>
               <h3 className="text-xl font-bold mb-3">For All Ages</h3>
               <p className="text-gray-600">
-                From simple designs for toddlers to intricate patterns for adults, we have coloring pages suitable for
-                every age and skill level.
+                From simple designs for toddlers to intricate patterns for
+                adults, we have coloring pages suitable for every age and skill
+                level.
               </p>
             </div>
           </div>
@@ -109,9 +127,17 @@ export default function AboutPage() {
       <section className="py-16 bg-gradient-to-r from-[#9d84ff] to-[#5bbce4] text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6">Ready to Start Coloring?</h2>
-            <p className="text-xl mb-8">Explore our collection of free, high-quality coloring pages today.</p>
-            <Button asChild size="lg" className="rounded-full bg-white text-[#9d84ff] hover:bg-gray-100">
+            <h2 className="text-3xl font-bold mb-6">
+              Ready to Start Coloring?
+            </h2>
+            <p className="text-xl mb-8">
+              Explore our collection of free, high-quality coloring pages today.
+            </p>
+            <Button
+              asChild
+              size="lg"
+              className="rounded-full bg-white text-[#9d84ff] hover:bg-gray-100"
+            >
               <Link href="/categories">
                 <Download className="mr-2 h-5 w-5" />
                 Browse Coloring Pages
@@ -121,6 +147,5 @@ export default function AboutPage() {
         </div>
       </section>
     </div>
-  )
+  );
 }
-
