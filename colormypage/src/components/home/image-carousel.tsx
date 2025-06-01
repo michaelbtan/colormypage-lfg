@@ -107,7 +107,7 @@ export function ImageCarousel() {
       <Button
         variant="ghost"
         size="icon"
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white/90 text-gray-800 rounded-full w-10 h-10 md:w-12 md:h-12"
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 rounded-full w-10 h-10 md:w-12 md:h-12 cursor-pointer bg-[#9d84ff]/20 backdrop-blur-sm hover:bg-[#9d84ff]/30 border border-[#9d84ff]/30 text-[#9d84ff] hover:text-white"
         onClick={goToPrevious}
         aria-label="Previous image"
       >
@@ -117,7 +117,7 @@ export function ImageCarousel() {
       <Button
         variant="ghost"
         size="icon"
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white/90 text-gray-800 rounded-full w-10 h-10 md:w-12 md:h-12"
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 rounded-full w-10 h-10 md:w-12 md:h-12 cursor-pointer bg-[#9d84ff]/20 backdrop-blur-sm hover:bg-[#9d84ff]/30 border border-[#9d84ff]/30 text-[#9d84ff] hover:text-white"
         onClick={goToNext}
         aria-label="Next image"
       >
