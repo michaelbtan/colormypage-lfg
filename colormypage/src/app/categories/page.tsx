@@ -15,53 +15,51 @@ export default async function CategoriesPage() {
   const { data: { user }} = await supabase.auth.getUser();
 
   // Fetch the initial categories from the database
-  // Fetch categories from Supabase
   const { data: categoriesData, count } = await supabase
     .from("categories")
     .select("id, created_at, title, image_url, image_count")
     .order("created_at", { ascending: false })
-    .limit(8)
+    .limit(8);
 
-  let categories = categoriesData || []
+  console.log('COUNT+++', count);
+
+  let categories = categoriesData || [];
 
   // Only check for favorites if user is logged in
   if (user) {
-    // Get category IDs from the fetched categories
-    const categoryIds = categories.map((category) => category.id)
+    const categoryIds = categories.map((category) => category.id);
 
-    // Fetch only the favorited categories for the current user that match our category list
     const { data: favoritedCategories } = await supabase
       .from("favorited_categories")
       .select("category_id")
       .eq("user_id", user.id)
-      .in("category_id", categoryIds)
+      .in("category_id", categoryIds);
 
-    // Create a set of favorited category IDs for faster lookup
-    const favoritedCategoryIds = new Set(favoritedCategories?.map((item) => item.category_id) || [])
+    const favoritedCategoryIds = new Set(favoritedCategories?.map((item) => item.category_id) || []);
 
-    // Map through categories and add isFavorited flag
     categories = categories.map((category) => ({
       ...category,
       categoryFavorited: favoritedCategoryIds.has(category.id),
-    }))
+    }));
   } else {
-    // If no user is logged in, mark all as not favorited
     categories = categories.map((category) => ({
       ...category,
       categoryFavorited: false,
-    }))
+    }));
   }
 
-  // Determine if there are more categories to load
   const hasMore = count ? (categories?.length || 0) < count : false;
 
   return (
     <div className="py-8">
       <div className="container mx-auto px-4">
-        <h1 className="text-3xl font-bold mb-8">All Categories</h1>
+        <h1 className="text-3xl font-bold mb-4">All Categories</h1>
+
+        <p className="text-lg text-gray-700 mb-8">
+          Discover a world of free downloadable coloring pages at ColorMyPage! Whether you’re looking for fun activities for kids, creative stress relief for adults, or unique designs to spark your imagination, our collection has something for everyone. All pages are available for instant download, so you can start coloring right away—anytime, anywhere.
+        </p>
 
         <div className="flex flex-col lg:flex-row gap-8">
-          {/* Main content - categories grid */}
           <div className="w-full lg:w-3/4">
             <InfiniteCategoriesGrid
               initialCategories={categories || []}

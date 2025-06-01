@@ -127,7 +127,7 @@ export function InfiniteCategoriesGrid({
       </div>
 
       {/* Loading indicator */}
-      <div ref={loaderRef} className="flex justify-center items-center py-8">
+      {/* <div ref={loaderRef} className="flex justify-center items-center py-8">
         {loading && (
           <div className="flex flex-col items-center">
             <Loader2 className="h-8 w-8 animate-spin text-[#9d84ff]" />
@@ -140,7 +140,7 @@ export function InfiniteCategoriesGrid({
             You've reached the end! {categories.length} of {totalCount} categories loaded.
           </p>
         )}
-      </div>
+      </div> */}
     </div>
   )
 }
