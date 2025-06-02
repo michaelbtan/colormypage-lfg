@@ -1,38 +1,47 @@
-import Link from "next/link"
-import Image from "next/image"
-import { Button } from "@/components/ui/button"
-import { Heart, Palette, LogIn, LogOut } from "lucide-react"
+import Link from "next/link";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Heart, Palette, LogIn, LogOut } from "lucide-react";
 // import { SearchBar } from "./search-bar";
-import { MobileMenu } from "./mobile-menu"
-import { createClient } from "@/lib/supabase/server"
-import { logout } from "@/lib/supabase/actions/auth"
-import logo from "@/assets/logo.png"
+import { MobileMenu } from "./mobile-menu";
+import { createClient } from "@/lib/supabase/server";
+import { logout } from "@/lib/supabase/actions/auth";
+import logo from "@/assets/logo.png";
 
 export async function Header() {
-  const supabase = await createClient()
-  const { data } = await supabase.auth.getUser()
-  const isLoggedIn = data.user != null
+  const supabase = await createClient();
+  const { data } = await supabase.auth.getUser();
+  const isLoggedIn = data.user != null;
 
   const navigationItems = [
     {
       name: "Categories",
       href: "/categories",
-      icon: <Palette className="h-6 w-6" />, 
+      icon: <Palette className="h-6 w-6" />,
     },
     {
       name: "Favorites",
       href: "/dashboard",
       icon: <Heart className="h-6 w-6" />,
     },
-  ]
+  ];
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto px-4 flex h-24 items-center justify-between py-2">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3 transition-transform duration-300 hover:scale-105">
+        <Link
+          href="/"
+          className="flex items-center gap-3 transition-transform duration-300 hover:scale-105"
+        >
           <div className="flex items-center justify-center gap-2">
-            <Image src={logo} alt="Logo" width={40} height={40} className="h-10 w-10 object-contain" />
+            <Image
+              src={logo}
+              alt="Logo"
+              width={40}
+              height={40}
+              className="h-10 w-10 object-contain"
+            />
             <h1 className="text-3xl font-bold">
               <span className="text-[#9d84ff]">Color</span>
               <span className="text-gray-800">My</span>
@@ -46,17 +55,20 @@ export async function Header() {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-6">
-          {navigationItems.map(({ name, href, icon }) => (
-            <Link
-              key={name}
-              href={href}
-              className="text-lg font-semibold transition-transform duration-300 hover:scale-110 flex items-center gap-2"
-            >
-              {icon}
-              {name}
-            </Link>
-          ))}
-
+          <Link
+            href="/cateogories"
+            className="text-lg font-semibold transition-transform duration-300 hover:scale-110 flex items-center gap-2"
+          >
+            <Palette className="h-6 w-6" />
+            Categories
+          </Link>
+          {isLoggedIn && <Link
+            href="/dashboard"
+            className="text-lg font-semibold transition-transform duration-300 hover:scale-110 flex items-center gap-2"
+          >
+            <Heart className="h-6 w-6" />
+            Favorites
+          </Link>}
           {isLoggedIn ? (
             <form action={logout} className="contents">
               <Button
@@ -81,5 +93,5 @@ export async function Header() {
         <MobileMenu loggedin={isLoggedIn} navigationItems={navigationItems} />
       </div>
     </header>
-  )
+  );
 }
