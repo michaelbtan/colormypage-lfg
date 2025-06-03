@@ -1,26 +1,88 @@
 {
-  "prompts": [
-    "A monkey swinging from vines with a big smile",
-    "An elephant spraying water with its trunk to cool off",
-    "A tiger lounging on a tree branch, napping",
-    "A parrot teaching other birds to talk",
-    "A jaguar sneaking through tall grass",
-    "A crocodile brushing its teeth with a big toothbrush",
-    "A sloth hanging upside down while reading a book",
-    "A chameleon painting itself different colors",
-    "A toucan delivering mail to other animals",
-    "A snake playing a jungle flute",
-    "A gorilla lifting weights made from coconuts",
-    "A hippo having a bubble bath in a river",
-    "A leopard and a panther playing chess on a rock",
-    "A frog DJ-ing at a jungle party",
-    "A rhinoceros watering flowers with a watering can",
-    "A baby orangutan learning to swing with a teacher monkey",
-    "A jungle animal band with bongos, maracas, and a banana mic",
-    "A group of jungle animals doing yoga in the clearing",
-    "A lizard catching fireflies in a jar",
-    "A group of animals painting a jungle mural together"
-  ],
+  "prompts":
+  [
+  {
+    "title": "Swinging Monkey",
+    "description": "A monkey swinging from vines with a big smile"
+  },
+  {
+    "title": "Elephant Cool-Off",
+    "description": "An elephant spraying water with its trunk to cool off"
+  },
+  {
+    "title": "Napping Tiger",
+    "description": "A tiger lounging on a tree branch, napping"
+  },
+  {
+    "title": "Parrot Teacher",
+    "description": "A parrot teaching other birds to talk"
+  },
+  {
+    "title": "Sneaky Jaguar",
+    "description": "A jaguar sneaking through tall grass"
+  },
+  {
+    "title": "Toothbrush Crocodile",
+    "description": "A crocodile brushing its teeth with a big toothbrush"
+  },
+  {
+    "title": "Reading Sloth",
+    "description": "A sloth hanging upside down while reading a book"
+  },
+  {
+    "title": "Chameleon Painter",
+    "description": "A chameleon painting itself different colors"
+  },
+  {
+    "title": "Toucan Mail Delivery",
+    "description": "A toucan delivering mail to other animals"
+  },
+  {
+    "title": "Flute-Playing Snake",
+    "description": "A snake playing a jungle flute"
+  },
+  {
+    "title": "Gorilla Gym Time",
+    "description": "A gorilla lifting weights made from coconuts"
+  },
+  {
+    "title": "Hippo Bubble Bath",
+    "description": "A hippo having a bubble bath in a river"
+  },
+  {
+    "title": "Chess Playing Cats",
+    "description": "A leopard and a panther playing chess on a rock"
+  },
+  {
+    "title": "Frog DJ",
+    "description": "A frog DJ-ing at a jungle party"
+  },
+  {
+    "title": "Gardening Rhino",
+    "description": "A rhinoceros watering flowers with a watering can"
+  },
+  {
+    "title": "Orangutan Student",
+    "description": "A baby orangutan learning to swing with a teacher monkey"
+  },
+  {
+    "title": "Jungle Animal Band",
+    "description": "A jungle animal band with bongos, maracas, and a banana mic"
+  },
+  {
+    "title": "Jungle Yoga Class",
+    "description": "A group of jungle animals doing yoga in the clearing"
+  },
+  {
+    "title": "Firefly Catching Lizard",
+    "description": "A lizard catching fireflies in a jar"
+  },
+  {
+    "title": "Jungle Mural Painting",
+    "description": "A group of animals painting a jungle mural together"
+  }
+]
+,
   "batchSize": 1,
   "outDir": "images",
   "model": "gpt-image-1",

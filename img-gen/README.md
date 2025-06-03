@@ -2,7 +2,7 @@
 
 ## For generating page ideas from chatgpt -
 
-I am creating ideas for a coloring book. Can you give me 20 ideas on the following topic and I want the response to be in the form of a javascript array: 
+I am creating ideas for a coloring book. Can you give me 20 unique and creative ideas on the following topic, and return the response in the form of a JavaScript array of objects with title and description fields?
 
 ## Home screen carousel image generator -
 
