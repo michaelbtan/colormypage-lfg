@@ -1,9 +1,9 @@
-import { createClient } from '@supabase/supabase-js';
-import fs from 'fs';
-import path from 'path';
-import mime from 'mime';
-import dotenv from 'dotenv';
-import { createObjectCsvWriter } from 'csv-writer';
+const { createClient } = require('@supabase/supabase-js');
+const fs = require('fs');
+const path = require('path');
+const mime = require('mime');
+const dotenv = require('dotenv');
+const { createObjectCsvWriter } = require('csv-writer');
 
 dotenv.config();
 
