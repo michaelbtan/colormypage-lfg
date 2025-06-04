@@ -1,3 +1,4 @@
+import { Suspense } from "react"
 import { AuthUI } from "@/components/auth/auth-ui"
 
 export const metadata = {
@@ -6,7 +7,10 @@ export const metadata = {
     "Join ColorMyPage to access thousands of free coloring pages, save your favorites, and share your creations with our community.",
 };
 
-export default async function AccountPage() {
-  return <AuthUI />
+export default function AccountPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <AuthUI />
+    </Suspense>
+  )
 }
-

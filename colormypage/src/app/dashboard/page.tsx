@@ -8,7 +8,6 @@ export const metadata = {
   description: "Get in touch with the ColorMyPage team. We'd love to hear from you!",
 }
 
-
 export default async function DashboardPage() {
   const supabase = await createClient()
 
