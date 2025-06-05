@@ -29,6 +29,27 @@ export async function generateMetadata({
   return {
     title: category.title,
     description: category.description,
+    openGraph: {
+      title: category.title,
+      description: category.description,
+      type: "website",
+      url: `https://colormypage.com/categories/${id}`,
+      siteName: "ColorMyPage",
+      images: [
+        {
+          url: category.image_url || "/logo.png",
+          width: 1200,
+          height: 630,
+          alt: category.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: category.title,
+      description: category.description,
+      images: [category.image_url || "/logo.png"],
+    },
   }
 }
 

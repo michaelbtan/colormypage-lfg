@@ -10,6 +10,27 @@ export const metadata = {
   title: "About Us",
   description:
     "Learn about ColorMyPage, our mission, and the team behind your favorite coloring pages.",
+  openGraph: {
+    title: "About ColorMyPage",
+    description: "Learn about ColorMyPage, our mission, and the team behind your favorite coloring pages.",
+    type: "website",
+    url: "https://colormypage.com/about",
+    siteName: "ColorMyPage",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "About ColorMyPage - Free Printable Coloring Pages",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About ColorMyPage",
+    description: "Learn about ColorMyPage, our mission, and the team behind your favorite coloring pages.",
+    images: ["/logo.png"],
+  },
 };
 
 export default function AboutPage() {

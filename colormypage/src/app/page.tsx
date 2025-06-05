@@ -3,6 +3,32 @@ import { CategoriesSection } from "@/components/home/categories-section"
 import { NewsletterSection } from "@/components/home/newsletter-section"
 // import { EasterSection } from "@/components/home/easter-section"
 import { createClient } from "@/lib/supabase/server"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Free Printable Coloring Pages for Kids & Adults",
+  description: "Discover thousands of high-quality, free printable coloring pages. Perfect for kids, adults, teachers, and parents. Download instantly and start coloring today!",
+  openGraph: {
+    title: "Free Printable Coloring Pages for Kids & Adults",
+    description: "Discover thousands of high-quality, free printable coloring pages. Perfect for kids, adults, teachers, and parents. Download instantly and start coloring today!",
+    type: "website",
+    url: "https://colormypage.com",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "ColorMyPage - Free Printable Coloring Pages",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Free Printable Coloring Pages for Kids & Adults",
+    description: "Discover thousands of high-quality, free printable coloring pages. Perfect for kids, adults, teachers, and parents. Download instantly and start coloring today!",
+    images: ["/logo.png"],
+  },
+}
 
 export default async function Home() {
   const supabase = await createClient()

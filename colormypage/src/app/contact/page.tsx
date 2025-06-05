@@ -41,6 +41,27 @@ export const metadata = {
   title: "Contact Us",
   description:
     "Get in touch with the ColorMyPage team. We'd love to hear from you!",
+  openGraph: {
+    title: "Contact ColorMyPage",
+    description: "Get in touch with the ColorMyPage team. We'd love to hear from you!",
+    type: "website",
+    url: "https://colormypage.com/contact",
+    siteName: "ColorMyPage",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "Contact ColorMyPage - Free Printable Coloring Pages",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact ColorMyPage",
+    description: "Get in touch with the ColorMyPage team. We'd love to hear from you!",
+    images: ["/logo.png"],
+  },
 };
 
 export default function ContactPage() {

@@ -7,6 +7,27 @@ import { FaqCategories } from "@/components/faq/faq-categories"
 export const metadata = {
   title: "Frequently Asked Questions",
   description: "Find answers to common questions about ColorMyPage, our coloring pages, and how to use our website.",
+  openGraph: {
+    title: "ColorMyPage FAQ",
+    description: "Find answers to common questions about ColorMyPage, our coloring pages, and how to use our website.",
+    type: "website",
+    url: "https://colormypage.com/faq",
+    siteName: "ColorMyPage",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "ColorMyPage FAQ - Free Printable Coloring Pages",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ColorMyPage FAQ",
+    description: "Find answers to common questions about ColorMyPage, our coloring pages, and how to use our website.",
+    images: ["/logo.png"],
+  },
 }
 
 export default function FaqPage() {

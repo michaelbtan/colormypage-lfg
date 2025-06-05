@@ -1,5 +1,32 @@
 import React from 'react';
 import Link from 'next/link';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Terms & Conditions",
+  description: "Read the terms and conditions for using ColorMyPage's free coloring pages and services.",
+  openGraph: {
+    title: "ColorMyPage Terms & Conditions",
+    description: "Read the terms and conditions for using ColorMyPage's free coloring pages and services.",
+    type: "website",
+    url: "https://colormypage.com/terms-and-conditions",
+    siteName: "ColorMyPage",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "ColorMyPage Terms & Conditions",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ColorMyPage Terms & Conditions",
+    description: "Read the terms and conditions for using ColorMyPage's free coloring pages and services.",
+    images: ["/logo.png"],
+  },
+};
 
 const TermsAndConditions = () => {
   return (

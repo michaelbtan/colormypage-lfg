@@ -20,6 +20,27 @@ export const metadata = {
   },
   description:
     "Download high-quality, free coloring pages for kids, parents, and teachers.",
+  openGraph: {
+    title: "ColorMyPage • Free Printable Coloring Pages",
+    description: "Download high-quality, free coloring pages for kids, parents, and teachers.",
+    type: "website",
+    url: "https://colormypage.com",
+    siteName: "ColorMyPage",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "ColorMyPage - Free Printable Coloring Pages",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ColorMyPage • Free Printable Coloring Pages",
+    description: "Download high-quality, free coloring pages for kids, parents, and teachers.",
+    images: ["/logo.png"],
+  },
 };
 
 export default function RootLayout({

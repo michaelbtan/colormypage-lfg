@@ -28,6 +28,27 @@ export async function generateMetadata({
   return {
     title: coloring_page.title,
     description: coloring_page.description,
+    openGraph: {
+      title: coloring_page.title,
+      description: coloring_page.description,
+      type: "article",
+      url: `https://colormypage.com/coloring-page/${id}`,
+      siteName: "ColorMyPage",
+      images: [
+        {
+          url: `https://colormypage.com/api/coloring-pages/${id}/image`,
+          width: 800,
+          height: 600,
+          alt: coloring_page.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: coloring_page.title,
+      description: coloring_page.description,
+      images: [`https://colormypage.com/api/coloring-pages/${id}/image`],
+    },
   }
 }
 

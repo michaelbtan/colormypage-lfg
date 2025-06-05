@@ -6,6 +6,27 @@ export const metadata = {
   title: "Browse All Coloring Page Categories",
   description:
     "Explore our complete collection of coloring page categories for all ages and interests.",
+  openGraph: {
+    title: "Browse All Coloring Page Categories",
+    description: "Explore our complete collection of coloring page categories for all ages and interests.",
+    type: "website",
+    url: "https://colormypage.com/categories",
+    siteName: "ColorMyPage",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "ColorMyPage Categories - Free Printable Coloring Pages",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Browse All Coloring Page Categories",
+    description: "Explore our complete collection of coloring page categories for all ages and interests.",
+    images: ["/logo.png"],
+  },
 };
 
 export default async function CategoriesPage() {

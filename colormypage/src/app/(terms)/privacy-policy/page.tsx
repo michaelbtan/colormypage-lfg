@@ -1,4 +1,31 @@
 import React from 'react';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Privacy Policy",
+  description: "Learn about how ColorMyPage collects, uses, and protects your personal information.",
+  openGraph: {
+    title: "ColorMyPage Privacy Policy",
+    description: "Learn about how ColorMyPage collects, uses, and protects your personal information.",
+    type: "website",
+    url: "https://colormypage.com/privacy-policy",
+    siteName: "ColorMyPage",
+    images: [
+      {
+        url: "/logo.png",
+        width: 1200,
+        height: 630,
+        alt: "ColorMyPage Privacy Policy",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ColorMyPage Privacy Policy",
+    description: "Learn about how ColorMyPage collects, uses, and protects your personal information.",
+    images: ["/logo.png"],
+  },
+};
 
 const PrivacyPolicy = () => {
   return (
