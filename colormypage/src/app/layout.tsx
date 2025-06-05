@@ -14,6 +14,7 @@ const fredoka = Fredoka({
 });
 
 export const metadata = {
+  metadataBase: new URL('https://colormypage.com'),
   title: {
     title: "ColorMyPage • Free Printable Coloring Pages",
     template: "%s • ColorMyPage",
