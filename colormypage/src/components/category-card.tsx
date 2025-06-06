@@ -41,6 +41,7 @@ export function CategoryCard({
     if (!userId) {
       toast("Must be logged in to favorite", {
         description: "Please log in to favorite this category.",
+        descriptionClassName: "!text-black font-medium"
       });
       return;
     }
