@@ -110,11 +110,13 @@ export function ShareModal({
       setCopied(true);
       toast("Link copied!", {
         description: "The link has been copied to your clipboard.",
+        descriptionClassName: "!text-black font-medium",
       });
       setTimeout(() => setCopied(false), 2000);
     } catch {
       toast("Failed to copy", {
         description: "Please try again or copy the link manually.",
+        descriptionClassName: "!text-black font-medium",
       });
     }
   };

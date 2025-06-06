@@ -42,6 +42,7 @@ export function ContactForm() {
     // Show success message
       toast("Message Sent!", {
         description: "Thank you for contacting us. We'll get back to you soon.",
+        descriptionClassName: "!text-black font-medium",
       })
       
     // Reset form

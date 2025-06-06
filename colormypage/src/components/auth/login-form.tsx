@@ -51,6 +51,7 @@ export function LoginForm() {
       if (success) {
         toast("Login Successful", {
           description: "Welcome back to ColorMyPage!",
+          descriptionClassName: "!text-black font-medium",
         });
         // Refresh the page to update the auth state
         router.refresh()
@@ -61,12 +62,14 @@ export function LoginForm() {
         // Handle login failure (e.g., show an error message)
         toast("Login failed", {
           description: "There was an error logging in. Please try again.",
+          descriptionClassName: "!text-black font-medium",
         });      
       }
     } catch (error) {
       console.error("Login error:", error);
       toast("Something went wrong", {
         description: "Please try again later",
+        descriptionClassName: "!text-black font-medium",
       });
     } finally {
       setIsLoading(false);

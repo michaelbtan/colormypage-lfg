@@ -48,6 +48,7 @@ export function UpdatePasswordForm() {
       console.error("Password update error:", error);
       toast("Something went wrong", {
         description: "Unable to update password. Please try again.",
+        descriptionClassName: "!text-black font-medium",
       });
     } finally {
       setIsLoading(false);

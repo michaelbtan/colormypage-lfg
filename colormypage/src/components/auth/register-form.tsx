@@ -59,6 +59,7 @@ export function RegisterForm() {
       if (result.error) {
         toast("Registration Failed", {
           description: result.error,
+          descriptionClassName: "!text-black font-medium",
         });
         return;
       }
@@ -66,6 +67,7 @@ export function RegisterForm() {
       if (result.success) {
         toast("Registration Successful", {
           description: "Please check your email to verify your account.",
+          descriptionClassName: "!text-black font-medium",
         });
         router.push("/check-email");
       }
@@ -76,6 +78,7 @@ export function RegisterForm() {
       console.error("Registration error:", error);
       toast("Something went wrong", {
         description: "Please try again later",
+        descriptionClassName: "!text-black font-medium",
       });
     } finally {
       setIsLoading(false);

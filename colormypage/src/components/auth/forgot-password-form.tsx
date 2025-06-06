@@ -42,11 +42,13 @@ export function ForgotPasswordForm() {
 
       toast("Email sent", {
         description: "Please check your inbox for a reset password link.",
+        descriptionClassName: "!text-black font-medium",
       });
     } catch (error) {
       console.error("Forgot password error:", error);
       toast("Something went wrong", {
         description: "Please try again later",
+        descriptionClassName: "!text-black font-medium",
       });
     } finally {
       setIsLoading(false);

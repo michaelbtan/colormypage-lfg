@@ -47,6 +47,7 @@ export function CategoryColoringPageCard({
     if (!userId) {
       toast("Must be logged in to favorite", {
         description: "Please log in to favorite this coloring page.",
+        descriptionClassName: "!text-black font-medium",
       });
       return;
     }
