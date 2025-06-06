@@ -1,47 +1,45 @@
-"use client"
+"use client";
 
-import type React from "react"
-
-import { useState } from "react"
-import { Mail, Send } from "lucide-react"
-import { Input } from "@/components/ui/input"
-import { Button } from "@/components/ui/button"
+import { useState } from "react";
+import { Mail, Send } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 
 export function NewsletterSection() {
-  const [email, setEmail] = useState("")
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSuccess, setIsSuccess] = useState(false)
-  const [error, setError] = useState("")
+  const [email, setEmail] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [error, setError] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    if (!email) return
+    e.preventDefault();
+    if (!email) return;
 
-    setIsSubmitting(true)
-    setError("")
+    setIsSubmitting(true);
+    setError("");
 
     try {
-      const response = await fetch("/api/subscribe", {
+      const res = await fetch("/api/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }),
-      })
+      });
 
-      const data = await response.json()
+      const { message } = await res.json();
 
-      if (response.ok) {
-        setIsSuccess(true)
-        setEmail("")
-        setTimeout(() => setIsSuccess(false), 3000)
+      if (res.ok) {
+        setIsSuccess(true);
+        setEmail("");
+        setTimeout(() => setIsSuccess(false), 3_000);
       } else {
-        setError(data.message || "Something went wrong. Please try again.")
+        setError(message ?? "Something went wrong. Please try again.");
       }
-    } catch (err) {
-      setError("An error occurred. Please try again.")
+    } catch {
+      setError("Network error. Please try again.");
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false);
     }
-  }
+  };
 
   return (
     <section className="w-full py-16">

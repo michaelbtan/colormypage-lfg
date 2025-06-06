@@ -1,38 +1,45 @@
-import type { NextApiRequest, NextApiResponse } from "next"
+import { NextResponse } from "next/server";
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "POST") {
-    return res.status(405).json({ message: "Method not allowed" })
-  }
-
-  const { email } = req.body
+export async function POST(request: Request) {
+  const { email } = await request.json() as { email?: string };
 
   if (!email) {
-    return res.status(400).json({ message: "Email is required" })
+    return NextResponse.json({ message: "Email is required" }, { status: 400 });
   }
 
   try {
-    const beehiivResponse = await fetch("https://api.beehiiv.com/v2/subscriptions", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${process.env.BEEHIIV_API_KEY}`,
+    const beehiivRes = await fetch(
+      `https://api.beehiiv.com/v2/publications/${process.env.NEXT_PUBLIC_BEEHIIV_PUBLICATION_ID}/subscriptions`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${process.env.NEXT_PUBLIC_BEEHIIV_API_KEY}`,
+        },
+        body: JSON.stringify({ email, send_welcome_email: true }),
+        cache: "no-store",
       },
-      body: JSON.stringify({
-        email,
-        publication_id: process.env.BEEHIIV_PUBLICATION_ID,
-        send_welcome_email: true,
-      }),
-    })
+    );
 
-    const data = await beehiivResponse.json()
+    const data = await beehiivRes.json();
 
-    if (!beehiivResponse.ok) {
-      return res.status(500).json({ message: data.message || "Beehiiv API error" })
+    if (!beehiivRes.ok) {
+      // log for server-side debugging
+      console.error("Beehiiv error", beehiivRes.status, data);
+
+      // forward details to the client
+      return NextResponse.json(
+        { message: data?.message ?? `Beehiiv responded ${beehiivRes.status}` },
+        { status: beehiivRes.status },
+      );
     }
 
-    return res.status(200).json({ message: "Successfully subscribed" })
-  } catch (err) {
-    return res.status(500).json({ message: err })
+    return NextResponse.json({ message: "Successfully subscribed" })
+    } catch (error) {
+      console.error("Subscription error", error);
+      return NextResponse.json(
+        { message: "An error occurred while subscribing. Please try again later." },
+        { status: 500 },
+      );
+    }
   }
-}
