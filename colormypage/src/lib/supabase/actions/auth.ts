@@ -2,6 +2,7 @@
 import { revalidatePath } from 'next/cache'
 import { redirect } from 'next/navigation'
 import { createClient } from '@/lib/supabase/server'
+import { baseURL } from '@/lib/constants'
 
 interface AuthValues {
   emailAddress: string
@@ -12,9 +13,9 @@ interface UpdatePasswordValues {
   newPassword: string
 }
 
-// interface ResetPasswordValues {
-//   emailAddress: string
-// }
+interface ResetPasswordValues {
+  emailAddress: string
+}
 
 export async function login(values: AuthValues): Promise<{ success: boolean }> {
   const supabase = await createClient()
@@ -60,19 +61,23 @@ export async function logout(): Promise<void> {
   redirect('/')
 }
 
-// export async function resetPassword(values: ResetPasswordValues): Promise<void> {
-//   const supabase = await createClient()
-//   const { error } = await supabase.auth.resetPasswordForEmail(values.emailAddress, {
-//     redirectTo: "http://localhost:3000/update-password",
-//   })
-// }
+export async function resetPassword(values: ResetPasswordValues): Promise<void> {
+  const supabase = await createClient()
+
+  const { error } = await supabase.auth.resetPasswordForEmail(values.emailAddress, {
+    redirectTo: `${baseURL}/update-password`,
+  })
+
+
+  if (error) {
+    redirect('/error')
+  }
+
+}
 
 export async function updatePassword(values: UpdatePasswordValues): Promise<void> {
   const supabase = await createClient()
-  const { data, error } = await supabase.auth.updateUser({ password: values.newPassword })
-
-  console.log('resetpass', data)
-  console.log('resetpass', error)
+  const { error } = await supabase.auth.updateUser({ password: values.newPassword })
 
   if (error) {
     redirect('/error')
