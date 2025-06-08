@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button";
 import { ShareModal } from "@/components/share-modal";
 import { toast } from "sonner";
 import { createClient } from "@/lib/supabase/client";
+import PLACEHOLDER from "@/assets/placeholder.svg";
 
 export interface ColoringPage {
   id: string;
@@ -220,7 +221,7 @@ ColoringPageViewProps) {
             >
               <div className="aspect-[8.5/11] relative">
                 <Image
-                  src={coloringPage.image_url || "/placeholder.svg"}
+                  src={coloringPage.image_url || PLACEHOLDER}
                   alt={coloringPage.title}
                   fill
                   className="object-contain"

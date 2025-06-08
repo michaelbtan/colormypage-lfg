@@ -3,6 +3,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
+import PLACEHOLDER from "@/assets/placeholder.svg"
 
 interface ThemedPageCard {
   id: string | number
@@ -33,7 +34,7 @@ export function ThemedSection({ title, pages, viewAllLink, viewAllText, accentCo
           <Link key={page.id} href={page.href} className="group block">
             <div className="bg-[#f9f7f2] rounded-xl p-4 shadow-sm transition-all duration-300 hover:shadow-md">
               <div className="relative aspect-[4/3] mb-4 overflow-hidden rounded-lg">
-                <Image src={page.imageUrl || "/placeholder.svg"} alt={page.title} fill className="object-cover" />
+                <Image src={page.imageUrl || PLACEHOLDER} alt={page.title} fill className="object-cover" />
 
                 {/* Subtle overlay with pencils in bottom corners */}
                 <div className="absolute bottom-2 left-2">

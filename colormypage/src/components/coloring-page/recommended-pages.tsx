@@ -1,6 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import type { ColoringPage } from "@/lib/coloring-pages"
+import PLACEHOLDER from "@/assets/placeholder.svg"
 
 interface RecommendedPagesProps {
   pages: ColoringPage[]
@@ -17,7 +18,7 @@ export function RecommendedPages({ pages }: RecommendedPagesProps) {
             <Link key={page.id} href={`/coloring-page/${page.id}`} className="flex items-start gap-3 group">
               <div className="relative w-16 h-20 flex-shrink-0 rounded-md overflow-hidden border border-gray-200">
                 <Image
-                  src={page.imageUrl || "/placeholder.svg"}
+                  src={page.imageUrl || PLACEHOLDER}
                   alt={page.title}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-300"

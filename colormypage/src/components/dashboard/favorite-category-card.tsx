@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { ShareModal } from "@/components/share-modal";
 import { createClient } from "@/lib/supabase/client";
 import { toast } from "sonner";
+import PLACEHOLDER from "@/assets/placeholder.svg";
 
 interface Category {
   title: string;
@@ -85,7 +86,7 @@ export function FavoriteCategoryCard({
       >
         <div className="relative h-16 w-16 rounded-md overflow-hidden">
           <Image
-            src={category.image_url || "/placeholder.svg"}
+            src={category.image_url || PLACEHOLDER}
             alt={category.title}
             fill
             className="object-cover"

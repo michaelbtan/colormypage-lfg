@@ -10,6 +10,7 @@ import { Share2, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
 import { createClient } from "@/lib/supabase/client";
+import PLACEHOLDER from "@/assets/placeholder.svg";
 
 export interface ColoringPage {
   id: string | number;
@@ -87,7 +88,7 @@ export default function FavoriteColoringPageCard({
           style={{ aspectRatio: "3/4" }}
         >
           <Image
-            src={page.image_url || "/placeholder.svg"}
+            src={page.image_url || PLACEHOLDER}
             alt={page.title}
             fill
             className="object-cover transition-transform duration-300 group-hover:scale-105"
