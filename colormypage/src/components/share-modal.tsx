@@ -1,18 +1,12 @@
 "use client";
 
-import type React from "react";
 import { useState } from "react";
 import Image from "next/image";
-import { Copy, Check } from "lucide-react";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogDescription,
-} from "@/components/ui/dialog";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
+import { X as Close } from "lucide-react";
 import { toast } from "sonner";
+
 import facebook from "@/assets/social/facebook.svg";
 import instagram from "@/assets/social/instagram.svg";
 import x from "@/assets/social/x.svg";
@@ -48,7 +42,7 @@ export function ShareModal({
 
   const fullPageUrl = pageUrl.startsWith("http")
     ? pageUrl
-    : `${baseURL || window.location.origin}${pageUrl}`;
+    : `${baseURL ?? (typeof window !== "undefined" ? window.location.origin : "")}${pageUrl}`;
 
   const shareOptions: ShareOption[] = [
     {
@@ -56,29 +50,21 @@ export function ShareModal({
       icon: facebook,
       color: "#1877F2",
       getShareUrl: (url, title) =>
-        `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-          url
-        )}&quote=${encodeURIComponent(title)}`,
+        `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&quote=${encodeURIComponent(title)}`,
     },
     {
       name: "Twitter",
       icon: x,
       color: "#1DA1F2",
       getShareUrl: (url, title) =>
-        `https://twitter.com/intent/tweet?url=${encodeURIComponent(
-          url
-        )}&text=${encodeURIComponent(title)}`,
+        `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(title)}`,
     },
     {
       name: "Pinterest",
       icon: pinterest,
       color: "#E60023",
       getShareUrl: (url, title) =>
-        `https://pinterest.com/pin/create/button/?url=${encodeURIComponent(
-          url
-        )}&media=${encodeURIComponent(
-          imageUrl
-        )}&description=${encodeURIComponent(title)}`,
+        `https://pinterest.com/pin/create/button/?url=${encodeURIComponent(url)}&media=${encodeURIComponent(imageUrl)}&description=${encodeURIComponent(title)}`,
     },
     {
       name: "Instagram",
@@ -91,11 +77,7 @@ export function ShareModal({
       icon: email,
       color: "#9d84ff",
       getShareUrl: (url, title) =>
-        `mailto:?subject=${encodeURIComponent(
-          `Check out this coloring page: ${title}`
-        )}&body=${encodeURIComponent(
-          `I found this awesome coloring page on ColorMyPage: ${url}`
-        )}`,
+        `mailto:?subject=${encodeURIComponent(`Check out this coloring page: ${title}`)}&body=${encodeURIComponent(`I found this awesome coloring page on ColorMyPage: ${url}`)}`,
     },
   ];
 
@@ -123,93 +105,39 @@ export function ShareModal({
 
   return (
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
-      <DialogContent className="sm:max-w-xl w-full max-w-[95vw] p-0 overflow-hidden bg-gradient-to-br from-cyan-50 to-blue-100 border-0 shadow-2xl">
-        <div className="bg-gradient-to-r from-purple-400 to-purple-500 p-6 text-white">
-          <DialogHeader>
-            <DialogTitle className="text-xl font-bold text-white">
-              Share Coloring Page
-            </DialogTitle>
-            <DialogDescription className="text-purple-100">
-              Share this coloring page with friends and family
-            </DialogDescription>
-          </DialogHeader>
-        </div>
+      <DialogContent className="sm:max-w-[500px] bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
 
-        <div className="p-4 sm:p-6">
-          <div className="flex items-center space-x-4 py-4 bg-white rounded-2xl p-4 shadow-sm border border-purple-100">
-            <div className="relative h-32 w-24 flex-shrink-0 overflow-hidden rounded-xl border-2 border-purple-200">
-              <Image
-                src={imageUrl || "/placeholder.svg"}
-                alt={title}
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="flex-1 min-w-0 overflow-hidden">
-              <h3 className="text-sm font-semibold text-gray-800 truncate">
-                {title}
-              </h3>
-              <p
-                className="text-xs text-purple-600 truncate mt-1"
-                title={fullPageUrl}
-              >
-                {description}
-              </p>
-            </div>
+        <div className="flex flex-col items-center gap-4 pt-2">
+          <Image
+            src={imageUrl || "/placeholder.svg"}
+            alt={title}
+            width={180}
+            height={180}
+            className="rounded-md object-cover"
+          />
+
+          <div className="text-center">
+            <h2 className="text-xl font-semibold">{title}</h2>
+            <p className="text-sm text-muted-foreground">{description}</p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-5 gap-2 py-6">
+          <div className="grid grid-cols-3 gap-4 w-full pt-2">
             {shareOptions.map((option) => (
               <button
                 key={option.name}
                 onClick={() => handleShare(option)}
-                className="flex flex-col items-center justify-center gap-1 rounded-2xl p-2 cursor-pointer bg-white hover:bg-purple-50 transition-all duration-200 shadow-sm border border-purple-100 hover:border-purple-200 hover:shadow-md transform hover:scale-105"
+                className="flex flex-col items-center gap-1 rounded-lg p-3 hover:bg-accent transition cursor-pointer"
+                aria-label={`Share to ${option.name}`}
               >
-                <div
-                  className="w-7 h-7 rounded-full flex items-center justify-center"
-                  style={{ backgroundColor: `${option.color}15` }}
-                >
-                  <Image
-                    src={option.icon}
-                    alt={option.name}
-                    width={20}
-                    height={20}
-                  />
-                </div>
-                <span className="text-xs font-medium text-gray-700 text-center leading-tight">
-                  {option.name}
-                </span>
+                <Image src={option.icon} alt={option.name} width={24} height={24} />
+                <span className="text-xs font-medium">{option.name}</span>
               </button>
             ))}
           </div>
 
-          <div className="mt-4">
-            <div className="bg-white rounded-2xl border-2 border-purple-200 overflow-hidden shadow-sm">
-              <div className="flex items-center justify-between px-2 py-2 gap-2">
-                <div className="flex-grow overflow-hidden min-w-0">
-                  <p
-                    className="text-xs sm:text-sm text-gray-600 truncate w-full font-medium break-all"
-                    title={fullPageUrl}
-                  >
-                    {fullPageUrl}
-                  </p>
-                </div>
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  onClick={copyToClipboard}
-                  className="h-7 w-7 p-0 flex-shrink-0 rounded-xl hover:bg-purple-100 transition-colors"
-                >
-                  {copied ? (
-                    <Check className="h-3.5 w-3.5 text-green-500" />
-                  ) : (
-                    <Copy className="h-3.5 w-3.5 text-purple-600" />
-                  )}
-                  <span className="sr-only">Copy link</span>
-                </Button>
-              </div>
-            </div>
-          </div>
+          <Button variant="outline" className="w-full mt-2 cursor-pointer bg-[#9d84ff]/20 hover:bg-[#9d84ff]/20 backdrop-blur-sm border border-[#9d84ff]/30 text-[#9d84ff] hover:text-[#9d84ff] transition-transform duration-300 hover:scale-105" onClick={copyToClipboard}>
+            {copied ? "Link Copied!" : "Copy Link"}
+          </Button>
         </div>
       </DialogContent>
     </Dialog>
