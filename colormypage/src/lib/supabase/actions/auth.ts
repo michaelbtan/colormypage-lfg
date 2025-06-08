@@ -61,18 +61,24 @@ export async function logout(): Promise<void> {
   redirect('/')
 }
 
-export async function resetPassword(values: ResetPasswordValues): Promise<void> {
-  const supabase = await createClient()
+export async function resetPassword(
+  values: ResetPasswordValues,
+): Promise<void> {
+  const supabase = await createClient();
 
-  const { error } = await supabase.auth.resetPasswordForEmail(values.emailAddress, {
-    redirectTo: `${baseURL}/update-password`,
-  })
-
+  const { error } = await supabase.auth.resetPasswordForEmail(
+    values.emailAddress,
+    {
+      redirectTo: `${baseURL}/auth/confirm?next=${encodeURIComponent(
+        "/update-password",
+      )}`,
+    },
+  );
 
   if (error) {
-    redirect('/error')
+    console.error("resetPassword error:", error);
+    redirect("/error");
   }
-
 }
 
 export async function updatePassword(values: UpdatePasswordValues): Promise<void> {
@@ -83,7 +89,6 @@ export async function updatePassword(values: UpdatePasswordValues): Promise<void
     redirect('/error')
   }
 
-  revalidatePath('/')
   redirect('/')
 }
 

@@ -56,7 +56,7 @@ export async function Header() {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-6">
           <Link
-            href="/cateogories"
+            href="/categories"
             className="text-lg font-semibold transition-transform duration-300 hover:scale-110 flex items-center gap-2"
           >
             <Palette className="h-6 w-6" />
