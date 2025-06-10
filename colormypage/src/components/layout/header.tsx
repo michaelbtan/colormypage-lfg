@@ -1,17 +1,39 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Heart, Palette, LogIn, LogOut } from "lucide-react";
 // import { SearchBar } from "./search-bar";
 import { MobileMenu } from "./mobile-menu";
-import { createClient } from "@/lib/supabase/server";
+import { createClient } from "@/lib/supabase/client";
 import { logout } from "@/lib/supabase/actions/auth";
 import logo from "@/assets/logo.png";
 
-export async function Header() {
-  const supabase = await createClient();
-  const { data } = await supabase.auth.getUser();
-  const isLoggedIn = data.user != null;
+export function Header() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const supabase = createClient();
+    
+    // Get initial session
+    const getInitialSession = async () => {
+      const { data: { session } } = await supabase.auth.getSession();
+      setIsLoggedIn(session?.user != null);
+      setLoading(false);
+    };
+    
+    getInitialSession();
+
+    // Listen for auth changes
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
+      setIsLoggedIn(session?.user != null);
+    });
+
+    return () => subscription.unsubscribe();
+  }, []);
 
   const navigationItems = [
     {
@@ -69,7 +91,9 @@ export async function Header() {
             <Heart className="h-6 w-6" />
             Favorites
           </Link>}
-          {isLoggedIn ? (
+          {loading ? (
+            <div className="h-10 w-40 bg-gray-200 animate-pulse rounded" />
+          ) : isLoggedIn ? (
             <form action={logout} className="contents">
               <Button
                 type="submit"

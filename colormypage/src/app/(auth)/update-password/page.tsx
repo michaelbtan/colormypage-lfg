@@ -10,7 +10,7 @@ export const metadata = {
     "Join ColorMyPage to access thousands of free coloring pages, save your favorites, and share your creations with our community.",
 };
 
-export default function AccountPage() {
+export default function UpdatePasswordPage() {
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <div className="flex min-h-screen">
