@@ -78,14 +78,13 @@ export async function resetPassword(
   }
 }
 
-export async function updatePassword(values: UpdatePasswordValues): Promise<void> {
-  const supabase = await createClient()
-  const { error } = await supabase.auth.updateUser({ password: values.newPassword })
+export async function updatePassword(values: UpdatePasswordValues): Promise<{ success: boolean; error?: string }> {
+  const supabase = await createClient();
+  const { error } = await supabase.auth.updateUser({ password: values.newPassword });
 
   if (error) {
-    redirect('/error')
+    return { success: false, error: error.message };
   }
 
-  redirect('/')
+  return { success: true };
 }
-

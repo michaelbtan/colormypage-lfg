@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { redirect } from 'next/navigation'
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { EyeIcon, EyeOffIcon, ArrowRight, Loader2 } from "lucide-react";
@@ -40,20 +41,34 @@ export function UpdatePasswordForm() {
     },
   });
 
-  const onSubmit = async (data: z.infer<typeof FormSchema>) => {
-    setIsLoading(true);
-    try {
-      await updatePassword({ newPassword: data.password });
-    } catch (error: any) {
-      console.error("Password update error:", error);
-      toast("Something went wrong", {
-        description: "Unable to update password. Please try again.",
+const onSubmit = async (data: z.infer<typeof FormSchema>) => {
+  setIsLoading(true);
+  try {
+    const result = await updatePassword({ newPassword: data.password });
+
+    if (result.success) {
+      toast("Password updated successfully", {
+        description: "Your password has been changed.",
         descriptionClassName: "!text-black font-medium",
       });
-    } finally {
-      setIsLoading(false);
+      redirect('/'); 
+    } else {
+      toast("Update failed", {
+        description: result.error || "Unable to update password. Please try again.",
+        descriptionClassName: "!text-black font-medium",
+      });
     }
-  };
+  } catch (error) {
+    console.error("Password update error:", error);
+    toast("Something went wrong", {
+      description: "Unable to update password. Please try again.",
+      descriptionClassName: "!text-black font-medium",
+    });
+  } finally {
+    setIsLoading(false);
+  }
+};
+
 
   return (
     <Form {...form}>
