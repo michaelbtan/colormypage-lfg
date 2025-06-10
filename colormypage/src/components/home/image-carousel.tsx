@@ -6,6 +6,9 @@ import { ChevronLeft, ChevronRight, Play, Pause } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import JUNGLEBANNER from "@/assets/junglebanner.png"
+import UNICORNBANNER from "@/assets/unicornbanner.png"
+import SUMMERKIDS from "@/assets/summerkids.png"
+import OCEANANIMALS from "@/assets/oceananimals.png"
 
 interface CarouselImage {
   id: number
@@ -20,34 +23,35 @@ const carouselImages: CarouselImage[] = [
   {
     id: 1,
     src: JUNGLEBANNER.src,
-    alt: "Featured Coloring Pages",
-    title: "Discover Amazing Coloring Pages",
-    subtitle: "Unleash your creativity with our collection",
-    href: "/coloring-pages",
+    alt: "Featured Jungle animal coloring pages",
+    title: "Jungle Adventures",
+    subtitle: "Explore the wild with our jungle-themed coloring pages",
+    href: "/coloring-pages/jungle-animals",
   },
   {
     id: 2,
-    src: "/placeholder.svg?height=1024&width=1536&query=artistic mandala coloring designs",
-    alt: "Mandala Collection",
-    title: "Beautiful Mandala Designs",
-    subtitle: "Find peace through intricate patterns",
-    href: "/coloring-pages/mandalas",
+    src: UNICORNBANNER.src,
+    alt: "Featured Unicorn coloring pages",
+    title: "Unicorn Dreams",
+    subtitle: "Color magical unicorns and their enchanting worlds",
+    href: "/coloring-pages/unicorns",
+
   },
   {
     id: 3,
-    src: "/placeholder.svg?height=1024&width=1536&query=nature animals coloring book illustrations",
-    alt: "Nature & Animals",
-    title: "Nature & Wildlife",
-    subtitle: "Explore the beauty of the natural world",
-    href: "/coloring-pages/nature-animals",
+    src: SUMMERKIDS.src,
+    alt: "Featured Summer Kids coloring pages",
+    title: "Summer Fun",
+    subtitle: "Enjoy sunny days with our summer-themed coloring pages",
+    href: "/coloring-pages/summer-kids",
   },
   {
     id: 4,
-    src: "/placeholder.svg?height=1024&width=1536&query=fantasy characters coloring pages",
-    alt: "Fantasy Characters",
-    title: "Fantasy Adventures",
-    subtitle: "Bring magical characters to life",
-    href: "/coloring-pages/fantasy",
+    src: OCEANANIMALS.src,
+    alt: "Featured Ocean Animals coloring pages",
+    title: "Ocean Wonders",
+    subtitle: "Dive into the sea with our ocean animal coloring pages",
+    href: "/coloring-pages/ocean-animals",
   },
 ]
 

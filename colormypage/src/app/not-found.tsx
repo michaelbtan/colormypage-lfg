@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Home, Palette } from "lucide-react";
+import notfound from "@/assets/notfound.png";
 
 export default function NotFound() {
   return (
@@ -14,37 +15,11 @@ export default function NotFound() {
             <div className="relative w-48 h-48">
               {/* Sad coloring page with scribbles outside the lines */}
               <div className="absolute inset-0 bg-white rounded-lg border-4 border-dashed border-[#9d84ff] rotate-3 transform-gpu"></div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <Palette className="h-20 w-20 text-gray-300" />
-                <div className="absolute inset-0">
-                  {/* Scribbles outside the lines */}
-                  <div className="absolute top-1/4 left-1/4 w-full h-full">
-                    <svg viewBox="0 0 100 100" className="w-full h-full">
-                      <path
-                        d="M10,30 Q30,5 50,30 T90,30"
-                        fill="none"
-                        stroke="#ffb380"
-                        strokeWidth="3"
-                        strokeLinecap="round"
-                      />
-                      <path
-                        d="M20,70 Q40,95 60,70 T100,70"
-                        fill="none"
-                        stroke="#5bbce4"
-                        strokeWidth="3"
-                        strokeLinecap="round"
-                      />
-                      <path
-                        d="M70,20 Q90,40 70,60 T70,80"
-                        fill="none"
-                        stroke="#9d84ff"
-                        strokeWidth="3"
-                        strokeLinecap="round"
-                      />
-                    </svg>
-                  </div>
-                </div>
-              </div>
+              <img
+                src={notfound.src}
+                alt="Missing coloring page"
+                className="absolute inset-0 w-full h-full object-cover rounded-lg"
+              />
             </div>
           </div>
         </div>
