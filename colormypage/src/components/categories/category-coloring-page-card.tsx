@@ -111,22 +111,22 @@ export function CategoryColoringPageCard({
           </Link>
 
           {/* Action buttons - in top right */}
-          <div className="absolute top-3 right-3 flex gap-2">
+          <div className="absolute top-2 right-2 md:top-3 md:right-3 flex gap-1 md:gap-2">
             <Button
               onClick={handleShare}
               size="icon"
               variant="outline"
-              className="h-8 w-8 rounded-full bg-[#9d84ff]/20 backdrop-blur-sm hover:bg-[#9d84ff]/30 shadow-sm cursor-pointer border border-[#9d84ff]/30"
+              className="h-6 w-6 md:h-8 md:w-8 rounded-full bg-[#9d84ff]/20 backdrop-blur-sm hover:bg-[#9d84ff]/30 shadow-sm cursor-pointer border border-[#9d84ff]/30"
               aria-label="Share"
             >
-              <Share2 className="h-4 w-4 text-[#9d84ff]" />
+              <Share2 className="h-3 w-3 md:h-4 md:w-4 text-[#9d84ff]" />
             </Button>
             <Button
               onClick={handleFavorite}
               size="icon"
               variant="outline"
               className={cn(
-                "h-8 w-8 rounded-full shadow-sm cursor-pointer",
+                "h-6 w-6 md:h-8 md:w-8 rounded-full shadow-sm cursor-pointer",
                 isFavorited
                   ? "bg-[#9d84ff] hover:bg-[#8a6dff] text-white hover:text-white"
                   : "bg-[#9d84ff]/20 backdrop-blur-sm hover:bg-[#9d84ff]/30 border border-[#9d84ff]/30 text-[#9d84ff] hover:text-white"
@@ -135,7 +135,7 @@ export function CategoryColoringPageCard({
                 isFavorited ? "Remove from favorites" : "Add to favorites"
               }
             >
-              <Star className="h-4 w-4" />
+              <Star className="h-3 w-3 md:h-4 md:w-4" />
               <span className="sr-only">
                 {isFavorited ? "Remove from favorites" : "Add to favorites"}
               </span>
@@ -144,8 +144,8 @@ export function CategoryColoringPageCard({
         </div>
 
         {/* Title below the image */}
-        <div className="mt-3 px-1">
-          <h3 className="font-medium text-base text-gray-800 line-clamp-2">
+        <div className="mt-2 px-1">
+          <h3 className="font-medium text-sm md:text-base text-gray-800 line-clamp-2">
             {page.title}
           </h3>
         </div>

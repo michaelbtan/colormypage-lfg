@@ -106,22 +106,22 @@ export function CategoryCard({
             </div>
 
             {/* Action buttons - in top right */}
-            <div className="absolute top-3 right-3 flex gap-2">
+            <div className="absolute top-2 right-2 md:top-3 md:right-3 flex gap-1 md:gap-2">
               <Button
                 onClick={handleShare}
                 size="icon"
                 variant="outline"
-                className="h-8 w-8 rounded-full bg-[#9d84ff]/20 backdrop-blur-sm hover:bg-[#9d84ff]/30 shadow-sm cursor-pointer border border-[#9d84ff]/30"
+                className="h-6 w-6 md:h-8 md:w-8 rounded-full bg-[#9d84ff]/20 backdrop-blur-sm hover:bg-[#9d84ff]/30 shadow-sm cursor-pointer border border-[#9d84ff]/30"
                 aria-label="Share"
               >
-                <Share2 className="h-4 w-4 text-[#9d84ff]" />
+                <Share2 className="h-3 w-3 md:h-4 md:w-4 text-[#9d84ff]" />
               </Button>
               <Button
                 onClick={handleFavorite}
                 size="icon"
                 variant="outline"
                 className={cn(
-                  "h-8 w-8 rounded-full shadow-sm cursor-pointer",
+                  "h-6 w-6 md:h-8 md:w-8 rounded-full shadow-sm cursor-pointer",
                   isFavorited
                     ? "bg-[#9d84ff] hover:bg-[#8a6dff] text-white hover:text-white"
                     : "bg-[#9d84ff]/20 backdrop-blur-sm hover:bg-[#9d84ff]/30 border border-[#9d84ff]/30 text-[#9d84ff] hover:text-white"
@@ -130,7 +130,7 @@ export function CategoryCard({
                   isFavorited ? "Remove from favorites" : "Add to favorites"
                 }
               >
-                <Star className="h-4 w-4" />
+                <Star className="h-3 w-3 md:h-4 md:w-4" />
                 <span className="sr-only">
                   {isFavorited ? "Remove from favorites" : "Add to favorites"}
                 </span>
@@ -139,7 +139,7 @@ export function CategoryCard({
 
             {/* Add a badge showing the number of pages (visible even when not hovering) */}
             {imageCount !== undefined && (
-              <div className="absolute top-3 left-3 bg-[#9d84ff] backdrop-blur-sm text-white text-xs font-medium px-2 py-1 rounded-full">
+              <div className="absolute top-2 left-2 md:top-3 md:left-3 bg-[#9d84ff] backdrop-blur-sm text-white text-xs font-medium px-1.5 py-0.5 md:px-2 md:py-1 rounded-full">
                 {imageCount} pages
               </div>
             )}
@@ -147,8 +147,8 @@ export function CategoryCard({
         </Link>
 
         {/* Title below the image */}
-        <div className="mt-3 px-1">
-          <h3 className="font-medium text-2xl text-gray-800 text-center">
+        <div className="mt-2 px-1">
+          <h3 className="font-medium text-lg md:text-2xl text-gray-800 text-center">
             {title}
           </h3>
         </div>
