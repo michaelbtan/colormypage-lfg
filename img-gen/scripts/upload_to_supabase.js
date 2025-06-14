@@ -110,7 +110,7 @@ async function uploadDirectoryAndGenerateCSVs(localDirPath) {
       { id: 'description', title: 'description' },
       { id: 'image_url', title: 'image_url' },
       { id: 'file_name', title: 'file_name' },
-      { id: 'isPublished', title: 'isPublished' },
+      { id: 'is_published', title: 'isPublished' },
     ],
   });
   await pagesCsvWriter.writeRecords(coloringPagesRecords);

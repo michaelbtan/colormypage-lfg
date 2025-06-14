@@ -9,7 +9,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "generate": "node scripts/generate_images.js",
     "frame": "node scripts/frame_coloring_pages.js",
-    "upload": "node scripts/upload_to_supabase.js"
+    "upload": "node scripts/upload_to_supabase.js",
+    "delete": "node scripts/delete_images.js"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.49.8",
