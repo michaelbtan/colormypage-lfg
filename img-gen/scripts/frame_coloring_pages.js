@@ -35,8 +35,8 @@ const sharp = require("sharp");
 const FRAME_PATH = path.resolve(__dirname, "frame.png");
 // If you prefer the quarter‑watermark version, change to: "frame_quarterwatermark.png"
 
-const INPUT_DIR  = path.resolve(__dirname, "images");
-const OUTPUT_DIR = path.resolve(__dirname, "coloring_pages");
+const INPUT_DIR  = path.resolve(__dirname, "..", "images");
+const OUTPUT_DIR = path.resolve(__dirname, "..", "coloring_pages");
 
 const DPI     = 300;
 const FRAME_W = 8   * DPI;  // 2400 px

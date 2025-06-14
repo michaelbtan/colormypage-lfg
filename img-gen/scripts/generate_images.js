@@ -17,7 +17,7 @@ const cfg         = JSON.parse(fs.readFileSync(CONFIG_PATH, "utf-8"));
 const {
   prompt,
   prompts,
-  batchSize      = 1,
+  batchSize      = 20,
   outDir         = "images",
   model          = "gpt-image-1",
   size           = "1024x1536",
@@ -29,8 +29,11 @@ const {
 
 // Normalise into an array so the rest of the script is uniform
 const promptList = Array.isArray(prompts)
-  ? prompts
-  : (prompt ? [prompt] : []);
+  ? prompts.map(p => ({ 
+      prompt: typeof p === 'string' ? p : p.description || p.title || p, 
+      original: p 
+    }))
+  : (prompt ? [{ prompt, original: prompt }] : []);
 
 if (promptList.length === 0) {
   console.error("🚫  No prompt(s) found. Add `prompt` or `prompts` to config.json.");
@@ -65,7 +68,7 @@ function downloadTo(filePath, url) {
 let imagesInWindow = 0;
 let windowStart    = Date.now();
 
-async function generateImages(forPrompt) {
+async function generateImages(forPrompt, originalPrompt) {
   const fullPrompt = (process.env.COLORING_PROMPT || "") + forPrompt;
   console.log(`\n• Requesting ${batchSize} image(s)…`);
   console.log(`  prompt: "${fullPrompt}"`);
@@ -79,7 +82,7 @@ async function generateImages(forPrompt) {
   });
 
   fs.mkdirSync(outDir, { recursive: true });
-  const base = slugify(forPrompt);
+  const base = slugify(originalPrompt && originalPrompt.title ? originalPrompt.title : forPrompt);
 
   for (const [i, img] of data.entries()) {
     const suffix = batchSize > 1 ? `-${i + 1}` : "";
@@ -118,7 +121,7 @@ async function generateImages(forPrompt) {
 
 (async () => {
   for (const p of promptList) {
-    await generateImages(p);
+    await generateImages(p.prompt, p.original);
   }
   console.log(`\nAll done – generated ${promptList.length} prompt(s).\n`);
 })().catch((err) => {
