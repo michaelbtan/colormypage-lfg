@@ -41,7 +41,7 @@ export default async function Home() {
   // Fetch categories from Supabase
   const { data: categoriesData } = await supabase
     .from("categories")
-    .select("id, created_at, title, image_url, image_count")
+    .select("id, created_at, title, cover_image_url, image_count")
     .order("created_at", { ascending: false })
     .limit(8)
 

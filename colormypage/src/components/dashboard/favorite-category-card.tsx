@@ -13,7 +13,7 @@ import PLACEHOLDER from "@/assets/placeholder.svg";
 
 interface Category {
   title: string;
-  image_url: string;
+  cover_image_url: string;
   description: string;
   image_count: number;
 }
@@ -86,7 +86,7 @@ export function FavoriteCategoryCard({
       >
         <div className="relative h-16 w-16 rounded-md overflow-hidden">
           <Image
-            src={category.image_url || PLACEHOLDER}
+            src={category.cover_image_url || PLACEHOLDER}
             alt={category.title}
             fill
             className="object-cover"
@@ -138,7 +138,7 @@ export function FavoriteCategoryCard({
         onClose={() => setIsShareModalOpen(false)}
         title={category.title}
         description={`Check out free downloadable ${category.title} coloring pages`}
-        imageUrl={category.image_url}
+        imageUrl={category.cover_image_url}
         pageUrl={`/categories/${category_id}`}
       />
     </div>

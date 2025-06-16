@@ -10,7 +10,7 @@ export interface Category {
   id: string
   created_at: string
   title: string
-  image_url: string
+  cover_image_url: string
   image_count: number
   description?: string // Optional as it's not in your current data
   categoryFavorited?: boolean // Optional, added for favorited state
@@ -53,7 +53,7 @@ export function InfiniteCategoriesGrid({
     // Query Supabase for more categories
     const { data, error, count } = await supabase
       .from("categories")
-      .select("id, created_at, title, image_url, image_count", { count: 'exact' })
+      .select("id, created_at, title, cover_image_url, image_count", { count: 'exact' })
       .order('created_at', { ascending: false })
       .range(from, to)
     
@@ -118,7 +118,7 @@ export function InfiniteCategoriesGrid({
             key={category.id}
             id={category.id}
             title={category.title}
-            imageUrl={category.image_url}
+            imageUrl={category.cover_image_url}
             imageCount={category.image_count}
             categoryFavorited={category.categoryFavorited}
             userId={userId}

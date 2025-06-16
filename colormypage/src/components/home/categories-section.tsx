@@ -9,7 +9,7 @@ interface CategoriesSectionProps {
     id: string | number
     created_at: string
     title: string
-    image_url: string
+    cover_image_url: string
     image_count?: number
     categoryFavorited?: boolean
   }[]
@@ -44,7 +44,7 @@ export function CategoriesSection({ title, categories, viewAllLink, userId }: Ca
                 <CategoryCard
                   id={category.id}
                   title={category.title}
-                  imageUrl={category.image_url}
+                  imageUrl={category.cover_image_url}
                   imageCount={category.image_count}
                   categoryFavorited={category.categoryFavorited}
                   userId={userId}
