@@ -25,7 +25,6 @@ interface FavoriteCategoriesProps {
 
 export function FavoriteCategories({ favoriteCategories, userId }: FavoriteCategoriesProps) {
   
-  console.log("favoriteCat", favoriteCategories)
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
       {favoriteCategories.map((category) => (

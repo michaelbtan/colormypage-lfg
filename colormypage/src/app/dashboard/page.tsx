@@ -33,8 +33,6 @@ export default async function DashboardPage() {
     totalFavorites: 12,
   }
 
-  console.log("favoriteCat", favoriteCategories)
-
   return (
     <div className="space-y-8">
       <DashboardHeader

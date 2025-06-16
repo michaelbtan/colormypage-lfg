@@ -42,9 +42,6 @@ export default async function CategoriesPage() {
     .order("created_at", { ascending: false })
     .limit(8);
 
-  console.log('COUNT+++', count);
-  console.log('CATEGORIES+++', categoriesData);
-
   let categories = categoriesData || [];
 
   // Only check for favorites if user is logged in
