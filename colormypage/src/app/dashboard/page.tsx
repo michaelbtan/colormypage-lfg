@@ -27,12 +27,6 @@ export default async function DashboardPage() {
     .select("*, categories(*)")
     .eq("user_id", user?.id)
 
-
-  // Fetch favorite pages and categories and then total
-  const stats = {
-    totalFavorites: 12,
-  }
-
   return (
     <div className="space-y-8">
       <DashboardHeader
@@ -46,7 +40,7 @@ export default async function DashboardPage() {
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-xl font-bold">Favorite Coloring Pages</h2>
           <span className="bg-[#9d84ff]/10 text-[#9d84ff] text-sm font-medium px-2.5 py-1 rounded-full">
-            {stats.totalFavorites} pages
+            {favoritePages?.length} page(s)
           </span>
         </div>
         <FavoriteColoringPages favoritePages={favoritePages} userId={user.id || null} />

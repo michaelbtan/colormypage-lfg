@@ -26,7 +26,7 @@ const carouselImages: CarouselImage[] = [
     alt: "Featured Jungle animal coloring pages",
     title: "Jungle Adventures",
     subtitle: "Explore the wild with our jungle-themed coloring pages",
-    href: "/coloring-pages/jungle-animals",
+    href: "/categories/Jungle%20Animals",
   },
   {
     id: 2,
@@ -34,7 +34,7 @@ const carouselImages: CarouselImage[] = [
     alt: "Featured Unicorn coloring pages",
     title: "Unicorn Dreams",
     subtitle: "Color magical unicorns and their enchanting worlds",
-    href: "/coloring-pages/unicorns",
+    href: "/categories/unicorns",
 
   },
   {
@@ -43,7 +43,7 @@ const carouselImages: CarouselImage[] = [
     alt: "Featured Summer Kids coloring pages",
     title: "Summer Fun",
     subtitle: "Enjoy sunny days with our summer-themed coloring pages",
-    href: "/coloring-pages/summer-kids",
+    href: "/categories/summer%20kids",
   },
   {
     id: 4,
@@ -51,7 +51,7 @@ const carouselImages: CarouselImage[] = [
     alt: "Featured Ocean Animals coloring pages",
     title: "Ocean Wonders",
     subtitle: "Dive into the sea with our ocean animal coloring pages",
-    href: "/coloring-pages/ocean-animals",
+    href: "/categories/ocean-animals",
   },
 ]
 
