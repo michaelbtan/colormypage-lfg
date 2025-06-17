@@ -50,32 +50,34 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto px-4 flex h-24 items-center justify-between py-2">
-        {/* Logo */}
-        <Link
-          href="/"
-          className="flex items-center gap-3 transition-transform duration-300 hover:scale-105"
-        >
-          <div className="flex items-center justify-center gap-2">
-            <Image
-              src={logo}
-              alt="Logo"
-              width={40}
-              height={40}
-              className="h-8 w-8 lg:h-10 lg:w-10 object-contain"
-            />
-            <h1 className="text-2xl lg:text-3xl font-bold">
-              <span className="text-[#9d84ff]">Color</span>
-              <span className="text-gray-800">My</span>
-              <span className="text-gray-800">Page</span>
-            </h1>
-          </div>
-        </Link>
+      <div className="container mx-auto px-4 flex h-24 items-center py-2">
+        {/* Left side: Logo + Search */}
+        <div className="flex items-center gap-4 flex-1">
+          <Link
+            href="/"
+            className="flex items-center gap-3 transition-transform duration-300 hover:scale-105"
+          >
+            <div className="flex items-center justify-center gap-2">
+              <Image
+                src={logo}
+                alt="Logo"
+                width={40}
+                height={40}
+                className="h-8 w-8 lg:h-10 lg:w-10 object-contain"
+              />
+              <h1 className="text-2xl lg:text-3xl font-bold">
+                <span className="text-[#9d84ff]">Color</span>
+                <span className="text-gray-800">My</span>
+                <span className="text-gray-800">Page</span>
+              </h1>
+            </div>
+          </Link>
 
-        {/* Search Component */}
-        <SearchBar />
+          {/* Search Component - positioned after logo */}
+          <SearchBar />
+        </div>
 
-        {/* Desktop Navigation */}
+        {/* Right side: Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-6">
           <Link
             href="/categories"

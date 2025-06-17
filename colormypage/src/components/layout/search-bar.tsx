@@ -1,8 +1,7 @@
 "use client"
 
 import { useState, useEffect, useRef } from "react"
-import {Button} from "@/components/ui/button"
-import { Search, X } from "lucide-react"
+import { Search } from "lucide-react"
 import { Input } from "@/components/ui/input"
 import { createClient } from "@/lib/supabase/client"
 import Link from "next/link"
@@ -102,33 +101,20 @@ export function SearchBar() {
     setIsSearchOpen(false)
   }
 
-  const clearSearch = () => {
-    setSearchQuery("")
-    setShowResults(false)
-  }
-
   return (
     <>
-      {/* Desktop Search - Full Search Bar (Large screens and up) */}
-      <div className="hidden lg:flex lg:w-1/2" ref={searchRef}>
+      {/* Desktop Search - Compact Search Bar (Large screens and up) */}
+      <div className="hidden lg:flex lg:w-80" ref={searchRef}>
         <div className="relative w-full">
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
           <Input
             type="search"
             placeholder="Search coloring pages and categories..."
-            className="w-full rounded-full bg-background/80 backdrop-blur-sm border border-[#9d84ff]/20 pl-9 pr-10 h-10 transition-all duration-300 focus:border-[#9d84ff]/40 focus:ring-[#9d84ff]/20 hover:border-[#9d84ff]/30"
+            className="w-full rounded-full bg-background/80 backdrop-blur-sm border border-[#9d84ff]/20 pl-9 pr-10 h-10 transition-all duration-300 focus:border-[#9d84ff] focus:ring-[#9d84ff]/20 hover:border-[#9d84ff]/30"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             onFocus={() => searchResults.length > 0 && setShowResults(true)}
           />
-          {searchQuery && (
-            <button
-              onClick={clearSearch}
-              className="absolute right-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground hover:text-[#9d84ff] transition-colors duration-300"
-            >
-              <X className="h-4 w-4" />
-            </button>
-          )}
           
           {/* Desktop Search Results Dropdown */}
           {showResults && (
@@ -174,10 +160,10 @@ export function SearchBar() {
 
       {/* Mobile/Tablet Search - Icon Only (Small and Medium screens) */}
       <button 
-        className="lg:hidden p-2 rounded-full hover:bg-[#9d84ff]/10 transition-all duration-300 hover:scale-105" 
+        className="lg:hidden p-3 rounded-full bg-[#9d84ff]/10 hover:bg-[#9d84ff]/20 border border-[#9d84ff]/20 hover:border-[#9d84ff]/30 transition-all duration-300 hover:scale-105 backdrop-blur-sm" 
         onClick={() => setIsSearchOpen(!isSearchOpen)}
       >
-        <Search className="h-7 w-7 text-[#9d84ff]" />
+        <Search className="h-5 w-5 text-[#9d84ff]" />
         <span className="sr-only">Search</span>
       </button>
 
@@ -192,26 +178,12 @@ export function SearchBar() {
                   <Input
                     type="search"
                     placeholder="Search coloring pages and categories..."
-                    className="w-full/75 rounded-full bg-background/80 backdrop-blur-sm border border-[#9d84ff]/20 pl-9 pr-10 h-12 text-base transition-all duration-300 focus:border-[#9d84ff]/40 focus:ring-[#9d84ff]/20"
+                    className="w-full rounded-full bg-background/80 backdrop-blur-sm border border-[#9d84ff]/20 pl-9 pr-10 h-12 text-base transition-all duration-300 focus:border-[#9d84ff] focus:ring-[#9d84ff]/20"
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                     autoFocus
                   />
-                  {searchQuery && (
-                    <Button
-                      onClick={clearSearch}
-                      className="absolute right-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-muted-foreground hover:text-[#9d84ff] transition-colors duration-300"
-                    >
-                      <X className="h-5 w-5" />
-                    </Button>
-                  )}
                 </div>
-                <Button
-                  onClick={() => setIsSearchOpen(false)}
-                  className="p-2 rounded-full hover:bg-[#9d84ff]/10 transition-all duration-300"
-                >
-                  <X className="h-6 w-6 text-[#9d84ff]" />
-                </Button>
               </div>
               
               {/* Mobile Search Results */}
