@@ -110,15 +110,15 @@ export function ShareModal({
         <div className="flex flex-col items-center gap-4 pt-2">
           <Image
             src={imageUrl || "/placeholder.svg"}
-            alt={title}
+            alt={decodeURI(title)}
             width={180}
             height={180}
             className="rounded-md object-cover"
           />
 
           <div className="text-center">
-            <h2 className="text-xl font-semibold">{title}</h2>
-            <p className="text-sm text-muted-foreground">{description}</p>
+            <h2 className="text-xl font-semibold">{decodeURI(title)}</h2>
+            <p className="text-sm text-muted-foreground">{decodeURI(description)}</p>
           </div>
 
           <div className="grid grid-cols-3 gap-4 w-full pt-2">
@@ -129,8 +129,8 @@ export function ShareModal({
                 className="flex flex-col items-center gap-1 rounded-lg p-3 hover:bg-accent transition cursor-pointer"
                 aria-label={`Share to ${option.name}`}
               >
-                <Image src={option.icon} alt={option.name} width={24} height={24} />
-                <span className="text-xs font-medium">{option.name}</span>
+                <Image src={option.icon} alt={decodeURI(option.name)} width={24} height={24} />
+                <span className="text-xs font-medium">{decodeURI(option.name)}</span>
               </button>
             ))}
           </div>

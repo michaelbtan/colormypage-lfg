@@ -2,19 +2,20 @@ import { notFound } from "next/navigation"
 import type { Metadata } from "next"
 import { ColoringPageView } from "@/components/coloring-page/coloring-page-view"
 import { createClient } from "@/lib/supabase/server"
+import LOGO from "@/assets/logo.png"
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ id: string }>
+  params: Promise<{ title: string }>
 }): Promise<Metadata> {
-  const id = (await params).id
+  const title = (await params).title
   const supabase = await createClient()
 
   const { data: coloring_page, error } = await supabase
     .from("coloring_pages")
-    .select("title, description")
-    .eq("id", id)
+    .select("title, description, image_url")
+    .eq("title", title)
     .single()
 
   if (error) {
@@ -26,20 +27,20 @@ export async function generateMetadata({
   }
 
   return {
-    title: coloring_page.title,
+    title: decodeURI(coloring_page.title),
     description: coloring_page.description,
     openGraph: {
       title: coloring_page.title,
       description: coloring_page.description,
       type: "article",
-      url: `https://colormypage.com/coloring-page/${id}`,
+      url: `https://colormypage.com/coloring-page/${title}`,
       siteName: "ColorMyPage",
       images: [
         {
-          url: `https://colormypage.com/api/coloring-pages/${id}/image`,
+          url: coloring_page.image_url || LOGO,
           width: 800,
           height: 600,
-          alt: coloring_page.title,
+          alt: decodeURI(coloring_page.title),
         },
       ],
     },
@@ -47,12 +48,12 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: coloring_page.title,
       description: coloring_page.description,
-      images: [`https://colormypage.com/api/coloring-pages/${id}/image`],
+      images: [coloring_page.image_url || LOGO],
     },
   }
 }
 
-export default async function ColoringPagePage({ params }: { params: { id: string } }) {
+export default async function ColoringPagePage({ params }: { params: { title: string } }) {
   const supabase = await createClient()
 
   const {
@@ -63,7 +64,7 @@ export default async function ColoringPagePage({ params }: { params: { id: strin
   const { data: coloringPage } = await supabase
     .from("coloring_pages")
     .select("*")
-    .eq("id", params.id)
+    .eq("title", params.title)
     .single()
 
   if (!coloringPage) {

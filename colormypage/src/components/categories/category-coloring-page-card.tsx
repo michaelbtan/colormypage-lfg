@@ -99,7 +99,7 @@ export function CategoryColoringPageCard({
           <div className="absolute inset-0 bg-gradient-to-b from-gray-50 to-white opacity-10"></div>
 
           {/* Image */}
-          <Link href={`/coloring-page/${page.id}`}>
+          <Link href={`/coloring-page/${page.title}`}>
             <div className="relative w-full h-full">
               <Image
                 src={page.imageUrl || "/placeholder.svg"}
@@ -146,7 +146,7 @@ export function CategoryColoringPageCard({
         {/* Title below the image */}
         <div className="mt-2 px-1">
           <h3 className="font-medium text-sm md:text-base text-gray-800 line-clamp-2">
-            {page.title}
+            {decodeURI(page.title)}
           </h3>
         </div>
       </div>
@@ -158,7 +158,7 @@ export function CategoryColoringPageCard({
         title={page.title}
         description={`Check out free downloadable ${page.title} coloring pages`}
         imageUrl={page.imageUrl}
-        pageUrl={`/coloring-page/${page.id}`}
+        pageUrl={`/coloring-page/${page.title}`}
       />
     </>
   );

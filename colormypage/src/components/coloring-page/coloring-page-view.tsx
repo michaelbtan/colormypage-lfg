@@ -200,7 +200,7 @@ ColoringPageViewProps) {
         <div className="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100">
           <div className="p-6 md:p-8">
             <h1 className="text-2xl md:text-3xl font-bold mb-2">
-              {coloringPage.title}
+              {decodeURI(coloringPage.title)}
             </h1>
 
             <div className="flex flex-wrap gap-2 mb-6">
@@ -222,7 +222,7 @@ ColoringPageViewProps) {
               <div className="aspect-[8.5/11] relative">
                 <Image
                   src={coloringPage.image_url || PLACEHOLDER}
-                  alt={coloringPage.title}
+                  alt={decodeURI(coloringPage.title)}
                   fill
                   className="object-contain"
                   priority
@@ -301,7 +301,7 @@ ColoringPageViewProps) {
         title={coloringPage.title}
         description={`Check out free downloadable ${coloringPage.title} coloring pages`}
         imageUrl={coloringPage.image_url}
-        pageUrl={`/coloring-page/${coloringPage.id}`}
+        pageUrl={`/coloring-page/${coloringPage.title}`}
       />
     </div>
   );

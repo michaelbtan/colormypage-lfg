@@ -89,7 +89,7 @@ export default function FavoriteColoringPageCard({
         >
           <Image
             src={page.image_url || PLACEHOLDER}
-            alt={page.title}
+            alt={decodeURI(page.title)}
             fill
             className="object-cover transition-transform duration-300 group-hover:scale-105"
           />
@@ -135,7 +135,7 @@ export default function FavoriteColoringPageCard({
 
       <div className="mt-2">
         <h3 className="text-xl font-medium text-gray-900 truncate">
-          {page.title}
+          {decodeURI(page.title)}
         </h3>
       </div>
 
@@ -146,7 +146,7 @@ export default function FavoriteColoringPageCard({
         title={page.title}
         description={`Check out free downloadable ${page.title} coloring pages`}
         imageUrl={page.image_url}
-        pageUrl={`/coloring-page/${page.id}`}
+        pageUrl={`/coloring-page/${page.title}`}
       />
     </div>
   );

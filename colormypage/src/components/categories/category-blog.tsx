@@ -118,7 +118,7 @@ export function CategoryBlog({
               featuredImage ||
               "/placeholder.svg?height=800&width=1200&query=colorful abstract pattern for coloring pages"
             }
-            alt={title}
+            alt={decodeURI(title)}
             fill
             className="object-cover"
             priority
@@ -133,7 +133,7 @@ export function CategoryBlog({
             <header className="space-y-6">
               {/* Title */}
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
-                {`${title} Downloadable Coloring Pages`}
+                {`${decodeURI(title)} Downloadable Coloring Pages`}
               </h1>
 
               {/* Meta Information */}
@@ -228,9 +228,7 @@ export function CategoryBlog({
         title={`${title} Coloring Pages`}
         description={`Check out free downloadable ${title} coloring pages`}
         imageUrl={featuredImage || "/placeholder.svg"}
-        pageUrl={`/categories/${encodeURIComponent(
-          title.toLowerCase().replace(/\s+/g, "-")
-        )}`}
+        pageUrl={`/categories/${title}`}
       />
     </>
   );

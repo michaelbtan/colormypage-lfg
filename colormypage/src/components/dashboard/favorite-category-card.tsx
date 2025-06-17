@@ -87,14 +87,14 @@ export function FavoriteCategoryCard({
         <div className="relative h-16 w-16 rounded-md overflow-hidden">
           <Image
             src={category.cover_image_url || PLACEHOLDER}
-            alt={category.title}
+            alt={decodeURI(category.title)}
             fill
             className="object-cover"
           />
         </div>
         <div className="ml-4 flex-1">
           <h3 className="text-sm font-medium text-gray-900">
-            {category.title}
+            {decodeURI(category.title)}
           </h3>
           <p className="text-xs text-gray-500">
             {category.image_count} saved pages
@@ -139,7 +139,7 @@ export function FavoriteCategoryCard({
         title={category.title}
         description={`Check out free downloadable ${category.title} coloring pages`}
         imageUrl={category.cover_image_url}
-        pageUrl={`/categories/${category_id}`}
+        pageUrl={`/categories/${category.title}`}
       />
     </div>
   );

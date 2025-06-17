@@ -84,7 +84,7 @@ export function CategoryCard({
     <>
       <div className="flex flex-col w-full transition-transform duration-300 hover:scale-105">
         <Link
-          href={categoryLink ? `${categoryLink}/${id}` : `/categories/${id}`}
+          href={categoryLink ? `${categoryLink}/${title}` : `/categories/${title}`}
         >
           <div
             className="group relative w-full overflow-hidden rounded-lg shadow-md bg-white border border-gray-100"
@@ -99,7 +99,7 @@ export function CategoryCard({
             <div className="relative w-full h-full">
               <Image
                 src={imageUrl || "/placeholder.svg"}
-                alt={title}
+                alt={decodeURI(title)}
                 fill
                 className="object-cover"
               />
@@ -149,7 +149,7 @@ export function CategoryCard({
         {/* Title below the image */}
         <div className="mt-2 px-1">
           <h3 className="font-medium text-lg md:text-2xl text-gray-800 text-center">
-            {title}
+            {decodeURI(title)}
           </h3>
         </div>
       </div>
@@ -161,7 +161,7 @@ export function CategoryCard({
         title={title}
         description={`Check out free downloadable ${title} coloring pages`}
         imageUrl={imageUrl}
-        pageUrl={`/categories/${id}`}
+        pageUrl={`/categories/${title}`}
       />
     </>
   );

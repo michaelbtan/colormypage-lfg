@@ -88,7 +88,7 @@ async function uploadDirectoryAndGenerateCSVs(localDirPath) {
 
       // Build CSV record
       coloringPagesRecords.push({
-        title: fileNameWithoutExt.split('_').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' '),
+        title: encodeURIComponent(fileNameWithoutExt.split('_').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')),
         description: description,
         image_url: publicUrl,
         file_name: fileName,

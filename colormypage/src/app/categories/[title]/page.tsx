@@ -3,19 +3,20 @@ import type { Metadata } from "next"
 import { CategoryBlog } from "@/components/categories/category-blog"
 import { ColoringPageGrid } from "@/components/categories/coloring-page-grid"
 import { createClient } from "@/lib/supabase/server"
+import LOGO from "@/assets/logo.png"
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ categoryId: string }>
+  params: Promise<{ title: string }>
 }): Promise<Metadata> {
-  const id = (await params).categoryId
+  const title = (await params).title
   const supabase = await createClient()
 
   const { data: category, error } = await supabase
     .from("categories")
-    .select("title, description")
-    .eq("id", id)
+    .select("title, description, cover_image_url, banner_image_url")
+    .eq("title", title)
     .single()
 
   if (error) {
@@ -27,17 +28,17 @@ export async function generateMetadata({
   }
 
   return {
-    title: category.title,
+    title: decodeURI(category.title),
     description: category.description,
     openGraph: {
       title: category.title,
       description: category.description,
       type: "website",
-      url: `https://colormypage.com/categories/${id}`,
+      url: `https://colormypage.com/categories/${title}`,
       siteName: "ColorMyPage",
       images: [
         {
-          url: category.image_url || "/logo.png",
+          url: category.banner_image_url || LOGO,
           width: 1200,
           height: 630,
           alt: category.title,
@@ -48,7 +49,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: category.title,
       description: category.description,
-      images: [category.image_url || "/logo.png"],
+      images: [category.banner_image_url || category.cover_image_url || LOGO],
     },
   }
 }
@@ -56,9 +57,9 @@ export async function generateMetadata({
 export default async function CategoryPage({
   params,
 }: {
-  params: { categoryId: string }
+  params: { title: string }
 }) {
-  const { categoryId } = params
+  const { title } = params
   const supabase = await createClient()
 
   const {
@@ -66,7 +67,7 @@ export default async function CategoryPage({
   } = await supabase.auth.getUser()
 
   // Fetch category data
-  const { data: category } = await supabase.from("categories").select("*").eq("id", categoryId).single()
+  const { data: category } = await supabase.from("categories").select("*").eq("title", title).single()
 
   if (!category) {
     notFound()
@@ -78,7 +79,7 @@ export default async function CategoryPage({
     const { data: favorited } = await supabase
       .from("favorited_categories")
       .select("*")
-      .eq("category_id", categoryId)
+      .eq("category_id", category.id)
       .eq("user_id", user.id)
       .single()
     isFavorited = !!favorited
@@ -101,7 +102,7 @@ export default async function CategoryPage({
   `,
       { count: "exact" },
     )
-    .eq("category_id", categoryId)
+    .eq("category_id", category.id)
     .order("created_at", { ascending: false })
     .range(0, 11) // Get first 12 items (0-11)
 
@@ -116,7 +117,7 @@ export default async function CategoryPage({
         description={category.description}
         excerpt={category.excerpt}
         imageCount={category.image_count}
-        featuredImage={category.featured_image || undefined}
+        featuredImage={category.cover_image_url || undefined}
         categoryFavorited={isFavorited}
         userId={user?.id || null}
         createdAt={category.created_at}
@@ -129,7 +130,7 @@ export default async function CategoryPage({
           <div className="w-full lg:w-4/5">
             <ColoringPageGrid
               userId={user?.id || null}
-              categoryId={categoryId}
+              categoryId={category.id}
               initialPages={pages || []}
               initialHasMore={hasMore}
               totalPages={count || 0}
