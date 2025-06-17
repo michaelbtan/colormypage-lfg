@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Heart, Palette, LogIn, LogOut } from "lucide-react";
-// import { SearchBar } from "./search-bar";
+import { SearchBar } from "./search-bar";
 import { MobileMenu } from "./mobile-menu";
 import { createClient } from "@/lib/supabase/client";
 import { logout } from "@/lib/supabase/actions/auth";
@@ -62,9 +62,9 @@ export function Header() {
               alt="Logo"
               width={40}
               height={40}
-              className="h-10 w-10 object-contain"
+              className="h-8 w-8 lg:h-10 lg:w-10 object-contain"
             />
-            <h1 className="text-3xl font-bold">
+            <h1 className="text-2xl lg:text-3xl font-bold">
               <span className="text-[#9d84ff]">Color</span>
               <span className="text-gray-800">My</span>
               <span className="text-gray-800">Page</span>
@@ -73,7 +73,7 @@ export function Header() {
         </Link>
 
         {/* Search Component */}
-        {/* <SearchBar /> */}
+        <SearchBar />
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-6">
@@ -114,7 +114,7 @@ export function Header() {
         </nav>
 
         {/* Mobile Menu */}
-        <MobileMenu loggedin={isLoggedIn} navigationItems={navigationItems} />
+          <MobileMenu loggedin={isLoggedIn} navigationItems={navigationItems} />
       </div>
     </header>
   );
