@@ -2,88 +2,200 @@
   "prompts":
 [
   {
-    "title": "Unicorn Treasure Hunt",
-    "description": "A unicorn discovers a treasure chest in a cave filled with jewels and glowing runes."
+    "title": "The Playful Dolphin",
+    "description": "A happy dolphin leaps over waves, playing with its pod under a sunny sky."
   },
   {
-    "title": "Gothic Unicorn Night",
-    "description": "A dark unicorn with bat wings stands beneath a full moon and twisted trees."
+    "title": "Octopus Garden",
+    "description": "A curious octopus tending to its garden of coral and seashells on the ocean floor."
   },
   {
-    "title": "Unicorn Music Band",
-    "description": "Unicorns play instruments like harps and flutes in a magical band."
+    "title": "Sea Turtle Voyage",
+    "description": "A sea turtle gliding through warm tropical currents alongside colorful fish."
   },
   {
-    "title": "Unicorn and the Mermaid Lagoon",
-    "description": "A unicorn greets mermaids lounging on rocks by a glowing lagoon."
+    "title": "Jellyfish Glow Parade",
+    "description": "Bioluminescent jellyfish float through the dark ocean, glowing with every move."
   },
   {
-    "title": "Magical Unicorn School",
-    "description": "Unicorns attend a floating school with books, scrolls, and magical chalkboards."
+    "title": "The Crab’s Castle",
+    "description": "A sand crab guards its intricate shell castle, decorated with ocean treasures."
   },
   {
-    "title": "Safari Unicorn Adventure",
-    "description": "A unicorn explores a safari landscape with giraffes and elephants wearing wizard hats."
+    "title": "Whale Song Symphony",
+    "description": "Majestic whales swimming and singing beneath shimmering light beams."
   },
   {
-    "title": "Unicorn and the Crystal Cavern",
-    "description": "A unicorn discovers a cave filled with sparkling crystals and magical artifacts."
+    "title": "Clownfish Hide and Seek",
+    "description": "A group of clownfish peek in and out of their protective sea anemone home."
   },
   {
-    "title": "Time Traveler Unicorn",
-    "description": "A unicorn leaps through swirling portals showing past and future worlds."
+    "title": "Seahorse Ballroom",
+    "description": "Elegant seahorses dance among kelp ribbons in an underwater waltz."
   },
   {
-    "title": "Unicorn Jungle Trek",
-    "description": "A unicorn journeys through a jungle with colorful parrots and waterfalls."
+    "title": "The Manta Ray Glider",
+    "description": "A manta ray soars through the ocean like a kite above coral reefs."
   },
   {
-    "title": "Unicorn Masquerade Ball",
-    "description": "Unicorns dance in masks and gowns in a grand enchanted ballroom."
+    "title": "Orca Pod Adventure",
+    "description": "A family of orcas hunt and explore the icy waters of the northern sea."
   },
   {
-    "title": "Unicorn Castle Tower",
-    "description": "A unicorn stands on the tower balcony of a sparkling crystal castle."
+    "title": "Tiny Pufferfish Picnic",
+    "description": "Cheerful pufferfish float around a coral picnic blanket filled with treats."
   },
   {
-    "title": "Unicorn Zen Garden",
-    "description": "A peaceful unicorn meditates in a garden with raked sand and koi fish."
+    "title": "Starfish Sunbathing",
+    "description": "A group of starfish rest on a sunny rock shelf covered in barnacles and algae."
   },
   {
-    "title": "Unicorn and Magic Mirror",
-    "description": "A unicorn looks into a mirror that shows a parallel mystical universe."
+    "title": "Moray Eel Mystery Cave",
+    "description": "A green moray eel peeks from a shadowy crevice full of shimmering fish."
   },
   {
-    "title": "Skydiving Unicorns",
-    "description": "Unicorns in parachutes float down from the sky surrounded by rainbows."
+    "title": "Undersea Fashion Show",
+    "description": "Sea creatures strut with shells, pearls, and seaweed accessories on a coral runway."
   },
   {
-    "title": "Unicorn and Fireflies",
-    "description": "A unicorn gallops through a night meadow lit up by swarming fireflies."
+    "title": "The Coral City",
+    "description": "An expansive coral reef filled with bustling marine life like a busy metropolis."
   },
   {
-    "title": "Unicorn Safari Balloons",
-    "description": "Unicorns ride animal-shaped balloons over a rainbow-striped savanna."
+    "title": "Deep Sea Lantern Fish",
+    "description": "Strange glowing lanternfish light their way in the deep dark ocean."
   },
   {
-    "title": "Unicorn Art Studio",
-    "description": "A unicorn paints a canvas with sparkly splashes of color and floating brushes."
+    "title": "The Busy Cleaner Shrimp",
+    "description": "A shrimp performs spa treatments on larger fish at an undersea cleaning station."
   },
   {
-    "title": "Pirate Unicorn Ship",
-    "description": "A unicorn dressed as a pirate sails on a ship with a rainbow flag and treasure map."
+    "title": "Squid Rocket Launch",
+    "description": "A school of squids jet away with inky trails like ocean rockets."
   },
   {
-    "title": "Unicorn Sleepover",
-    "description": "Unicorns in pajamas tell stories, eat snacks, and gaze at glow-in-the-dark stars."
+    "title": "Hermit Crab’s Shell Swap",
+    "description": "Hermit crabs try on fancy new shells like a changing room at a boutique."
   },
   {
-    "title": "Unicorns in Love",
-    "description": "Two unicorns touch horns beneath a heart-shaped constellation."
+    "title": "The Shy Goby Fish",
+    "description": "A tiny goby fish peeks from behind seagrass in a calm underwater meadow."
   },
   {
-    "title": "Unicorn Puzzle World",
-    "description": "A unicorn wanders through a surreal landscape made of floating puzzle pieces and chessboards."
+    "title": "The Mermaid’s Friends",
+    "description": "A mermaid surrounded by friendly sea animals like dolphins, turtles, and rays."
+  },
+  {
+    "title": "Sea Slug Slideshow",
+    "description": "Brightly colored sea slugs parade in dazzling patterns and shapes."
+  },
+  {
+    "title": "Penguins Underwater Race",
+    "description": "A race between penguins darting like torpedoes through chilly Antarctic waters."
+  },
+  {
+    "title": "Swordfish Slicers",
+    "description": "Swordfish slice through schools of fish with lightning-fast speed."
+  },
+  {
+    "title": "Manatee’s Lazy Day",
+    "description": "Gentle manatees float lazily in warm shallow waters filled with water lilies."
+  },
+  {
+    "title": "The Secret of the Giant Squid",
+    "description": "A giant squid lurks in the deep sea, shrouded in mystery and shadows."
+  },
+  {
+    "title": "Colorful Reef Parade",
+    "description": "All ocean animals come together for a parade through vibrant coral canyons."
+  },
+  {
+    "title": "Lionfish in the Garden",
+    "description": "A lionfish spreads its fins among brightly colored sponges and coral fans."
+  },
+  {
+    "title": "The Wise Old Lobster",
+    "description": "An ancient lobster tells tales to baby sea creatures in a seaweed amphitheater."
+  },
+  {
+    "title": "Barracuda Speed Chase",
+    "description": "Fast-moving barracudas streak past rocks and fish in pursuit of prey."
+  },
+  {
+    "title": "Urchin Art Studio",
+    "description": "Sea urchins decorate the sea floor with tiny shell mosaics."
+  },
+  {
+    "title": "Sea Otter Nap Time",
+    "description": "Fluffy sea otters float on their backs holding hands in kelp beds."
+  },
+  {
+    "title": "The Electric Eel Show",
+    "description": "Electric eels put on a glowing light show in a shadowy underwater cave."
+  },
+  {
+    "title": "Nudibranch Carnival",
+    "description": "A nudibranch party explodes with textures, color swirls, and odd shapes."
+  },
+  {
+    "title": "The Parrotfish Painter",
+    "description": "A parrotfish munches on coral and spreads colors like an underwater painter."
+  },
+  {
+    "title": "Shark School",
+    "description": "Young sharks gather for a day of lessons from their wise old shark teacher."
+  },
+  {
+    "title": "Blue Tang Hideout",
+    "description": "Blue tangs zip through seaweed forests in a game of underwater tag."
+  },
+  {
+    "title": "Ocean Bedtime",
+    "description": "A sleepy underwater scene where sea animals tuck in for the night."
+  },
+  {
+    "title": "The Curious Beluga",
+    "description": "A friendly beluga explores an underwater glacier cave with arctic fish."
+  },
+  {
+    "title": "Snail Trail Adventure",
+    "description": "A sea snail goes on a slow journey across an entire reef leaving shiny trails."
+  },
+  {
+    "title": "Kelp Forest Hideaway",
+    "description": "Creatures hide and play in the swaying stalks of a magical kelp forest."
+  },
+  {
+    "title": "Bubble Ring Games",
+    "description": "Dolphins and seals blow and jump through bubble rings in playful competitions."
+  },
+  {
+    "title": "Crab vs. Lobster Dance-off",
+    "description": "A humorous dance battle between a crab and a lobster on a rocky stage."
+  },
+  {
+    "title": "The Anglerfish Lure",
+    "description": "A spooky anglerfish with a glowing lure attracts curious prey in the dark."
+  },
+  {
+    "title": "Tide Pool Explorers",
+    "description": "Ocean critters like sea stars, barnacles, and crabs explore tide pools at low tide."
+  },
+  {
+    "title": "The Flying Fish Leap",
+    "description": "Flying fish burst from the waves in acrobatic jumps above the surface."
+  },
+  {
+    "title": "Glowworm Reef Party",
+    "description": "Bioluminescent creatures light up the reef for a magical undersea celebration."
+  },
+  {
+    "title": "The Curious Cuttlefish",
+    "description": "A clever cuttlefish changes colors and patterns to blend with its surroundings."
+  },
+  {
+    "title": "Ocean Symphony Orchestra",
+    "description": "A musical gathering of sea animals playing shells, drums, and coral xylophones."
   }
 ]
 ,

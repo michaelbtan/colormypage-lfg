@@ -17,7 +17,7 @@ const cfg         = JSON.parse(fs.readFileSync(CONFIG_PATH, "utf-8"));
 const {
   prompt,
   prompts,
-  batchSize      = 21,
+  batchSize      = prompts ? prompts.length : 1,
   outDir         = "images",
   model          = "gpt-image-1",
   size           = "1024x1536",
