@@ -1,85 +1,89 @@
 {
   "prompts":
-  [
+[
   {
-    "title": "Midnight Jungle Parade",
-    "description": "A nocturnal scene with glowing eyes, moonlit trees, and jungle animals like owls, leopards, and bats on a nighttime prowl."
+    "title": "Unicorn Treasure Hunt",
+    "description": "A unicorn discovers a treasure chest in a cave filled with jewels and glowing runes."
   },
   {
-    "title": "Jungle Animal Yoga",
-    "description": "Illustrations of jungle animals in yoga poses—tigers doing tree pose, elephants in downward dog, and monkeys meditating."
+    "title": "Gothic Unicorn Night",
+    "description": "A dark unicorn with bat wings stands beneath a full moon and twisted trees."
   },
   {
-    "title": "Rainforest Rain Dance",
-    "description": "A festive scene with animals dancing joyfully in the rain, with umbrellas, puddles, and tropical leaves around."
+    "title": "Unicorn Music Band",
+    "description": "Unicorns play instruments like harps and flutes in a magical band."
   },
   {
-    "title": "Animal Architects",
-    "description": "Jungle animals building homes—orangutans crafting treehouses, ants constructing tunnels, and beavers making dams."
+    "title": "Unicorn and the Mermaid Lagoon",
+    "description": "A unicorn greets mermaids lounging on rocks by a glowing lagoon."
   },
   {
-    "title": "Safari Scientist Explorers",
-    "description": "Animals in lab coats with magnifying glasses and notebooks, exploring and documenting jungle life."
+    "title": "Magical Unicorn School",
+    "description": "Unicorns attend a floating school with books, scrolls, and magical chalkboards."
   },
   {
-    "title": "Jungle Music Band",
-    "description": "A band made up of animals—giraffes playing drums, parrots singing, and elephants playing trumpets made of vines."
+    "title": "Safari Unicorn Adventure",
+    "description": "A unicorn explores a safari landscape with giraffes and elephants wearing wizard hats."
   },
   {
-    "title": "Camouflage Masters",
-    "description": "Scenes where jungle animals are cleverly hidden among foliage—perfect for seek-and-color fun."
+    "title": "Unicorn and the Crystal Cavern",
+    "description": "A unicorn discovers a cave filled with sparkling crystals and magical artifacts."
   },
   {
-    "title": "Jungle Carnival",
-    "description": "A festive celebration with animals wearing masks, dancing, and playing games with confetti and balloons."
+    "title": "Time Traveler Unicorn",
+    "description": "A unicorn leaps through swirling portals showing past and future worlds."
   },
   {
-    "title": "Monkey Mischief",
-    "description": "Playful monkeys causing mayhem—swinging on vines, stealing hats, and juggling bananas."
+    "title": "Unicorn Jungle Trek",
+    "description": "A unicorn journeys through a jungle with colorful parrots and waterfalls."
   },
   {
-    "title": "Amazonian Guardians",
-    "description": "Majestic, fantasy-inspired jungle creatures with armor and magical elements protecting the forest."
+    "title": "Unicorn Masquerade Ball",
+    "description": "Unicorns dance in masks and gowns in a grand enchanted ballroom."
   },
   {
-    "title": "Jungle Treehouse Village",
-    "description": "A sprawling treetop community where various animals live—complete with bridges, zip lines, and rope ladders."
+    "title": "Unicorn Castle Tower",
+    "description": "A unicorn stands on the tower balcony of a sparkling crystal castle."
   },
   {
-    "title": "Tropical Feast",
-    "description": "A buffet of fruits and treats attended by jungle animals—lemurs eating mangoes, toucans sipping coconut juice."
+    "title": "Unicorn Zen Garden",
+    "description": "A peaceful unicorn meditates in a garden with raked sand and koi fish."
   },
   {
-    "title": "Jungle Animal Olympics",
-    "description": "Athletic animals competing in vine swinging, banana throwing, and water races."
+    "title": "Unicorn and Magic Mirror",
+    "description": "A unicorn looks into a mirror that shows a parallel mystical universe."
   },
   {
-    "title": "Tiny Jungle Critters",
-    "description": "Focus on the smaller residents—colorful frogs, beetles, butterflies, and chameleons up close."
+    "title": "Skydiving Unicorns",
+    "description": "Unicorns in parachutes float down from the sky surrounded by rainbows."
   },
   {
-    "title": "Jungle Fashion Show",
-    "description": "Stylish jungle animals walking down a leafy runway in themed costumes made of flowers, feathers, and bark."
+    "title": "Unicorn and Fireflies",
+    "description": "A unicorn gallops through a night meadow lit up by swarming fireflies."
   },
   {
-    "title": "Understory Hideaway",
-    "description": "A calm, shaded world beneath the jungle canopy where animals rest, nap, or read."
+    "title": "Unicorn Safari Balloons",
+    "description": "Unicorns ride animal-shaped balloons over a rainbow-striped savanna."
   },
   {
-    "title": "Jungle Balloon Ride",
-    "description": "Animals flying above the jungle in hot air balloons, floating past waterfalls and treetops."
+    "title": "Unicorn Art Studio",
+    "description": "A unicorn paints a canvas with sparkly splashes of color and floating brushes."
   },
   {
-    "title": "Sloth Spa Day",
-    "description": "A relaxing sloth-themed spa scene with hammocks, cucumber eye masks, and mud baths."
+    "title": "Pirate Unicorn Ship",
+    "description": "A unicorn dressed as a pirate sails on a ship with a rainbow flag and treasure map."
   },
   {
-    "title": "Rainforest Royalty",
-    "description": "Animals dressed like jungle kings and queens, complete with thrones made of vines and jeweled crowns."
+    "title": "Unicorn Sleepover",
+    "description": "Unicorns in pajamas tell stories, eat snacks, and gaze at glow-in-the-dark stars."
   },
   {
-    "title": "Jungle Time Travelers",
-    "description": "Animals discovering ancient jungle ruins and stepping into different time eras—prehistoric, tribal, futuristic."
+    "title": "Unicorns in Love",
+    "description": "Two unicorns touch horns beneath a heart-shaped constellation."
+  },
+  {
+    "title": "Unicorn Puzzle World",
+    "description": "A unicorn wanders through a surreal landscape made of floating puzzle pieces and chessboards."
   }
 ]
 ,

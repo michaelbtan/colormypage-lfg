@@ -27,13 +27,19 @@ const CONFIG_PATH = process.env.CONFIG_PATH ?? "./config.json";
 const config = JSON.parse(fs.readFileSync(CONFIG_PATH, "utf-8"));
 
 // Create a map of slugified titles to descriptions
-const titleDescriptionMap = new Map();
-config.prompts.forEach(prompt => {
-  const slugifiedTitle = prompt.title
+// Use the same slugify logic as generate_images.js
+function slugify(str, maxLength = 100) {
+  return str
     .trim()
     .toLowerCase()
-    .replace(/\s+/g, "_")
-    .replace(/[^\w\-]+/g, "");
+    .replace(/\s+/g, "_")        // spaces → underscores
+    .replace(/[^\w\-]+/g, "")    // drop non-alphanumerics/underscores
+    .slice(0, maxLength);
+}
+
+const titleDescriptionMap = new Map();
+config.prompts.forEach(prompt => {
+  const slugifiedTitle = slugify(prompt.title);
   titleDescriptionMap.set(slugifiedTitle, prompt.description);
 });
 
@@ -92,7 +98,7 @@ async function uploadDirectoryAndGenerateCSVs(localDirPath) {
         description: description,
         image_url: publicUrl,
         file_name: fileName,
-        isPublished: true,
+        is_published: true,
       });
 
       coloringPageCategoriesRecords.push({
@@ -110,7 +116,7 @@ async function uploadDirectoryAndGenerateCSVs(localDirPath) {
       { id: 'description', title: 'description' },
       { id: 'image_url', title: 'image_url' },
       { id: 'file_name', title: 'file_name' },
-      { id: 'is_published', title: 'isPublished' },
+      { id: 'is_published', title: 'is_published' },
     ],
   });
   await pagesCsvWriter.writeRecords(coloringPagesRecords);
