@@ -5,10 +5,6 @@ import Link from "next/link"
 import { ChevronLeft, ChevronRight, Play, Pause } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
-import JUNGLEBANNER from "@/assets/junglebanner.png"
-import UNICORNBANNER from "@/assets/unicornbanner.png"
-import SUMMERKIDS from "@/assets/summerkids.png"
-import OCEANANIMALS from "@/assets/oceananimals.png"
 
 interface CarouselImage {
   id: number
@@ -22,7 +18,7 @@ interface CarouselImage {
 const carouselImages: CarouselImage[] = [
   {
     id: 1,
-    src: JUNGLEBANNER.src,
+    src: "https://puswptfnpjdigfsatylx.supabase.co/storage/v1/object/public/category-covers/jungle_animals/jungle-banner.png",
     alt: "Featured Jungle animal coloring pages",
     title: "Jungle Adventures",
     subtitle: "Explore the wild with our jungle-themed coloring pages",
@@ -30,7 +26,7 @@ const carouselImages: CarouselImage[] = [
   },
   {
     id: 2,
-    src: UNICORNBANNER.src,
+    src: "https://puswptfnpjdigfsatylx.supabase.co/storage/v1/object/public/category-covers/unicorns/unicorns-banner.png",
     alt: "Featured Unicorn coloring pages",
     title: "Unicorn Dreams",
     subtitle: "Color magical unicorns and their enchanting worlds",
@@ -39,7 +35,7 @@ const carouselImages: CarouselImage[] = [
   },
   {
     id: 3,
-    src: SUMMERKIDS.src,
+    src: "https://puswptfnpjdigfsatylx.supabase.co/storage/v1/object/public/category-covers/summer_kids/summer-kids-banner.png",
     alt: "Featured Summer Kids coloring pages",
     title: "Summer Fun",
     subtitle: "Enjoy sunny days with our summer-themed coloring pages",
@@ -47,7 +43,7 @@ const carouselImages: CarouselImage[] = [
   },
   {
     id: 4,
-    src: OCEANANIMALS.src,
+    src: "https://puswptfnpjdigfsatylx.supabase.co/storage/v1/object/public/category-covers/ocean_animals/ocean-animals-banner.png",
     alt: "Featured Ocean Animals coloring pages",
     title: "Ocean Wonders",
     subtitle: "Dive into the sea with our ocean animal coloring pages",
