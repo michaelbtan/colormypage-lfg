@@ -24,7 +24,7 @@ Using the above templete can you make a blog post for ColorMyPage.com, free down
 
 ### For generating page ideas from chatgpt -
 
-I am creating ideas for a coloring book. Can you give me 20 unique and creative ideas on the following topic, and return the response in the form of a json array of objects with title and description fields?
+I am creating ideas for a coloring book. Can you give me 50 unique and creative ideas on the following topic, and return the response in the form of a json array of objects with title and description fields?
 
 Ex. Unicorn coloring pages
 

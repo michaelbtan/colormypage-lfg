@@ -5,6 +5,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Toaster } from "@/components/ui/sonner";
 import CloudBackground from "@/components/layout/cloud-background";
+import Script from "next/script";
 
 // Import Fredoka with desired options (e.g., weights, subsets)
 const fredoka = Fredoka({
@@ -13,7 +14,7 @@ const fredoka = Fredoka({
 });
 
 export const metadata = {
-  metadataBase: new URL('https://colormypage.com'),
+  metadataBase: new URL("https://colormypage.com"),
   title: {
     title: "ColorMyPage • Free Printable Coloring Pages",
     template: "%s • ColorMyPage",
@@ -22,7 +23,8 @@ export const metadata = {
     "Download high-quality, free coloring pages for kids, parents, and teachers.",
   openGraph: {
     title: "ColorMyPage • Free Printable Coloring Pages",
-    description: "Download high-quality, free coloring pages for kids, parents, and teachers.",
+    description:
+      "Download high-quality, free coloring pages for kids, parents, and teachers.",
     type: "website",
     url: "https://colormypage.com",
     siteName: "ColorMyPage",
@@ -38,7 +40,8 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "ColorMyPage • Free Printable Coloring Pages",
-    description: "Download high-quality, free coloring pages for kids, parents, and teachers.",
+    description:
+      "Download high-quality, free coloring pages for kids, parents, and teachers.",
     images: ["/logo.png"],
   },
 };
@@ -50,7 +53,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="overflow-x-hidden scroll-smooth">
-      <body className={`${fredoka.className} min-h-screen flex flex-col overflow-x-hidden`}>
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-02YV9CXCGN"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-02YV9CXCGN')`}
+        </Script>
+      </head>
+      <body
+        className={`${fredoka.className} min-h-screen flex flex-col overflow-x-hidden`}
+      >
         <CloudBackground />
         <Header />
         <main className="flex-1">{children}</main>

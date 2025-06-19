@@ -2,200 +2,204 @@
   "prompts":
 [
   {
-    "title": "The Playful Dolphin",
-    "description": "A happy dolphin leaps over waves, playing with its pod under a sunny sky."
+    "title": "Beach Day Adventure",
+    "description": "Kids building sandcastles, splashing in the waves, and collecting seashells at the beach."
   },
   {
-    "title": "Octopus Garden",
-    "description": "A curious octopus tending to its garden of coral and seashells on the ocean floor."
+    "title": "Backyard Water Balloon Fight",
+    "description": "Children playfully tossing water balloons in a sunny backyard setting."
   },
   {
-    "title": "Sea Turtle Voyage",
-    "description": "A sea turtle gliding through warm tropical currents alongside colorful fish."
+    "title": "Ice Cream Truck Visit",
+    "description": "A neighborhood ice cream truck surrounded by excited kids picking their favorite flavors."
   },
   {
-    "title": "Jellyfish Glow Parade",
-    "description": "Bioluminescent jellyfish float through the dark ocean, glowing with every move."
+    "title": "Picnic in the Park",
+    "description": "Families and children enjoying sandwiches and lemonade on a checkered blanket under a tree."
   },
   {
-    "title": "The Crab’s Castle",
-    "description": "A sand crab guards its intricate shell castle, decorated with ocean treasures."
+    "title": "Sprinkler Fun",
+    "description": "Children laughing and running through a spinning water sprinkler on a hot afternoon."
   },
   {
-    "title": "Whale Song Symphony",
-    "description": "Majestic whales swimming and singing beneath shimmering light beams."
+    "title": "Flying Kites",
+    "description": "A windy summer day with kids flying colorful kites in an open field."
   },
   {
-    "title": "Clownfish Hide and Seek",
-    "description": "A group of clownfish peek in and out of their protective sea anemone home."
+    "title": "Lemonade Stand Hustle",
+    "description": "Two kids running a lemonade stand with signs, cups, and smiling customers."
   },
   {
-    "title": "Seahorse Ballroom",
-    "description": "Elegant seahorses dance among kelp ribbons in an underwater waltz."
+    "title": "Camping Under the Stars",
+    "description": "Children roasting marshmallows and telling stories by the campfire in a forest."
   },
   {
-    "title": "The Manta Ray Glider",
-    "description": "A manta ray soars through the ocean like a kite above coral reefs."
+    "title": "Biking Around the Neighborhood",
+    "description": "A group of kids riding their bikes with streamers and helmets through their street."
   },
   {
-    "title": "Orca Pod Adventure",
-    "description": "A family of orcas hunt and explore the icy waters of the northern sea."
+    "title": "Pool Party Splash",
+    "description": "Inflatable toys, beach balls, and kids jumping into a backyard pool."
   },
   {
-    "title": "Tiny Pufferfish Picnic",
-    "description": "Cheerful pufferfish float around a coral picnic blanket filled with treats."
+    "title": "Sidewalk Chalk Art",
+    "description": "Children creating colorful masterpieces with chalk on the pavement."
   },
   {
-    "title": "Starfish Sunbathing",
-    "description": "A group of starfish rest on a sunny rock shelf covered in barnacles and algae."
+    "title": "Catching Fireflies",
+    "description": "Kids chasing glowing fireflies with jars at dusk in a grassy field."
   },
   {
-    "title": "Moray Eel Mystery Cave",
-    "description": "A green moray eel peeks from a shadowy crevice full of shimmering fish."
+    "title": "Neighborhood Baseball Game",
+    "description": "A summer baseball game in an open lot with cheering kids and homemade bases."
   },
   {
-    "title": "Undersea Fashion Show",
-    "description": "Sea creatures strut with shells, pearls, and seaweed accessories on a coral runway."
+    "title": "Treehouse Hangout",
+    "description": "A group of children enjoying snacks and board games in a backyard treehouse."
   },
   {
-    "title": "The Coral City",
-    "description": "An expansive coral reef filled with bustling marine life like a busy metropolis."
+    "title": "Roller Skating Afternoon",
+    "description": "Kids in helmets and pads gliding around a park path on roller skates."
   },
   {
-    "title": "Deep Sea Lantern Fish",
-    "description": "Strange glowing lanternfish light their way in the deep dark ocean."
+    "title": "Fruit Picking at the Orchard",
+    "description": "Children picking apples, strawberries, or blueberries in an orchard with baskets."
   },
   {
-    "title": "The Busy Cleaner Shrimp",
-    "description": "A shrimp performs spa treatments on larger fish at an undersea cleaning station."
+    "title": "Nature Scavenger Hunt",
+    "description": "Kids with checklists and binoculars searching for bugs, leaves, and birds."
   },
   {
-    "title": "Squid Rocket Launch",
-    "description": "A school of squids jet away with inky trails like ocean rockets."
+    "title": "Summer Reading Circle",
+    "description": "Children sitting under a tree reading picture books during a sunny afternoon."
   },
   {
-    "title": "Hermit Crab’s Shell Swap",
-    "description": "Hermit crabs try on fancy new shells like a changing room at a boutique."
+    "title": "Sailing Toy Boats",
+    "description": "Little kids sailing handmade boats in a pond or small stream."
   },
   {
-    "title": "The Shy Goby Fish",
-    "description": "A tiny goby fish peeks from behind seagrass in a calm underwater meadow."
+    "title": "Bubble Blowing Contest",
+    "description": "Big and small soap bubbles floating around as kids compete for the biggest bubble."
   },
   {
-    "title": "The Mermaid’s Friends",
-    "description": "A mermaid surrounded by friendly sea animals like dolphins, turtles, and rays."
+    "title": "Gardening with Grandma",
+    "description": "Children planting sunflowers and watering veggies in a backyard garden."
   },
   {
-    "title": "Sea Slug Slideshow",
-    "description": "Brightly colored sea slugs parade in dazzling patterns and shapes."
+    "title": "Summer Fair Fun",
+    "description": "Rides, games, and cotton candy as kids enjoy the local summer fair."
   },
   {
-    "title": "Penguins Underwater Race",
-    "description": "A race between penguins darting like torpedoes through chilly Antarctic waters."
+    "title": "Puppy Park Playdate",
+    "description": "Children playing fetch with puppies and walking dogs in the sunshine."
   },
   {
-    "title": "Swordfish Slicers",
-    "description": "Swordfish slice through schools of fish with lightning-fast speed."
+    "title": "Obstacle Course Challenge",
+    "description": "A DIY obstacle course in the yard with kids jumping, crawling, and balancing."
   },
   {
-    "title": "Manatee’s Lazy Day",
-    "description": "Gentle manatees float lazily in warm shallow waters filled with water lilies."
+    "title": "Popsicle Break",
+    "description": "Kids enjoying colorful popsicles on a porch swing or backyard bench."
   },
   {
-    "title": "The Secret of the Giant Squid",
-    "description": "A giant squid lurks in the deep sea, shrouded in mystery and shadows."
+    "title": "Paddle Boat Pond",
+    "description": "Children paddling mini boats on a serene pond with ducks and lily pads."
   },
   {
-    "title": "Colorful Reef Parade",
-    "description": "All ocean animals come together for a parade through vibrant coral canyons."
+    "title": "Outdoor Movie Night",
+    "description": "Blankets, popcorn, and a projector under the stars as kids watch a summer movie."
   },
   {
-    "title": "Lionfish in the Garden",
-    "description": "A lionfish spreads its fins among brightly colored sponges and coral fans."
+    "title": "Carnival Cotton Candy",
+    "description": "A fun carnival scene with kids holding giant sticks of colorful cotton candy."
   },
   {
-    "title": "The Wise Old Lobster",
-    "description": "An ancient lobster tells tales to baby sea creatures in a seaweed amphitheater."
+    "title": "Kiddie Car Wash",
+    "description": "Kids helping wash bikes and scooters with soap and sponges on the driveway."
   },
   {
-    "title": "Barracuda Speed Chase",
-    "description": "Fast-moving barracudas streak past rocks and fish in pursuit of prey."
+    "title": "Sandcastle Competition",
+    "description": "Elaborate sandcastles, seashells, and kids with buckets and shovels."
   },
   {
-    "title": "Urchin Art Studio",
-    "description": "Sea urchins decorate the sea floor with tiny shell mosaics."
+    "title": "Sunflower Maze",
+    "description": "Children running and giggling through a tall sunflower maze."
   },
   {
-    "title": "Sea Otter Nap Time",
-    "description": "Fluffy sea otters float on their backs holding hands in kelp beds."
+    "title": "DIY Lemonade Pops",
+    "description": "A kitchen scene with kids pouring juice into molds to freeze homemade popsicles."
   },
   {
-    "title": "The Electric Eel Show",
-    "description": "Electric eels put on a glowing light show in a shadowy underwater cave."
+    "title": "Pet Parade",
+    "description": "Kids dressed up with their pets in funny costumes for a small pet parade."
   },
   {
-    "title": "Nudibranch Carnival",
-    "description": "A nudibranch party explodes with textures, color swirls, and odd shapes."
+    "title": "Backyard Camping Tent",
+    "description": "Tents, flashlights, and sleeping bags set up under the stars in the backyard."
   },
   {
-    "title": "The Parrotfish Painter",
-    "description": "A parrotfish munches on coral and spreads colors like an underwater painter."
+    "title": "Field Day Races",
+    "description": "Sack races, three-legged races, and water cup balancing challenges in a grassy field."
   },
   {
-    "title": "Shark School",
-    "description": "Young sharks gather for a day of lessons from their wise old shark teacher."
+    "title": "Treasure Hunt Map",
+    "description": "Children using maps and clues to find buried treasure in the sandbox."
   },
   {
-    "title": "Blue Tang Hideout",
-    "description": "Blue tangs zip through seaweed forests in a game of underwater tag."
+    "title": "Making Friendship Bracelets",
+    "description": "Kids sitting cross-legged, weaving colorful string bracelets for each other."
   },
   {
-    "title": "Ocean Bedtime",
-    "description": "A sleepy underwater scene where sea animals tuck in for the night."
+    "title": "Butterfly Garden Visit",
+    "description": "Children walking through a butterfly garden surrounded by fluttering wings."
   },
   {
-    "title": "The Curious Beluga",
-    "description": "A friendly beluga explores an underwater glacier cave with arctic fish."
+    "title": "Slip and Slide Fun",
+    "description": "A backyard scene with kids sliding down a soapy tarp into a kiddie pool."
   },
   {
-    "title": "Snail Trail Adventure",
-    "description": "A sea snail goes on a slow journey across an entire reef leaving shiny trails."
+    "title": "Mini Golf Challenge",
+    "description": "Kids with golf clubs trying to hit colorful balls into whimsical obstacles."
   },
   {
-    "title": "Kelp Forest Hideaway",
-    "description": "Creatures hide and play in the swaying stalks of a magical kelp forest."
+    "title": "Painting Outdoors",
+    "description": "Easels, paint splatters, and kids painting nature scenes in the yard."
   },
   {
-    "title": "Bubble Ring Games",
-    "description": "Dolphins and seals blow and jump through bubble rings in playful competitions."
+    "title": "Sun Hat Parade",
+    "description": "A creative parade where kids wear their own decorated sun hats."
   },
   {
-    "title": "Crab vs. Lobster Dance-off",
-    "description": "A humorous dance battle between a crab and a lobster on a rocky stage."
+    "title": "Catch and Release Fishing",
+    "description": "Children with fishing rods and smiling faces at the edge of a quiet lake."
   },
   {
-    "title": "The Anglerfish Lure",
-    "description": "A spooky anglerfish with a glowing lure attracts curious prey in the dark."
+    "title": "Hot Air Balloon Watch",
+    "description": "Kids lying in the grass, pointing at hot air balloons floating in the sky."
   },
   {
-    "title": "Tide Pool Explorers",
-    "description": "Ocean critters like sea stars, barnacles, and crabs explore tide pools at low tide."
+    "title": "Pine Cone Collecting",
+    "description": "Children wandering through pine trees, gathering pine cones in baskets."
   },
   {
-    "title": "The Flying Fish Leap",
-    "description": "Flying fish burst from the waves in acrobatic jumps above the surface."
+    "title": "Hopscotch Tournament",
+    "description": "Chalk-drawn hopscotch squares and kids leaping with excitement."
   },
   {
-    "title": "Glowworm Reef Party",
-    "description": "Bioluminescent creatures light up the reef for a magical undersea celebration."
+    "title": "Nature Crafts",
+    "description": "Making art from leaves, sticks, and flowers at an outdoor picnic table."
   },
   {
-    "title": "The Curious Cuttlefish",
-    "description": "A clever cuttlefish changes colors and patterns to blend with its surroundings."
+    "title": "Zoo Field Trip",
+    "description": "Kids pointing at lions, monkeys, and elephants on a sunny day at the zoo."
   },
   {
-    "title": "Ocean Symphony Orchestra",
-    "description": "A musical gathering of sea animals playing shells, drums, and coral xylophones."
+    "title": "Underwater Goggles",
+    "description": "Kids diving and swimming underwater with snorkels and goggles in a clear pool."
+  },
+  {
+    "title": "Summer Sunset Walk",
+    "description": "Children walking hand-in-hand on a trail as the sky glows with sunset colors."
   }
 ]
 ,
