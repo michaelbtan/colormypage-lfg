@@ -30,7 +30,7 @@ export async function generateMetadata({
     title: decodeURI(coloring_page.title),
     description: coloring_page.description,
     openGraph: {
-      title: coloring_page.title,
+      title: decodeURI(coloring_page.title),
       description: coloring_page.description,
       type: "article",
       url: `https://colormypage.com/coloring-page/${title}`,
@@ -46,7 +46,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: coloring_page.title,
+      title: decodeURI(coloring_page.title),
       description: coloring_page.description,
       images: [coloring_page.image_url || LOGO],
     },

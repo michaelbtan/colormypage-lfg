@@ -2,206 +2,207 @@
   "prompts":
 [
   {
-    "title": "Beach Day Adventure",
-    "description": "Kids building sandcastles, splashing in the waves, and collecting seashells at the beach."
+    "title": "First Day Outfit",
+    "description": "Kids can design and color their perfect first day of school outfit."
   },
   {
-    "title": "Backyard Water Balloon Fight",
-    "description": "Children playfully tossing water balloons in a sunny backyard setting."
+    "title": "School Bus Adventure",
+    "description": "A fun ride to school with friends, featuring a cheerful school bus and kids waving from the windows."
   },
   {
-    "title": "Ice Cream Truck Visit",
-    "description": "A neighborhood ice cream truck surrounded by excited kids picking their favorite flavors."
+    "title": "Build Your Backpack",
+    "description": "A backpack outline kids can fill and color with their school supplies."
   },
   {
-    "title": "Picnic in the Park",
-    "description": "Families and children enjoying sandwiches and lemonade on a checkered blanket under a tree."
+    "title": "My Dream Classroom",
+    "description": "An imaginative classroom filled with rainbows, stars, and fun desks."
   },
   {
-    "title": "Sprinkler Fun",
-    "description": "Children laughing and running through a spinning water sprinkler on a hot afternoon."
+    "title": "Lunchbox Surprise",
+    "description": "Color a lunchbox full of tasty, silly, or magical foods."
   },
   {
-    "title": "Flying Kites",
-    "description": "A windy summer day with kids flying colorful kites in an open field."
+    "title": "Crayon Friends",
+    "description": "Friendly animated crayons introducing themselves and ready to color the world."
   },
   {
-    "title": "Lemonade Stand Hustle",
-    "description": "Two kids running a lemonade stand with signs, cups, and smiling customers."
+    "title": "Pencil Parade",
+    "description": "Marching pencils with hats, drums, and flags celebrating the start of school."
   },
   {
-    "title": "Camping Under the Stars",
-    "description": "Children roasting marshmallows and telling stories by the campfire in a forest."
+    "title": "My Favorite Subject",
+    "description": "An open-ended scene kids can fill with art, science, reading, or math symbols."
   },
   {
-    "title": "Biking Around the Neighborhood",
-    "description": "A group of kids riding their bikes with streamers and helmets through their street."
+    "title": "Teacher Time",
+    "description": "A kind teacher greeting students in a welcoming classroom."
   },
   {
-    "title": "Pool Party Splash",
-    "description": "Inflatable toys, beach balls, and kids jumping into a backyard pool."
+    "title": "Magical Library",
+    "description": "A whimsical library where books fly and stories come to life."
   },
   {
-    "title": "Sidewalk Chalk Art",
-    "description": "Children creating colorful masterpieces with chalk on the pavement."
+    "title": "Alphabet Forest",
+    "description": "A forest filled with trees shaped like letters and animals hiding nearby."
   },
   {
-    "title": "Catching Fireflies",
-    "description": "Kids chasing glowing fireflies with jars at dusk in a grassy field."
+    "title": "Number Zoo",
+    "description": "A zoo where each animal’s body is made of numbers 1–10."
   },
   {
-    "title": "Neighborhood Baseball Game",
-    "description": "A summer baseball game in an open lot with cheering kids and homemade bases."
+    "title": "Recess Playground",
+    "description": "A joyful recess scene with swings, slides, jump ropes, and happy kids."
   },
   {
-    "title": "Treehouse Hangout",
-    "description": "A group of children enjoying snacks and board games in a backyard treehouse."
+    "title": "Science Lab Fun",
+    "description": "Beakers, rockets, and colorful experiments in a kid-friendly lab."
   },
   {
-    "title": "Roller Skating Afternoon",
-    "description": "Kids in helmets and pads gliding around a park path on roller skates."
+    "title": "Art Time Explosion",
+    "description": "Paint brushes, palettes, and canvases exploding with creativity."
   },
   {
-    "title": "Fruit Picking at the Orchard",
-    "description": "Children picking apples, strawberries, or blueberries in an orchard with baskets."
+    "title": "Music Class Band",
+    "description": "Kids playing different instruments in a fun classroom concert."
   },
   {
-    "title": "Nature Scavenger Hunt",
-    "description": "Kids with checklists and binoculars searching for bugs, leaves, and birds."
+    "title": "School Supply Shop",
+    "description": "Shelves full of bright pencils, scissors, rulers, and notebooks to color."
   },
   {
-    "title": "Summer Reading Circle",
-    "description": "Children sitting under a tree reading picture books during a sunny afternoon."
+    "title": "Kindness Tree",
+    "description": "A tree with leaves that say kind things kids can color and read."
   },
   {
-    "title": "Sailing Toy Boats",
-    "description": "Little kids sailing handmade boats in a pond or small stream."
+    "title": "My Desk Setup",
+    "description": "A desk scene with space for coloring in books, pencils, gadgets, and notes."
   },
   {
-    "title": "Bubble Blowing Contest",
-    "description": "Big and small soap bubbles floating around as kids compete for the biggest bubble."
+    "title": "Welcome Banner",
+    "description": "A big banner saying 'Welcome Back to School!' with balloons and stars."
   },
   {
-    "title": "Gardening with Grandma",
-    "description": "Children planting sunflowers and watering veggies in a backyard garden."
+    "title": "Class Pet Party",
+    "description": "Class pets (hamster, fish, bird) having a party in their tiny school."
   },
   {
-    "title": "Summer Fair Fun",
-    "description": "Rides, games, and cotton candy as kids enjoy the local summer fair."
+    "title": "Backpack Monster",
+    "description": "A silly monster whose belly is a backpack full of school goodies."
   },
   {
-    "title": "Puppy Park Playdate",
-    "description": "Children playing fetch with puppies and walking dogs in the sunshine."
+    "title": "Time for Show and Tell",
+    "description": "A kid showing off their favorite toy or drawing to classmates."
   },
   {
-    "title": "Obstacle Course Challenge",
-    "description": "A DIY obstacle course in the yard with kids jumping, crawling, and balancing."
+    "title": "Magical School Map",
+    "description": "A treasure map-style layout of a fun, imaginary school."
   },
   {
-    "title": "Popsicle Break",
-    "description": "Kids enjoying colorful popsicles on a porch swing or backyard bench."
+    "title": "Celebrate With Confetti",
+    "description": "A party scene with streamers, confetti, and smiling students."
   },
   {
-    "title": "Paddle Boat Pond",
-    "description": "Children paddling mini boats on a serene pond with ducks and lily pads."
+    "title": "Locker Decor Ideas",
+    "description": "A row of school lockers ready to be colored and personalized."
   },
   {
-    "title": "Outdoor Movie Night",
-    "description": "Blankets, popcorn, and a projector under the stars as kids watch a summer movie."
+    "title": "Field Trip Bus",
+    "description": "A magical field trip bus driving through space, underwater, or jungle scenes."
   },
   {
-    "title": "Carnival Cotton Candy",
-    "description": "A fun carnival scene with kids holding giant sticks of colorful cotton candy."
+    "title": "Friendly Notes Exchange",
+    "description": "Kids exchanging cheerful notes and drawings in class."
   },
   {
-    "title": "Kiddie Car Wash",
-    "description": "Kids helping wash bikes and scooters with soap and sponges on the driveway."
+    "title": "My School Goals",
+    "description": "A goal chart with stars, rockets, and positive reminders to color in."
   },
   {
-    "title": "Sandcastle Competition",
-    "description": "Elaborate sandcastles, seashells, and kids with buckets and shovels."
+    "title": "Bookworm’s Den",
+    "description": "A cozy corner full of books and a cute cartoon bookworm."
   },
   {
-    "title": "Sunflower Maze",
-    "description": "Children running and giggling through a tall sunflower maze."
+    "title": "Puzzle Day Challenge",
+    "description": "A page full of jumbled school-themed puzzle pieces."
   },
   {
-    "title": "DIY Lemonade Pops",
-    "description": "A kitchen scene with kids pouring juice into molds to freeze homemade popsicles."
+    "title": "Rainy Day Reading",
+    "description": "A child reading by the window with raindrops and imagination clouds."
   },
   {
-    "title": "Pet Parade",
-    "description": "Kids dressed up with their pets in funny costumes for a small pet parade."
+    "title": "Welcome Board Designs",
+    "description": "A chalkboard with doodles and welcome messages to decorate."
   },
   {
-    "title": "Backyard Camping Tent",
-    "description": "Tents, flashlights, and sleeping bags set up under the stars in the backyard."
+    "title": "Color the Class Rules",
+    "description": "Illustrated class rules with smiling faces and fun fonts."
   },
   {
-    "title": "Field Day Races",
-    "description": "Sack races, three-legged races, and water cup balancing challenges in a grassy field."
+    "title": "Favorite School Snack",
+    "description": "A menu of snacks like apples, juice boxes, cookies, and quirky sandwiches."
   },
   {
-    "title": "Treasure Hunt Map",
-    "description": "Children using maps and clues to find buried treasure in the sandbox."
+    "title": "Friends from Every Grade",
+    "description": "Kids of all ages together on one colorful playground."
   },
   {
-    "title": "Making Friendship Bracelets",
-    "description": "Kids sitting cross-legged, weaving colorful string bracelets for each other."
+    "title": "Back to School Maze",
+    "description": "A fun maze helping a student find their way to class."
   },
   {
-    "title": "Butterfly Garden Visit",
-    "description": "Children walking through a butterfly garden surrounded by fluttering wings."
+    "title": "Name Tag Designer",
+    "description": "A blank name tag with doodles and space to color and personalize."
   },
   {
-    "title": "Slip and Slide Fun",
-    "description": "A backyard scene with kids sliding down a soapy tarp into a kiddie pool."
+    "title": "School Spirit Day",
+    "description": "Students dressed up in school colors with pompoms and banners."
   },
   {
-    "title": "Mini Golf Challenge",
-    "description": "Kids with golf clubs trying to hit colorful balls into whimsical obstacles."
+    "title": "Computer Lab Quest",
+    "description": "A techy room with colorful screens and kids learning to type."
   },
   {
-    "title": "Painting Outdoors",
-    "description": "Easels, paint splatters, and kids painting nature scenes in the yard."
+    "title": "Secret Message Code",
+    "description": "A colorable code with letters and numbers kids can decode and color."
   },
   {
-    "title": "Sun Hat Parade",
-    "description": "A creative parade where kids wear their own decorated sun hats."
+    "title": "Write Your Own Schedule",
+    "description": "A class schedule template surrounded by doodles and school icons."
   },
   {
-    "title": "Catch and Release Fishing",
-    "description": "Children with fishing rods and smiling faces at the edge of a quiet lake."
+    "title": "Hidden School Objects",
+    "description": "A hidden picture page with backpacks, books, and erasers to find and color."
   },
   {
-    "title": "Hot Air Balloon Watch",
-    "description": "Kids lying in the grass, pointing at hot air balloons floating in the sky."
+    "title": "School Bus Safety Superhero",
+    "description": "A superhero teaching how to be safe around the bus in a comic-style panel."
   },
   {
-    "title": "Pine Cone Collecting",
-    "description": "Children wandering through pine trees, gathering pine cones in baskets."
+    "title": "School Garden Helpers",
+    "description": "Kids planting, watering, and harvesting in a school garden."
   },
   {
-    "title": "Hopscotch Tournament",
-    "description": "Chalk-drawn hopscotch squares and kids leaping with excitement."
+    "title": "Back-to-School Carnival",
+    "description": "Games, booths, and prizes at a pretend school carnival."
   },
   {
-    "title": "Nature Crafts",
-    "description": "Making art from leaves, sticks, and flowers at an outdoor picnic table."
+    "title": "Silly School Monsters",
+    "description": "Silly, non-scary monsters going to school and learning too."
   },
   {
-    "title": "Zoo Field Trip",
-    "description": "Kids pointing at lions, monkeys, and elephants on a sunny day at the zoo."
+    "title": "The History Hall",
+    "description": "A museum-style hallway with exhibits from history class."
   },
   {
-    "title": "Underwater Goggles",
-    "description": "Kids diving and swimming underwater with snorkels and goggles in a clear pool."
+    "title": "Let's Learn Shapes",
+    "description": "A classroom filled with shape characters like triangles and circles with faces."
   },
   {
-    "title": "Summer Sunset Walk",
-    "description": "Children walking hand-in-hand on a trail as the sky glows with sunset colors."
+    "title": "Around the World in Class",
+    "description": "Kids from different cultures sharing and learning together."
   }
 ]
+
 ,
   "batchSize": 1,
   "outDir": "images",
