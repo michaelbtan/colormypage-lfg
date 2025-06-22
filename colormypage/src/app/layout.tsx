@@ -54,6 +54,11 @@ export default function RootLayout({
   return (
     <html lang="en" className="overflow-x-hidden scroll-smooth">
       <head>
+        <meta
+          name="p:domain_verify"
+          content="a39dfbe0e9a81753e740bfa572d09a03"
+        />
+
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-02YV9CXCGN"
           strategy="afterInteractive"
