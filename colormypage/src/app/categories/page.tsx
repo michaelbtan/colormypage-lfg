@@ -3,12 +3,12 @@ import { createClient } from "@/lib/supabase/server";
 import { AdPlaceholder } from "@/components/ad-placeholder";
 
 export const metadata = {
-  title: "Browse All Coloring Page Categories",
+  title: "Browse All Free Printable Coloring Page Categories",
   description:
-    "Explore our complete collection of coloring page categories for all ages and interests.",
+    "Explore our complete collection of free printable coloring page categories for all ages and interests.",
   openGraph: {
-    title: "Browse All Coloring Page Categories",
-    description: "Explore our complete collection of coloring page categories for all ages and interests.",
+  title: "Browse All Free Printable Coloring Page Categories",
+    description: "Explore our complete collection of free printable coloring page categories for all ages and interests.",
     type: "website",
     url: "https://colormypage.com/categories",
     siteName: "ColorMyPage",
@@ -24,7 +24,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Browse All Coloring Page Categories",
-    description: "Explore our complete collection of coloring page categories for all ages and interests.",
+    description: "Explore our complete collection of free printable coloring page categories for all ages and interests.",
     images: ["/logo.png"],
   },
 };

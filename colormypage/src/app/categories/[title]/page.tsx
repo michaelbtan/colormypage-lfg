@@ -28,10 +28,10 @@ export async function generateMetadata({
   }
 
   return {
-    title: decodeURI(category.title),
+    title: `Free Printable ${decodeURI(category.title)} Coloring Pages (PDF)`,
     description: category.description,
     openGraph: {
-      title: decodeURI(category.title),
+    title: `Free Printable ${decodeURI(category.title)} Coloring Pages (PDF)`,
       description: category.description,
       type: "website",
       url: `https://colormypage.com/categories/${title}`,
@@ -47,7 +47,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: decodeURI(category.title),
+    title: `Free Printable ${decodeURI(category.title)} Coloring Pages (PDF)`,
       description: category.description,
       images: [category.banner_image_url || category.cover_image_url || LOGO],
     },

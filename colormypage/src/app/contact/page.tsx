@@ -31,7 +31,7 @@ const socialLinks = [
     icon: pinterest,
   },
   {
-    href: "mailto:contact@colormypage.com",
+    href: "mailto:jasmine@colormypage.com",
     label: "Email",
     icon: email,
   },

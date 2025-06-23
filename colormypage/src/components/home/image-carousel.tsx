@@ -150,7 +150,7 @@ export function ImageCarousel() {
       </div>
 
       {/* Auto-play indicator */}
-      <div className="absolute top-4 right-4">
+      <div className="absolute top-4 right-4 hidden md:block">
         <Button
           onClick={() => setIsAutoPlaying(!isAutoPlaying)}
           aria-label={isAutoPlaying ? "Pause autoplay" : "Resume autoplay"}
