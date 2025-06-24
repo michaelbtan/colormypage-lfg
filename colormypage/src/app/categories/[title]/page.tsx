@@ -1,38 +1,38 @@
-import { notFound } from "next/navigation"
-import type { Metadata } from "next"
-import { CategoryBlog } from "@/components/categories/category-blog"
-import { ColoringPageGrid } from "@/components/categories/coloring-page-grid"
-import { createClient } from "@/lib/supabase/server"
-import LOGO from "@/assets/logo.png"
+import { notFound } from "next/navigation";
+import type { Metadata } from "next";
+import { CategoryBlog } from "@/components/categories/category-blog";
+import { ColoringPageGrid } from "@/components/categories/coloring-page-grid";
+import { createClient } from "@/lib/supabase/server";
+import LOGO from "@/assets/logo.png";
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ title: string }>
+  params: Promise<{ title: string }>;
 }): Promise<Metadata> {
-  const title = (await params).title
-  const supabase = await createClient()
+  const title = (await params).title;
+  const supabase = await createClient();
 
   const { data: category, error } = await supabase
     .from("categories")
     .select("title, description, cover_image_url, banner_image_url")
     .eq("title", title)
-    .single()
+    .single();
 
   if (error) {
-    console.error("Error fetching category for metadata", error)
+    console.error("Error fetching category for metadata", error);
     return {
       title: "Category Not Found",
       description: "Unable to load category information",
-    }
+    };
   }
 
   return {
     title: `Free Printable ${decodeURI(category.title)} Coloring Pages (PDF)`,
-    description: category.description,
+    description: `${category.description}. Download and print free coloring pages for kids and adults. Perfect for home, school, or therapy.`,
     openGraph: {
-    title: `Free Printable ${decodeURI(category.title)} Coloring Pages (PDF)`,
-      description: category.description,
+      title: `Free Printable ${decodeURI(category.title)} Coloring Pages (PDF)`,
+      description: `${category.description}. Download and print free coloring pages for kids and adults. Perfect for home, school, or therapy.`,
       type: "website",
       url: `https://colormypage.com/categories/${title}`,
       siteName: "ColorMyPage",
@@ -47,42 +47,46 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-    title: `Free Printable ${decodeURI(category.title)} Coloring Pages (PDF)`,
-      description: category.description,
+      title: `Free Printable ${decodeURI(category.title)} Coloring Pages (PDF)`,
+      description: `${category.description}. Download and print free coloring pages for kids and adults. Perfect for home, school, or therapy.`,
       images: [category.banner_image_url || category.cover_image_url || LOGO],
     },
-  }
+  };
 }
 
 export default async function CategoryPage({
   params,
 }: {
-  params: { title: string }
+  params: { title: string };
 }) {
-  const { title } = params
-  const supabase = await createClient()
+  const { title } = params;
+  const supabase = await createClient();
 
   const {
     data: { user },
-  } = await supabase.auth.getUser()
+  } = await supabase.auth.getUser();
 
   // Fetch category data
-  const { data: category } = await supabase.from("categories").select("*").eq("title", title).single()
+  const { data: category } = await supabase
+    .from("categories")
+    .select("*")
+    .eq("title", title)
+    .single();
 
   if (!category) {
-    notFound()
+    notFound();
   }
 
   // Check if category is favorited by the current user
-  let isFavorited = false
+  let isFavorited = false;
   if (user) {
     const { data: favorited } = await supabase
       .from("favorited_categories")
       .select("*")
       .eq("category_id", category.id)
       .eq("user_id", user.id)
-      .single()
-    isFavorited = !!favorited
+      .single();
+    isFavorited = !!favorited;
   }
 
   // Fetch coloring pages for the category with related coloring_pages data
@@ -100,14 +104,14 @@ export default async function CategoryPage({
       is_published
     )
   `,
-      { count: "exact" },
+      { count: "exact" }
     )
     .eq("category_id", category.id)
     .order("created_at", { ascending: false })
-    .range(0, 11) // Get first 12 items (0-11)
+    .range(0, 11); // Get first 12 items (0-11)
 
   // Calculate if there are more pages
-  const hasMore = count ? pages.length < count : false
+  const hasMore = count ? pages.length < count : false;
 
   return (
     <div>
@@ -148,5 +152,5 @@ export default async function CategoryPage({
         </div>
       </div>
     </div>
-  )
+  );
 }

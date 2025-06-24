@@ -30,12 +30,12 @@ export async function generateMetadata({
     title: `Free Printable ${decodeURI(
       coloring_page.title
     )} Coloring Page (PDF)`,
-    description: coloring_page.description,
+    description: `${coloring_page.description}. Download and print free coloring pages for kids and adults. Perfect for home, school, or therapy.`,
     openGraph: {
       title: `Free Printable ${decodeURI(
         coloring_page.title
       )} Coloring Page (PDF)`,
-      description: coloring_page.description,
+      description: `${coloring_page.description}. Download and print free coloring pages for kids and adults. Perfect for home, school, or therapy.`,
       type: "article",
       url: `https://colormypage.com/coloring-page/${title}`,
       siteName: "ColorMyPage",
@@ -53,7 +53,7 @@ export async function generateMetadata({
       title: `Free Printable ${decodeURI(
         coloring_page.title
       )} Coloring Page (PDF)`,
-      description: coloring_page.description,
+      description: `${coloring_page.description}. Download and print free coloring pages for kids and adults. Perfect for home, school, or therapy.`,
       images: [coloring_page.image_url || LOGO],
     },
   };
