@@ -119,7 +119,6 @@ export default async function CategoryPage({
         id={category.id}
         title={category.title}
         description={category.description}
-        excerpt={category.excerpt}
         imageCount={category.image_count}
         featuredImage={category.cover_image_url || undefined}
         categoryFavorited={isFavorited}

@@ -14,7 +14,6 @@ interface CategoryBlogProps {
   userId: string | null;
   title: string;
   description: string;
-  excerpt?: string; // Short description for hero section
   imageCount: number;
   featuredImage?: string;
   categoryFavorited?: boolean;
@@ -26,7 +25,6 @@ export function CategoryBlog({
   id,
   title,
   description,
-  excerpt,
   imageCount,
   featuredImage,
   categoryFavorited,
@@ -86,10 +84,6 @@ export function CategoryBlog({
         day: "numeric",
       })
     : null;
-
-  // Extract first paragraph or use excerpt for hero section
-  const heroDescription =
-    excerpt || description.split("</p>")[0].replace(/<[^>]*>/g, "") + "...";
 
   return (
     <>
@@ -162,11 +156,6 @@ export function CategoryBlog({
                 </div>
               </div>
 
-              {/* Description */}
-              <p className="text-lg md:text-xl lg:text-2xl text-white/90 max-w-3xl leading-relaxed">
-                {heroDescription}
-              </p>
-
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Button
@@ -196,7 +185,7 @@ export function CategoryBlog({
       </section>
 
       {/* Content Section */}
-      <section className="pt-12 lg:pt-24">
+      <section className="pt-6 lg:pt-12">
         <div className="container mx-auto px-4">
           <div className="max-w-8xl mx-auto">
             <div className="p-8 lg:p-12 rounded-xl shadow-md border border-gray-100 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
