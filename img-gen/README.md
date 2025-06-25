@@ -72,3 +72,6 @@ Coloring pages
     3 - Upload to supabase
     4 - Upload the coloring_pages.csv to the coloring pages table
     5 - Fill out the coloring_pages_categories.csv and upload to the table
+Social Media
+    2 - Create the pinterest board 
+    1 - Update the board info and upload the pinterest_upload.csv to pinterest - https://www.pinterest.com/settings/bulk-create-pins

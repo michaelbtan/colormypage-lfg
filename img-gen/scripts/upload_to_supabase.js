@@ -136,7 +136,7 @@ async function uploadDirectoryAndGenerateCSVs(localDirPath) {
       pinterestRecords.push({
         title: title,
         media_url: publicUrl,
-        pinterest_board: 'Coloring Pages',
+        pinterest_board: '',
         description: description || `${title} coloring page - Perfect for kids and adults! Download and print this fun coloring activity.`,
         link: `https://colormypage.com/coloring-pages/${fileNameWithoutExt}`,
         publish_date: currentDate,
