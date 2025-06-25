@@ -7,11 +7,11 @@
     "keywords": ["back to school", "outfit", "coloring page"]
   }
 ]
-
 ,
   "batchSize": 1,
   "outDir": "images",
   "model": "gpt-image-1",
   "quality": "high",
-  "size": "1024x1536"
+  "size": "1024x1536",
+  "pinterestBoard": ""
 }
