@@ -56,7 +56,7 @@ Using the above example templete can you make a blog post for ColorMyPage.com, f
 
 ### For generating page ideas from chatgpt -
 
-I am creating ideas for a coloring book. Can you give me 50 unique and creative ideas on the following topic, and return the response in the form of a json array of objects with title and description fields?
+I am creating ideas for a coloring book. I will be needing 50 unique and creative ideas on the following topic, and return the response in the form of a json array of objects with title, description, and keywords for pinterest in the form of an array. The pinterest keywords already include coloring page, printable, kids activity, do not include these in the array. 
 
 Ex. Unicorn coloring pages
 

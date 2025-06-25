@@ -26,7 +26,7 @@ if (!SUPABASE_URL || !SUPABASE_KEY || !BUCKET_NAME) {
 const CONFIG_PATH = process.env.CONFIG_PATH ?? "./config.json";
 const config = JSON.parse(fs.readFileSync(CONFIG_PATH, "utf-8"));
 
-// Create a map of slugified titles to descriptions
+// Create a map of slugified titles to descriptions and keywords
 // Use the same slugify logic as generate_images.js
 function slugify(str, maxLength = 100) {
   return str
@@ -38,13 +38,37 @@ function slugify(str, maxLength = 100) {
 }
 
 const titleDescriptionMap = new Map();
+const titleKeywordsMap = new Map();
 config.prompts.forEach(prompt => {
   const slugifiedTitle = slugify(prompt.title);
   titleDescriptionMap.set(slugifiedTitle, prompt.description);
+  titleKeywordsMap.set(slugifiedTitle, prompt.keywords || []);
 });
 
 // Initialize Supabase client
 const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
+
+// Pinterest optimal posting times based on research
+// Best times: 8PM, 4PM, 9PM, 3PM, 2PM - post 5 images per day
+function getStaggeredPublishDate(index) {
+  const now = new Date();
+  
+  // Best times of day in 24-hour format - 5 images per day
+  const optimalHours = [20, 16, 21, 15, 14]; // 8PM, 4PM, 9PM, 3PM, 2PM
+  
+  // Calculate which day and time slot
+  const daysAhead = Math.floor(index / optimalHours.length);
+  const hourIndex = index % optimalHours.length;
+  const targetHour = optimalHours[hourIndex];
+  
+  // Start from tomorrow to avoid same-day posting conflicts
+  const targetDate = new Date(now);
+  targetDate.setDate(now.getDate() + 1 + daysAhead);
+  targetDate.setHours(targetHour, 0, 0, 0);
+  
+  // Format as Pinterest expects: YYYY-MM-DDTHH:mm:ss
+  return targetDate.toISOString().slice(0, 19);
+}
 
 // Function to determine content type from file extension
 function getContentType(filePath) {
@@ -63,7 +87,7 @@ function getContentType(filePath) {
 async function uploadDirectoryAndGenerateCSVs(localDirPath) {
   const files = getAllFiles(localDirPath);
   const coloringPagesRecords = [];
-  const coloringPageCategoriesRecords = [];
+  const pinterestRecords = [];
 
   for (const file of files) {
     const fileName = path.basename(file); // only the file name
@@ -89,8 +113,9 @@ async function uploadDirectoryAndGenerateCSVs(localDirPath) {
       const fileNameWithoutExt = path.basename(file, path.extname(file))
         .replace(/_coloring$/, '');
 
-      // Look up the description from our map
+      // Look up the description and keywords from our maps
       const description = titleDescriptionMap.get(fileNameWithoutExt) || '';
+      const configKeywords = titleKeywordsMap.get(fileNameWithoutExt) || [];
 
       // Build CSV record
       coloringPagesRecords.push({
@@ -101,9 +126,21 @@ async function uploadDirectoryAndGenerateCSVs(localDirPath) {
         is_published: true,
       });
 
-      coloringPageCategoriesRecords.push({
-        coloring_page_id: fileNameWithoutExt,
-        category_id: '',
+
+      // Build Pinterest CSV record
+      const title = fileNameWithoutExt.split('_').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+      const keywords = [...configKeywords, 'coloring page', 'printable', 'kids activity'].join(', ');
+      // Stagger posting times across optimal Pinterest hours
+      const currentDate = getStaggeredPublishDate(coloringPagesRecords.length);
+      
+      pinterestRecords.push({
+        title: title,
+        media_url: publicUrl,
+        pinterest_board: 'Coloring Pages',
+        description: description || `${title} coloring page - Perfect for kids and adults! Download and print this fun coloring activity.`,
+        link: `https://colormypage.com/coloring-pages/${fileNameWithoutExt}`,
+        publish_date: currentDate,
+        keywords: keywords
       });
     }
   }
@@ -121,6 +158,22 @@ async function uploadDirectoryAndGenerateCSVs(localDirPath) {
   });
   await pagesCsvWriter.writeRecords(coloringPagesRecords);
   console.log('✅ CSV file created: coloring_pages.csv');
+
+  // Write pinterest_upload.csv
+  const pinterestCsvWriter = createObjectCsvWriter({
+    path: 'pinterest_upload.csv',
+    header: [
+      { id: 'title', title: 'Title' },
+      { id: 'media_url', title: 'Media URL' },
+      { id: 'pinterest_board', title: 'Pinterest board' },
+      { id: 'description', title: 'Description' },
+      { id: 'link', title: 'Link' },
+      { id: 'publish_date', title: 'Publish date' },
+      { id: 'keywords', title: 'Keywords' },
+    ],
+  });
+  await pinterestCsvWriter.writeRecords(pinterestRecords);
+  console.log('✅ CSV file created: pinterest_upload.csv');
 }
 
 // Recursively get all file paths in a directory
