@@ -1,11 +1,13 @@
 import type React from "react";
 import "@/app/globals.css";
+import Script from "next/script";
 import { Fredoka } from "next/font/google";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Toaster } from "@/components/ui/sonner";
 import CloudBackground from "@/components/layout/cloud-background";
-import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const fredoka = Fredoka({
   subsets: ["latin"],
@@ -93,6 +95,8 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
         <Footer />
         <Toaster />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
