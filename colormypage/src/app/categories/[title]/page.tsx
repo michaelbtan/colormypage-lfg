@@ -15,7 +15,7 @@ export async function generateMetadata({
 
   const { data: category, error } = await supabase
     .from("categories")
-    .select("title, description, cover_image_url, banner_image_url")
+    .select("id, title, description, cover_image_url, banner_image_url")
     .eq("title", title)
     .single();
 
@@ -27,11 +27,21 @@ export async function generateMetadata({
     };
   }
 
+  // Get count of coloring pages in this category
+  const { count } = await supabase
+    .from("coloring_page_categories")
+    .select("*", { count: "exact", head: true })
+    .eq("category_id", category.id);
+
   return {
-    title: `Free Printable ${decodeURI(category.title)} Coloring Pages (PDF)`,
+    title: `${count} ${decodeURI(
+      category.title
+    )} Free Printable Coloring Pages (PDF)`,
     description: `${category.description}. Download and print free coloring pages for kids and adults. Perfect for home, school, or therapy.`,
     openGraph: {
-      title: `Free Printable ${decodeURI(category.title)} Coloring Pages (PDF)`,
+      title: `${count} ${decodeURI(
+        category.title
+      )} Free Printable Coloring Pages (PDF)`,
       description: `${category.description}. Download and print free coloring pages for kids and adults. Perfect for home, school, or therapy.`,
       type: "website",
       url: `https://colormypage.com/categories/${title}`,
@@ -47,7 +57,9 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: `Free Printable ${decodeURI(category.title)} Coloring Pages (PDF)`,
+      title: `${count} ${decodeURI(
+        category.title
+      )} Free Printable Coloring Pages (PDF)`,
       description: `${category.description}. Download and print free coloring pages for kids and adults. Perfect for home, school, or therapy.`,
       images: [category.banner_image_url || category.cover_image_url || LOGO],
     },
