@@ -14,7 +14,7 @@ export default async function DashboardLayout({
   return (
     <div className="min-h-screen">
       {/* Alert banner to indicate this is a demo mode */}
-      <main className="p-4 md:p-6 max-w-7xl mx-auto mt-12">{children}</main>
+      <main className="p-4 md:p-6 max-w-7xl mx-auto">{children}</main>
     </div>
   )
 }
