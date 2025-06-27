@@ -252,12 +252,12 @@
     "keywords": ["berry safari", "balloon ride", "african scene", "wildlife joy", "sky adventure"]
   }
 ]
-
 ,
+  "pinterestBoard": "",
+  "categoryId": "",
   "batchSize": 1,
   "outDir": "images",
   "model": "gpt-image-1",
   "quality": "high",
-  "size": "1024x1536",
-  "pinterestBoard": ""
+  "size": "1024x1536"
 }

@@ -10,8 +10,9 @@
     "generate": "node scripts/generate_images.js",
     "frame": "node scripts/frame_coloring_pages.js",
     "copy": "node scripts/copy_coloring_pages.js",
-    "upload": "node scripts/upload_to_supabase.js",
-    "delete": "node scripts/delete_images.js"
+    "upload": "node scripts/generate_csv.js",
+    "delete": "node scripts/delete_images.js",
+    "build": "npm run generate && npm run frame && npm run upload"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.49.8",

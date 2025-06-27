@@ -66,6 +66,7 @@ Cateogry
     2 - Create the category cover image
     3 - Create the category blog post
     4 - Create the cateogry row
+    5 - Fill in config - cateogry_id, pinterestBoard
 Coloring pages
     1 - Generate coloring pages based on the category
     2 - Frame the coloring pages
@@ -73,5 +74,4 @@ Coloring pages
     4 - Upload the coloring_pages.csv to the coloring pages table
     5 - Fill out the coloring_pages_categories.csv and upload to the table
 Social Media
-    2 - Create the pinterest board 
     1 - Update the board info and upload the pinterest_upload.csv to pinterest - https://www.pinterest.com/settings/bulk-create-pins

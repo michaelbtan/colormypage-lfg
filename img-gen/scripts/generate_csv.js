@@ -88,6 +88,7 @@ async function uploadDirectoryAndGenerateCSVs(localDirPath) {
   const files = getAllFiles(localDirPath);
   const coloringPagesRecords = [];
   const pinterestRecords = [];
+  const coloringPageCategoriesRecords = [];
 
   for (const file of files) {
     const fileName = path.basename(file); // only the file name
@@ -118,12 +119,20 @@ async function uploadDirectoryAndGenerateCSVs(localDirPath) {
       const configKeywords = titleKeywordsMap.get(fileNameWithoutExt) || [];
 
       // Build CSV record
+      const pageTitle = encodeURIComponent(fileNameWithoutExt.split('_').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' '));
+      
       coloringPagesRecords.push({
-        title: encodeURIComponent(fileNameWithoutExt.split('_').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')),
+        title: pageTitle,
         description: description,
         image_url: publicUrl,
         file_name: fileName,
         is_published: true,
+      });
+
+      // Build coloring page categories record
+      coloringPageCategoriesRecords.push({
+        coloring_page_title: pageTitle,
+        category_id: config.categoryId
       });
 
 
@@ -147,7 +156,7 @@ async function uploadDirectoryAndGenerateCSVs(localDirPath) {
 
   // Write coloring_pages.csv
   const pagesCsvWriter = createObjectCsvWriter({
-    path: 'coloring_pages.csv',
+    path: path.join(__dirname, '../csv/coloring_pages.csv'),
     header: [
       { id: 'title', title: 'title' },
       { id: 'description', title: 'description' },
@@ -157,11 +166,11 @@ async function uploadDirectoryAndGenerateCSVs(localDirPath) {
     ],
   });
   await pagesCsvWriter.writeRecords(coloringPagesRecords);
-  console.log('✅ CSV file created: coloring_pages.csv');
+  console.log('✅ CSV file created: csv/coloring_pages.csv');
 
   // Write pinterest_upload.csv
   const pinterestCsvWriter = createObjectCsvWriter({
-    path: 'pinterest_upload.csv',
+    path: path.join(__dirname, '../csv/pinterest_upload.csv'),
     header: [
       { id: 'title', title: 'Title' },
       { id: 'media_url', title: 'Media URL' },
@@ -173,7 +182,18 @@ async function uploadDirectoryAndGenerateCSVs(localDirPath) {
     ],
   });
   await pinterestCsvWriter.writeRecords(pinterestRecords);
-  console.log('✅ CSV file created: pinterest_upload.csv');
+  console.log('✅ CSV file created: csv/pinterest_upload.csv');
+
+  // Write coloring_page_categories.csv
+  const categoriesCsvWriter = createObjectCsvWriter({
+    path: path.join(__dirname, '../csv/coloring_page_categories.csv'),
+    header: [
+      { id: 'coloring_page_title', title: 'coloring_page_title' },
+      { id: 'category_id', title: 'category_id' },
+    ],
+  });
+  await categoriesCsvWriter.writeRecords(coloringPageCategoriesRecords);
+  console.log('✅ CSV file created: csv/coloring_page_categories.csv');
 }
 
 // Recursively get all file paths in a directory
@@ -195,7 +215,7 @@ function getAllFiles(dir) {
 }
 
 // Run the script
-const localDir = path.join(__dirname, '../to_upload');
+const localDir = path.join(__dirname, '../coloring_pages');
 uploadDirectoryAndGenerateCSVs(localDir)
   .then(() => console.log('✅ Upload and CSV generation complete'))
   .catch((err) => console.error('❌ Upload failed:', err));
