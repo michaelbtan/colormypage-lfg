@@ -1,6 +1,7 @@
 import { InfiniteCategoriesGrid } from "@/components/categories/infinite-categories-grid";
 import { createClient } from "@/lib/supabase/server";
 import { AdPlaceholder } from "@/components/ad-placeholder";
+import { PageBreadcrumbs, createHomeBreadcrumb } from "@/components/navigation/page-breadcrumbs";
 
 export const metadata = {
   title: "Browse All Free Printable Coloring Page Categories",
@@ -69,8 +70,15 @@ export default async function CategoriesPage() {
 
   const hasMore = count ? (categories?.length || 0) < count : false;
 
+  // Create breadcrumbs
+  const breadcrumbs = [
+    createHomeBreadcrumb(),
+    { label: "Categories" },
+  ];
+
   return (
     <div className="py-8">
+      <PageBreadcrumbs items={breadcrumbs} />
       <div className="container mx-auto px-4">
         <h1 className="text-3xl font-bold mb-4">All Categories</h1>
 

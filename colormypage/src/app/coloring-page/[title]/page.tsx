@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { ColoringPageView } from "@/components/coloring-page/coloring-page-view";
 import { createClient } from "@/lib/supabase/server";
+import { PageBreadcrumbs, createHomeBreadcrumb, createCategoriesBreadcrumb, createCategoryBreadcrumb } from "@/components/navigation/page-breadcrumbs";
 import LOGO from "@/assets/logo.png";
 
 export async function generateMetadata({
@@ -81,7 +82,37 @@ export default async function ColoringPagePage({
     notFound();
   }
 
+  // Fetch category information for breadcrumbs
+  const { data: categoryData } = await supabase
+    .from("coloring_page_categories")
+    .select(`
+      categories!inner(
+        id,
+        title
+      )
+    `)
+    .eq("coloring_page_title", coloringPage.title)
+    .limit(1)
+    .single();
+
+  // Create breadcrumbs
+  const breadcrumbs = [
+    createHomeBreadcrumb(),
+    createCategoriesBreadcrumb(),
+  ];
+
+  // Add category breadcrumb if we found one
+  if (categoryData?.categories) {
+    breadcrumbs.push(createCategoryBreadcrumb(categoryData.categories.title));
+  }
+
+  // Add current page
+  breadcrumbs.push({ label: decodeURI(coloringPage.title) });
+
   return (
-    <ColoringPageView coloringPage={coloringPage} userId={user?.id || null} />
+    <div>
+      <PageBreadcrumbs items={breadcrumbs} />
+      <ColoringPageView coloringPage={coloringPage} userId={user?.id || null} />
+    </div>
   );
 }

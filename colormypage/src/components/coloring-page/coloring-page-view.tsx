@@ -89,23 +89,6 @@ ColoringPageViewProps) {
     }
   };
 
-  const handleDownload = () => {
-    // Create a temporary anchor element
-    const link = document.createElement("a");
-    link.href = coloringPage.image_url;
-    link.download = `${coloringPage.title
-      .replace(/\s+/g, "-")
-      .toLowerCase()}.png`;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-
-    toast("Download started", {
-      description: "Your coloring page image is being downloaded.",
-      descriptionClassName: "!text-black font-medium",
-    });
-  };
-
   const handleShare = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
@@ -185,7 +168,7 @@ ColoringPageViewProps) {
   };
 
   return (
-    <div className="container py-8 md:py-12 max-w-5xl mx-auto">
+    <div className="container max-w-5xl mx-auto">
       <div className="mb-6">
         {/* <Link
           href={`/categories/${coloringPage.categoryId}`}

@@ -2,6 +2,7 @@ import { DashboardHeader } from "@/components/dashboard/dashboard-header"
 import { FavoriteCategories } from "@/components/dashboard/favorite-categories"
 import { FavoriteColoringPages } from "@/components/dashboard/favorite-coloring-pages"
 import { createClient } from "@/lib/supabase/server"
+import { PageBreadcrumbs, createHomeBreadcrumb } from "@/components/navigation/page-breadcrumbs"
 
 export const metadata = {
   title: "Dashboard",
@@ -27,8 +28,15 @@ export default async function DashboardPage() {
     .select("*, categories(*)")
     .eq("user_id", user?.id)
 
+  // Create breadcrumbs
+  const breadcrumbs = [
+    createHomeBreadcrumb(),
+    { label: "Dashboard" },
+  ];
+
   return (
     <div className="space-y-8">
+      <PageBreadcrumbs items={breadcrumbs} />
       <DashboardHeader
         title="My Coloring Pages"
         description="Manage your favorite coloring pages and categories"

@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { CategoryBlog } from "@/components/categories/category-blog";
 import { ColoringPageGrid } from "@/components/categories/coloring-page-grid";
 import { createClient } from "@/lib/supabase/server";
+import { PageBreadcrumbs, createHomeBreadcrumb, createCategoriesBreadcrumb } from "@/components/navigation/page-breadcrumbs";
 import LOGO from "@/assets/logo.png";
 
 export async function generateMetadata({
@@ -125,8 +126,16 @@ export default async function CategoryPage({
   // Calculate if there are more pages
   const hasMore = count ? pages.length < count : false;
 
+  // Create breadcrumbs
+  const breadcrumbs = [
+    createHomeBreadcrumb(),
+    createCategoriesBreadcrumb(),
+    { label: decodeURI(category.title) },
+  ];
+
   return (
     <div>
+      <PageBreadcrumbs items={breadcrumbs} />
       <CategoryBlog
         id={category.id}
         title={category.title}
