@@ -1,12 +1,258 @@
 {
   "prompts":
 [
+    {
+    "title": "Tropical Beach Banana Party",
+    "description": "Bananas with sunglasses lounging on hammocks between palm trees under a sunny sky, waves in the background.",
+    "keywords": ["banana art", "tropical theme", "beach fruit", "summer scene", "fun in the sun"]
+  },
   {
-    "title": "First Day Outfit",
-    "description": "Kids can design and color their perfect first day of school outfit.",
-    "keywords": ["back to school", "outfit", "coloring page"]
+    "title": "Strawberries at the Skate Park",
+    "description": "Cute strawberries wearing helmets riding skateboards and performing tricks at a colorful skate park.",
+    "keywords": ["strawberry skate", "urban scene", "fruit sports", "skateboarding fun", "berry cool"]
+  },
+  {
+    "title": "Apple Orchard Picnic",
+    "description": "Smiling apples enjoying a picnic with baskets, blankets, and juice boxes in a grassy orchard.",
+    "keywords": ["apple picnic", "outdoor scene", "fruit friends", "orchard vibes", "family fun"]
+  },
+  {
+    "title": "Watermelons at the Pool",
+    "description": "Slices of watermelon floating on pool floaties with goggles, splashing and playing in the water.",
+    "keywords": ["watermelon pool", "summer fruit", "fun in the water", "poolside theme", "splash party"]
+  },
+  {
+    "title": "Pineapple Hiking Adventure",
+    "description": "Adventurous pineapples with backpacks hiking a scenic mountain trail with flowers and wildlife.",
+    "keywords": ["pineapple outdoors", "hiking fruit", "mountain trail", "adventure time", "nature theme"]
+  },
+  {
+    "title": "Cherries on a Rainy Day",
+    "description": "Happy cherries under umbrellas jumping in puddles, surrounded by clouds and gentle rain.",
+    "keywords": ["cherry rain", "fruit weather", "rainy day fun", "puddle jump", "stormy sky"]
+  },
+  {
+    "title": "Lemon Ice Skating Rink",
+    "description": "Excited lemons in scarves ice skating on a frozen pond with snowy trees around.",
+    "keywords": ["lemon skating", "winter fruit", "ice rink theme", "snowy scene", "chilly fun"]
+  },
+  {
+    "title": "Grapes at the Carnival",
+    "description": "Grapes riding ferris wheels and playing games at a festive carnival with lights and booths.",
+    "keywords": ["grape fair", "carnival fun", "fruit rides", "festival theme", "bright lights"]
+  },
+  {
+    "title": "Avocados in Outer Space",
+    "description": "Floating avocados in astronaut suits exploring stars and planets with friendly aliens.",
+    "keywords": ["avocado space", "cosmic fun", "fruit astronauts", "galaxy theme", "planet adventure"]
+  },
+  {
+    "title": "Oranges in the Desert",
+    "description": "Oranges wearing explorer hats trekking through dunes with cacti, camels, and a sunset.",
+    "keywords": ["orange desert", "explorer fruit", "sunset adventure", "cactus scene", "desert travel"]
+  },
+  {
+    "title": "Blueberries in the Library",
+    "description": "Blueberries with glasses reading books and whispering in a quiet, cozy library setting.",
+    "keywords": ["blueberry reading", "fruit book club", "library theme", "cozy corner", "smart fun"]
+  },
+  {
+    "title": "Mangoes on a Safari",
+    "description": "Mangoes taking pictures of animals while riding in a safari jeep through the savannah.",
+    "keywords": ["mango safari", "fruit wildlife", "jeep adventure", "savannah theme", "animal spotting"]
+  },
+  {
+    "title": "Kiwi Jungle Zipline",
+    "description": "Brave kiwis swinging on vines and zipping through a tropical jungle canopy.",
+    "keywords": ["kiwi jungle", "fruit swinging", "zipline fun", "canopy adventure", "wild world"]
+  },
+  {
+    "title": "Peaches at the Farm",
+    "description": "Peaches driving tractors, planting seeds, and enjoying the sunshine on a countryside farm.",
+    "keywords": ["peach farming", "fruit tractor", "country life", "planting day", "farm fun"]
+  },
+  {
+    "title": "Pears in the Snow",
+    "description": "Bundled-up pears building snowmen, making snow angels, and sipping hot cocoa.",
+    "keywords": ["pear winter", "snow fruit", "hot cocoa scene", "snow play", "cozy moments"]
+  },
+  {
+    "title": "Coconuts on a Pirate Ship",
+    "description": "Coconuts in pirate hats steering a ship, finding treasure maps, and sailing the ocean.",
+    "keywords": ["coconut pirate", "nautical theme", "fruit ship", "treasure hunt", "sea voyage"]
+  },
+  {
+    "title": "Melons at a Music Festival",
+    "description": "Melons playing instruments, dancing, and enjoying music under fairy lights.",
+    "keywords": ["melon band", "fruit concert", "music fest", "night scene", "dancing joy"]
+  },
+  {
+    "title": "Raspberries at the Ice Cream Parlor",
+    "description": "Raspberries decorating ice cream cones and sharing sundaes in a cute shop.",
+    "keywords": ["raspberry dessert", "sweet scene", "ice cream fun", "fruit treat", "candy colors"]
+  },
+  {
+    "title": "Dragon Fruits at the Volcano",
+    "description": "Brave dragon fruits climbing a fiery volcano and roasting marshmallows.",
+    "keywords": ["dragonfruit volcano", "hot adventure", "fire mountain", "lava trail", "campfire vibe"]
+  },
+  {
+    "title": "Figs at the Aquarium",
+    "description": "Figs pointing at colorful sea creatures in large glass tanks and ocean tunnels.",
+    "keywords": ["fig sea life", "aquarium visit", "fruit underwater", "marine fun", "fish friends"]
+  },
+  {
+    "title": "Cranberries at the Spa",
+    "description": "Cranberries relaxing in mud baths and hot tubs, wearing towels and cucumber slices on their eyes.",
+    "keywords": ["cranberry spa", "fruit relaxation", "wellness day", "pamper time", "zen vibe"]
+  },
+  {
+    "title": "Plums in a Hot Air Balloon",
+    "description": "Happy plums waving from a colorful hot air balloon floating over scenic hills.",
+    "keywords": ["plum balloon", "sky adventure", "floating fun", "high above", "cloudy ride"]
+  },
+  {
+    "title": "Gooseberries in a Haunted House",
+    "description": "Gooseberries dressed as ghosts and witches exploring a spooky but friendly haunted house.",
+    "keywords": ["gooseberry spooky", "fruit halloween", "haunted fun", "ghost play", "costume fun"]
+  },
+  {
+    "title": "Blackberries at a Science Lab",
+    "description": "Curious blackberries mixing colorful potions and examining things under microscopes.",
+    "keywords": ["blackberry science", "fruit experiments", "lab theme", "colorful potions", "nerdy fun"]
+  },
+  {
+    "title": "Dates at the Ancient Pyramids",
+    "description": "Dates exploring pyramids, deciphering hieroglyphics, and discovering hidden rooms.",
+    "keywords": ["date pyramids", "fruit archaeology", "desert journey", "mystery adventure", "ancient world"]
+  },
+  {
+    "title": "Apricots in the Rainforest",
+    "description": "Apricots swinging through vines, spotting parrots and monkeys in a lush rainforest.",
+    "keywords": ["apricot jungle", "fruit canopy", "rainforest exploration", "vibrant nature", "tropical vibe"]
+  },
+  {
+    "title": "Passion Fruits at the Theater",
+    "description": "Passion fruits acting on stage with costumes and stage lights in a theater.",
+    "keywords": ["passionfruit acting", "fruit drama", "theater scene", "spotlight fun", "costume play"]
+  },
+  {
+    "title": "Starfruits in the Night Sky",
+    "description": "Starfruits twinkling and floating among the stars with sleepy moons and constellations.",
+    "keywords": ["starfruit sky", "nighttime scene", "cosmic fruit", "dreamy stars", "galactic fun"]
+  },
+  {
+    "title": "Lychees at the Amusement Park",
+    "description": "Lychees riding roller coasters and cotton candy rides at a bustling amusement park.",
+    "keywords": ["lychee fun", "fruit fairground", "ride joy", "cotton candy scene", "carnival colors"]
+  },
+  {
+    "title": "Persimmons in the Mountains",
+    "description": "Persimmons camping by a mountain lake with tents, campfires, and marshmallows.",
+    "keywords": ["persimmon camp", "mountain chill", "fruit tent", "lake view", "bonfire fun"]
+  },
+  {
+    "title": "Papayas at the Surf Shack",
+    "description": "Cool papayas waxing surfboards and riding waves at a beachside surf shack.",
+    "keywords": ["papaya surf", "beach wave", "tropical sport", "fruit on board", "sun and sea"]
+  },
+  {
+    "title": "Mulberries in a Magical Forest",
+    "description": "Mulberries discovering glowing mushrooms and magical animals in an enchanted forest.",
+    "keywords": ["mulberry magic", "fairy forest", "mystical fruit", "fantasy scene", "glow adventure"]
+  },
+  {
+    "title": "Pomegranates at the Zoo",
+    "description": "Pomegranates feeding giraffes and watching penguins splash at a colorful zoo.",
+    "keywords": ["pomegranate zoo", "animal fruit fun", "safari visit", "petting zoo", "zoo day"]
+  },
+  {
+    "title": "Tangerines in the Rain",
+    "description": "Cheerful tangerines dancing in the rain with raincoats and boots on a cobblestone street.",
+    "keywords": ["tangerine rain", "fruit drizzle", "urban scene", "dancing fun", "colorful coats"]
+  },
+  {
+    "title": "Limes in a Snow Globe",
+    "description": "Limes trapped in a cute snow globe world with sparkles, snow, and winter fun.",
+    "keywords": ["lime winter", "snow globe fruit", "tiny world", "sparkle scene", "holiday cheer"]
+  },
+  {
+    "title": "Nectarines in a Bubble Bath",
+    "description": "Nectarines in bubble baths with rubber ducks and lavender-scented candles.",
+    "keywords": ["nectarine bath", "soapy fun", "fruit spa", "bubble world", "bath time joy"]
+  },
+  {
+    "title": "Rambutans at the Zoo Parade",
+    "description": "Rambutans riding on animal floats during a zoo-themed parade with crowds cheering.",
+    "keywords": ["rambutan float", "parade party", "zoo celebration", "festival day", "crowd joy"]
+  },
+  {
+    "title": "Clementines at the Market",
+    "description": "Clementines shopping for veggies and snacks at a farmer’s market with striped tents.",
+    "keywords": ["clementine shopping", "market vibe", "fruit trade", "colorful stalls", "fresh produce"]
+  },
+  {
+    "title": "Jackfruit in the City",
+    "description": "Cool jackfruits in city clothes exploring downtown with taxis, cafés, and street art.",
+    "keywords": ["jackfruit city", "urban style", "downtown scene", "fruit explorer", "street fun"]
+  },
+  {
+    "title": "Kumquats at the Art Museum",
+    "description": "Kumquats admiring classic and abstract fruit paintings in a modern art gallery.",
+    "keywords": ["kumquat museum", "artful fruit", "gallery visit", "creative vibe", "paintings fun"]
+  },
+  {
+    "title": "Durians at the Market Bazaar",
+    "description": "Durians selling spicy foods and crafts at a lively open-air market bazaar.",
+    "keywords": ["durian market", "exotic scene", "fruit merchant", "spice bazaar", "street food vibe"]
+  },
+  {
+    "title": "Boysenberries in the Labyrinth",
+    "description": "Boysenberries solving a leafy maze filled with puzzles, lanterns, and surprises.",
+    "keywords": ["boysenberry maze", "fruit puzzle", "labyrinth game", "garden mystery", "adventure play"]
+  },
+  {
+    "title": "Soursop in the Arctic",
+    "description": "Soursops with earmuffs hanging out with polar bears and penguins on icebergs.",
+    "keywords": ["soursop snow", "arctic fruit", "cold world", "polar fun", "ice adventure"]
+  },
+  {
+    "title": "Cactus Pears in the Wild West",
+    "description": "Cactus pears riding horses and wearing cowboy hats in a dusty desert town.",
+    "keywords": ["cactus pear wild west", "fruit cowboy", "western fun", "desert rodeo", "saloon scene"]
+  },
+  {
+    "title": "Longans in the Garden",
+    "description": "Longans planting flowers and vegetables in a sunny garden with butterflies.",
+    "keywords": ["longan gardening", "fruit plant life", "sunny flowers", "nature love", "green thumb"]
+  },
+  {
+    "title": "Jujubes at the Water Park",
+    "description": "Jujubes sliding down water slides and enjoying wave pools with goggles on.",
+    "keywords": ["jujube splash", "fruit water park", "summer fun", "pool party", "wet and wild"]
+  },
+  {
+    "title": "Olives at the Mediterranean Café",
+    "description": "Olives sitting at café tables sipping juice with scenic sea views and sunset colors.",
+    "keywords": ["olive café", "fruit café life", "mediterranean theme", "juice bar", "coastal vibes"]
+  },
+  {
+    "title": "Tamarinds at the Train Station",
+    "description": "Tamarinds carrying luggage, reading train schedules, and boarding colorful trains.",
+    "keywords": ["tamarind travel", "train station scene", "fruit journey", "luggage fun", "platform vibe"]
+  },
+  {
+    "title": "Currants in the Rainforest Canopy",
+    "description": "Currants swinging above the forest floor with birds, butterflies, and vines.",
+    "keywords": ["currant canopy", "jungle swing", "fruit explorer", "rainforest animals", "lush leaves"]
+  },
+  {
+    "title": "Berries on a Hot Air Safari",
+    "description": "Mixed berries riding hot air balloons over elephants and giraffes in Africa.",
+    "keywords": ["berry safari", "balloon ride", "african scene", "wildlife joy", "sky adventure"]
   }
 ]
+
 ,
   "batchSize": 1,
   "outDir": "images",

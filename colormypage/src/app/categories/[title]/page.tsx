@@ -95,7 +95,7 @@ export default async function CategoryPage({
     .select(
       `
     *,
-    coloring_pages:coloring_page_id(
+    coloring_pages:coloring_page_title(
       id,
       title,
       description,
@@ -119,7 +119,7 @@ export default async function CategoryPage({
         id={category.id}
         title={category.title}
         description={category.description}
-        imageCount={category.image_count}
+        imageCount={count || 0}
         featuredImage={category.cover_image_url || undefined}
         categoryFavorited={isFavorited}
         userId={user?.id || null}

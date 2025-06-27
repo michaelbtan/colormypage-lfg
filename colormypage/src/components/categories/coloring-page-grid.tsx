@@ -73,7 +73,7 @@ export function ColoringPageGrid({
       .from("coloring_page_categories")
       .select(`
         *,
-        coloring_pages:coloring_page_id(
+        coloring_pages:coloring_page_title(
           id,
           title,
           description,
