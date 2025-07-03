@@ -10,23 +10,23 @@ import email from "@/assets/social/email.svg";
 
 // Social Links Mapping
 const socialLinks = [
+  // {
+  //   href: "https://instagram.com",
+  //   label: "Instagram",
+  //   icon: instagram,
+  // },
+  // {
+  //   href: "https://facebook.com",
+  //   label: "Facebook",
+  //   icon: facebook,
+  // },
+  // {
+  //   href: "https://x.com",
+  //   label: "X (Twitter)",
+  //   icon: x,
+  // },
   {
-    href: "https://instagram.com",
-    label: "Instagram",
-    icon: instagram,
-  },
-  {
-    href: "https://facebook.com",
-    label: "Facebook",
-    icon: facebook,
-  },
-  {
-    href: "https://x.com",
-    label: "X (Twitter)",
-    icon: x,
-  },
-  {
-    href: "https://pinterest.com",
+    href: "https://www.pinterest.com/colormypage4/",
     label: "Pinterest",
     icon: pinterest,
   },
