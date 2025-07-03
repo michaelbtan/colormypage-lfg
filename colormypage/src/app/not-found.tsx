@@ -1,6 +1,5 @@
-"use client";
-
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Home, Palette } from "lucide-react";
 import notfound from "@/assets/notfound.png";
@@ -25,10 +24,11 @@ export default function NotFound() {
             <div className="relative w-48 h-48">
               {/* Sad coloring page with scribbles outside the lines */}
               <div className="absolute inset-0 bg-white rounded-lg border-4 border-dashed border-[#9d84ff] rotate-3 transform-gpu"></div>
-              <img
-                src={notfound.src}
+              <Image
+                src={notfound}
                 alt="Missing coloring page"
-                className="absolute inset-0 w-full h-full object-cover rounded-lg"
+                fill
+                className="object-cover rounded-lg"
               />
             </div>
           </div>

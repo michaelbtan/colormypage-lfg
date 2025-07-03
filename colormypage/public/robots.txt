@@ -1,0 +1,10 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.colormypage.com
+
+# Sitemaps
+Sitemap: https://www.colormypage.com/sitemap.xml
+Sitemap: https://www.colormypage.com/server-sitemap.xml
