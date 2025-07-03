@@ -50,7 +50,7 @@ Ex. Unicorns dancing around a rainbow fire
 <p>Let the magic begin—<strong>download your free unicorn coloring pages now</strong> and bring your fantasy world to life!</p>
 
 
-Using the above example templete can you make a blog post for ColorMyPage.com, free downloadable coloring pages.
+Using the above example templete can you make a blog post for ColorMyPage.com, free downloadable coloring pages. The following topic: 
 
 ## 2. Coloring Pages
 

@@ -4,6 +4,16 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Home, Palette } from "lucide-react";
 import notfound from "@/assets/notfound.png";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "404 - Page Not Found | Color My Page",
+  description: "Oops! The page you're looking for seems to have colored outside the lines. Return to our coloring book collection and find your perfect coloring page.",
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
 
 export default function NotFound() {
   return (

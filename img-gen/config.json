@@ -1,260 +1,246 @@
 {
   "prompts":
 [
-    {
-    "title": "Tropical Beach Banana Party",
-    "description": "Bananas with sunglasses lounging on hammocks between palm trees under a sunny sky, waves in the background.",
-    "keywords": ["banana art", "tropical theme", "beach fruit", "summer scene", "fun in the sun"]
+  {
+    "title": "Tropical Toucan Fiesta",
+    "description": "A lively toucan perched on a vine, surrounded by tropical fruits and lush rainforest leaves.",
+    "keywords": ["toucan", "rainforest", "tropical birds", "jungle animals"]
   },
   {
-    "title": "Strawberries at the Skate Park",
-    "description": "Cute strawberries wearing helmets riding skateboards and performing tricks at a colorful skate park.",
-    "keywords": ["strawberry skate", "urban scene", "fruit sports", "skateboarding fun", "berry cool"]
+    "title": "Dancing Flamingo Parade",
+    "description": "A group of graceful flamingos wading in a lagoon, some stretching their wings in a beautiful display.",
+    "keywords": ["flamingo", "lagoon birds", "pink birds", "wetlands"]
   },
   {
-    "title": "Apple Orchard Picnic",
-    "description": "Smiling apples enjoying a picnic with baskets, blankets, and juice boxes in a grassy orchard.",
-    "keywords": ["apple picnic", "outdoor scene", "fruit friends", "orchard vibes", "family fun"]
+    "title": "Macaw Rainbow Gathering",
+    "description": "Vibrant macaws perched together on a rainforest branch, their feathers forming a rainbow.",
+    "keywords": ["macaw", "rainbow birds", "parrot", "rainforest animals"]
   },
   {
-    "title": "Watermelons at the Pool",
-    "description": "Slices of watermelon floating on pool floaties with goggles, splashing and playing in the water.",
-    "keywords": ["watermelon pool", "summer fruit", "fun in the water", "poolside theme", "splash party"]
+    "title": "Crowned Crane Ballet",
+    "description": "Elegant crowned cranes performing a courtship dance on a grassy savanna.",
+    "keywords": ["crowned crane", "savanna birds", "bird dance", "exotic wildlife"]
   },
   {
-    "title": "Pineapple Hiking Adventure",
-    "description": "Adventurous pineapples with backpacks hiking a scenic mountain trail with flowers and wildlife.",
-    "keywords": ["pineapple outdoors", "hiking fruit", "mountain trail", "adventure time", "nature theme"]
+    "title": "Peacock Splendor",
+    "description": "A majestic peacock displaying its spectacular fan of feathers in full glory.",
+    "keywords": ["peacock", "bird feathers", "majestic birds", "nature art"]
   },
   {
-    "title": "Cherries on a Rainy Day",
-    "description": "Happy cherries under umbrellas jumping in puddles, surrounded by clouds and gentle rain.",
-    "keywords": ["cherry rain", "fruit weather", "rainy day fun", "puddle jump", "stormy sky"]
+    "title": "Quetzal Jungle Jewel",
+    "description": "A resplendent quetzal with emerald plumage resting on a mossy branch.",
+    "keywords": ["quetzal", "central america birds", "emerald feathers", "rainforest creatures"]
   },
   {
-    "title": "Lemon Ice Skating Rink",
-    "description": "Excited lemons in scarves ice skating on a frozen pond with snowy trees around.",
-    "keywords": ["lemon skating", "winter fruit", "ice rink theme", "snowy scene", "chilly fun"]
+    "title": "Hummingbird Garden Magic",
+    "description": "Tiny hummingbirds flitting among tropical flowers, sipping nectar.",
+    "keywords": ["hummingbird", "nectar birds", "garden animals", "tiny birds"]
   },
   {
-    "title": "Grapes at the Carnival",
-    "description": "Grapes riding ferris wheels and playing games at a festive carnival with lights and booths.",
-    "keywords": ["grape fair", "carnival fun", "fruit rides", "festival theme", "bright lights"]
+    "title": "Cockatoo Forest Party",
+    "description": "A playful cockatoo with its crest raised, perched on a tree stump in the forest.",
+    "keywords": ["cockatoo", "white parrot", "forest birds", "australia wildlife"]
   },
   {
-    "title": "Avocados in Outer Space",
-    "description": "Floating avocados in astronaut suits exploring stars and planets with friendly aliens.",
-    "keywords": ["avocado space", "cosmic fun", "fruit astronauts", "galaxy theme", "planet adventure"]
+    "title": "Scarlet Ibis Reflections",
+    "description": "A scarlet ibis standing in shallow water, its red plumage mirrored on the surface.",
+    "keywords": ["scarlet ibis", "wetland birds", "red birds", "reflections"]
   },
   {
-    "title": "Oranges in the Desert",
-    "description": "Oranges wearing explorer hats trekking through dunes with cacti, camels, and a sunset.",
-    "keywords": ["orange desert", "explorer fruit", "sunset adventure", "cactus scene", "desert travel"]
+    "title": "Mandarin Duck Serenity",
+    "description": "A peaceful mandarin duck gliding across a pond with lotus flowers.",
+    "keywords": ["mandarin duck", "pond animals", "asian birds", "water birds"]
   },
   {
-    "title": "Blueberries in the Library",
-    "description": "Blueberries with glasses reading books and whispering in a quiet, cozy library setting.",
-    "keywords": ["blueberry reading", "fruit book club", "library theme", "cozy corner", "smart fun"]
+    "title": "Kiwi Night Adventure",
+    "description": "A curious kiwi bird exploring the forest floor under moonlight.",
+    "keywords": ["kiwi bird", "nocturnal animals", "new zealand birds", "forest creatures"]
   },
   {
-    "title": "Mangoes on a Safari",
-    "description": "Mangoes taking pictures of animals while riding in a safari jeep through the savannah.",
-    "keywords": ["mango safari", "fruit wildlife", "jeep adventure", "savannah theme", "animal spotting"]
+    "title": "Golden Pheasant Majesty",
+    "description": "A regal golden pheasant with brilliant plumage standing among bamboo.",
+    "keywords": ["golden pheasant", "bright birds", "bamboo forest", "asia wildlife"]
   },
   {
-    "title": "Kiwi Jungle Zipline",
-    "description": "Brave kiwis swinging on vines and zipping through a tropical jungle canopy.",
-    "keywords": ["kiwi jungle", "fruit swinging", "zipline fun", "canopy adventure", "wild world"]
+    "title": "Paradise Bird Courtship",
+    "description": "A bird of paradise displaying its intricate feathers to attract a mate.",
+    "keywords": ["bird of paradise", "courtship dance", "tropical wildlife", "colorful birds"]
   },
   {
-    "title": "Peaches at the Farm",
-    "description": "Peaches driving tractors, planting seeds, and enjoying the sunshine on a countryside farm.",
-    "keywords": ["peach farming", "fruit tractor", "country life", "planting day", "farm fun"]
+    "title": "Kookaburra Tree Song",
+    "description": "A kookaburra sitting on a eucalyptus branch, singing its distinctive call.",
+    "keywords": ["kookaburra", "australian birds", "eucalyptus tree", "singing birds"]
   },
   {
-    "title": "Pears in the Snow",
-    "description": "Bundled-up pears building snowmen, making snow angels, and sipping hot cocoa.",
-    "keywords": ["pear winter", "snow fruit", "hot cocoa scene", "snow play", "cozy moments"]
+    "title": "Lorikeet Sweet Feast",
+    "description": "Rainbow lorikeets enjoying fresh fruit in a canopy clearing.",
+    "keywords": ["lorikeet", "rainbow parrot", "fruit eating birds", "tropical animals"]
   },
   {
-    "title": "Coconuts on a Pirate Ship",
-    "description": "Coconuts in pirate hats steering a ship, finding treasure maps, and sailing the ocean.",
-    "keywords": ["coconut pirate", "nautical theme", "fruit ship", "treasure hunt", "sea voyage"]
+    "title": "Hoatzin Amazon Explorer",
+    "description": "A hoatzin with spiky feathers clinging to a swampy tree branch.",
+    "keywords": ["hoatzin", "amazon birds", "swamp creatures", "prehistoric birds"]
   },
   {
-    "title": "Melons at a Music Festival",
-    "description": "Melons playing instruments, dancing, and enjoying music under fairy lights.",
-    "keywords": ["melon band", "fruit concert", "music fest", "night scene", "dancing joy"]
+    "title": "Frigatebird Ocean Soar",
+    "description": "A magnificent frigatebird gliding above crashing ocean waves.",
+    "keywords": ["frigatebird", "sea birds", "ocean animals", "soaring birds"]
   },
   {
-    "title": "Raspberries at the Ice Cream Parlor",
-    "description": "Raspberries decorating ice cream cones and sharing sundaes in a cute shop.",
-    "keywords": ["raspberry dessert", "sweet scene", "ice cream fun", "fruit treat", "candy colors"]
+    "title": "Sunbittern River Dance",
+    "description": "A sunbittern spreading its wings in a dazzling display by the riverbank.",
+    "keywords": ["sunbittern", "river birds", "wing patterns", "colorful wildlife"]
   },
   {
-    "title": "Dragon Fruits at the Volcano",
-    "description": "Brave dragon fruits climbing a fiery volcano and roasting marshmallows.",
-    "keywords": ["dragonfruit volcano", "hot adventure", "fire mountain", "lava trail", "campfire vibe"]
+    "title": "Lilac-Breasted Roller Vistas",
+    "description": "A lilac-breasted roller perched against an African savanna sunrise.",
+    "keywords": ["lilac breasted roller", "african birds", "savanna animals", "beautiful birds"]
   },
   {
-    "title": "Figs at the Aquarium",
-    "description": "Figs pointing at colorful sea creatures in large glass tanks and ocean tunnels.",
-    "keywords": ["fig sea life", "aquarium visit", "fruit underwater", "marine fun", "fish friends"]
+    "title": "Bee-Eater Nest Builders",
+    "description": "Vibrant bee-eaters collecting insects and nesting on a sandy riverbank.",
+    "keywords": ["bee eater", "insect eating birds", "nest building", "sandy habitats"]
   },
   {
-    "title": "Cranberries at the Spa",
-    "description": "Cranberries relaxing in mud baths and hot tubs, wearing towels and cucumber slices on their eyes.",
-    "keywords": ["cranberry spa", "fruit relaxation", "wellness day", "pamper time", "zen vibe"]
+    "title": "Secretary Bird Safari Hunt",
+    "description": "A tall secretary bird striding through grasslands in search of prey.",
+    "keywords": ["secretary bird", "africa wildlife", "grassland birds", "predator birds"]
   },
   {
-    "title": "Plums in a Hot Air Balloon",
-    "description": "Happy plums waving from a colorful hot air balloon floating over scenic hills.",
-    "keywords": ["plum balloon", "sky adventure", "floating fun", "high above", "cloudy ride"]
+    "title": "Turaco Forest Canopy",
+    "description": "A vivid turaco resting high in the leafy treetops.",
+    "keywords": ["turaco", "african canopy", "green birds", "tropical foliage"]
   },
   {
-    "title": "Gooseberries in a Haunted House",
-    "description": "Gooseberries dressed as ghosts and witches exploring a spooky but friendly haunted house.",
-    "keywords": ["gooseberry spooky", "fruit halloween", "haunted fun", "ghost play", "costume fun"]
+    "title": "Helmeted Hornbill Watch",
+    "description": "A helmeted hornbill surveying the jungle from a tall tree.",
+    "keywords": ["hornbill", "jungle birds", "exotic wildlife", "rainforest animals"]
   },
   {
-    "title": "Blackberries at a Science Lab",
-    "description": "Curious blackberries mixing colorful potions and examining things under microscopes.",
-    "keywords": ["blackberry science", "fruit experiments", "lab theme", "colorful potions", "nerdy fun"]
+    "title": "Cassowary Rainforest Trek",
+    "description": "A giant cassowary walking among ferns and palms.",
+    "keywords": ["cassowary", "giant birds", "australian wildlife", "rainforest creatures"]
   },
   {
-    "title": "Dates at the Ancient Pyramids",
-    "description": "Dates exploring pyramids, deciphering hieroglyphics, and discovering hidden rooms.",
-    "keywords": ["date pyramids", "fruit archaeology", "desert journey", "mystery adventure", "ancient world"]
+    "title": "Kingfisher River Dive",
+    "description": "A bright kingfisher plunging into the water to catch a fish.",
+    "keywords": ["kingfisher", "fishing birds", "river life", "blue birds"]
   },
   {
-    "title": "Apricots in the Rainforest",
-    "description": "Apricots swinging through vines, spotting parrots and monkeys in a lush rainforest.",
-    "keywords": ["apricot jungle", "fruit canopy", "rainforest exploration", "vibrant nature", "tropical vibe"]
+    "title": "Resplendent Sun Conure",
+    "description": "A cheerful sun conure perched in a flowering tree.",
+    "keywords": ["sun conure", "yellow parrot", "flowering trees", "bright birds"]
   },
   {
-    "title": "Passion Fruits at the Theater",
-    "description": "Passion fruits acting on stage with costumes and stage lights in a theater.",
-    "keywords": ["passionfruit acting", "fruit drama", "theater scene", "spotlight fun", "costume play"]
+    "title": "Greater Bird of Paradise Show",
+    "description": "A greater bird of paradise with flowing tail feathers dancing on a branch.",
+    "keywords": ["bird of paradise", "tropical display", "jungle animals", "courtship dance"]
   },
   {
-    "title": "Starfruits in the Night Sky",
-    "description": "Starfruits twinkling and floating among the stars with sleepy moons and constellations.",
-    "keywords": ["starfruit sky", "nighttime scene", "cosmic fruit", "dreamy stars", "galactic fun"]
+    "title": "Emerald Dove Secret Garden",
+    "description": "An emerald dove resting in a lush garden filled with blossoms.",
+    "keywords": ["emerald dove", "garden birds", "green plumage", "peaceful scenes"]
   },
   {
-    "title": "Lychees at the Amusement Park",
-    "description": "Lychees riding roller coasters and cotton candy rides at a bustling amusement park.",
-    "keywords": ["lychee fun", "fruit fairground", "ride joy", "cotton candy scene", "carnival colors"]
+    "title": "Tanager Tropical Party",
+    "description": "A flock of tanagers feeding among tropical fruits.",
+    "keywords": ["tanager", "colorful flock", "fruit trees", "jungle life"]
   },
   {
-    "title": "Persimmons in the Mountains",
-    "description": "Persimmons camping by a mountain lake with tents, campfires, and marshmallows.",
-    "keywords": ["persimmon camp", "mountain chill", "fruit tent", "lake view", "bonfire fun"]
+    "title": "Blue Jay Woodland Explorer",
+    "description": "A curious blue jay perched among oak branches.",
+    "keywords": ["blue jay", "forest birds", "woodland creatures", "acorns"]
   },
   {
-    "title": "Papayas at the Surf Shack",
-    "description": "Cool papayas waxing surfboards and riding waves at a beachside surf shack.",
-    "keywords": ["papaya surf", "beach wave", "tropical sport", "fruit on board", "sun and sea"]
+    "title": "Puffin Seaside Colony",
+    "description": "Puffins standing on rocky cliffs above crashing waves.",
+    "keywords": ["puffin", "sea cliffs", "arctic birds", "coastal wildlife"]
   },
   {
-    "title": "Mulberries in a Magical Forest",
-    "description": "Mulberries discovering glowing mushrooms and magical animals in an enchanted forest.",
-    "keywords": ["mulberry magic", "fairy forest", "mystical fruit", "fantasy scene", "glow adventure"]
+    "title": "Bee Hummingbird Delights",
+    "description": "The tiniest bee hummingbird hovering near bright blossoms.",
+    "keywords": ["bee hummingbird", "tiny birds", "nectar feeders", "flower gardens"]
   },
   {
-    "title": "Pomegranates at the Zoo",
-    "description": "Pomegranates feeding giraffes and watching penguins splash at a colorful zoo.",
-    "keywords": ["pomegranate zoo", "animal fruit fun", "safari visit", "petting zoo", "zoo day"]
+    "title": "White Egret Marshlands",
+    "description": "A graceful white egret standing in calm marsh waters.",
+    "keywords": ["egret", "marsh birds", "wetland scenes", "wading birds"]
   },
   {
-    "title": "Tangerines in the Rain",
-    "description": "Cheerful tangerines dancing in the rain with raincoats and boots on a cobblestone street.",
-    "keywords": ["tangerine rain", "fruit drizzle", "urban scene", "dancing fun", "colorful coats"]
+    "title": "Spangled Drongo Shadows",
+    "description": "A spangled drongo resting in the shadows of rainforest foliage.",
+    "keywords": ["spangled drongo", "shadow birds", "rainforest canopy", "black birds"]
   },
   {
-    "title": "Limes in a Snow Globe",
-    "description": "Limes trapped in a cute snow globe world with sparkles, snow, and winter fun.",
-    "keywords": ["lime winter", "snow globe fruit", "tiny world", "sparkle scene", "holiday cheer"]
+    "title": "Red Bishop Meadow",
+    "description": "A red bishop bird perched on tall grass in a sunny meadow.",
+    "keywords": ["red bishop", "grassland birds", "bright feathers", "meadow life"]
   },
   {
-    "title": "Nectarines in a Bubble Bath",
-    "description": "Nectarines in bubble baths with rubber ducks and lavender-scented candles.",
-    "keywords": ["nectarine bath", "soapy fun", "fruit spa", "bubble world", "bath time joy"]
+    "title": "Jacana Lily Pads",
+    "description": "A jacana walking gracefully on lily pads.",
+    "keywords": ["jacana", "water birds", "lily pad scene", "wetlands"]
   },
   {
-    "title": "Rambutans at the Zoo Parade",
-    "description": "Rambutans riding on animal floats during a zoo-themed parade with crowds cheering.",
-    "keywords": ["rambutan float", "parade party", "zoo celebration", "festival day", "crowd joy"]
+    "title": "Andean Cock-of-the-rock Perch",
+    "description": "A vibrant Andean cock-of-the-rock on a mossy ledge.",
+    "keywords": ["cock of the rock", "andes birds", "bright plumage", "cloud forest"]
   },
   {
-    "title": "Clementines at the Market",
-    "description": "Clementines shopping for veggies and snacks at a farmer’s market with striped tents.",
-    "keywords": ["clementine shopping", "market vibe", "fruit trade", "colorful stalls", "fresh produce"]
+    "title": "Harpy Eagle Majesty",
+    "description": "A powerful harpy eagle perched with wings partially open.",
+    "keywords": ["harpy eagle", "predator birds", "rainforest raptors", "majestic eagles"]
   },
   {
-    "title": "Jackfruit in the City",
-    "description": "Cool jackfruits in city clothes exploring downtown with taxis, cafés, and street art.",
-    "keywords": ["jackfruit city", "urban style", "downtown scene", "fruit explorer", "street fun"]
+    "title": "Rosy-faced Lovebird Pair",
+    "description": "A pair of lovebirds snuggling on a branch.",
+    "keywords": ["lovebirds", "parrot couple", "rosy faced birds", "affectionate birds"]
   },
   {
-    "title": "Kumquats at the Art Museum",
-    "description": "Kumquats admiring classic and abstract fruit paintings in a modern art gallery.",
-    "keywords": ["kumquat museum", "artful fruit", "gallery visit", "creative vibe", "paintings fun"]
+    "title": "Blue Crowned Motmot Swing",
+    "description": "A blue crowned motmot on a vine swing in the jungle.",
+    "keywords": ["motmot", "jungle birds", "blue feathers", "tropical life"]
   },
   {
-    "title": "Durians at the Market Bazaar",
-    "description": "Durians selling spicy foods and crafts at a lively open-air market bazaar.",
-    "keywords": ["durian market", "exotic scene", "fruit merchant", "spice bazaar", "street food vibe"]
+    "title": "Great Horned Owl Twilight",
+    "description": "A great horned owl emerging at dusk among pine trees.",
+    "keywords": ["owl", "twilight birds", "forest life", "nocturnal creatures"]
   },
   {
-    "title": "Boysenberries in the Labyrinth",
-    "description": "Boysenberries solving a leafy maze filled with puzzles, lanterns, and surprises.",
-    "keywords": ["boysenberry maze", "fruit puzzle", "labyrinth game", "garden mystery", "adventure play"]
+    "title": "African Grey Parrot Wisdom",
+    "description": "An African grey parrot perched thoughtfully on a tree branch.",
+    "keywords": ["african grey", "intelligent birds", "parrot art", "savanna animals"]
   },
   {
-    "title": "Soursop in the Arctic",
-    "description": "Soursops with earmuffs hanging out with polar bears and penguins on icebergs.",
-    "keywords": ["soursop snow", "arctic fruit", "cold world", "polar fun", "ice adventure"]
+    "title": "Vulturine Guineafowl Stroll",
+    "description": "A vulturine guineafowl walking proudly on a rocky plain.",
+    "keywords": ["guineafowl", "african plains", "speckled birds", "exotic wildlife"]
   },
   {
-    "title": "Cactus Pears in the Wild West",
-    "description": "Cactus pears riding horses and wearing cowboy hats in a dusty desert town.",
-    "keywords": ["cactus pear wild west", "fruit cowboy", "western fun", "desert rodeo", "saloon scene"]
+    "title": "Secretary Bird Thunder Chase",
+    "description": "A secretary bird running across grasslands with storm clouds overhead.",
+    "keywords": ["secretary bird", "stormy sky", "grassland predators", "dramatic scene"]
   },
   {
-    "title": "Longans in the Garden",
-    "description": "Longans planting flowers and vegetables in a sunny garden with butterflies.",
-    "keywords": ["longan gardening", "fruit plant life", "sunny flowers", "nature love", "green thumb"]
+    "title": "Galah Cockatoo Playtime",
+    "description": "A pink galah cockatoo playing among eucalyptus blossoms.",
+    "keywords": ["galah", "pink parrot", "australian wildlife", "playful birds"]
   },
   {
-    "title": "Jujubes at the Water Park",
-    "description": "Jujubes sliding down water slides and enjoying wave pools with goggles on.",
-    "keywords": ["jujube splash", "fruit water park", "summer fun", "pool party", "wet and wild"]
+    "title": "Blue-Footed Booby Cliffside",
+    "description": "A blue-footed booby dancing on a seaside cliff.",
+    "keywords": ["blue footed booby", "dancing birds", "sea cliffs", "unique animals"]
   },
   {
-    "title": "Olives at the Mediterranean Café",
-    "description": "Olives sitting at café tables sipping juice with scenic sea views and sunset colors.",
-    "keywords": ["olive café", "fruit café life", "mediterranean theme", "juice bar", "coastal vibes"]
-  },
-  {
-    "title": "Tamarinds at the Train Station",
-    "description": "Tamarinds carrying luggage, reading train schedules, and boarding colorful trains.",
-    "keywords": ["tamarind travel", "train station scene", "fruit journey", "luggage fun", "platform vibe"]
-  },
-  {
-    "title": "Currants in the Rainforest Canopy",
-    "description": "Currants swinging above the forest floor with birds, butterflies, and vines.",
-    "keywords": ["currant canopy", "jungle swing", "fruit explorer", "rainforest animals", "lush leaves"]
-  },
-  {
-    "title": "Berries on a Hot Air Safari",
-    "description": "Mixed berries riding hot air balloons over elephants and giraffes in Africa.",
-    "keywords": ["berry safari", "balloon ride", "african scene", "wildlife joy", "sky adventure"]
+    "title": "Emu Outback Trek",
+    "description": "A curious emu exploring the Australian outback.",
+    "keywords": ["emu", "australian birds", "outback animals", "giant birds"]
   }
 ]
+
 ,
-  "pinterestBoard": "",
-  "categoryId": "",
+  "pinterestBoard": "Extoic Birds - Free Printable Coloring Pages",
+  "categoryId": "b33c70f1-ea43-410a-b043-94bb3982c956",
   "batchSize": 1,
   "outDir": "images",
   "model": "gpt-image-1",
