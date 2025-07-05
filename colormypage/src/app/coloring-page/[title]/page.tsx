@@ -67,6 +67,8 @@ export default async function ColoringPagePage({
 }) {
   const supabase = await createClient();
 
+  const title = (await params).title;
+
   const {
     data: { user },
   } = await supabase.auth.getUser();
@@ -75,7 +77,7 @@ export default async function ColoringPagePage({
   const { data: coloringPage } = await supabase
     .from("coloring_pages")
     .select("*")
-    .eq("title", params.title)
+    .eq("title", title)
     .single();
 
   if (!coloringPage) {

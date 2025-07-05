@@ -72,8 +72,8 @@ export default async function CategoryPage({
 }: {
   params: { title: string };
 }) {
-  const { title } = params;
   const supabase = await createClient();
+  const title = (await params).title;
 
   const {
     data: { user },
