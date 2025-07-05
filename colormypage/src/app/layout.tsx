@@ -75,6 +75,9 @@ export default function RootLayout({
            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
            })(window,document,'script','dataLayer','GTM-TWBS5W4R');`}
         </Script>
+        
+        {/* Lucky Orange */}
+        <Script async defer src="https://tools.luckyorange.com/core/lo.js?site-id=e147f0e8" />
       </head>
       <body
         className={`${fredoka.className} min-h-screen flex flex-col overflow-x-hidden`}
