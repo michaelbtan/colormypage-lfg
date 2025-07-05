@@ -168,15 +168,8 @@ ColoringPageViewProps) {
   };
 
   return (
-    <div className="container max-w-5xl mx-auto">
+    <div className="container max-w-5xl mx-auto mb-6">
       <div className="mb-6">
-        {/* <Link
-          href={`/categories/${coloringPage.categoryId}`}
-          className="inline-flex items-center text-sm text-gray-600 hover:text-[#9d84ff]"
-        >
-          <ChevronLeft className="h-4 w-4 mr-1" />
-          Back to {coloringPage.categoryName}
-        </Link> */}
       </div>
 
       <div className="grid grid-cols-1 gap-8">
