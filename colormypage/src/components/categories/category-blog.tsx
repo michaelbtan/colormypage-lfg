@@ -3,7 +3,7 @@
 import type React from "react";
 import Image from "next/image";
 import { useState } from "react";
-import { Share2, Heart, Calendar, BadgeCheck } from "lucide-react";
+import { Share2, Heart, Calendar, BadgeCheck, FileHeart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ShareModal } from "@/components/share-modal";
 import { toast } from "sonner";
@@ -151,6 +151,7 @@ export function CategoryBlog({
                   )}
 
                   <div className="flex items-center gap-2 text-lg">
+                    <FileHeart className="h-4 w-4" />
                     <span>{imageCount} coloring pages</span>
                   </div>
                 </div>

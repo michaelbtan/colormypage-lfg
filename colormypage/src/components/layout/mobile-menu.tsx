@@ -80,7 +80,7 @@ export function MobileMenu({
                 <SheetClose asChild>
                   <Button
                     type="submit"
-                    className="flex items-center gap-3 px-4 py-3 mt-4 text-lg font-semibold cursor-pointer bg-[#9d84ff]/20 backdrop-blur-sm hover:bg-[#9d84ff]/30 border border-[#9d84ff]/30 text-[#9d84ff] hover:text-white rounded-xl transition-all duration-200 shadow-md hover:shadow-lg h-auto justify-start"
+                    className="flex items-center gap-3 px-4 py-3 mt-4 text-lg font-semibold cursor-pointer bg-[#9d84ff]/20 backdrop-blur-sm border border-[#9d84ff]/30 text-[#9d84ff] rounded-xl transition-all duration-200 shadow-md hover:scale-105 h-auto justify-start"
                   >
                     <LogOut className="h-6 w-6" />
                     Logout
@@ -91,7 +91,7 @@ export function MobileMenu({
               <SheetClose asChild>
                 <Link
                   href="/account"
-                  className="flex items-center gap-3 px-4 py-3 mt-4 text-lg font-semibold cursor-pointer bg-[#9d84ff]/20 backdrop-blur-sm hover:bg-[#9d84ff]/30 border border-[#9d84ff]/30 text-[#9d84ff] hover:text-white rounded-xl transition-all duration-200 shadow-md hover:shadow-lg h-auto justify-start"
+                  className="flex items-center gap-3 px-4 py-3 mt-4 text-lg font-semibold cursor-pointer bg-[#9d84ff]/20 backdrop-blur-sm border border-[#9d84ff]/30 text-[#9d84ff] rounded-xl transition-all duration-200 shadow-md hover:scale-105 h-auto justify-start"
                 >
                   <LogIn className="h-6 w-6" />
                   Sign in

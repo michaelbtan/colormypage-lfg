@@ -41,11 +41,11 @@ export function Header() {
       href: "/categories",
       icon: <Palette className="h-6 w-6" />,
     },
-    {
+    ...(isLoggedIn ? [{
       name: "Favorites",
       href: "/dashboard",
       icon: <Heart className="h-6 w-6" />,
-    },
+    }] : []),
   ];
 
   return (

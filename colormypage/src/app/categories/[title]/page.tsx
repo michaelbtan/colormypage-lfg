@@ -160,15 +160,6 @@ export default async function CategoryPage({
               totalPages={count || 0}
             />
           </div>
-
-          {/* Sidebar - Our Favorites (hidden on mobile) */}
-          {/* Add the ad placeholder above the favorites */}
-          {/* <div className="hidden lg:block lg:w-1/5">
-            <AdPlaceholder />
-            <div className="mt-6">
-              <OurFavorites categoryId={categoryId} favorites={favorites} />
-            </div>
-          </div> */}
         </div>
       </div>
     </div>
