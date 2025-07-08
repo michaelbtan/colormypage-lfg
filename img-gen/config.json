@@ -2,245 +2,249 @@
   "prompts":
 [
   {
-    "title": "Tropical Toucan Fiesta",
-    "description": "A lively toucan perched on a vine, surrounded by tropical fruits and lush rainforest leaves.",
-    "keywords": ["toucan", "rainforest", "tropical birds", "jungle animals"]
+    "title": "Puppy with a Big Bow",
+    "description": "A cute puppy sitting happily with a giant bow around its neck.",
+    "keywords": ["adorable puppy", "puppy with bow", "cute dog art"]
   },
   {
-    "title": "Dancing Flamingo Parade",
-    "description": "A group of graceful flamingos wading in a lagoon, some stretching their wings in a beautiful display.",
-    "keywords": ["flamingo", "lagoon birds", "pink birds", "wetlands"]
+    "title": "Sleepy Puppy in a Basket",
+    "description": "A little puppy curled up and napping in a cozy wicker basket.",
+    "keywords": ["sleeping puppy", "puppy basket", "sweet puppy illustration"]
   },
   {
-    "title": "Macaw Rainbow Gathering",
-    "description": "Vibrant macaws perched together on a rainforest branch, their feathers forming a rainbow.",
-    "keywords": ["macaw", "rainbow birds", "parrot", "rainforest animals"]
+    "title": "Playful Puppy with a Ball",
+    "description": "A puppy excitedly playing with a bouncy ball in the yard.",
+    "keywords": ["puppy with ball", "playful dog", "fun puppy scene"]
   },
   {
-    "title": "Crowned Crane Ballet",
-    "description": "Elegant crowned cranes performing a courtship dance on a grassy savanna.",
-    "keywords": ["crowned crane", "savanna birds", "bird dance", "exotic wildlife"]
+    "title": "Puppy Dressed as a Superhero",
+    "description": "A brave puppy wearing a superhero cape and mask.",
+    "keywords": ["superhero puppy", "costumed dog", "imaginative puppy"]
   },
   {
-    "title": "Peacock Splendor",
-    "description": "A majestic peacock displaying its spectacular fan of feathers in full glory.",
-    "keywords": ["peacock", "bird feathers", "majestic birds", "nature art"]
+    "title": "Puppy in Rain Boots",
+    "description": "A puppy splashing in puddles while wearing rain boots.",
+    "keywords": ["rainy day puppy", "puppy in boots", "cute dog activities"]
   },
   {
-    "title": "Quetzal Jungle Jewel",
-    "description": "A resplendent quetzal with emerald plumage resting on a mossy branch.",
-    "keywords": ["quetzal", "central america birds", "emerald feathers", "rainforest creatures"]
+    "title": "Puppy with a Birthday Cake",
+    "description": "A happy puppy celebrating with a birthday cake and balloons.",
+    "keywords": ["birthday puppy", "celebration dog", "party puppy"]
   },
   {
-    "title": "Hummingbird Garden Magic",
-    "description": "Tiny hummingbirds flitting among tropical flowers, sipping nectar.",
-    "keywords": ["hummingbird", "nectar birds", "garden animals", "tiny birds"]
+    "title": "Puppy and Butterfly Friends",
+    "description": "A curious puppy watching colorful butterflies flutter by.",
+    "keywords": ["puppy with butterflies", "nature puppy", "spring puppy"]
   },
   {
-    "title": "Cockatoo Forest Party",
-    "description": "A playful cockatoo with its crest raised, perched on a tree stump in the forest.",
-    "keywords": ["cockatoo", "white parrot", "forest birds", "australia wildlife"]
+    "title": "Puppy in a Pumpkin",
+    "description": "A little puppy peeking out of a carved pumpkin.",
+    "keywords": ["pumpkin puppy", "fall dog", "Halloween puppy"]
   },
   {
-    "title": "Scarlet Ibis Reflections",
-    "description": "A scarlet ibis standing in shallow water, its red plumage mirrored on the surface.",
-    "keywords": ["scarlet ibis", "wetland birds", "red birds", "reflections"]
+    "title": "Puppy in a Teacup",
+    "description": "A tiny puppy sitting snugly inside a decorated teacup.",
+    "keywords": ["teacup puppy", "mini dog", "cute puppy art"]
   },
   {
-    "title": "Mandarin Duck Serenity",
-    "description": "A peaceful mandarin duck gliding across a pond with lotus flowers.",
-    "keywords": ["mandarin duck", "pond animals", "asian birds", "water birds"]
+    "title": "Puppy with a Teddy Bear",
+    "description": "A sweet puppy cuddling its favorite teddy bear.",
+    "keywords": ["puppy with teddy", "snuggly dog", "bedtime puppy"]
   },
   {
-    "title": "Kiwi Night Adventure",
-    "description": "A curious kiwi bird exploring the forest floor under moonlight.",
-    "keywords": ["kiwi bird", "nocturnal animals", "new zealand birds", "forest creatures"]
+    "title": "Puppy with a Kite",
+    "description": "A playful puppy flying a colorful kite on a breezy day.",
+    "keywords": ["kite puppy", "outdoor dog", "happy puppy scene"]
   },
   {
-    "title": "Golden Pheasant Majesty",
-    "description": "A regal golden pheasant with brilliant plumage standing among bamboo.",
-    "keywords": ["golden pheasant", "bright birds", "bamboo forest", "asia wildlife"]
+    "title": "Puppy in Pajamas",
+    "description": "A sleepy puppy wearing cute patterned pajamas.",
+    "keywords": ["pajama puppy", "sleepy dog", "bedtime puppy"]
   },
   {
-    "title": "Paradise Bird Courtship",
-    "description": "A bird of paradise displaying its intricate feathers to attract a mate.",
-    "keywords": ["bird of paradise", "courtship dance", "tropical wildlife", "colorful birds"]
+    "title": "Mermaid Puppy Underwater",
+    "description": "A magical puppy with a mermaid tail exploring the ocean.",
+    "keywords": ["mermaid puppy", "fantasy dog", "underwater puppy"]
   },
   {
-    "title": "Kookaburra Tree Song",
-    "description": "A kookaburra sitting on a eucalyptus branch, singing its distinctive call.",
-    "keywords": ["kookaburra", "australian birds", "eucalyptus tree", "singing birds"]
+    "title": "Puppy Playing Hide and Seek",
+    "description": "A puppy peeking out from behind a curtain.",
+    "keywords": ["hide and seek puppy", "curious dog", "playful puppy"]
   },
   {
-    "title": "Lorikeet Sweet Feast",
-    "description": "Rainbow lorikeets enjoying fresh fruit in a canopy clearing.",
-    "keywords": ["lorikeet", "rainbow parrot", "fruit eating birds", "tropical animals"]
+    "title": "Puppy in a Wagon",
+    "description": "A happy puppy sitting in a wagon full of toys.",
+    "keywords": ["puppy in wagon", "toy dog", "fun puppy drawing"]
   },
   {
-    "title": "Hoatzin Amazon Explorer",
-    "description": "A hoatzin with spiky feathers clinging to a swampy tree branch.",
-    "keywords": ["hoatzin", "amazon birds", "swamp creatures", "prehistoric birds"]
+    "title": "Chef Puppy Cooking",
+    "description": "A puppy chef stirring a pot with a big spoon.",
+    "keywords": ["chef puppy", "cooking dog", "kitchen puppy"]
   },
   {
-    "title": "Frigatebird Ocean Soar",
-    "description": "A magnificent frigatebird gliding above crashing ocean waves.",
-    "keywords": ["frigatebird", "sea birds", "ocean animals", "soaring birds"]
+    "title": "Puppy Astronaut in Space",
+    "description": "A brave puppy floating in space with a helmet and stars.",
+    "keywords": ["space puppy", "astronaut dog", "galaxy puppy"]
   },
   {
-    "title": "Sunbittern River Dance",
-    "description": "A sunbittern spreading its wings in a dazzling display by the riverbank.",
-    "keywords": ["sunbittern", "river birds", "wing patterns", "colorful wildlife"]
+    "title": "Pirate Puppy Adventure",
+    "description": "A puppy dressed as a pirate with a treasure map.",
+    "keywords": ["pirate puppy", "adventure dog", "treasure hunt puppy"]
   },
   {
-    "title": "Lilac-Breasted Roller Vistas",
-    "description": "A lilac-breasted roller perched against an African savanna sunrise.",
-    "keywords": ["lilac breasted roller", "african birds", "savanna animals", "beautiful birds"]
+    "title": "Puppy with Balloons",
+    "description": "A puppy holding colorful balloons on a sunny day.",
+    "keywords": ["balloon puppy", "festive dog", "party puppy"]
   },
   {
-    "title": "Bee-Eater Nest Builders",
-    "description": "Vibrant bee-eaters collecting insects and nesting on a sandy riverbank.",
-    "keywords": ["bee eater", "insect eating birds", "nest building", "sandy habitats"]
+    "title": "Artist Puppy Painting",
+    "description": "A creative puppy painting on a canvas with splashes of color.",
+    "keywords": ["artist puppy", "creative dog", "painting puppy"]
   },
   {
-    "title": "Secretary Bird Safari Hunt",
-    "description": "A tall secretary bird striding through grasslands in search of prey.",
-    "keywords": ["secretary bird", "africa wildlife", "grassland birds", "predator birds"]
+    "title": "Unicorn Puppy Fantasy",
+    "description": "A magical puppy with a unicorn horn and sparkles.",
+    "keywords": ["unicorn puppy", "fantasy dog", "magical puppy"]
   },
   {
-    "title": "Turaco Forest Canopy",
-    "description": "A vivid turaco resting high in the leafy treetops.",
-    "keywords": ["turaco", "african canopy", "green birds", "tropical foliage"]
+    "title": "Puppy on a Skateboard",
+    "description": "A cool puppy riding a skateboard with style.",
+    "keywords": ["skateboard puppy", "sporty dog", "fun puppy activity"]
   },
   {
-    "title": "Helmeted Hornbill Watch",
-    "description": "A helmeted hornbill surveying the jungle from a tall tree.",
-    "keywords": ["hornbill", "jungle birds", "exotic wildlife", "rainforest animals"]
+    "title": "Knight Puppy in Armor",
+    "description": "A noble puppy in shining armor with a little sword.",
+    "keywords": ["knight puppy", "medieval dog", "brave puppy"]
   },
   {
-    "title": "Cassowary Rainforest Trek",
-    "description": "A giant cassowary walking among ferns and palms.",
-    "keywords": ["cassowary", "giant birds", "australian wildlife", "rainforest creatures"]
+    "title": "Puppy with Ice Cream",
+    "description": "A puppy enjoying a giant ice cream cone.",
+    "keywords": ["ice cream puppy", "summer dog", "sweet puppy"]
   },
   {
-    "title": "Kingfisher River Dive",
-    "description": "A bright kingfisher plunging into the water to catch a fish.",
-    "keywords": ["kingfisher", "fishing birds", "river life", "blue birds"]
+    "title": "Puppy Blowing Bubbles",
+    "description": "A puppy blowing shiny bubbles into the air.",
+    "keywords": ["bubble puppy", "playful dog", "outdoor puppy"]
   },
   {
-    "title": "Resplendent Sun Conure",
-    "description": "A cheerful sun conure perched in a flowering tree.",
-    "keywords": ["sun conure", "yellow parrot", "flowering trees", "bright birds"]
+    "title": "Puppy with Sunglasses",
+    "description": "A stylish puppy wearing sunglasses and relaxing.",
+    "keywords": ["sunglasses puppy", "cool dog", "summer puppy"]
   },
   {
-    "title": "Greater Bird of Paradise Show",
-    "description": "A greater bird of paradise with flowing tail feathers dancing on a branch.",
-    "keywords": ["bird of paradise", "tropical display", "jungle animals", "courtship dance"]
+    "title": "Firefighter Puppy Hero",
+    "description": "A puppy dressed as a firefighter ready to save the day.",
+    "keywords": ["firefighter puppy", "hero dog", "rescue puppy"]
   },
   {
-    "title": "Emerald Dove Secret Garden",
-    "description": "An emerald dove resting in a lush garden filled with blossoms.",
-    "keywords": ["emerald dove", "garden birds", "green plumage", "peaceful scenes"]
+    "title": "Puppy with a Giant Cupcake",
+    "description": "A puppy sitting beside a huge cupcake with sprinkles.",
+    "keywords": ["cupcake puppy", "dessert dog", "birthday puppy"]
   },
   {
-    "title": "Tanager Tropical Party",
-    "description": "A flock of tanagers feeding among tropical fruits.",
-    "keywords": ["tanager", "colorful flock", "fruit trees", "jungle life"]
+    "title": "Detective Puppy with Magnifying Glass",
+    "description": "A clever puppy solving mysteries with a magnifying glass.",
+    "keywords": ["detective puppy", "mystery dog", "sleuth puppy"]
   },
   {
-    "title": "Blue Jay Woodland Explorer",
-    "description": "A curious blue jay perched among oak branches.",
-    "keywords": ["blue jay", "forest birds", "woodland creatures", "acorns"]
+    "title": "Ballerina Puppy Dancing",
+    "description": "A graceful puppy dancing in a tutu.",
+    "keywords": ["ballerina puppy", "dancing dog", "cute ballerina puppy"]
   },
   {
-    "title": "Puffin Seaside Colony",
-    "description": "Puffins standing on rocky cliffs above crashing waves.",
-    "keywords": ["puffin", "sea cliffs", "arctic birds", "coastal wildlife"]
+    "title": "Puppy Camping Adventure",
+    "description": "A puppy roasting marshmallows by a campfire.",
+    "keywords": ["camping puppy", "outdoor dog", "campfire puppy"]
   },
   {
-    "title": "Bee Hummingbird Delights",
-    "description": "The tiniest bee hummingbird hovering near bright blossoms.",
-    "keywords": ["bee hummingbird", "tiny birds", "nectar feeders", "flower gardens"]
+    "title": "Princess Puppy in a Castle",
+    "description": "A royal puppy exploring a magical castle.",
+    "keywords": ["princess puppy", "castle dog", "fairytale puppy"]
   },
   {
-    "title": "White Egret Marshlands",
-    "description": "A graceful white egret standing in calm marsh waters.",
-    "keywords": ["egret", "marsh birds", "wetland scenes", "wading birds"]
+    "title": "Puppy in a Flower Field",
+    "description": "A puppy sniffing colorful flowers in a meadow.",
+    "keywords": ["flower puppy", "nature dog", "spring puppy"]
   },
   {
-    "title": "Spangled Drongo Shadows",
-    "description": "A spangled drongo resting in the shadows of rainforest foliage.",
-    "keywords": ["spangled drongo", "shadow birds", "rainforest canopy", "black birds"]
+    "title": "Puppy on a Swing",
+    "description": "A joyful puppy swinging under a tree.",
+    "keywords": ["swing puppy", "happy dog", "playground puppy"]
   },
   {
-    "title": "Red Bishop Meadow",
-    "description": "A red bishop bird perched on tall grass in a sunny meadow.",
-    "keywords": ["red bishop", "grassland birds", "bright feathers", "meadow life"]
+    "title": "Puppy with Autumn Leaves",
+    "description": "A puppy jumping in a pile of fall leaves.",
+    "keywords": ["autumn puppy", "fall dog", "seasonal puppy"]
   },
   {
-    "title": "Jacana Lily Pads",
-    "description": "A jacana walking gracefully on lily pads.",
-    "keywords": ["jacana", "water birds", "lily pad scene", "wetlands"]
+    "title": "Puppy with Snowflakes",
+    "description": "A puppy catching snowflakes on its nose.",
+    "keywords": ["winter puppy", "snow dog", "holiday puppy"]
   },
   {
-    "title": "Andean Cock-of-the-rock Perch",
-    "description": "A vibrant Andean cock-of-the-rock on a mossy ledge.",
-    "keywords": ["cock of the rock", "andes birds", "bright plumage", "cloud forest"]
+    "title": "Puppy with a Fairy Wand",
+    "description": "A magical puppy waving a sparkling fairy wand.",
+    "keywords": ["fairy puppy", "enchanted dog", "magic puppy"]
   },
   {
-    "title": "Harpy Eagle Majesty",
-    "description": "A powerful harpy eagle perched with wings partially open.",
-    "keywords": ["harpy eagle", "predator birds", "rainforest raptors", "majestic eagles"]
+    "title": "Puppy in a Hot Air Balloon",
+    "description": "A puppy floating high in a colorful hot air balloon.",
+    "keywords": ["balloon puppy", "travel dog", "adventure puppy"]
   },
   {
-    "title": "Rosy-faced Lovebird Pair",
-    "description": "A pair of lovebirds snuggling on a branch.",
-    "keywords": ["lovebirds", "parrot couple", "rosy faced birds", "affectionate birds"]
+    "title": "Puppy Reading a Book",
+    "description": "A smart puppy reading a storybook.",
+    "keywords": ["reading puppy", "book dog", "studious puppy"]
   },
   {
-    "title": "Blue Crowned Motmot Swing",
-    "description": "A blue crowned motmot on a vine swing in the jungle.",
-    "keywords": ["motmot", "jungle birds", "blue feathers", "tropical life"]
+    "title": "Puppy with Dandelions",
+    "description": "A puppy making wishes with dandelions.",
+    "keywords": ["dandelion puppy", "spring dog", "wishful puppy"]
   },
   {
-    "title": "Great Horned Owl Twilight",
-    "description": "A great horned owl emerging at dusk among pine trees.",
-    "keywords": ["owl", "twilight birds", "forest life", "nocturnal creatures"]
+    "title": "Puppy in a Christmas Stocking",
+    "description": "A puppy peeking out of a holiday stocking.",
+    "keywords": ["Christmas puppy", "holiday dog", "festive puppy"]
   },
   {
-    "title": "African Grey Parrot Wisdom",
-    "description": "An African grey parrot perched thoughtfully on a tree branch.",
-    "keywords": ["african grey", "intelligent birds", "parrot art", "savanna animals"]
+    "title": "Puppy Playing Soccer",
+    "description": "A sporty puppy kicking a soccer ball.",
+    "keywords": ["soccer puppy", "athletic dog", "sports puppy"]
   },
   {
-    "title": "Vulturine Guineafowl Stroll",
-    "description": "A vulturine guineafowl walking proudly on a rocky plain.",
-    "keywords": ["guineafowl", "african plains", "speckled birds", "exotic wildlife"]
+    "title": "Puppy with a Rainbow",
+    "description": "A happy puppy sitting under a bright rainbow.",
+    "keywords": ["rainbow puppy", "colorful dog", "joyful puppy"]
   },
   {
-    "title": "Secretary Bird Thunder Chase",
-    "description": "A secretary bird running across grasslands with storm clouds overhead.",
-    "keywords": ["secretary bird", "stormy sky", "grassland predators", "dramatic scene"]
+    "title": "Puppy in a Flower Basket",
+    "description": "A puppy nestled in a basket full of blooms.",
+    "keywords": ["flower basket puppy", "spring dog", "cute puppy"]
   },
   {
-    "title": "Galah Cockatoo Playtime",
-    "description": "A pink galah cockatoo playing among eucalyptus blossoms.",
-    "keywords": ["galah", "pink parrot", "australian wildlife", "playful birds"]
+    "title": "Puppy with a Starry Sky",
+    "description": "A puppy gazing up at the twinkling stars.",
+    "keywords": ["starry sky puppy", "night dog", "dreamy puppy"]
   },
   {
-    "title": "Blue-Footed Booby Cliffside",
-    "description": "A blue-footed booby dancing on a seaside cliff.",
-    "keywords": ["blue footed booby", "dancing birds", "sea cliffs", "unique animals"]
+    "title": "Puppy Riding a Dinosaur",
+    "description": "A brave puppy riding on a friendly dinosaur's back.",
+    "keywords": ["dinosaur puppy", "prehistoric dog", "adventure puppy"]
   },
   {
-    "title": "Emu Outback Trek",
-    "description": "A curious emu exploring the Australian outback.",
-    "keywords": ["emu", "australian birds", "outback animals", "giant birds"]
+    "title": "Puppy Playing the Piano",
+    "description": "A musical puppy tapping piano keys.",
+    "keywords": ["musical puppy", "piano dog", "creative puppy"]
+  },
+  {
+    "title": "Puppy with a Garden Gnome",
+    "description": "A curious puppy meeting a friendly garden gnome.",
+    "keywords": ["garden gnome puppy", "whimsical dog", "storybook puppy"]
   }
 ]
-
 ,
-  "pinterestBoard": "Extoic Birds - Free Printable Coloring Pages",
-  "categoryId": "b33c70f1-ea43-410a-b043-94bb3982c956",
+  "pinterestBoard": "Cute Puppies - Free Printable Coloring Pages",
+  "categoryId": "77be8493-927a-43b6-b5e2-b5d804fe7853",
   "batchSize": 1,
   "outDir": "images",
   "model": "gpt-image-1",
