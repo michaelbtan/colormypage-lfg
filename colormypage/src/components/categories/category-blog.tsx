@@ -17,7 +17,7 @@ interface CategoryBlogProps {
   imageCount: number;
   featuredImage?: string;
   categoryFavorited?: boolean;
-  createdAt?: string;
+  updatedAt?: string;
   author?: string;
 }
 
@@ -29,7 +29,7 @@ export function CategoryBlog({
   featuredImage,
   categoryFavorited,
   userId,
-  createdAt,
+  updatedAt,
   author,
 }: CategoryBlogProps) {
   const supabase = createClient();
@@ -77,8 +77,8 @@ export function CategoryBlog({
     setIsShareModalOpen(true);
   };
 
-  const formattedDate = createdAt
-    ? new Date(createdAt).toLocaleDateString("en-US", {
+  const formattedDate = updatedAt
+    ? new Date(updatedAt).toLocaleDateString("en-US", {
         year: "numeric",
         month: "long",
         day: "numeric",
@@ -98,7 +98,7 @@ export function CategoryBlog({
             image: featuredImage || "/placeholder.svg",
             description: description.replace(/<[^>]*>/g, ""), // Strip HTML for schema
             ...(author && { author: { "@type": "Person", name: author } }),
-            ...(createdAt && { datePublished: createdAt }),
+            ...(updatedAt && { datePublished: updatedAt }),
           }),
         }}
       />
@@ -145,7 +145,7 @@ export function CategoryBlog({
                     <div className="flex items-center gap-2 text-lg">
                       <Calendar className="h-4 w-4" />
                       <time
-                        dateTime={createdAt}
+                        dateTime={updatedAt}
                       >{`Last updated: ${formattedDate}`}</time>
                     </div>
                   )}

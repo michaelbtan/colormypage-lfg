@@ -144,7 +144,7 @@ export default async function CategoryPage({
         featuredImage={category.cover_image_url || undefined}
         categoryFavorited={isFavorited}
         userId={user?.id || null}
-        createdAt={category.created_at}
+        updatedAt={category.updated_at}
         author={category.author || "Jasmine"}
       />
 

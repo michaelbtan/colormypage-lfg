@@ -39,8 +39,8 @@ export default async function CategoriesPage() {
   // Fetch the initial categories from the database
   const { data: categoriesData, count } = await supabase
     .from("categories")
-    .select("id, created_at, title, cover_image_url, image_count")
-    .order("created_at", { ascending: false })
+    .select("id, updated_at, created_at, title, cover_image_url, image_count")
+    .order("updated_at", { ascending: false })
     .limit(8);
 
   let categories = categoriesData || [];
