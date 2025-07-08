@@ -68,8 +68,6 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
     .eq("id", postId)
     .single();
 
-    console.log("Blog Post Data:", blog);
-
   if (error || !blog) {
     notFound();
   }
