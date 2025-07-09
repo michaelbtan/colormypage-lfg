@@ -34,6 +34,7 @@ ColoringPageViewProps) {
   const supabase = createClient();
   const [isFavorited, setIsFavorited] = useState(false);
   const [isShareModalOpen, setIsShareModalOpen] = useState(false);
+  const [isGeneratingPdf, setIsGeneratingPdf] = useState(false);
   const coloringImageRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -114,7 +115,7 @@ ColoringPageViewProps) {
     setIsShareModalOpen(true);
   };
 
-  const handlePrint = () => {
+  const handlePrint = async () => {
     // Track download/print event
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('event', 'download_click', {
@@ -123,145 +124,118 @@ ColoringPageViewProps) {
       });
     }
 
-    // Open a new window with just the coloring page
-    const printWindow = window.open("", "_blank");
-    if (!printWindow) {
-      toast("Print failed", {
-        description:
-          "Unable to open print window. Please check your popup blocker settings.",
-          descriptionClassName: "!text-black font-medium",
+    setIsGeneratingPdf(true);
+
+    try {
+      // Show immediate feedback
+      toast("Generating PDF...", {
+        description: "Please wait while we create your coloring page PDF.",
+        descriptionClassName: "!text-black font-medium",
       });
-      return;
+
+      // Dynamically import jsPDF
+      const { jsPDF } = await import('jspdf');
+      
+      // Create a new PDF instance with specific print-friendly settings
+      const pdf = new jsPDF({
+        orientation: 'portrait',
+        unit: 'mm',
+        format: [216, 279] // Letter size in mm (8.5" x 11")
+      });
+
+      // Add timeout for faster feedback
+      const timeout = setTimeout(() => {
+        setIsGeneratingPdf(false);
+        toast("PDF generation timed out", {
+          description: "The image is taking too long to load. Please try again.",
+          descriptionClassName: "!text-black font-medium",
+        });
+      }, 8000); // 8 second timeout
+
+      // Create an image element to load the coloring page
+      const img = document.createElement('img');
+      img.crossOrigin = 'anonymous';
+      
+      img.onload = function() {
+        clearTimeout(timeout);
+        
+        // Calculate dimensions using millimeters for better print compatibility
+        const pageWidth = 216; // Letter width in mm (8.5")
+        const pageHeight = 279; // Letter height in mm (11")
+        const margin = 8; // 8mm margin (~0.3 inches) for maximum size
+        const maxWidth = pageWidth - (margin * 2);
+        const maxHeight = pageHeight - (margin * 2);
+        
+        // Calculate aspect ratios
+        const imgAspectRatio = img.naturalWidth / img.naturalHeight;
+        const pageAspectRatio = maxWidth / maxHeight;
+        
+        let finalWidth, finalHeight;
+        
+        if (imgAspectRatio > pageAspectRatio) {
+          // Image is wider, fit to width
+          finalWidth = maxWidth;
+          finalHeight = maxWidth / imgAspectRatio;
+        } else {
+          // Image is taller, fit to height
+          finalHeight = maxHeight;
+          finalWidth = maxHeight * imgAspectRatio;
+        }
+        
+        // Calculate centered position
+        const x = (pageWidth - finalWidth) / 2;
+        const y = (pageHeight - finalHeight) / 2;
+        
+        // Add the image to the PDF with print-optimized settings
+        pdf.addImage(img, 'JPEG', x, y, finalWidth, finalHeight, undefined, 'FAST');
+        
+        // Set PDF metadata for better print handling
+        pdf.setProperties({
+          title: `${decodeURI(coloringPage.title)} - Coloring Page`,
+          subject: 'Printable Coloring Page',
+          author: 'ColorMyPage',
+          creator: 'ColorMyPage'
+        });
+        
+        // Open the PDF in a new tab immediately
+        const pdfBlob = pdf.output('blob');
+        const pdfUrl = URL.createObjectURL(pdfBlob);
+        window.open(pdfUrl, '_blank');
+        
+        // Show success message
+        toast("PDF ready!", {
+          description: "Your coloring page PDF has opened in a new tab.",
+          descriptionClassName: "!text-black font-medium",
+        });
+        
+        // Clean up the URL after a delay
+        setTimeout(() => {
+          URL.revokeObjectURL(pdfUrl);
+        }, 1000);
+        
+        setIsGeneratingPdf(false);
+      };
+      
+      img.onerror = function() {
+        clearTimeout(timeout);
+        setIsGeneratingPdf(false);
+        toast("PDF generation failed", {
+          description: "Unable to load the coloring page image. Please try again.",
+          descriptionClassName: "!text-black font-medium",
+        });
+      };
+      
+      // Load the image (this starts the process)
+      img.src = coloringPage.image_url;
+      
+    } catch (error) {
+      console.error("Error generating PDF:", error);
+      setIsGeneratingPdf(false);
+      toast("PDF generation failed", {
+        description: "Unable to generate PDF. Please try again later.",
+        descriptionClassName: "!text-black font-medium",
+      });
     }
-
-    // Write the print-optimized HTML to the new window
-    printWindow.document.write(`
-      <!DOCTYPE html>
-      <html>
-        <head>
-          <title>${coloringPage.title} - Print</title>
-          <style>
-            * {
-              margin: 0;
-              padding: 0;
-              box-sizing: border-box;
-            }
-            
-            html, body {
-              width: 100%;
-              height: 100%;
-              margin: 0;
-              padding: 0;
-              overflow: hidden;
-            }
-            
-            .print-container {
-              width: 100vw;
-              height: 100vh;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              page-break-inside: avoid;
-            }
-            
-            .print-container img {
-              max-width: 100%;
-              max-height: 100%;
-              width: auto;
-              height: auto;
-              object-fit: contain;
-              display: block;
-            }
-            
-            @media print {
-              @page {
-                size: letter;
-                margin: 0.5in;
-              }
-              
-              html, body {
-                width: 100%;
-                height: 100%;
-                margin: 0;
-                padding: 0;
-                overflow: visible;
-              }
-              
-              .print-container {
-                width: 100%;
-                height: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                page-break-inside: avoid;
-                page-break-after: auto;
-              }
-              
-              .print-container img {
-                max-width: 100%;
-                max-height: 100%;
-                width: auto;
-                height: auto;
-                object-fit: contain;
-                page-break-inside: avoid;
-              }
-            }
-            
-            @media screen {
-              body {
-                background-color: #f0f0f0;
-              }
-              
-              .print-container {
-                background-color: white;
-                box-shadow: 0 0 10px rgba(0,0,0,0.1);
-              }
-            }
-          </style>
-        </head>
-        <body>
-          <div class="print-container">
-            <img src="${coloringPage.image_url}" alt="${coloringPage.title}" onload="fitToPage()" />
-          </div>
-          <script>
-            function fitToPage() {
-              const img = document.querySelector('img');
-              const container = document.querySelector('.print-container');
-              
-              if (img && container) {
-                // Ensure image fits within print area
-                const containerWidth = container.clientWidth;
-                const containerHeight = container.clientHeight;
-                const imgAspectRatio = img.naturalWidth / img.naturalHeight;
-                const containerAspectRatio = containerWidth / containerHeight;
-                
-                if (imgAspectRatio > containerAspectRatio) {
-                  // Image is wider, fit to width
-                  img.style.width = '100%';
-                  img.style.height = 'auto';
-                } else {
-                  // Image is taller, fit to height
-                  img.style.height = '100%';
-                  img.style.width = 'auto';
-                }
-              }
-            }
-            
-            // Automatically print and then close the window when loaded
-            window.onload = function() {
-              setTimeout(function() {
-                window.print();
-                setTimeout(function() {
-                  window.close();
-                }, 1000);
-              }, 500);
-            };
-          </script>
-        </body>
-      </html>
-    `);
-
-    printWindow.document.close();
   };
 
   return (
@@ -285,11 +259,12 @@ ColoringPageViewProps) {
                   <Button
                     id="download-coloring-page"
                     onClick={handlePrint}
+                    disabled={isGeneratingPdf}
                     size="lg"
-                    className="bg-[#9d84ff] cursor-pointer hover:bg-[#8a6dff] rounded-full flex-1 h-12 text-base"
+                    className="bg-[#9d84ff] cursor-pointer hover:bg-[#8a6dff] rounded-full flex-1 h-12 text-base disabled:opacity-50"
                   >
                     <Printer className="mr-2 h-5 w-5" />
-                    Print
+                    {isGeneratingPdf ? "Generating..." : "Download PDF"}
                   </Button>
 
                   <Button
@@ -370,11 +345,12 @@ ColoringPageViewProps) {
                 <Button
                   id="download-coloring-page"
                   onClick={handlePrint}
+                  disabled={isGeneratingPdf}
                   size="lg"
-                  className="bg-[#9d84ff] cursor-pointer hover:bg-[#8a6dff] rounded-full h-14 text-lg px-8"
+                  className="bg-[#9d84ff] cursor-pointer hover:bg-[#8a6dff] rounded-full h-14 text-lg px-8 disabled:opacity-50"
                 >
                   <Printer className="mr-3 h-6 w-6" />
-                  Print Coloring Page
+                  {isGeneratingPdf ? "Generating..." : "Download PDF"}
                 </Button>
 
                 <Button
