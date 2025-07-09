@@ -27,7 +27,7 @@ export default async function RecommendedCategoriesSidebar() {
             {categories.map((category) => (
               <Link
                 key={category.id}
-                href={`/categories/${category.title.toLowerCase().replace(/\s+/g, '-')}`}
+                href={`/categories/${category.title}`}
                 className="flex-shrink-0 group"
               >
                 <div className="w-32 p-3 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
@@ -62,7 +62,7 @@ export default async function RecommendedCategoriesSidebar() {
           {categories.map((category) => (
             <Link
               key={category.id}
-              href={`/categories/${category.title.toLowerCase().replace(/\s+/g, '-')}`}
+              href={`/categories/${category.title}`}
               className="block group"
             >
               <div className="flex items-center gap-3 p-3 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">
