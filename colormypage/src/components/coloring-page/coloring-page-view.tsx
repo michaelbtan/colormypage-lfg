@@ -8,6 +8,7 @@ import { Heart, Share2, Printer } from "lucide-react";
 import { Button } from "@/components/ui/button";
 // import { RecommendedPages } from "@/components/coloring-page/recommended-pages";
 import { ShareModal } from "@/components/share-modal";
+import { RecommendedColoringPages } from "@/components/coloring-page/recommended-coloring-pages";
 import { toast } from "sonner";
 import { createClient } from "@/lib/supabase/client";
 import PLACEHOLDER from "@/assets/placeholder.svg";
@@ -53,6 +54,15 @@ ColoringPageViewProps) {
   const handleFavorite = async (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
+    
+    // Track favorite event
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'favorite_click', {
+        button_id: 'favorite-coloring-page',
+        page_location: window.location.href
+      });
+    }
+
     if (!userId) {
       toast("Must be logged in to favorite", {
         description: "Please log in to favorite this coloring page.",
@@ -92,10 +102,27 @@ ColoringPageViewProps) {
   const handleShare = (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
+    
+    // Track share event
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'share_click', {
+        button_id: 'share-coloring-page',
+        page_location: window.location.href
+      });
+    }
+
     setIsShareModalOpen(true);
   };
 
   const handlePrint = () => {
+    // Track download/print event
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'download_click', {
+        button_id: 'download-coloring-page',
+        page_location: window.location.href
+      });
+    }
+
     // Open a new window with just the coloring page
     const printWindow = window.open("", "_blank");
     if (!printWindow) {
@@ -186,6 +213,7 @@ ColoringPageViewProps) {
                 {/* Mobile: Action buttons below title and above image */}
                 <div className="flex flex-wrap gap-3 mb-4">
                   <Button
+                    id="download-coloring-page"
                     onClick={handlePrint}
                     size="lg"
                     className="bg-[#9d84ff] cursor-pointer hover:bg-[#8a6dff] rounded-full flex-1 h-12 text-base"
@@ -195,6 +223,7 @@ ColoringPageViewProps) {
                   </Button>
 
                   <Button
+                    id="favorite-coloring-page"
                     onClick={handleFavorite}
                     variant="outline"
                     size="lg"
@@ -212,6 +241,7 @@ ColoringPageViewProps) {
                   </Button>
 
                   <Button
+                    id="share-coloring-page"
                     onClick={handleShare}
                     variant="outline"
                     size="lg"
@@ -268,6 +298,7 @@ ColoringPageViewProps) {
               {/* Desktop: Action buttons in details section */}
               <div className="hidden lg:flex flex-wrap gap-4 mb-8">
                 <Button
+                  id="download-coloring-page"
                   onClick={handlePrint}
                   size="lg"
                   className="bg-[#9d84ff] cursor-pointer hover:bg-[#8a6dff] rounded-full h-14 text-lg px-8"
@@ -277,6 +308,7 @@ ColoringPageViewProps) {
                 </Button>
 
                 <Button
+                  id="favorite-coloring-page"
                   onClick={handleFavorite}
                   variant="outline"
                   size="lg"
@@ -294,6 +326,7 @@ ColoringPageViewProps) {
                 </Button>
 
                 <Button
+                  id="share-coloring-page"
                   onClick={handleShare}
                   variant="outline"
                   size="lg"
@@ -340,6 +373,14 @@ ColoringPageViewProps) {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Recommended Coloring Pages Section */}
+      <div className="mt-12">
+        <RecommendedColoringPages 
+          currentPageId={coloringPage.id}
+          userId={userId}
+        />
       </div>
 
       {/* Share Modal */}
