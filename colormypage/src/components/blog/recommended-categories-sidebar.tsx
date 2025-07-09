@@ -10,8 +10,6 @@ export default async function RecommendedCategoriesSidebar() {
     .select("*")
     .limit(6);
 
-    console.log("Recommended Categories:", categories);
-
   if (error || !categories) {
     return null;
   }

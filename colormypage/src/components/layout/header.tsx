@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Heart, Palette, LogIn, LogOut } from "lucide-react";
+import { Heart, Palette, LogIn, LogOut, BookOpen } from "lucide-react";
 import { SearchBar } from "./search-bar";
 import { MobileMenu } from "./mobile-menu";
 import { createClient } from "@/lib/supabase/client";
@@ -40,6 +40,11 @@ export function Header() {
       name: "Categories",
       href: "/categories",
       icon: <Palette className="h-6 w-6" />,
+    },
+    {
+      name: "Blog",
+      href: "/blogs",
+      icon: <BookOpen className="h-6 w-6" />,
     },
     ...(isLoggedIn ? [{
       name: "Favorites",
@@ -86,6 +91,13 @@ export function Header() {
             <Palette className="h-6 w-6" />
             Categories
           </Link>
+          <Link
+            href="/blogs"
+            className="text-lg font-semibold transition-transform duration-300 hover:scale-110 flex items-center gap-2"
+          >
+            <BookOpen className="h-6 w-6" />
+            Blog
+          </Link>
           {isLoggedIn && <Link
             href="/dashboard"
             className="text-lg font-semibold transition-transform duration-300 hover:scale-110 flex items-center gap-2"
@@ -116,7 +128,7 @@ export function Header() {
         </nav>
 
         {/* Mobile Menu */}
-          <MobileMenu loggedin={isLoggedIn} navigationItems={navigationItems} />
+          <MobileMenu loggedin={isLoggedIn} navigationItems={navigationItems} logoutAction={logout} />
       </div>
     </header>
   );

@@ -4,6 +4,7 @@ import { CategoryBlog } from "@/components/categories/category-blog";
 import { ColoringPageGrid } from "@/components/categories/coloring-page-grid";
 import { createClient } from "@/lib/supabase/server";
 import { PageBreadcrumbs, createHomeBreadcrumb, createCategoriesBreadcrumb } from "@/components/navigation/page-breadcrumbs";
+import RecommendedCategoriesSidebar from "@/components/blog/recommended-categories-sidebar";
 import LOGO from "@/assets/logo.png";
 
 export async function generateMetadata({
@@ -151,7 +152,7 @@ export default async function CategoryPage({
       <div className="container mx-auto px-4 py-12">
         <div className="flex flex-col lg:flex-row gap-8">
           {/* Main content - coloring pages grid */}
-          <div className="w-full lg:w-4/5">
+          <div className="flex-1">
             <ColoringPageGrid
               userId={user?.id || null}
               categoryId={category.id}
@@ -159,6 +160,13 @@ export default async function CategoryPage({
               initialHasMore={hasMore}
               totalPages={count || 0}
             />
+          </div>
+          
+          {/* Sidebar - recommended categories */}
+          <div className="lg:w-80 flex-shrink-0">
+            <div className="sticky top-8">
+              <RecommendedCategoriesSidebar />
+            </div>
           </div>
         </div>
       </div>
