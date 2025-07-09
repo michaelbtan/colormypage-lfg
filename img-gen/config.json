@@ -2,249 +2,250 @@
   "prompts":
 [
   {
-    "title": "Puppy with a Big Bow",
-    "description": "A cute puppy sitting happily with a giant bow around its neck.",
-    "keywords": ["adorable puppy", "puppy with bow", "cute dog art"]
+    "title": "Hibiscus Paradise",
+    "description": "A tropical hibiscus in full bloom surrounded by lush leaves and gentle butterflies.",
+    "keywords": ["hibiscus flower", "tropical bloom", "butterflies", "summer flowers"]
   },
   {
-    "title": "Sleepy Puppy in a Basket",
-    "description": "A little puppy curled up and napping in a cozy wicker basket.",
-    "keywords": ["sleeping puppy", "puppy basket", "sweet puppy illustration"]
+    "title": "Orchid Elegance",
+    "description": "Graceful orchids arranged in a delicate bouquet for a touch of elegance.",
+    "keywords": ["orchid bouquet", "exotic flowers", "graceful petals"]
   },
   {
-    "title": "Playful Puppy with a Ball",
-    "description": "A puppy excitedly playing with a bouncy ball in the yard.",
-    "keywords": ["puppy with ball", "playful dog", "fun puppy scene"]
+    "title": "Bird of Paradise",
+    "description": "A striking Bird of Paradise flower with bold shapes and dramatic foliage.",
+    "keywords": ["bird of paradise", "vibrant flower", "tropical plants"]
   },
   {
-    "title": "Puppy Dressed as a Superhero",
-    "description": "A brave puppy wearing a superhero cape and mask.",
-    "keywords": ["superhero puppy", "costumed dog", "imaginative puppy"]
+    "title": "Lotus Serenity",
+    "description": "A peaceful lotus flower floating on calm water with lily pads.",
+    "keywords": ["lotus blossom", "water flowers", "peaceful nature"]
   },
   {
-    "title": "Puppy in Rain Boots",
-    "description": "A puppy splashing in puddles while wearing rain boots.",
-    "keywords": ["rainy day puppy", "puppy in boots", "cute dog activities"]
+    "title": "Protea Majesty",
+    "description": "The unique protea bloom with spiky petals and interesting textures.",
+    "keywords": ["protea flower", "wildflowers", "exotic blooms"]
   },
   {
-    "title": "Puppy with a Birthday Cake",
-    "description": "A happy puppy celebrating with a birthday cake and balloons.",
-    "keywords": ["birthday puppy", "celebration dog", "party puppy"]
+    "title": "Passionflower Tangle",
+    "description": "Intricate passionflowers climbing along a vine with curling tendrils.",
+    "keywords": ["passionflower vine", "intricate flowers", "climbing plants"]
   },
   {
-    "title": "Puppy and Butterfly Friends",
-    "description": "A curious puppy watching colorful butterflies flutter by.",
-    "keywords": ["puppy with butterflies", "nature puppy", "spring puppy"]
+    "title": "Calla Lily Grace",
+    "description": "Elegant calla lilies in a glass vase, showcasing their smooth curves.",
+    "keywords": ["calla lily", "elegant flowers", "modern floral"]
   },
   {
-    "title": "Puppy in a Pumpkin",
-    "description": "A little puppy peeking out of a carved pumpkin.",
-    "keywords": ["pumpkin puppy", "fall dog", "Halloween puppy"]
+    "title": "Frangipani Bliss",
+    "description": "Plumeria (frangipani) blossoms clustered together in a tropical setting.",
+    "keywords": ["frangipani", "plumeria flowers", "tropical garden"]
   },
   {
-    "title": "Puppy in a Teacup",
-    "description": "A tiny puppy sitting snugly inside a decorated teacup.",
-    "keywords": ["teacup puppy", "mini dog", "cute puppy art"]
+    "title": "Heliconia Harmony",
+    "description": "Colorful heliconia flowers with layered bracts reaching toward the sky.",
+    "keywords": ["heliconia plant", "tropical blooms", "layered flowers"]
   },
   {
-    "title": "Puppy with a Teddy Bear",
-    "description": "A sweet puppy cuddling its favorite teddy bear.",
-    "keywords": ["puppy with teddy", "snuggly dog", "bedtime puppy"]
+    "title": "Bleeding Heart Arch",
+    "description": "Delicate bleeding hearts dangling gracefully from an arched stem.",
+    "keywords": ["bleeding heart flower", "delicate blooms", "romantic flowers"]
   },
   {
-    "title": "Puppy with a Kite",
-    "description": "A playful puppy flying a colorful kite on a breezy day.",
-    "keywords": ["kite puppy", "outdoor dog", "happy puppy scene"]
+    "title": "Fuchsia Fiesta",
+    "description": "Hanging fuchsia blossoms with vibrant colors and delicate shapes.",
+    "keywords": ["fuchsia plant", "vibrant flowers", "hanging blooms"]
   },
   {
-    "title": "Puppy in Pajamas",
-    "description": "A sleepy puppy wearing cute patterned pajamas.",
-    "keywords": ["pajama puppy", "sleepy dog", "bedtime puppy"]
+    "title": "Canna Lily Splendor",
+    "description": "Tall canna lilies towering over lush tropical leaves.",
+    "keywords": ["canna lily", "tropical foliage", "garden flowers"]
   },
   {
-    "title": "Mermaid Puppy Underwater",
-    "description": "A magical puppy with a mermaid tail exploring the ocean.",
-    "keywords": ["mermaid puppy", "fantasy dog", "underwater puppy"]
+    "title": "Anthurium Accent",
+    "description": "Heart-shaped anthurium flowers surrounded by glossy leaves.",
+    "keywords": ["anthurium flower", "heart-shaped blooms", "exotic plants"]
   },
   {
-    "title": "Puppy Playing Hide and Seek",
-    "description": "A puppy peeking out from behind a curtain.",
-    "keywords": ["hide and seek puppy", "curious dog", "playful puppy"]
+    "title": "Gazania Glow",
+    "description": "Bright gazania flowers open wide to soak up the sun.",
+    "keywords": ["gazania daisies", "sun-loving flowers", "colorful blooms"]
   },
   {
-    "title": "Puppy in a Wagon",
-    "description": "A happy puppy sitting in a wagon full of toys.",
-    "keywords": ["puppy in wagon", "toy dog", "fun puppy drawing"]
+    "title": "Zinnia Medley",
+    "description": "Cluster of zinnias in varying shapes and petal patterns.",
+    "keywords": ["zinnia flowers", "garden bouquet", "summer blooms"]
   },
   {
-    "title": "Chef Puppy Cooking",
-    "description": "A puppy chef stirring a pot with a big spoon.",
-    "keywords": ["chef puppy", "cooking dog", "kitchen puppy"]
+    "title": "Dahlia Delight",
+    "description": "Intricate dahlia blossoms with layers of ruffled petals.",
+    "keywords": ["dahlia flower", "layered petals", "ornamental flowers"]
   },
   {
-    "title": "Puppy Astronaut in Space",
-    "description": "A brave puppy floating in space with a helmet and stars.",
-    "keywords": ["space puppy", "astronaut dog", "galaxy puppy"]
+    "title": "Passiflora Dream",
+    "description": "Detailed passiflora blooms with their unique, mesmerizing centers.",
+    "keywords": ["passiflora", "intricate flowers", "botanical illustration"]
   },
   {
-    "title": "Pirate Puppy Adventure",
-    "description": "A puppy dressed as a pirate with a treasure map.",
-    "keywords": ["pirate puppy", "adventure dog", "treasure hunt puppy"]
+    "title": "Gloriosa Lily Spark",
+    "description": "A climbing gloriosa lily with dramatic, curling petals.",
+    "keywords": ["gloriosa lily", "climbing flowers", "striking blooms"]
   },
   {
-    "title": "Puppy with Balloons",
-    "description": "A puppy holding colorful balloons on a sunny day.",
-    "keywords": ["balloon puppy", "festive dog", "party puppy"]
+    "title": "Torch Ginger Radiance",
+    "description": "Torch ginger flowers standing tall in a tropical landscape.",
+    "keywords": ["torch ginger", "tropical garden", "bold flowers"]
   },
   {
-    "title": "Artist Puppy Painting",
-    "description": "A creative puppy painting on a canvas with splashes of color.",
-    "keywords": ["artist puppy", "creative dog", "painting puppy"]
+    "title": "Camellia Calm",
+    "description": "Soft camellia flowers nestled among glossy green leaves.",
+    "keywords": ["camellia bloom", "garden flowers", "serene blossoms"]
   },
   {
-    "title": "Unicorn Puppy Fantasy",
-    "description": "A magical puppy with a unicorn horn and sparkles.",
-    "keywords": ["unicorn puppy", "fantasy dog", "magical puppy"]
+    "title": "Magnolia Moments",
+    "description": "Large magnolia flowers opening gracefully on sturdy branches.",
+    "keywords": ["magnolia tree", "southern flowers", "white blossoms"]
   },
   {
-    "title": "Puppy on a Skateboard",
-    "description": "A cool puppy riding a skateboard with style.",
-    "keywords": ["skateboard puppy", "sporty dog", "fun puppy activity"]
+    "title": "Ranunculus Ruffles",
+    "description": "Ranunculus blossoms with dense, layered petals in full bloom.",
+    "keywords": ["ranunculus flower", "ruffled petals", "romantic bouquet"]
   },
   {
-    "title": "Knight Puppy in Armor",
-    "description": "A noble puppy in shining armor with a little sword.",
-    "keywords": ["knight puppy", "medieval dog", "brave puppy"]
+    "title": "Queen Anne's Lace",
+    "description": "Delicate Queen Anne's Lace flowers forming lace-like clusters.",
+    "keywords": ["queen anne's lace", "wildflowers", "delicate blooms"]
   },
   {
-    "title": "Puppy with Ice Cream",
-    "description": "A puppy enjoying a giant ice cream cone.",
-    "keywords": ["ice cream puppy", "summer dog", "sweet puppy"]
+    "title": "Alstroemeria Array",
+    "description": "Alstroemeria blossoms showcasing their streaked petals.",
+    "keywords": ["alstroemeria", "peruvian lily", "striped flowers"]
   },
   {
-    "title": "Puppy Blowing Bubbles",
-    "description": "A puppy blowing shiny bubbles into the air.",
-    "keywords": ["bubble puppy", "playful dog", "outdoor puppy"]
+    "title": "Strelitzia Showcase",
+    "description": "Bird of Paradise (Strelitzia) blooms ready to color in vivid shades.",
+    "keywords": ["strelitzia", "bird of paradise", "exotic blooms"]
   },
   {
-    "title": "Puppy with Sunglasses",
-    "description": "A stylish puppy wearing sunglasses and relaxing.",
-    "keywords": ["sunglasses puppy", "cool dog", "summer puppy"]
+    "title": "Cosmos Charm",
+    "description": "Graceful cosmos flowers dancing in a summer breeze.",
+    "keywords": ["cosmos flowers", "summer garden", "graceful blooms"]
   },
   {
-    "title": "Firefighter Puppy Hero",
-    "description": "A puppy dressed as a firefighter ready to save the day.",
-    "keywords": ["firefighter puppy", "hero dog", "rescue puppy"]
+    "title": "Edelweiss Whisper",
+    "description": "Rare edelweiss flowers nestled in alpine scenery.",
+    "keywords": ["edelweiss", "alpine flowers", "rare blooms"]
   },
   {
-    "title": "Puppy with a Giant Cupcake",
-    "description": "A puppy sitting beside a huge cupcake with sprinkles.",
-    "keywords": ["cupcake puppy", "dessert dog", "birthday puppy"]
+    "title": "Peony Bliss",
+    "description": "Full, fluffy peonies opening their soft petals.",
+    "keywords": ["peony blossoms", "garden flowers", "romantic petals"]
   },
   {
-    "title": "Detective Puppy with Magnifying Glass",
-    "description": "A clever puppy solving mysteries with a magnifying glass.",
-    "keywords": ["detective puppy", "mystery dog", "sleuth puppy"]
+    "title": "Marigold Mornings",
+    "description": "Bright marigolds bringing a touch of cheerfulness.",
+    "keywords": ["marigold flowers", "vibrant petals", "garden blooms"]
   },
   {
-    "title": "Ballerina Puppy Dancing",
-    "description": "A graceful puppy dancing in a tutu.",
-    "keywords": ["ballerina puppy", "dancing dog", "cute ballerina puppy"]
+    "title": "Tuberose Twilight",
+    "description": "Delicate tuberose flowers ready to be brought to life with color.",
+    "keywords": ["tuberose", "fragrant blooms", "night flowers"]
   },
   {
-    "title": "Puppy Camping Adventure",
-    "description": "A puppy roasting marshmallows by a campfire.",
-    "keywords": ["camping puppy", "outdoor dog", "campfire puppy"]
+    "title": "Ixora Cluster",
+    "description": "Clusters of ixora blossoms with tiny star-shaped flowers.",
+    "keywords": ["ixora plant", "star flowers", "tropical cluster"]
   },
   {
-    "title": "Princess Puppy in a Castle",
-    "description": "A royal puppy exploring a magical castle.",
-    "keywords": ["princess puppy", "castle dog", "fairytale puppy"]
+    "title": "Bougainvillea Breeze",
+    "description": "Trailing bougainvillea vines heavy with colorful bracts.",
+    "keywords": ["bougainvillea", "flowering vines", "vibrant garden"]
   },
   {
-    "title": "Puppy in a Flower Field",
-    "description": "A puppy sniffing colorful flowers in a meadow.",
-    "keywords": ["flower puppy", "nature dog", "spring puppy"]
+    "title": "Waratah Wonder",
+    "description": "Unique waratah flowers with a sculptural form.",
+    "keywords": ["waratah bloom", "australian flowers", "striking petals"]
   },
   {
-    "title": "Puppy on a Swing",
-    "description": "A joyful puppy swinging under a tree.",
-    "keywords": ["swing puppy", "happy dog", "playground puppy"]
+    "title": "Lily of the Valley",
+    "description": "Sweet lily of the valley flowers dangling gracefully.",
+    "keywords": ["lily of the valley", "delicate blooms", "spring flowers"]
   },
   {
-    "title": "Puppy with Autumn Leaves",
-    "description": "A puppy jumping in a pile of fall leaves.",
-    "keywords": ["autumn puppy", "fall dog", "seasonal puppy"]
+    "title": "Ginger Flower Fan",
+    "description": "Tropical ginger flowers bursting with color.",
+    "keywords": ["ginger flower", "tropical blooms", "botanical beauty"]
   },
   {
-    "title": "Puppy with Snowflakes",
-    "description": "A puppy catching snowflakes on its nose.",
-    "keywords": ["winter puppy", "snow dog", "holiday puppy"]
+    "title": "Cherry Blossom Picnic",
+    "description": "Cherry blossoms in full bloom on a spring day.",
+    "keywords": ["cherry blossom", "sakura flowers", "spring garden"]
   },
   {
-    "title": "Puppy with a Fairy Wand",
-    "description": "A magical puppy waving a sparkling fairy wand.",
-    "keywords": ["fairy puppy", "enchanted dog", "magic puppy"]
+    "title": "Wisteria Waterfall",
+    "description": "Flowing wisteria clusters cascading from above.",
+    "keywords": ["wisteria flowers", "cascading blooms", "romantic garden"]
   },
   {
-    "title": "Puppy in a Hot Air Balloon",
-    "description": "A puppy floating high in a colorful hot air balloon.",
-    "keywords": ["balloon puppy", "travel dog", "adventure puppy"]
+    "title": "Ylang Ylang Delight",
+    "description": "Fragrant ylang ylang flowers hanging in clusters.",
+    "keywords": ["ylang ylang", "tropical fragrance", "yellow blooms"]
   },
   {
-    "title": "Puppy Reading a Book",
-    "description": "A smart puppy reading a storybook.",
-    "keywords": ["reading puppy", "book dog", "studious puppy"]
+    "title": "Jasmine Nightfall",
+    "description": "Soft jasmine blossoms filling the air with their perfume.",
+    "keywords": ["jasmine flowers", "night blooms", "fragrant garden"]
   },
   {
-    "title": "Puppy with Dandelions",
-    "description": "A puppy making wishes with dandelions.",
-    "keywords": ["dandelion puppy", "spring dog", "wishful puppy"]
+    "title": "Bluebell Blanket",
+    "description": "Fields of bluebells carpeting the forest floor.",
+    "keywords": ["bluebell flowers", "forest blooms", "wildflower meadow"]
   },
   {
-    "title": "Puppy in a Christmas Stocking",
-    "description": "A puppy peeking out of a holiday stocking.",
-    "keywords": ["Christmas puppy", "holiday dog", "festive puppy"]
+    "title": "Petunia Patch",
+    "description": "Pretty petunias in a variety of shapes and patterns.",
+    "keywords": ["petunia flowers", "garden blooms", "ornamental plants"]
   },
   {
-    "title": "Puppy Playing Soccer",
-    "description": "A sporty puppy kicking a soccer ball.",
-    "keywords": ["soccer puppy", "athletic dog", "sports puppy"]
+    "title": "Lavender Fields",
+    "description": "A calming field of lavender stretching to the horizon.",
+    "keywords": ["lavender flowers", "herbal blooms", "purple fields"]
   },
   {
-    "title": "Puppy with a Rainbow",
-    "description": "A happy puppy sitting under a bright rainbow.",
-    "keywords": ["rainbow puppy", "colorful dog", "joyful puppy"]
+    "title": "Gardenia Grace",
+    "description": "Lush gardenia blossoms ready for coloring.",
+    "keywords": ["gardenia flowers", "white blooms", "fragrant petals"]
   },
   {
-    "title": "Puppy in a Flower Basket",
-    "description": "A puppy nestled in a basket full of blooms.",
-    "keywords": ["flower basket puppy", "spring dog", "cute puppy"]
+    "title": "Snapdragon Row",
+    "description": "A line of cheerful snapdragons in full bloom.",
+    "keywords": ["snapdragon flowers", "garden plants", "bright blossoms"]
   },
   {
-    "title": "Puppy with a Starry Sky",
-    "description": "A puppy gazing up at the twinkling stars.",
-    "keywords": ["starry sky puppy", "night dog", "dreamy puppy"]
+    "title": "Morning Glory",
+    "description": "Morning glory vines unfurling their trumpet-shaped blooms.",
+    "keywords": ["morning glory", "vining flowers", "trumpet blooms"]
   },
   {
-    "title": "Puppy Riding a Dinosaur",
-    "description": "A brave puppy riding on a friendly dinosaur's back.",
-    "keywords": ["dinosaur puppy", "prehistoric dog", "adventure puppy"]
+    "title": "Foxglove Tower",
+    "description": "Tall foxglove spikes with bell-shaped flowers.",
+    "keywords": ["foxglove flowers", "bell blooms", "cottage garden"]
   },
   {
-    "title": "Puppy Playing the Piano",
-    "description": "A musical puppy tapping piano keys.",
-    "keywords": ["musical puppy", "piano dog", "creative puppy"]
+    "title": "Poppy Meadow",
+    "description": "A field of poppies dancing in the breeze.",
+    "keywords": ["poppy flowers", "wildflowers", "meadow blooms"]
   },
   {
-    "title": "Puppy with a Garden Gnome",
-    "description": "A curious puppy meeting a friendly garden gnome.",
-    "keywords": ["garden gnome puppy", "whimsical dog", "storybook puppy"]
+    "title": "Hydrangea Haven",
+    "description": "Hydrangea clusters bursting with tiny petals.",
+    "keywords": ["hydrangea blooms", "garden shrubs", "colorful flowers"]
   }
 ]
+
 ,
-  "pinterestBoard": "Cute Puppies - Free Printable Coloring Pages",
-  "categoryId": "77be8493-927a-43b6-b5e2-b5d804fe7853",
+  "pinterestBoard": "Pretty Flowers - Free Printable Coloring Pages",
+  "categoryId": "265cb74f-9679-406a-a197-6c874fb840c6",
   "batchSize": 1,
   "outDir": "images",
   "model": "gpt-image-1",

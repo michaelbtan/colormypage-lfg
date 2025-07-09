@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect, useRef } from "react"
-import { Search } from "lucide-react"
+import { Search, X } from "lucide-react"
 import { Input } from "@/components/ui/input"
 import { createClient } from "@/lib/supabase/client"
 import Link from "next/link"
@@ -115,6 +115,17 @@ export function SearchBar() {
             onChange={(e) => setSearchQuery(e.target.value)}
             onFocus={() => searchResults.length > 0 && setShowResults(true)}
           />
+          {searchQuery && (
+            <button
+              onClick={() => {
+                setSearchQuery("")
+                setShowResults(false)
+              }}
+              className="absolute right-3 top-1/2 transform -translate-y-1/2 p-1 hover:bg-[#9d84ff]/10 rounded-full transition-all duration-300"
+            >
+              <X className="h-4 w-4 text-muted-foreground hover:text-[#9d84ff]" />
+            </button>
+          )}
           
           {/* Desktop Search Results Dropdown */}
           {showResults && (
@@ -183,7 +194,24 @@ export function SearchBar() {
                     onChange={(e) => setSearchQuery(e.target.value)}
                     autoFocus
                   />
+                  {searchQuery && (
+                    <button
+                      onClick={() => {
+                        setSearchQuery("")
+                        setShowResults(false)
+                      }}
+                      className="absolute right-3 top-1/2 transform -translate-y-1/2 p-1 hover:bg-[#9d84ff]/10 rounded-full transition-all duration-300"
+                    >
+                      <X className="h-4 w-4 text-muted-foreground hover:text-[#9d84ff]" />
+                    </button>
+                  )}
                 </div>
+                <button
+                  onClick={() => setIsSearchOpen(false)}
+                  className="p-2 hover:bg-[#9d84ff]/10 rounded-full transition-all duration-300"
+                >
+                  <X className="h-5 w-5 text-muted-foreground hover:text-[#9d84ff]" />
+                </button>
               </div>
               
               {/* Mobile Search Results */}

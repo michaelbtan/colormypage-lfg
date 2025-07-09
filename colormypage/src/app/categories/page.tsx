@@ -41,7 +41,6 @@ export default async function CategoriesPage() {
     .from("categories")
     .select("id, updated_at, created_at, title, cover_image_url, image_count")
     .order("updated_at", { ascending: false })
-    .limit(8);
 
   let categories = categoriesData || [];
 
