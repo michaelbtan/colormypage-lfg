@@ -168,103 +168,175 @@ ColoringPageViewProps) {
   };
 
   return (
-    <div className="container max-w-5xl mx-auto mb-6">
+    <div className="container max-w-7xl mx-auto mb-6 px-4">
       <div className="mb-6">
       </div>
 
-      <div className="grid grid-cols-1 gap-8">
-        <div className="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100">
-          <div className="p-6 md:p-8">
-            <h1 className="text-2xl md:text-3xl font-bold mb-2">
-              {decodeURI(coloringPage.title)}
-            </h1>
-
-            <div className="flex flex-wrap gap-2 mb-6">
-              {/* {coloringPage.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="inline-block bg-gray-100 rounded-full px-3 py-1 text-sm font-medium text-gray-700"
+      <div className="flex flex-col lg:flex-row gap-8">
+        {/* Left side - Image section */}
+        <div className="lg:w-1/2">
+          <div className="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 sticky top-8">
+            <div className="p-4 md:p-6">
+              {/* Mobile: Title above buttons */}
+              <div className="lg:hidden mb-4">
+                <h1 className="text-2xl md:text-3xl font-bold mb-4">
+                  {decodeURI(coloringPage.title)}
+                </h1>
+                
+                {/* Mobile: Action buttons below title and above image */}
+                <div className="flex flex-wrap gap-3 mb-4">
+                  <Button
+                    onClick={handlePrint}
+                    size="lg"
+                    className="bg-[#9d84ff] cursor-pointer hover:bg-[#8a6dff] rounded-full flex-1 h-12 text-base"
                   >
-                    {tag}
-                  </span>
-                ))} */}
-            </div>
+                    <Printer className="mr-2 h-5 w-5" />
+                    Print
+                  </Button>
 
-            {/* Image container with print-friendly styling */}
-            <div
-              ref={coloringImageRef}
-              className="relative bg-white rounded-lg border border-gray-200 mb-6"
-            >
-              <div className="aspect-[8.5/11] relative">
-                <Image
-                  src={coloringPage.image_url || PLACEHOLDER}
-                  alt={decodeURI(coloringPage.title)}
-                  fill
-                  className="object-contain"
-                  priority
-                />
+                  <Button
+                    onClick={handleFavorite}
+                    variant="outline"
+                    size="lg"
+                    className={`rounded-full cursor-pointer h-12 text-base ${
+                      isFavorited
+                        ? "bg-[#9d84ff]/10 text-[#9d84ff] border-[#9d84ff]"
+                        : ""
+                    }`}
+                  >
+                    <Heart
+                      className="mr-2 h-5 w-5"
+                      fill={isFavorited ? "currentColor" : "none"}
+                    />
+                    {isFavorited ? "Favorited" : "Favorite"}
+                  </Button>
+
+                  <Button
+                    onClick={handleShare}
+                    variant="outline"
+                    size="lg"
+                    className="rounded-full cursor-pointer h-12 text-base"
+                  >
+                    <Share2 className="mr-2 h-5 w-5" />
+                    Share
+                  </Button>
+                </div>
+              </div>
+
+              {/* Image container with print-friendly styling */}
+              <div
+                ref={coloringImageRef}
+                className="relative bg-white rounded-lg border border-gray-200"
+              >
+                <div className="aspect-[8.5/11] relative">
+                  <Image
+                    src={coloringPage.image_url || PLACEHOLDER}
+                    alt={decodeURI(coloringPage.title)}
+                    fill
+                    className="object-contain"
+                    priority
+                  />
+                </div>
               </div>
             </div>
+          </div>
+        </div>
 
-            {/* Action buttons */}
-            <div className="flex flex-wrap gap-3">
-              <Button
-                onClick={handlePrint}
-                className="bg-[#9d84ff] cursor-pointer hover:bg-[#8a6dff] rounded-full"
-              >
-                <Printer className="mr-2 h-4 w-4" />
-                Print Coloring Page
-              </Button>
-
-              <Button
-                onClick={handleFavorite}
-                variant="outline"
-                className={`rounded-full cursor-pointer ${
-                  isFavorited
-                    ? "bg-[#9d84ff]/10 text-[#9d84ff] border-[#9d84ff]"
-                    : ""
-                }`}
-              >
-                <Heart
-                  className="mr-2 h-4 w-4"
-                  fill={isFavorited ? "currentColor" : "none"}
-                />
-                {isFavorited ? "Favorited" : "Add to Favorites"}
-              </Button>
-
-              <Button
-                onClick={handleShare}
-                variant="outline"
-                className="rounded-full cursor-pointer"
-              >
-                <Share2 className="mr-2 h-4 w-4" />
-                Share
-              </Button>
-            </div>
-
-            {/* Description */}
-            {coloringPage.description && (
-              <div className="mt-8">
-                <h2 className="text-xl font-bold mb-3">
-                  About this Coloring Page
-                </h2>
-                <p className="text-gray-600">{coloringPage.description}</p>
+        {/* Right side - Details section */}
+        <div className="lg:w-1/2">
+          <div className="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100">
+            <div className="p-6 md:p-8">
+              {/* Desktop: Title in details section */}
+              <div className="hidden lg:block mb-6">
+                <h1 className="text-3xl md:text-4xl font-bold mb-2">
+                  {decodeURI(coloringPage.title)}
+                </h1>
               </div>
-            )}
 
-            {/* Coloring tips */}
-            <div className="mt-8 bg-[#f2f0ff] rounded-lg p-4">
-              <h2 className="text-lg font-bold mb-2">Coloring Tips</h2>
-              <ul className="list-disc list-inside text-gray-700 space-y-1">
-                <li>
-                  Print on standard letter-sized paper (8.5&quot; x 11&quot;)
-                </li>
-                <li>Use colored pencils, crayons, or markers</li>
-                <li>
-                  Start with lighter colors and gradually add darker shades
-                </li>
-                <li>Take your time and enjoy the process!</li>
-              </ul>
+              {/* Tags section (commented out but keeping structure) */}
+              <div className="flex flex-wrap gap-2 mb-6">
+                {/* {coloringPage.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="inline-block bg-gray-100 rounded-full px-3 py-1 text-sm font-medium text-gray-700"
+                    >
+                      {tag}
+                    </span>
+                  ))} */}
+              </div>
+
+              {/* Desktop: Action buttons in details section */}
+              <div className="hidden lg:flex flex-wrap gap-4 mb-8">
+                <Button
+                  onClick={handlePrint}
+                  size="lg"
+                  className="bg-[#9d84ff] cursor-pointer hover:bg-[#8a6dff] rounded-full h-14 text-lg px-8"
+                >
+                  <Printer className="mr-3 h-6 w-6" />
+                  Print Coloring Page
+                </Button>
+
+                <Button
+                  onClick={handleFavorite}
+                  variant="outline"
+                  size="lg"
+                  className={`rounded-full cursor-pointer h-14 text-lg px-8 ${
+                    isFavorited
+                      ? "bg-[#9d84ff]/10 text-[#9d84ff] border-[#9d84ff]"
+                      : ""
+                  }`}
+                >
+                  <Heart
+                    className="mr-3 h-6 w-6"
+                    fill={isFavorited ? "currentColor" : "none"}
+                  />
+                  {isFavorited ? "Favorited" : "Add to Favorites"}
+                </Button>
+
+                <Button
+                  onClick={handleShare}
+                  variant="outline"
+                  size="lg"
+                  className="rounded-full cursor-pointer h-14 text-lg px-8"
+                >
+                  <Share2 className="mr-3 h-6 w-6" />
+                  Share
+                </Button>
+              </div>
+
+              {/* Description */}
+              {coloringPage.description && (
+                <div className="mb-8">
+                  <h2 className="text-xl font-bold mb-3">
+                    About this Coloring Page
+                  </h2>
+                  <p className="text-gray-600 leading-relaxed">{coloringPage.description}</p>
+                </div>
+              )}
+
+              {/* Coloring tips */}
+              <div className="bg-[#f2f0ff] rounded-lg p-6">
+                <h2 className="text-lg font-bold mb-4">Coloring Tips</h2>
+                <ul className="list-disc list-inside text-gray-700 space-y-2">
+                  <li>
+                    Print on standard letter-sized paper (8.5&quot; x 11&quot;)
+                  </li>
+                  <li>Use colored pencils, crayons, or markers</li>
+                  <li>
+                    Start with lighter colors and gradually add darker shades
+                  </li>
+                  <li>Take your time and enjoy the process!</li>
+                </ul>
+              </div>
+
+              {/* Additional info section */}
+              <div className="mt-8 p-4 bg-gray-50 rounded-lg">
+                <h3 className="font-semibold mb-2">Free Printable Coloring Page</h3>
+                <p className="text-sm text-gray-600">
+                  This coloring page is completely free to download and print. 
+                  Perfect for kids, adults, classrooms, and therapeutic activities.
+                </p>
+              </div>
             </div>
           </div>
         </div>
