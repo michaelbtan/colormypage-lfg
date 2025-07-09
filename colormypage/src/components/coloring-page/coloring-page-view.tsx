@@ -141,50 +141,120 @@ ColoringPageViewProps) {
         <head>
           <title>${coloringPage.title} - Print</title>
           <style>
-            body {
+            * {
               margin: 0;
               padding: 0;
+              box-sizing: border-box;
+            }
+            
+            html, body {
+              width: 100%;
+              height: 100%;
+              margin: 0;
+              padding: 0;
+              overflow: hidden;
+            }
+            
+            .print-container {
+              width: 100vw;
+              height: 100vh;
               display: flex;
               justify-content: center;
               align-items: center;
-              min-height: 100vh;
-            }
-            .print-container {
-              max-width: 100%;
-              max-height: 100vh;
               page-break-inside: avoid;
             }
+            
             .print-container img {
-              width: 100%;
+              max-width: 100%;
+              max-height: 100%;
+              width: auto;
               height: auto;
-              max-height: 100vh;
               object-fit: contain;
+              display: block;
             }
+            
             @media print {
               @page {
-                size: auto;
-                margin: 0mm;
+                size: letter;
+                margin: 0.5in;
               }
-              body {
+              
+              html, body {
+                width: 100%;
+                height: 100%;
                 margin: 0;
                 padding: 0;
+                overflow: visible;
+              }
+              
+              .print-container {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                page-break-inside: avoid;
+                page-break-after: auto;
+              }
+              
+              .print-container img {
+                max-width: 100%;
+                max-height: 100%;
+                width: auto;
+                height: auto;
+                object-fit: contain;
+                page-break-inside: avoid;
+              }
+            }
+            
+            @media screen {
+              body {
+                background-color: #f0f0f0;
+              }
+              
+              .print-container {
+                background-color: white;
+                box-shadow: 0 0 10px rgba(0,0,0,0.1);
               }
             }
           </style>
         </head>
         <body>
           <div class="print-container">
-            <img src="${coloringPage.image_url}" alt="${coloringPage.title}" />
+            <img src="${coloringPage.image_url}" alt="${coloringPage.title}" onload="fitToPage()" />
           </div>
           <script>
+            function fitToPage() {
+              const img = document.querySelector('img');
+              const container = document.querySelector('.print-container');
+              
+              if (img && container) {
+                // Ensure image fits within print area
+                const containerWidth = container.clientWidth;
+                const containerHeight = container.clientHeight;
+                const imgAspectRatio = img.naturalWidth / img.naturalHeight;
+                const containerAspectRatio = containerWidth / containerHeight;
+                
+                if (imgAspectRatio > containerAspectRatio) {
+                  // Image is wider, fit to width
+                  img.style.width = '100%';
+                  img.style.height = 'auto';
+                } else {
+                  // Image is taller, fit to height
+                  img.style.height = '100%';
+                  img.style.width = 'auto';
+                }
+              }
+            }
+            
             // Automatically print and then close the window when loaded
             window.onload = function() {
               setTimeout(function() {
                 window.print();
                 setTimeout(function() {
                   window.close();
-                }, 500);
-              }, 300);
+                }, 1000);
+              }, 500);
             };
           </script>
         </body>
