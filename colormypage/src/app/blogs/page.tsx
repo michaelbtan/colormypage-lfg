@@ -76,12 +76,12 @@ export default async function BlogsPage() {
               <div className="grid gap-8 md:grid-cols-4">
                 {blogPosts.map((blog) => (
                   <article key={blog.id} className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:scale-105">
-                    <Link href={`/blog/${blog.id}`} className="block">
+                    <Link href={`/blog/${blog.title}`} className="block">
                       {blog.cover_image && (
                         <div className="relative w-full h-48 md:h-56">
                           <Image
                             src={blog.cover_image}
-                            alt={blog.title}
+                            alt={decodeURI(blog.title)}
                             fill
                             className="object-cover"
                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -93,7 +93,7 @@ export default async function BlogsPage() {
                       <div className="p-6">
                         <header className="mb-4">
                           <h2 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-2 line-clamp-2">
-                            {blog.title}
+                            {decodeURI(blog.title)}
                           </h2>
                           
                           {blog.subtitle && (

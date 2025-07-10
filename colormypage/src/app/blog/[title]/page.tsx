@@ -19,19 +19,19 @@ interface BlogPost {
 }
 
 interface BlogPageProps {
-  params: Promise<{ post: string }>;
+  params: Promise<{ title: string }>;
 }
 
 export async function generateMetadata({
   params,
 }: BlogPageProps): Promise<Metadata> {
-  const { post: postId } = await params;
+  const { title: title } = await params;
   const supabase = await createClient();
   
   const { data: blog } = await supabase
     .from("blog")
     .select("title, subtitle, cover_image")
-    .eq("id", postId)
+    .eq("title", title)
     .single();
 
   if (!blog) {
@@ -42,17 +42,17 @@ export async function generateMetadata({
   }
 
   return {
-    title: blog.title,
+    title: decodeURI(blog.title),
     description: blog.subtitle || "Read this blog post on ColorMyPage",
     openGraph: {
-      title: blog.title,
+    title: decodeURI(blog.title),
       description: blog.subtitle || "Read this blog post on ColorMyPage",
       images: blog.cover_image ? [blog.cover_image] : [],
       type: "article",
     },
     twitter: {
       card: "summary_large_image",
-      title: blog.title,
+    title: decodeURI(blog.title),
       description: blog.subtitle || "Read this blog post on ColorMyPage",
       images: blog.cover_image ? [blog.cover_image] : [],
     },
@@ -60,13 +60,13 @@ export async function generateMetadata({
 }
 
 export default async function BlogPostPage({ params }: BlogPageProps) {
-  const { post: postId } = await params;
+  const { title: title } = await params;
   const supabase = await createClient();
 
   const { data: blog, error } = await supabase
     .from("blog")
     .select("*")
-    .eq("id", postId)
+    .eq("title", title)
     .single();
 
   if (error || !blog) {
@@ -85,7 +85,7 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
                 <div className="relative w-full h-64 md:h-96">
                   <Image
                     src={blogPost.cover_image}
-                    alt={blogPost.title}
+                    alt={decodeURI(blogPost.title)}
                     fill
                     className="object-cover"
                     priority
@@ -97,7 +97,7 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
               <div className="p-6 md:p-8">
                 <header className="mb-8">
                   <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4 leading-tight">
-                    {blogPost.title}
+                    {decodeURI(blogPost.title)}
                   </h1>
                   
                   {blogPost.subtitle && (
