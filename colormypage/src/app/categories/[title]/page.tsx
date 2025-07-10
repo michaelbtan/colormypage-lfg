@@ -36,14 +36,14 @@ export async function generateMetadata({
     .eq("category_id", category.id);
 
   return {
-    title: `${count} ${decodeURI(
+    title: `${count} Free ${decodeURI(
       category.title
-    )} Free Printable Coloring Pages (PDF)`,
+    )} Printable Coloring Pages (PDF)`,
     description: `${category.description}. Download and print free coloring pages for kids and adults. Perfect for home, school, or therapy.`,
     openGraph: {
-      title: `${count} ${decodeURI(
+      title: `${count} Free ${decodeURI(
         category.title
-      )} Free Printable Coloring Pages (PDF)`,
+      )} Printable Coloring Pages (PDF)`,
       description: `${category.description}. Download and print free coloring pages for kids and adults. Perfect for home, school, or therapy.`,
       type: "website",
       url: `https://colormypage.com/categories/${title}`,
@@ -59,9 +59,9 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: `${count} ${decodeURI(
+      title: `${count} Free ${decodeURI(
         category.title
-      )} Free Printable Coloring Pages (PDF)`,
+      )} Printable Coloring Pages (PDF)`,
       description: `${category.description}. Download and print free coloring pages for kids and adults. Perfect for home, school, or therapy.`,
       images: [category.banner_image_url || category.cover_image_url || LOGO],
     },
