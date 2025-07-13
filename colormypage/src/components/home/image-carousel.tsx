@@ -30,7 +30,7 @@ const carouselImages: CarouselImage[] = [
     alt: "Featured Unicorn coloring pages",
     title: "Unicorn Dreams",
     subtitle: "Color magical unicorns and their enchanting worlds",
-    href: "/categories/Unicorns",
+    href: "/categories/Unicorn",
 
   },
   {

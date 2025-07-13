@@ -2,250 +2,244 @@
   "prompts":
 [
   {
-    "title": "Cat Tea Party",
-    "description": "Adorable cats sitting around a tiny table enjoying tea and cupcakes with fancy hats.",
-    "keywords": ["cats tea party", "cute cats", "tea time", "whimsical cats"]
+    "title": "Mermaid Under the Moon",
+    "description": "A serene mermaid resting on a rock, gazing up at a glowing full moon with sparkling stars all around.",
+    "keywords": ["mermaid art", "night sky", "moon illustration", "fantasy drawing"]
   },
   {
-    "title": "Gardening Cats",
-    "description": "Playful cats planting flowers and watering plants in a sunny garden.",
-    "keywords": ["cats gardening", "cats with flowers", "garden cats", "spring cats"]
+    "title": "Mermaid and Her Dolphin Friend",
+    "description": "A joyful mermaid swimming alongside a playful dolphin among ocean waves and sea foam.",
+    "keywords": ["dolphin art", "underwater scene", "marine animals", "friendship theme"]
   },
   {
-    "title": "Camping Adventure",
-    "description": "Curious cats roasting marshmallows and telling stories by the campfire under the stars.",
-    "keywords": ["camping cats", "outdoor cats", "cat adventure", "starry night"]
+    "title": "Mermaid with a Treasure Chest",
+    "description": "A curious mermaid discovering an ancient treasure chest overflowing with jewels and coins.",
+    "keywords": ["treasure hunt", "ocean treasure", "pirate theme", "hidden gems"]
   },
   {
-    "title": "Chef Cats in the Kitchen",
-    "description": "Funny cats wearing chef hats baking cookies and making delicious treats.",
-    "keywords": ["chef cats", "cooking cats", "kitchen cats", "baking cats"]
+    "title": "Mermaid's Coral Castle",
+    "description": "A majestic underwater castle made of coral and shells where the mermaid princess lives.",
+    "keywords": ["castle illustration", "ocean palace", "coral reef", "royal theme"]
   },
   {
-    "title": "Pirate Cats on the High Seas",
-    "description": "Brave pirate cats sailing a ship and looking through telescopes.",
-    "keywords": ["pirate cats", "nautical cats", "adventure cats", "sailing cats"]
+    "title": "Mermaid Tea Party",
+    "description": "Mermaids sitting around a clam-shaped table having tea and seaweed cupcakes.",
+    "keywords": ["tea party art", "cute mermaids", "ocean party", "sweet treats"]
   },
   {
-    "title": "Cat Circus Extravaganza",
-    "description": "Talented cats performing tricks and balancing on colorful balls.",
-    "keywords": ["circus cats", "performing cats", "acrobatic cats", "funny cats"]
+    "title": "Mermaid and the Giant Seahorse",
+    "description": "A brave mermaid riding a giant seahorse through a kelp forest.",
+    "keywords": ["seahorse art", "kelp forest", "fantasy creatures", "adventure drawing"]
   },
   {
-    "title": "Musician Cats Band",
-    "description": "Cats playing different musical instruments in a rock band.",
-    "keywords": ["musician cats", "cats with instruments", "rock band cats", "music cats"]
+    "title": "Mermaid Reading a Book",
+    "description": "A studious mermaid sitting on a rock with an open book and seashell glasses.",
+    "keywords": ["book lover", "reading nook", "mermaid study", "cute illustration"]
   },
   {
-    "title": "Space Explorer Cats",
-    "description": "Adventurous cats floating in space suits and exploring planets.",
-    "keywords": ["space cats", "astronaut cats", "galaxy cats", "explorer cats"]
+    "title": "Mermaid Birthday Party",
+    "description": "Mermaids celebrating a birthday with balloons, gifts, and a coral cake.",
+    "keywords": ["birthday party art", "celebration drawing", "party theme", "festive scene"]
   },
   {
-    "title": "Mermaid Cats Under the Sea",
-    "description": "Magical mermaid cats swimming with fish and collecting seashells.",
-    "keywords": ["mermaid cats", "ocean cats", "underwater cats", "fantasy cats"]
+    "title": "Mermaid and Baby Turtle",
+    "description": "A gentle mermaid helping a baby turtle find its way home.",
+    "keywords": ["turtle rescue", "ocean conservation", "animal friend", "heartwarming art"]
   },
   {
-    "title": "Superhero Cats Saving the Day",
-    "description": "Heroic cats wearing capes and masks flying over the city.",
-    "keywords": ["superhero cats", "flying cats", "rescue cats", "comic cats"]
+    "title": "Mermaid Playing the Harp",
+    "description": "A musical mermaid strumming a harp made from coral and pearls.",
+    "keywords": ["music illustration", "harp art", "melody theme", "fantasy music"]
   },
   {
-    "title": "Detective Cats on the Case",
-    "description": "Sleuth cats searching for clues with magnifying glasses.",
-    "keywords": ["detective cats", "mystery cats", "investigator cats", "spy cats"]
+    "title": "Mermaid and the Sunken Ship",
+    "description": "A curious mermaid exploring a mysterious old shipwreck.",
+    "keywords": ["shipwreck drawing", "nautical adventure", "exploration art", "ocean mystery"]
   },
   {
-    "title": "Beach Vacation Cats",
-    "description": "Relaxed cats building sandcastles and surfing waves.",
-    "keywords": ["beach cats", "summer cats", "vacation cats", "surfing cats"]
+    "title": "Mermaid in a Seashell Swing",
+    "description": "A playful mermaid swinging from a giant seashell hung by kelp vines.",
+    "keywords": ["swing art", "playful illustration", "ocean playground", "fun theme"]
   },
   {
-    "title": "Artist Cats Painting Masterpieces",
-    "description": "Creative cats holding brushes and painting colorful canvases.",
-    "keywords": ["artist cats", "painting cats", "creative cats", "art studio cats"]
+    "title": "Mermaid Garden",
+    "description": "A mermaid tending a magical underwater garden full of glowing plants.",
+    "keywords": ["underwater garden", "sea plants", "nature illustration", "botanical fantasy"]
   },
   {
-    "title": "Yoga Cats Zen Time",
-    "description": "Peaceful cats stretching and meditating on yoga mats.",
-    "keywords": ["yoga cats", "meditating cats", "calm cats", "zen cats"]
+    "title": "Mermaid and Jellyfish Parade",
+    "description": "A mermaid surrounded by floating jellyfish with glowing tendrils.",
+    "keywords": ["jellyfish art", "glowing ocean", "marine parade", "fantasy sea life"]
   },
   {
-    "title": "Library Cats Reading Books",
-    "description": "Studious cats surrounded by stacks of books in a cozy library.",
-    "keywords": ["library cats", "reading cats", "book cats", "study cats"]
+    "title": "Mermaid Sisters",
+    "description": "Two mermaid sisters holding hands and swimming together in the ocean.",
+    "keywords": ["sister art", "family theme", "mermaid siblings", "togetherness"]
   },
   {
-    "title": "Magician Cats Performing Tricks",
-    "description": "Enchanting cats pulling rabbits out of hats and juggling cards.",
-    "keywords": ["magician cats", "magic cats", "trickster cats", "illusion cats"]
+    "title": "Mermaid and the Octopus",
+    "description": "A friendly mermaid playing with a curious octopus near a coral reef.",
+    "keywords": ["octopus illustration", "marine animals", "friendship art", "ocean creatures"]
   },
   {
-    "title": "Cat Princess and Castle",
-    "description": "Royal cat wearing a crown sitting in a fairytale castle.",
-    "keywords": ["princess cat", "royal cats", "castle cats", "fairytale cats"]
+    "title": "Mermaid Lagoon",
+    "description": "A tranquil mermaid resting in a hidden lagoon surrounded by tropical flowers.",
+    "keywords": ["lagoon scene", "peaceful art", "hidden paradise", "nature drawing"]
   },
   {
-    "title": "Rainy Day Cats in Boots",
-    "description": "Happy cats jumping in puddles with umbrellas and raincoats.",
-    "keywords": ["rainy day cats", "puddle cats", "umbrella cats", "cute weather cats"]
+    "title": "Mermaid Crown Crafting",
+    "description": "A creative mermaid making a crown from seashells and pearls.",
+    "keywords": ["craft art", "mermaid DIY", "creative activity", "underwater royalty"]
   },
   {
-    "title": "Mountain Climbing Cats",
-    "description": "Adventurous cats climbing snowy peaks with backpacks.",
-    "keywords": ["mountain cats", "climbing cats", "adventure cats", "outdoor cats"]
+    "title": "Mermaid and Starfish Dance",
+    "description": "A joyful mermaid dancing among colorful starfish on the sandy ocean floor.",
+    "keywords": ["dance illustration", "starfish art", "celebration theme", "fun drawing"]
   },
   {
-    "title": "Farmer Cats on the Tractor",
-    "description": "Busy cats driving a tractor and harvesting crops.",
-    "keywords": ["farmer cats", "tractor cats", "harvest cats", "country cats"]
+    "title": "Mermaid Bubble Blowing",
+    "description": "A playful mermaid blowing giant bubbles that float through the sea.",
+    "keywords": ["bubble art", "playful drawing", "ocean fun", "creative scene"]
   },
   {
-    "title": "Ballerina Cats in Tutus",
-    "description": "Graceful cats dancing ballet on stage in sparkling tutus.",
-    "keywords": ["ballerina cats", "dance cats", "performance cats", "elegant cats"]
+    "title": "Mermaid and Sea Unicorn",
+    "description": "A mermaid meeting a magical sea unicorn with a shimmering horn.",
+    "keywords": ["sea unicorn art", "fantasy animals", "magical creature", "imagination"]
   },
   {
-    "title": "Baking Birthday Cake Cats",
-    "description": "Cheerful cats baking and decorating a big birthday cake.",
-    "keywords": ["birthday cats", "cake cats", "party cats", "celebration cats"]
+    "title": "Mermaid Shell Collector",
+    "description": "A mermaid gathering beautiful seashells into a woven basket.",
+    "keywords": ["shell collecting", "nature treasure", "ocean harvest", "beachcombing"]
   },
   {
-    "title": "Knitting Cozy Sweaters Cats",
-    "description": "Crafty cats knitting scarves and sweaters by the fireplace.",
-    "keywords": ["knitting cats", "crafting cats", "cozy cats", "winter cats"]
+    "title": "Mermaid and Giant Clam",
+    "description": "A mermaid sitting inside a giant open clam as her royal throne.",
+    "keywords": ["giant clam art", "royal throne", "underwater royalty", "fantasy scene"]
   },
   {
-    "title": "Treasure Hunt Explorer Cats",
-    "description": "Curious cats with maps and compasses searching for treasure.",
-    "keywords": ["explorer cats", "treasure hunt cats", "adventure cats", "map cats"]
+    "title": "Mermaid and Coral Dragon",
+    "description": "A mermaid befriending a tiny dragon that lives in the coral reef.",
+    "keywords": ["coral dragon art", "fantasy friendship", "tiny creature", "ocean magic"]
   },
   {
-    "title": "Cat Flower Shop",
-    "description": "Sweet cats arranging bouquets and watering flowers in a shop.",
-    "keywords": ["flower shop cats", "florist cats", "spring cats", "blossom cats"]
+    "title": "Mermaid with Baby Mermaids",
+    "description": "A nurturing mermaid surrounded by adorable baby mermaids learning to swim.",
+    "keywords": ["baby mermaids", "motherhood art", "family scene", "cute illustration"]
   },
   {
-    "title": "Firefighter Cats Saving the Day",
-    "description": "Brave cats in helmets putting out a fire with hoses.",
-    "keywords": ["firefighter cats", "rescue cats", "hero cats", "emergency cats"]
+    "title": "Mermaid and the Storm",
+    "description": "A brave mermaid swimming through turbulent waves during a storm.",
+    "keywords": ["stormy sea", "adventure art", "dramatic illustration", "heroic theme"]
   },
   {
-    "title": "Skateboarding Cool Cats",
-    "description": "Trendy cats doing tricks on skateboards in the park.",
-    "keywords": ["skateboard cats", "sporty cats", "cool cats", "urban cats"]
+    "title": "Mermaid on a Pearl Throne",
+    "description": "A regal mermaid seated on a throne carved from a giant pearl.",
+    "keywords": ["pearl throne art", "royal mermaid", "elegant drawing", "fantasy royalty"]
   },
   {
-    "title": "Cat Bakery Shop",
-    "description": "Baker cats making bread and pastries in a cozy bakery.",
-    "keywords": ["bakery cats", "baking cats", "pastry cats", "chef cats"]
+    "title": "Mermaid and the Seahorse Carousel",
+    "description": "Mermaids riding seahorses like a magical carousel ride.",
+    "keywords": ["carousel art", "fantasy ride", "seahorse illustration", "whimsical scene"]
   },
   {
-    "title": "Camping Under the Stars",
-    "description": "Cats roasting marshmallows and gazing at the stars in sleeping bags.",
-    "keywords": ["camping cats", "night sky cats", "tent cats", "adventure cats"]
+    "title": "Mermaid and the Manta Ray",
+    "description": "A graceful mermaid swimming side by side with a majestic manta ray.",
+    "keywords": ["manta ray art", "ocean companion", "graceful illustration", "marine life"]
   },
   {
-    "title": "Hot Air Balloon Ride",
-    "description": "Cats floating high above the fields in a colorful hot air balloon.",
-    "keywords": ["hot air balloon cats", "travel cats", "sky cats", "floating cats"]
+    "title": "Mermaid and Hidden Treasure Map",
+    "description": "A mermaid studying an old map to find a hidden treasure.",
+    "keywords": ["treasure map art", "adventure theme", "pirate treasure", "nautical drawing"]
   },
   {
-    "title": "Cat Ice Cream Truck",
-    "description": "Cats serving ice cream cones from a bright ice cream truck.",
-    "keywords": ["ice cream cats", "summer cats", "treat cats", "dessert cats"]
+    "title": "Mermaid and Seahorse Babies",
+    "description": "A mermaid gently caring for a group of tiny baby seahorses.",
+    "keywords": ["baby seahorses", "caring illustration", "marine nursery", "gentle art"]
   },
   {
-    "title": "Snow Day Sledding Cats",
-    "description": "Cats sledding down snowy hills and throwing snowballs.",
-    "keywords": ["sledding cats", "winter cats", "snowball cats", "holiday cats"]
+    "title": "Mermaid Painting Seashells",
+    "description": "A creative mermaid painting colorful patterns on seashells.",
+    "keywords": ["painting art", "craft illustration", "creative mermaid", "DIY theme"]
   },
   {
-    "title": "Rock Climbing Cats",
-    "description": "Energetic cats climbing tall rocks with harnesses.",
-    "keywords": ["rock climbing cats", "adventure cats", "outdoor cats", "sport cats"]
+    "title": "Mermaid and the Sunken Piano",
+    "description": "A mermaid playing an old piano sunk deep in the ocean.",
+    "keywords": ["piano art", "music underwater", "mystical theme", "musical illustration"]
   },
   {
-    "title": "Cat Photographers",
-    "description": "Cats snapping photos with cameras in nature.",
-    "keywords": ["photographer cats", "camera cats", "nature cats", "explorer cats"]
+    "title": "Mermaid Waving Hello",
+    "description": "A friendly mermaid waving to the viewer with a warm smile.",
+    "keywords": ["friendly art", "welcoming illustration", "happy mermaid", "cute character"]
   },
   {
-    "title": "Astronomy Stargazing Cats",
-    "description": "Cats looking through telescopes and drawing constellations.",
-    "keywords": ["astronomy cats", "stargazing cats", "space cats", "night cats"]
+    "title": "Mermaid and the Bubble Castle",
+    "description": "A fantasy castle made entirely of shimmering bubbles and guarded by mermaids.",
+    "keywords": ["bubble castle art", "fantasy building", "magical scene", "whimsical architecture"]
   },
   {
-    "title": "Cat Movie Night",
-    "description": "Cats munching popcorn and watching a movie together.",
-    "keywords": ["movie night cats", "cozy cats", "popcorn cats", "fun cats"]
+    "title": "Mermaid Braiding Her Hair",
+    "description": "A mermaid braiding her long flowing hair decorated with tiny shells.",
+    "keywords": ["hair braiding art", "beauty theme", "cute mermaid", "self-care"]
   },
   {
-    "title": "Fairy Cats in the Forest",
-    "description": "Magical fairy cats with wings exploring an enchanted forest.",
-    "keywords": ["fairy cats", "fantasy cats", "enchanted cats", "magic cats"]
+    "title": "Mermaid and the Giant Whale",
+    "description": "A tiny mermaid riding on the back of a friendly giant whale.",
+    "keywords": ["whale art", "ocean friendship", "big and small", "marine adventure"]
   },
   {
-    "title": "Cat Farmers Market",
-    "description": "Friendly cats selling fruits and vegetables at a market stall.",
-    "keywords": ["market cats", "farmers market cats", "fruit cats", "vegetable cats"]
+    "title": "Mermaid and the Floating Lanterns",
+    "description": "Mermaids releasing glowing lanterns into the ocean currents.",
+    "keywords": ["lantern art", "peaceful scene", "night illustration", "fantasy lights"]
   },
   {
-    "title": "Cat Sleepover Party",
-    "description": "Cats in pajamas having a pillow fight and telling stories.",
-    "keywords": ["sleepover cats", "pajama cats", "slumber party cats", "fun cats"]
+    "title": "Mermaid with Sea Crown",
+    "description": "A mermaid wearing a crown made of coral, pearls, and starfish.",
+    "keywords": ["sea crown art", "royalty theme", "mermaid queen", "ocean royalty"]
   },
   {
-    "title": "Cat Science Lab",
-    "description": "Scientist cats mixing potions and studying experiments.",
-    "keywords": ["science cats", "lab cats", "experiment cats", "smart cats"]
+    "title": "Mermaid and the Ship in a Bottle",
+    "description": "A mermaid examining a magical ship trapped inside a giant bottle.",
+    "keywords": ["ship in bottle", "magic object", "nautical art", "fantasy theme"]
   },
   {
-    "title": "Cat Picnic in the Park",
-    "description": "Cats enjoying a picnic with sandwiches and lemonade.",
-    "keywords": ["picnic cats", "outdoor cats", "summer cats", "fun cats"]
+    "title": "Mermaid and the Crystal Cave",
+    "description": "A mermaid discovering a hidden cave filled with giant crystals.",
+    "keywords": ["crystal cave art", "hidden treasure", "magical discovery", "fantasy crystals"]
   },
   {
-    "title": "Cat Race Car Drivers",
-    "description": "Speedy cats racing colorful cars around the track.",
-    "keywords": ["race car cats", "driver cats", "sporty cats", "fast cats"]
+    "title": "Mermaid Making Sea Art",
+    "description": "A creative mermaid making patterns in the sand with shells and stones.",
+    "keywords": ["sea art", "creative expression", "sand art", "imagination theme"]
   },
   {
-    "title": "Cat Post Office",
-    "description": "Cats delivering letters and packages in a cute post office.",
-    "keywords": ["post office cats", "mail cats", "delivery cats", "working cats"]
+    "title": "Mermaid Feeding the Fish",
+    "description": "A gentle mermaid feeding a school of hungry little fish.",
+    "keywords": ["feeding fish", "kindness art", "animal care", "heartwarming scene"]
   },
   {
-    "title": "Cat Beekeepers",
-    "description": "Cats tending beehives and collecting honey.",
-    "keywords": ["beekeeper cats", "honey cats", "garden cats", "nature cats"]
+    "title": "Mermaid and the Golden Seahorse",
+    "description": "A mermaid meeting a rare golden seahorse shimmering in the sunlight.",
+    "keywords": ["golden seahorse art", "rare creature", "magical animal", "special moment"]
   },
   {
-    "title": "Cat Train Conductors",
-    "description": "Cats driving a steam train through the countryside.",
-    "keywords": ["train cats", "conductor cats", "travel cats", "railroad cats"]
+    "title": "Mermaid and the Rainbow Coral",
+    "description": "A mermaid swimming through a colorful coral reef filled with rainbows.",
+    "keywords": ["rainbow coral", "colorful illustration", "fantasy reef", "vibrant scene"]
   },
   {
-    "title": "Cat Astronauts on the Moon",
-    "description": "Cats planting flags and exploring the moon surface.",
-    "keywords": ["moon cats", "astronaut cats", "space explorer cats", "galaxy cats"]
+    "title": "Mermaid Blowing Kisses",
+    "description": "A cute mermaid blowing bubbles shaped like hearts.",
+    "keywords": ["bubble hearts", "cute scene", "love theme", "playful art"]
   },
   {
-    "title": "Cat Farmers Harvesting Pumpkins",
-    "description": "Cats picking pumpkins in a colorful autumn field.",
-    "keywords": ["pumpkin cats", "fall cats", "harvest cats", "autumn cats"]
-  },
-  {
-    "title": "Cat Ice Skaters",
-    "description": "Graceful cats twirling on ice in winter outfits.",
-    "keywords": ["ice skating cats", "winter cats", "sports cats", "snow cats"]
+    "title": "Mermaid and the Magical Pearl",
+    "description": "A mermaid holding a giant glowing pearl that lights up the sea.",
+    "keywords": ["glowing pearl art", "magical light", "fantasy treasure", "shimmering illustration"]
   }
 ]
-
 ,
-  "pinterestBoard": "Cat - Free Printable Coloring Pages",
-  "categoryId": "20f93ff8-26c2-44a0-8b2b-f56b4709a566",
+  "pinterestBoard": "Mermaids - Free Printable Coloring Pages",
+  "categoryId": "898c7c8f-38c7-4148-8ee0-09915cf32f65",
   "batchSize": 1,
   "outDir": "images",
   "model": "gpt-image-1",
