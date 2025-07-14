@@ -2,244 +2,250 @@
   "prompts":
 [
   {
-    "title": "Mermaid Under the Moon",
-    "description": "A serene mermaid resting on a rock, gazing up at a glowing full moon with sparkling stars all around.",
-    "keywords": ["mermaid art", "night sky", "moon illustration", "fantasy drawing"]
+    "title": "Starry Night Tent",
+    "description": "A cozy tent set up under a sparkling star-filled sky with a crescent moon.",
+    "keywords": ["camping tent", "starry sky", "nighttime adventure"]
   },
   {
-    "title": "Mermaid and Her Dolphin Friend",
-    "description": "A joyful mermaid swimming alongside a playful dolphin among ocean waves and sea foam.",
-    "keywords": ["dolphin art", "underwater scene", "marine animals", "friendship theme"]
+    "title": "Campfire Stories",
+    "description": "Children sitting around a campfire, roasting marshmallows and telling stories.",
+    "keywords": ["campfire fun", "marshmallow roasting", "storytelling"]
   },
   {
-    "title": "Mermaid with a Treasure Chest",
-    "description": "A curious mermaid discovering an ancient treasure chest overflowing with jewels and coins.",
-    "keywords": ["treasure hunt", "ocean treasure", "pirate theme", "hidden gems"]
+    "title": "Hiking the Trail",
+    "description": "Kids hiking along a forest trail with backpacks and walking sticks.",
+    "keywords": ["hiking trail", "forest walk", "backpacking adventure"]
   },
   {
-    "title": "Mermaid's Coral Castle",
-    "description": "A majestic underwater castle made of coral and shells where the mermaid princess lives.",
-    "keywords": ["castle illustration", "ocean palace", "coral reef", "royal theme"]
+    "title": "Fishing at the Lake",
+    "description": "A boy and a girl fishing off a dock with fish jumping in the water.",
+    "keywords": ["lake fishing", "dock fun", "catching fish"]
   },
   {
-    "title": "Mermaid Tea Party",
-    "description": "Mermaids sitting around a clam-shaped table having tea and seaweed cupcakes.",
-    "keywords": ["tea party art", "cute mermaids", "ocean party", "sweet treats"]
+    "title": "Wildlife Watch",
+    "description": "Binoculars pointed at deer, rabbits, and birds near the campsite.",
+    "keywords": ["wildlife spotting", "nature watching", "animals"]
   },
   {
-    "title": "Mermaid and the Giant Seahorse",
-    "description": "A brave mermaid riding a giant seahorse through a kelp forest.",
-    "keywords": ["seahorse art", "kelp forest", "fantasy creatures", "adventure drawing"]
+    "title": "Canoeing Adventure",
+    "description": "Two campers paddling a canoe down a peaceful river surrounded by trees.",
+    "keywords": ["canoe trip", "river paddling", "water adventure"]
   },
   {
-    "title": "Mermaid Reading a Book",
-    "description": "A studious mermaid sitting on a rock with an open book and seashell glasses.",
-    "keywords": ["book lover", "reading nook", "mermaid study", "cute illustration"]
+    "title": "Backpack Packing",
+    "description": "All the camping essentials laid out to pack: lantern, compass, snacks, and map.",
+    "keywords": ["camping gear", "packing list", "trip preparation"]
   },
   {
-    "title": "Mermaid Birthday Party",
-    "description": "Mermaids celebrating a birthday with balloons, gifts, and a coral cake.",
-    "keywords": ["birthday party art", "celebration drawing", "party theme", "festive scene"]
+    "title": "Camp Kitchen",
+    "description": "Cooking breakfast on a camp stove with pancakes and eggs sizzling.",
+    "keywords": ["outdoor cooking", "camp meals", "breakfast"]
   },
   {
-    "title": "Mermaid and Baby Turtle",
-    "description": "A gentle mermaid helping a baby turtle find its way home.",
-    "keywords": ["turtle rescue", "ocean conservation", "animal friend", "heartwarming art"]
+    "title": "Nature Scavenger Hunt",
+    "description": "Kids collecting leaves, pinecones, and feathers in baskets.",
+    "keywords": ["nature hunt", "collecting treasures", "outdoor exploration"]
   },
   {
-    "title": "Mermaid Playing the Harp",
-    "description": "A musical mermaid strumming a harp made from coral and pearls.",
-    "keywords": ["music illustration", "harp art", "melody theme", "fantasy music"]
+    "title": "Treehouse Campout",
+    "description": "A wooden treehouse decorated with lanterns and blankets.",
+    "keywords": ["treehouse adventure", "sleepover", "forest camp"]
   },
   {
-    "title": "Mermaid and the Sunken Ship",
-    "description": "A curious mermaid exploring a mysterious old shipwreck.",
-    "keywords": ["shipwreck drawing", "nautical adventure", "exploration art", "ocean mystery"]
+    "title": "Mountain View Camp",
+    "description": "A campsite overlooking a range of majestic mountains at sunrise.",
+    "keywords": ["mountain camping", "sunrise view", "scenic landscape"]
   },
   {
-    "title": "Mermaid in a Seashell Swing",
-    "description": "A playful mermaid swinging from a giant seashell hung by kelp vines.",
-    "keywords": ["swing art", "playful illustration", "ocean playground", "fun theme"]
+    "title": "Birdwatching Binoculars",
+    "description": "A child spotting colorful birds with a field guide in hand.",
+    "keywords": ["birdwatching", "nature study", "binocular fun"]
   },
   {
-    "title": "Mermaid Garden",
-    "description": "A mermaid tending a magical underwater garden full of glowing plants.",
-    "keywords": ["underwater garden", "sea plants", "nature illustration", "botanical fantasy"]
+    "title": "Campfire Songs",
+    "description": "A group playing guitar and singing songs around a glowing fire.",
+    "keywords": ["campfire music", "singalong", "guitar"]
   },
   {
-    "title": "Mermaid and Jellyfish Parade",
-    "description": "A mermaid surrounded by floating jellyfish with glowing tendrils.",
-    "keywords": ["jellyfish art", "glowing ocean", "marine parade", "fantasy sea life"]
+    "title": "Telling Ghost Stories",
+    "description": "Spooky shadows and kids making scary faces by flashlight.",
+    "keywords": ["ghost stories", "flashlight fun", "night adventure"]
   },
   {
-    "title": "Mermaid Sisters",
-    "description": "Two mermaid sisters holding hands and swimming together in the ocean.",
-    "keywords": ["sister art", "family theme", "mermaid siblings", "togetherness"]
+    "title": "S'mores Treat Time",
+    "description": "Marshmallows, chocolate, and graham crackers all ready to assemble.",
+    "keywords": ["s'mores snack", "sweet treats", "campfire dessert"]
   },
   {
-    "title": "Mermaid and the Octopus",
-    "description": "A friendly mermaid playing with a curious octopus near a coral reef.",
-    "keywords": ["octopus illustration", "marine animals", "friendship art", "ocean creatures"]
+    "title": "Setting Up the Tent",
+    "description": "Kids working together to pitch a bright-colored tent.",
+    "keywords": ["tent building", "teamwork", "camp setup"]
   },
   {
-    "title": "Mermaid Lagoon",
-    "description": "A tranquil mermaid resting in a hidden lagoon surrounded by tropical flowers.",
-    "keywords": ["lagoon scene", "peaceful art", "hidden paradise", "nature drawing"]
+    "title": "Forest Animals",
+    "description": "Cute raccoons and squirrels sneaking around the campsite.",
+    "keywords": ["forest friends", "animals", "camp visitors"]
   },
   {
-    "title": "Mermaid Crown Crafting",
-    "description": "A creative mermaid making a crown from seashells and pearls.",
-    "keywords": ["craft art", "mermaid DIY", "creative activity", "underwater royalty"]
+    "title": "Night Sky Constellations",
+    "description": "A sky map showing constellations above the tent.",
+    "keywords": ["stargazing", "constellation map", "astronomy"]
   },
   {
-    "title": "Mermaid and Starfish Dance",
-    "description": "A joyful mermaid dancing among colorful starfish on the sandy ocean floor.",
-    "keywords": ["dance illustration", "starfish art", "celebration theme", "fun drawing"]
+    "title": "Rainy Day Camp",
+    "description": "Kids in raincoats splashing in puddles by the tent.",
+    "keywords": ["rainy camping", "puddle jumping", "wet weather fun"]
   },
   {
-    "title": "Mermaid Bubble Blowing",
-    "description": "A playful mermaid blowing giant bubbles that float through the sea.",
-    "keywords": ["bubble art", "playful drawing", "ocean fun", "creative scene"]
+    "title": "Camping Lantern Glow",
+    "description": "A glowing lantern illuminating a cozy campsite at dusk.",
+    "keywords": ["lantern light", "evening camp", "warm glow"]
   },
   {
-    "title": "Mermaid and Sea Unicorn",
-    "description": "A mermaid meeting a magical sea unicorn with a shimmering horn.",
-    "keywords": ["sea unicorn art", "fantasy animals", "magical creature", "imagination"]
+    "title": "Camping Checklist",
+    "description": "A checklist of camping supplies to color and check off.",
+    "keywords": ["packing checklist", "camp supplies", "trip planning"]
   },
   {
-    "title": "Mermaid Shell Collector",
-    "description": "A mermaid gathering beautiful seashells into a woven basket.",
-    "keywords": ["shell collecting", "nature treasure", "ocean harvest", "beachcombing"]
+    "title": "Mountain Climbing",
+    "description": "Campers scaling a rocky mountain with ropes and helmets.",
+    "keywords": ["rock climbing", "adventure sports", "mountain ascent"]
   },
   {
-    "title": "Mermaid and Giant Clam",
-    "description": "A mermaid sitting inside a giant open clam as her royal throne.",
-    "keywords": ["giant clam art", "royal throne", "underwater royalty", "fantasy scene"]
+    "title": "Treetop Hammock",
+    "description": "A hammock strung between trees for a relaxing nap.",
+    "keywords": ["forest hammock", "relaxation", "naptime"]
   },
   {
-    "title": "Mermaid and Coral Dragon",
-    "description": "A mermaid befriending a tiny dragon that lives in the coral reef.",
-    "keywords": ["coral dragon art", "fantasy friendship", "tiny creature", "ocean magic"]
+    "title": "Compass Navigation",
+    "description": "A child using a compass and map to find the campsite.",
+    "keywords": ["navigation skills", "compass", "map reading"]
   },
   {
-    "title": "Mermaid with Baby Mermaids",
-    "description": "A nurturing mermaid surrounded by adorable baby mermaids learning to swim.",
-    "keywords": ["baby mermaids", "motherhood art", "family scene", "cute illustration"]
+    "title": "Exploring a Cave",
+    "description": "Campers with headlamps discovering a hidden cave.",
+    "keywords": ["cave exploration", "spelunking", "hidden treasures"]
   },
   {
-    "title": "Mermaid and the Storm",
-    "description": "A brave mermaid swimming through turbulent waves during a storm.",
-    "keywords": ["stormy sea", "adventure art", "dramatic illustration", "heroic theme"]
+    "title": "Nature Sketchbook",
+    "description": "Drawing flowers and leaves in a camping journal.",
+    "keywords": ["nature journaling", "sketching", "botany"]
   },
   {
-    "title": "Mermaid on a Pearl Throne",
-    "description": "A regal mermaid seated on a throne carved from a giant pearl.",
-    "keywords": ["pearl throne art", "royal mermaid", "elegant drawing", "fantasy royalty"]
+    "title": "Paddle Boarding",
+    "description": "Standing on paddle boards gliding across a lake.",
+    "keywords": ["paddleboarding", "lake fun", "water sports"]
   },
   {
-    "title": "Mermaid and the Seahorse Carousel",
-    "description": "Mermaids riding seahorses like a magical carousel ride.",
-    "keywords": ["carousel art", "fantasy ride", "seahorse illustration", "whimsical scene"]
+    "title": "Campfire Safety",
+    "description": "Kids learning how to safely build and put out a fire.",
+    "keywords": ["fire safety", "campfire rules", "outdoor lessons"]
   },
   {
-    "title": "Mermaid and the Manta Ray",
-    "description": "A graceful mermaid swimming side by side with a majestic manta ray.",
-    "keywords": ["manta ray art", "ocean companion", "graceful illustration", "marine life"]
+    "title": "Sunrise Breakfast",
+    "description": "Breakfast picnic by the lake at dawn.",
+    "keywords": ["sunrise meal", "picnic breakfast", "early morning"]
   },
   {
-    "title": "Mermaid and Hidden Treasure Map",
-    "description": "A mermaid studying an old map to find a hidden treasure.",
-    "keywords": ["treasure map art", "adventure theme", "pirate treasure", "nautical drawing"]
+    "title": "Trail Markers",
+    "description": "Signs and markers showing the way through the forest.",
+    "keywords": ["trail signs", "forest path", "navigation"]
   },
   {
-    "title": "Mermaid and Seahorse Babies",
-    "description": "A mermaid gently caring for a group of tiny baby seahorses.",
-    "keywords": ["baby seahorses", "caring illustration", "marine nursery", "gentle art"]
+    "title": "Tent Decorating",
+    "description": "Kids decorating tents with flags, bunting, and drawings.",
+    "keywords": ["tent decor", "creative camping", "colorful flags"]
   },
   {
-    "title": "Mermaid Painting Seashells",
-    "description": "A creative mermaid painting colorful patterns on seashells.",
-    "keywords": ["painting art", "craft illustration", "creative mermaid", "DIY theme"]
+    "title": "Butterfly Meadow",
+    "description": "A clearing filled with butterflies and wildflowers.",
+    "keywords": ["butterflies", "wildflowers", "meadow"]
   },
   {
-    "title": "Mermaid and the Sunken Piano",
-    "description": "A mermaid playing an old piano sunk deep in the ocean.",
-    "keywords": ["piano art", "music underwater", "mystical theme", "musical illustration"]
+    "title": "Bear Tracks",
+    "description": "Following animal footprints through the forest.",
+    "keywords": ["animal tracks", "bear prints", "tracking skills"]
   },
   {
-    "title": "Mermaid Waving Hello",
-    "description": "A friendly mermaid waving to the viewer with a warm smile.",
-    "keywords": ["friendly art", "welcoming illustration", "happy mermaid", "cute character"]
+    "title": "Outdoor Yoga",
+    "description": "Practicing yoga poses on mats in the fresh air.",
+    "keywords": ["camp yoga", "mindfulness", "stretching"]
   },
   {
-    "title": "Mermaid and the Bubble Castle",
-    "description": "A fantasy castle made entirely of shimmering bubbles and guarded by mermaids.",
-    "keywords": ["bubble castle art", "fantasy building", "magical scene", "whimsical architecture"]
+    "title": "Zipline Fun",
+    "description": "Zooming through trees on a zipline course.",
+    "keywords": ["zipline adventure", "forest canopy", "thrill ride"]
   },
   {
-    "title": "Mermaid Braiding Her Hair",
-    "description": "A mermaid braiding her long flowing hair decorated with tiny shells.",
-    "keywords": ["hair braiding art", "beauty theme", "cute mermaid", "self-care"]
+    "title": "Collecting Firewood",
+    "description": "Gathering sticks and logs for the evening fire.",
+    "keywords": ["firewood collecting", "camp chores", "preparation"]
   },
   {
-    "title": "Mermaid and the Giant Whale",
-    "description": "A tiny mermaid riding on the back of a friendly giant whale.",
-    "keywords": ["whale art", "ocean friendship", "big and small", "marine adventure"]
+    "title": "Picnic Lunch",
+    "description": "A picnic blanket covered with sandwiches and fruit.",
+    "keywords": ["picnic time", "outdoor lunch", "camp meal"]
   },
   {
-    "title": "Mermaid and the Floating Lanterns",
-    "description": "Mermaids releasing glowing lanterns into the ocean currents.",
-    "keywords": ["lantern art", "peaceful scene", "night illustration", "fantasy lights"]
+    "title": "Kayak Race",
+    "description": "Kids racing kayaks on a shimmering lake.",
+    "keywords": ["kayaking", "race fun", "water adventure"]
   },
   {
-    "title": "Mermaid with Sea Crown",
-    "description": "A mermaid wearing a crown made of coral, pearls, and starfish.",
-    "keywords": ["sea crown art", "royalty theme", "mermaid queen", "ocean royalty"]
+    "title": "Forest Fairy House",
+    "description": "Building a tiny fairy house from sticks and moss.",
+    "keywords": ["fairy house", "imaginative play", "nature craft"]
   },
   {
-    "title": "Mermaid and the Ship in a Bottle",
-    "description": "A mermaid examining a magical ship trapped inside a giant bottle.",
-    "keywords": ["ship in bottle", "magic object", "nautical art", "fantasy theme"]
+    "title": "Camp Badge Collection",
+    "description": "Collecting merit badges for different camping skills.",
+    "keywords": ["merit badges", "achievement", "camp activities"]
   },
   {
-    "title": "Mermaid and the Crystal Cave",
-    "description": "A mermaid discovering a hidden cave filled with giant crystals.",
-    "keywords": ["crystal cave art", "hidden treasure", "magical discovery", "fantasy crystals"]
+    "title": "Campsite Flags",
+    "description": "Flagpole with colorful flags flying in the breeze.",
+    "keywords": ["camp flags", "decorations", "festive camp"]
   },
   {
-    "title": "Mermaid Making Sea Art",
-    "description": "A creative mermaid making patterns in the sand with shells and stones.",
-    "keywords": ["sea art", "creative expression", "sand art", "imagination theme"]
+    "title": "Nighttime Fireflies",
+    "description": "Catching fireflies in jars near the tent.",
+    "keywords": ["firefly catching", "glowing bugs", "night play"]
   },
   {
-    "title": "Mermaid Feeding the Fish",
-    "description": "A gentle mermaid feeding a school of hungry little fish.",
-    "keywords": ["feeding fish", "kindness art", "animal care", "heartwarming scene"]
+    "title": "Nature Mandala",
+    "description": "Creating a mandala with leaves, stones, and flowers.",
+    "keywords": ["nature art", "mandala", "creative project"]
   },
   {
-    "title": "Mermaid and the Golden Seahorse",
-    "description": "A mermaid meeting a rare golden seahorse shimmering in the sunlight.",
-    "keywords": ["golden seahorse art", "rare creature", "magical animal", "special moment"]
+    "title": "Forest Ranger Visit",
+    "description": "A ranger teaching kids about wildlife and safety.",
+    "keywords": ["forest ranger", "learning time", "nature education"]
   },
   {
-    "title": "Mermaid and the Rainbow Coral",
-    "description": "A mermaid swimming through a colorful coral reef filled with rainbows.",
-    "keywords": ["rainbow coral", "colorful illustration", "fantasy reef", "vibrant scene"]
+    "title": "Sleeping Under Stars",
+    "description": "Kids in sleeping bags under a clear, starry sky.",
+    "keywords": ["sleeping outdoors", "night sky", "camping dreams"]
   },
   {
-    "title": "Mermaid Blowing Kisses",
-    "description": "A cute mermaid blowing bubbles shaped like hearts.",
-    "keywords": ["bubble hearts", "cute scene", "love theme", "playful art"]
+    "title": "Making Leaf Prints",
+    "description": "Pressing leaves into clay and coloring the designs.",
+    "keywords": ["leaf crafts", "nature prints", "art activity"]
   },
   {
-    "title": "Mermaid and the Magical Pearl",
-    "description": "A mermaid holding a giant glowing pearl that lights up the sea.",
-    "keywords": ["glowing pearl art", "magical light", "fantasy treasure", "shimmering illustration"]
+    "title": "Trail Mix Snack",
+    "description": "Bags of trail mix with nuts, fruits, and chocolate.",
+    "keywords": ["trail mix", "snack time", "camp treat"]
+  },
+  {
+    "title": "Woodland Maze",
+    "description": "A maze made of sticks and logs to explore.",
+    "keywords": ["forest maze", "exploration", "puzzle path"]
   }
 ]
+
 ,
-  "pinterestBoard": "Mermaids - Free Printable Coloring Pages",
-  "categoryId": "898c7c8f-38c7-4148-8ee0-09915cf32f65",
+  "pinterestBoard": "Camping - Free Printable Coloring Pages",
+  "categoryId": "9c25eea5-7c3d-452e-904e-ac843298d643",
   "batchSize": 1,
   "outDir": "images",
   "model": "gpt-image-1",

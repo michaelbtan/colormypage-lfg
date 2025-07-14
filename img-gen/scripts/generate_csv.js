@@ -147,7 +147,7 @@ async function uploadDirectoryAndGenerateCSVs(localDirPath) {
         media_url: publicUrl,
         pinterest_board: config.pinterestBoard || '',
         description: description || `${decodeURI(title)} coloring page - Perfect for kids and adults! Download and print this fun coloring activity.`,
-        link: `https://colormypage.com/coloring-pages/${fileNameWithoutExt}`,
+        link: `https://colormypage.com/coloring-page/${encodeURIComponent(fileNameWithoutExt)}`,
         publish_date: currentDate,
         keywords: keywords
       });
