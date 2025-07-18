@@ -142,12 +142,15 @@ async function uploadDirectoryAndGenerateCSVs(localDirPath) {
       // Stagger posting times across optimal Pinterest hours
       const currentDate = getStaggeredPublishDate(coloringPagesRecords.length);
       
+      // Convert underscores to %20 for URL
+      const urlEncodedFileName = fileNameWithoutExt.replace(/_/g, '%20');
+      
       pinterestRecords.push({
         title: decodeURI(title),
         media_url: publicUrl,
         pinterest_board: config.pinterestBoard || '',
         description: description || `${decodeURI(title)} coloring page - Perfect for kids and adults! Download and print this fun coloring activity.`,
-        link: `https://colormypage.com/coloring-page/${encodeURIComponent(fileNameWithoutExt)}`,
+        link: `https://colormypage.com/coloring-page/${urlEncodedFileName}`,
         publish_date: currentDate,
         keywords: keywords
       });
