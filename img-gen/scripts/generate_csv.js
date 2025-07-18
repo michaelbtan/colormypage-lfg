@@ -142,8 +142,11 @@ async function uploadDirectoryAndGenerateCSVs(localDirPath) {
       // Stagger posting times across optimal Pinterest hours
       const currentDate = getStaggeredPublishDate(coloringPagesRecords.length);
       
-      // Convert underscores to %20 for URL
-      const urlEncodedFileName = fileNameWithoutExt.replace(/_/g, '%20');
+      // Convert underscores to %20 for URL and capitalize first letter of each word
+      const urlEncodedFileName = fileNameWithoutExt
+        .split('_')
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+        .join('%20');
       
       pinterestRecords.push({
         title: decodeURI(title),
