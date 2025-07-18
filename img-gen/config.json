@@ -2,250 +2,250 @@
   "prompts":
 [
   {
-    "title": "Starry Night Tent",
-    "description": "A cozy tent set up under a sparkling star-filled sky with a crescent moon.",
-    "keywords": ["camping tent", "starry sky", "nighttime adventure"]
+    "title": "Magical Meadow Horses",
+    "description": "A group of friendly horses galloping through a vibrant flower-filled meadow under a sunny sky.",
+    "keywords": ["horses", "meadow", "flowers", "galloping", "outdoors", "nature", "sunshine"]
   },
   {
-    "title": "Campfire Stories",
-    "description": "Children sitting around a campfire, roasting marshmallows and telling stories.",
-    "keywords": ["campfire fun", "marshmallow roasting", "storytelling"]
+    "title": "Sleepy Pony in the Barn",
+    "description": "A peaceful pony curled up with hay bales and a cozy blanket inside a wooden barn.",
+    "keywords": ["pony", "barn", "cozy", "hay", "blanket", "sleeping", "stable"]
   },
   {
-    "title": "Hiking the Trail",
-    "description": "Kids hiking along a forest trail with backpacks and walking sticks.",
-    "keywords": ["hiking trail", "forest walk", "backpacking adventure"]
+    "title": "Horses at the Watering Hole",
+    "description": "Several horses drinking from a stream with forest trees and birds in the background.",
+    "keywords": ["horses", "stream", "water", "forest", "wildlife", "outdoors"]
   },
   {
-    "title": "Fishing at the Lake",
-    "description": "A boy and a girl fishing off a dock with fish jumping in the water.",
-    "keywords": ["lake fishing", "dock fun", "catching fish"]
+    "title": "Unicorn and Horse Friends",
+    "description": "A magical unicorn and a regular horse sharing a rainbow and stars in a dreamy field.",
+    "keywords": ["unicorn", "rainbow", "friendship", "fantasy", "magic", "stars"]
   },
   {
-    "title": "Wildlife Watch",
-    "description": "Binoculars pointed at deer, rabbits, and birds near the campsite.",
-    "keywords": ["wildlife spotting", "nature watching", "animals"]
+    "title": "Western Cowboy Horse",
+    "description": "A sturdy horse wearing a saddle next to a cowboy hat and boots in the desert.",
+    "keywords": ["cowboy", "saddle", "desert", "wild west", "boots", "ranch"]
   },
   {
-    "title": "Canoeing Adventure",
-    "description": "Two campers paddling a canoe down a peaceful river surrounded by trees.",
-    "keywords": ["canoe trip", "river paddling", "water adventure"]
+    "title": "Farmyard Horses and Friends",
+    "description": "Cute horses with chickens, sheep, and a tractor on a farm scene.",
+    "keywords": ["farm", "tractor", "animals", "sheep", "chickens", "pasture"]
   },
   {
-    "title": "Backpack Packing",
-    "description": "All the camping essentials laid out to pack: lantern, compass, snacks, and map.",
-    "keywords": ["camping gear", "packing list", "trip preparation"]
+    "title": "Rodeo Horse in Action",
+    "description": "A horse mid-jump during a rodeo show, with excited spectators cheering.",
+    "keywords": ["rodeo", "jumping", "arena", "performance", "crowd", "western"]
   },
   {
-    "title": "Camp Kitchen",
-    "description": "Cooking breakfast on a camp stove with pancakes and eggs sizzling.",
-    "keywords": ["outdoor cooking", "camp meals", "breakfast"]
+    "title": "Princess and Her Pony",
+    "description": "A royal pony with bows and glitter standing beside a princess in a garden.",
+    "keywords": ["princess", "pony", "castle", "glitter", "fairy tale", "flowers"]
   },
   {
-    "title": "Nature Scavenger Hunt",
-    "description": "Kids collecting leaves, pinecones, and feathers in baskets.",
-    "keywords": ["nature hunt", "collecting treasures", "outdoor exploration"]
+    "title": "Horses in the Snow",
+    "description": "Horses playing and trotting in a snowy forest with snowflakes falling.",
+    "keywords": ["snow", "winter", "forest", "cold", "snowflakes", "seasonal"]
   },
   {
-    "title": "Treehouse Campout",
-    "description": "A wooden treehouse decorated with lanterns and blankets.",
-    "keywords": ["treehouse adventure", "sleepover", "forest camp"]
+    "title": "Horses at the Beach",
+    "description": "Two horses enjoying the beach, splashing in the waves and feeling the breeze.",
+    "keywords": ["beach", "ocean", "waves", "summer", "sand", "vacation"]
   },
   {
-    "title": "Mountain View Camp",
-    "description": "A campsite overlooking a range of majestic mountains at sunrise.",
-    "keywords": ["mountain camping", "sunrise view", "scenic landscape"]
+    "title": "Carousel Horses",
+    "description": "A classic carousel with beautifully decorated horses spinning around.",
+    "keywords": ["carousel", "amusement park", "vintage", "decorated", "festival"]
   },
   {
-    "title": "Birdwatching Binoculars",
-    "description": "A child spotting colorful birds with a field guide in hand.",
-    "keywords": ["birdwatching", "nature study", "binocular fun"]
+    "title": "Horses Under the Stars",
+    "description": "A pair of horses standing on a hilltop under a glowing starry night sky.",
+    "keywords": ["stars", "night", "moon", "peaceful", "sky", "constellations"]
   },
   {
-    "title": "Campfire Songs",
-    "description": "A group playing guitar and singing songs around a glowing fire.",
-    "keywords": ["campfire music", "singalong", "guitar"]
+    "title": "Rainy Day Ponies",
+    "description": "Ponies playing in puddles while wearing cute rain boots and coats.",
+    "keywords": ["rain", "puddles", "boots", "coat", "weather", "spring"]
   },
   {
-    "title": "Telling Ghost Stories",
-    "description": "Spooky shadows and kids making scary faces by flashlight.",
-    "keywords": ["ghost stories", "flashlight fun", "night adventure"]
+    "title": "Horse Parade Festival",
+    "description": "Horses in fancy costumes marching in a festive town parade.",
+    "keywords": ["parade", "festival", "costume", "celebration", "music"]
   },
   {
-    "title": "S'mores Treat Time",
-    "description": "Marshmallows, chocolate, and graham crackers all ready to assemble.",
-    "keywords": ["s'mores snack", "sweet treats", "campfire dessert"]
+    "title": "Horse and Baby Foal",
+    "description": "A gentle adult horse nuzzling its adorable baby foal in a field.",
+    "keywords": ["foal", "mother", "caring", "baby animal", "pasture"]
   },
   {
-    "title": "Setting Up the Tent",
-    "description": "Kids working together to pitch a bright-colored tent.",
-    "keywords": ["tent building", "teamwork", "camp setup"]
+    "title": "Horse Stable Life",
+    "description": "Scenes from a busy stable with feeding, grooming, and playful moments.",
+    "keywords": ["stable", "grooming", "feeding", "hay", "daily life"]
   },
   {
-    "title": "Forest Animals",
-    "description": "Cute raccoons and squirrels sneaking around the campsite.",
-    "keywords": ["forest friends", "animals", "camp visitors"]
+    "title": "Knight’s Horse in Armor",
+    "description": "A majestic horse in full armor ready for a medieval adventure.",
+    "keywords": ["knight", "armor", "castle", "medieval", "brave"]
   },
   {
-    "title": "Night Sky Constellations",
-    "description": "A sky map showing constellations above the tent.",
-    "keywords": ["stargazing", "constellation map", "astronomy"]
+    "title": "Race Day Horses",
+    "description": "Energetic racehorses at the starting line, ready to run.",
+    "keywords": ["racing", "speed", "competition", "track", "energy"]
   },
   {
-    "title": "Rainy Day Camp",
-    "description": "Kids in raincoats splashing in puddles by the tent.",
-    "keywords": ["rainy camping", "puddle jumping", "wet weather fun"]
+    "title": "Boho Wild Horses",
+    "description": "Stylish horses with feathers and tribal patterns running free.",
+    "keywords": ["boho", "feathers", "tribal", "freedom", "decorative"]
   },
   {
-    "title": "Camping Lantern Glow",
-    "description": "A glowing lantern illuminating a cozy campsite at dusk.",
-    "keywords": ["lantern light", "evening camp", "warm glow"]
+    "title": "Horse Picnic Day",
+    "description": "A group of horses enjoying a sunny picnic with baskets and blankets.",
+    "keywords": ["picnic", "blanket", "food", "relaxing", "sunny"]
   },
   {
-    "title": "Camping Checklist",
-    "description": "A checklist of camping supplies to color and check off.",
-    "keywords": ["packing checklist", "camp supplies", "trip planning"]
+    "title": "Magic Horse in the Clouds",
+    "description": "A dreamy horse walking on fluffy clouds with sparkles and moonlight.",
+    "keywords": ["dream", "clouds", "moonlight", "fantasy", "soft"]
   },
   {
-    "title": "Mountain Climbing",
-    "description": "Campers scaling a rocky mountain with ropes and helmets.",
-    "keywords": ["rock climbing", "adventure sports", "mountain ascent"]
+    "title": "Circus Performing Horse",
+    "description": "A trained horse performing tricks under a circus tent.",
+    "keywords": ["circus", "performance", "tent", "entertainment", "show"]
   },
   {
-    "title": "Treetop Hammock",
-    "description": "A hammock strung between trees for a relaxing nap.",
-    "keywords": ["forest hammock", "relaxation", "naptime"]
+    "title": "Horse and Butterfly Friends",
+    "description": "A horse gently watching butterflies in a flower-filled field.",
+    "keywords": ["butterfly", "gentle", "flowers", "peaceful", "nature"]
   },
   {
-    "title": "Compass Navigation",
-    "description": "A child using a compass and map to find the campsite.",
-    "keywords": ["navigation skills", "compass", "map reading"]
+    "title": "Horse in the Pumpkin Patch",
+    "description": "A fall-themed scene with a horse exploring a pumpkin patch.",
+    "keywords": ["pumpkin", "autumn", "harvest", "seasonal", "fall"]
   },
   {
-    "title": "Exploring a Cave",
-    "description": "Campers with headlamps discovering a hidden cave.",
-    "keywords": ["cave exploration", "spelunking", "hidden treasures"]
+    "title": "Camping with Horses",
+    "description": "Horses beside a tent and campfire, surrounded by pine trees and stars.",
+    "keywords": ["camping", "tent", "campfire", "pine", "outdoors"]
   },
   {
-    "title": "Nature Sketchbook",
-    "description": "Drawing flowers and leaves in a camping journal.",
-    "keywords": ["nature journaling", "sketching", "botany"]
+    "title": "Horse Fairyland",
+    "description": "A magical world where horses fly with fairy wings among floating islands.",
+    "keywords": ["fairy", "wings", "islands", "imagination", "mystical"]
   },
   {
-    "title": "Paddle Boarding",
-    "description": "Standing on paddle boards gliding across a lake.",
-    "keywords": ["paddleboarding", "lake fun", "water sports"]
+    "title": "Horse and Tractor Friends",
+    "description": "Farm horse playing beside a tractor with hay bales and tools.",
+    "keywords": ["tractor", "tools", "farm", "hay", "equipment"]
   },
   {
-    "title": "Campfire Safety",
-    "description": "Kids learning how to safely build and put out a fire.",
-    "keywords": ["fire safety", "campfire rules", "outdoor lessons"]
+    "title": "Horse Birthday Party",
+    "description": "Horses celebrating with balloons, cupcakes, and party hats.",
+    "keywords": ["birthday", "balloons", "celebration", "cupcakes", "fun"]
   },
   {
-    "title": "Sunrise Breakfast",
-    "description": "Breakfast picnic by the lake at dawn.",
-    "keywords": ["sunrise meal", "picnic breakfast", "early morning"]
+    "title": "Wild Mustang Adventure",
+    "description": "Strong wild mustangs galloping through canyons and rivers.",
+    "keywords": ["mustang", "wild", "canyon", "adventure", "river"]
   },
   {
-    "title": "Trail Markers",
-    "description": "Signs and markers showing the way through the forest.",
-    "keywords": ["trail signs", "forest path", "navigation"]
+    "title": "Horse in a Flower Crown",
+    "description": "A sweet horse wearing a floral crown in a spring field.",
+    "keywords": ["flower crown", "spring", "sweet", "gentle", "bloom"]
   },
   {
-    "title": "Tent Decorating",
-    "description": "Kids decorating tents with flags, bunting, and drawings.",
-    "keywords": ["tent decor", "creative camping", "colorful flags"]
+    "title": "Horses Pulling a Sleigh",
+    "description": "Winter scene with horses pulling a sleigh across a snowy path.",
+    "keywords": ["sleigh", "snow", "holiday", "winter", "ride"]
   },
   {
-    "title": "Butterfly Meadow",
-    "description": "A clearing filled with butterflies and wildflowers.",
-    "keywords": ["butterflies", "wildflowers", "meadow"]
+    "title": "Horse and Cat Friendship",
+    "description": "A horse lying in a field while a cat curls up on its back.",
+    "keywords": ["cat", "friendship", "cute", "animal pals", "companions"]
   },
   {
-    "title": "Bear Tracks",
-    "description": "Following animal footprints through the forest.",
-    "keywords": ["animal tracks", "bear prints", "tracking skills"]
+    "title": "Horse Reading Time",
+    "description": "A silly horse with glasses reading a book under a tree.",
+    "keywords": ["reading", "tree", "glasses", "funny", "storytime"]
   },
   {
-    "title": "Outdoor Yoga",
-    "description": "Practicing yoga poses on mats in the fresh air.",
-    "keywords": ["camp yoga", "mindfulness", "stretching"]
+    "title": "Horses and Hot Air Balloons",
+    "description": "Horses looking up at colorful hot air balloons in the sky.",
+    "keywords": ["balloons", "sky", "colorful", "travel", "wonder"]
   },
   {
-    "title": "Zipline Fun",
-    "description": "Zooming through trees on a zipline course.",
-    "keywords": ["zipline adventure", "forest canopy", "thrill ride"]
+    "title": "Horse Yoga Poses",
+    "description": "Playful horses trying yoga poses on mats in a peaceful park.",
+    "keywords": ["yoga", "stretching", "relax", "exercise", "peace"]
   },
   {
-    "title": "Collecting Firewood",
-    "description": "Gathering sticks and logs for the evening fire.",
-    "keywords": ["firewood collecting", "camp chores", "preparation"]
+    "title": "Horse Carnival Night",
+    "description": "Bright lights, games, and horses enjoying a festive carnival.",
+    "keywords": ["carnival", "night", "games", "rides", "festival"]
   },
   {
-    "title": "Picnic Lunch",
-    "description": "A picnic blanket covered with sandwiches and fruit.",
-    "keywords": ["picnic time", "outdoor lunch", "camp meal"]
+    "title": "Horses and Dinosaurs",
+    "description": "A time-travel scene with horses and dinosaurs roaming together.",
+    "keywords": ["dinosaurs", "prehistoric", "fantasy", "time travel"]
   },
   {
-    "title": "Kayak Race",
-    "description": "Kids racing kayaks on a shimmering lake.",
-    "keywords": ["kayaking", "race fun", "water adventure"]
+    "title": "Pony School Day",
+    "description": "Ponies sitting at desks, reading books and learning letters.",
+    "keywords": ["school", "learning", "books", "education", "alphabet"]
   },
   {
-    "title": "Forest Fairy House",
-    "description": "Building a tiny fairy house from sticks and moss.",
-    "keywords": ["fairy house", "imaginative play", "nature craft"]
+    "title": "Horses in Outer Space",
+    "description": "Space horses with helmets floating past stars and planets.",
+    "keywords": ["space", "stars", "planets", "astronaut", "sci-fi"]
   },
   {
-    "title": "Camp Badge Collection",
-    "description": "Collecting merit badges for different camping skills.",
-    "keywords": ["merit badges", "achievement", "camp activities"]
+    "title": "Horse Garden Helpers",
+    "description": "Helpful horses planting flowers and watering plants in a garden.",
+    "keywords": ["gardening", "plants", "helping", "flowers", "nature"]
   },
   {
-    "title": "Campsite Flags",
-    "description": "Flagpole with colorful flags flying in the breeze.",
-    "keywords": ["camp flags", "decorations", "festive camp"]
+    "title": "Fantasy Ice Horses",
+    "description": "Beautiful icy-blue horses trotting on frozen lakes under snowflakes.",
+    "keywords": ["ice", "frozen", "winter", "fantasy", "blue"]
   },
   {
-    "title": "Nighttime Fireflies",
-    "description": "Catching fireflies in jars near the tent.",
-    "keywords": ["firefly catching", "glowing bugs", "night play"]
+    "title": "Horses in Love",
+    "description": "Two horses forming a heart with their tails under a sunset sky.",
+    "keywords": ["love", "heart", "romantic", "sunset", "together"]
   },
   {
-    "title": "Nature Mandala",
-    "description": "Creating a mandala with leaves, stones, and flowers.",
-    "keywords": ["nature art", "mandala", "creative project"]
+    "title": "Royal Coach Horses",
+    "description": "Elegant horses pulling a royal carriage through a magical kingdom.",
+    "keywords": ["carriage", "royal", "kingdom", "elegant", "princess"]
   },
   {
-    "title": "Forest Ranger Visit",
-    "description": "A ranger teaching kids about wildlife and safety.",
-    "keywords": ["forest ranger", "learning time", "nature education"]
+    "title": "Safari Horse Adventure",
+    "description": "Horses exploring the savannah with zebras, lions, and giraffes.",
+    "keywords": ["safari", "savannah", "adventure", "animals", "exploration"]
   },
   {
-    "title": "Sleeping Under Stars",
-    "description": "Kids in sleeping bags under a clear, starry sky.",
-    "keywords": ["sleeping outdoors", "night sky", "camping dreams"]
+    "title": "Firefighter Horse Hero",
+    "description": "A brave horse dressed as a firefighter rescuing animals from a barn.",
+    "keywords": ["firefighter", "hero", "rescue", "brave", "emergency"]
   },
   {
-    "title": "Making Leaf Prints",
-    "description": "Pressing leaves into clay and coloring the designs.",
-    "keywords": ["leaf crafts", "nature prints", "art activity"]
+    "title": "Horse Ice Cream Truck",
+    "description": "A playful horse running an ice cream stand with happy customers.",
+    "keywords": ["ice cream", "treat", "summer", "stand", "dessert"]
   },
   {
-    "title": "Trail Mix Snack",
-    "description": "Bags of trail mix with nuts, fruits, and chocolate.",
-    "keywords": ["trail mix", "snack time", "camp treat"]
+    "title": "Horses in Fairy Tale Forest",
+    "description": "Horses exploring an enchanted forest with mushrooms and glowing trees.",
+    "keywords": ["fairy tale", "forest", "magic", "glow", "enchanted"]
   },
   {
-    "title": "Woodland Maze",
-    "description": "A maze made of sticks and logs to explore.",
-    "keywords": ["forest maze", "exploration", "puzzle path"]
+    "title": "Knight’s Jousting Horse",
+    "description": "A powerful horse in a jousting competition with armor and flags.",
+    "keywords": ["jousting", "competition", "medieval", "flags", "battle"]
   }
 ]
 
 ,
-  "pinterestBoard": "Camping - Free Printable Coloring Pages",
-  "categoryId": "9c25eea5-7c3d-452e-904e-ac843298d643",
+  "pinterestBoard": "Horses - Free Printable Coloring Pages",
+  "categoryId": "51dfaa83-d5e2-424b-b6f3-c1520a5ee6b9",
   "batchSize": 1,
   "outDir": "images",
   "model": "gpt-image-1",
