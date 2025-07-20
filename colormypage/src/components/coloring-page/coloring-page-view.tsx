@@ -1,7 +1,6 @@
 "use client";
 
 import type React from "react";
-
 import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import { Heart, Share2, Printer } from "lucide-react";
@@ -197,14 +196,24 @@ ColoringPageViewProps) {
           creator: 'ColorMyPage'
         });
         
-        // Open the PDF in a new tab immediately
+        // Use anchor element for iOS Safari compatibility
         const pdfBlob = pdf.output('blob');
         const pdfUrl = URL.createObjectURL(pdfBlob);
-        window.open(pdfUrl, '_blank');
+        
+        // Create anchor element for download
+        const downloadLink = document.createElement('a');
+        downloadLink.href = pdfUrl;
+        downloadLink.download = `${decodeURI(coloringPage.title).replace(/[^a-zA-Z0-9]/g, '_')}_coloring_page.pdf`;
+        downloadLink.style.display = 'none';
+        
+        // Add to DOM, trigger click, then remove
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        document.body.removeChild(downloadLink);
         
         // Show success message
-        toast("PDF ready!", {
-          description: "Your coloring page PDF has opened in a new tab.",
+        toast("PDF downloaded!", {
+          description: "Your coloring page PDF has been downloaded.",
           descriptionClassName: "!text-black font-medium",
         });
         
