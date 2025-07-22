@@ -66,12 +66,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Fetch categories
   const { data: categories } = await supabase
     .from('categories')
-    .select('id, created_at')
+    .select('title, created_at')
     .eq('is_published', true)
     .order('created_at', { ascending: false })
 
   const categoryPages: MetadataRoute.Sitemap = (categories || []).map((category) => ({
-    url: `${baseUrl}/categories/${category.id}`,
+    url: `${baseUrl}/categories/${encodeURIComponent(category.title)}`,
     lastModified: new Date(category.created_at),
     changeFrequency: 'weekly' as const,
     priority: 0.8,
@@ -80,12 +80,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Fetch coloring pages
   const { data: coloringPages } = await supabase
     .from('coloring_pages')
-    .select('id, created_at')
+    .select('title, created_at')
     .eq('is_published', true)
     .order('created_at', { ascending: false })
 
   const coloringPageUrls: MetadataRoute.Sitemap = (coloringPages || []).map((page) => ({
-    url: `${baseUrl}/coloring-page/${page.id}`,
+    url: `${baseUrl}/coloring-page/${encodeURIComponent(page.title)}`,
     lastModified: new Date(page.created_at),
     changeFrequency: 'monthly' as const,
     priority: 0.7,

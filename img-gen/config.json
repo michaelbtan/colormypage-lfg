@@ -1,251 +1,235 @@
 {
-  "prompts":
+  "prompts": 
 [
   {
-    "title": "Magical Meadow Horses",
-    "description": "A group of friendly horses galloping through a vibrant flower-filled meadow under a sunny sky.",
-    "keywords": ["horses", "meadow", "flowers", "galloping", "outdoors", "nature", "sunshine"]
+    "title": "Ice Cream Castle",
+    "description": "A whimsical castle made entirely of ice cream cones, sundaes, and sprinkles. Kids can explore a fantasy world of frozen treats.",
+    "keywords": ["ice cream castle", "sweet fantasy", "sundae tower", "dessert palace", "whimsical treats"]
   },
   {
-    "title": "Sleepy Pony in the Barn",
-    "description": "A peaceful pony curled up with hay bales and a cozy blanket inside a wooden barn.",
-    "keywords": ["pony", "barn", "cozy", "hay", "blanket", "sleeping", "stable"]
+    "title": "Ice Cream Animals",
+    "description": "Cute animals like cats, dogs, and pandas made out of scoops of ice cream.",
+    "keywords": ["cute animals", "ice cream animal mashup", "sweet creatures", "kawaii animals", "fun dessert animals"]
   },
   {
-    "title": "Horses at the Watering Hole",
-    "description": "Several horses drinking from a stream with forest trees and birds in the background.",
-    "keywords": ["horses", "stream", "water", "forest", "wildlife", "outdoors"]
+    "title": "Ice Cream Planet",
+    "description": "An imaginative outer space scene with planets shaped like ice cream scoops orbiting a cherry sun.",
+    "keywords": ["space dessert", "ice cream planets", "galaxy sweets", "outer space fun", "cherry sun"]
   },
   {
-    "title": "Unicorn and Horse Friends",
-    "description": "A magical unicorn and a regular horse sharing a rainbow and stars in a dreamy field.",
-    "keywords": ["unicorn", "rainbow", "friendship", "fantasy", "magic", "stars"]
+    "title": "Underwater Ice Cream World",
+    "description": "Mermaids and sea creatures enjoying ice cream under the sea with coral cones and shell sprinkles.",
+    "keywords": ["mermaid dessert", "ocean theme", "underwater sweets", "sea creatures and treats", "shell sprinkles"]
   },
   {
-    "title": "Western Cowboy Horse",
-    "description": "A sturdy horse wearing a saddle next to a cowboy hat and boots in the desert.",
-    "keywords": ["cowboy", "saddle", "desert", "wild west", "boots", "ranch"]
+    "title": "Ice Cream Truck Parade",
+    "description": "A fun scene with many uniquely decorated ice cream trucks parading through a candy street.",
+    "keywords": ["ice cream truck", "sweet parade", "candy road", "dessert vehicles", "truck fun"]
   },
   {
-    "title": "Farmyard Horses and Friends",
-    "description": "Cute horses with chickens, sheep, and a tractor on a farm scene.",
-    "keywords": ["farm", "tractor", "animals", "sheep", "chickens", "pasture"]
+    "title": "Monster Ice Cream Party",
+    "description": "Silly monsters throwing an ice cream party with overflowing sundaes and whipped cream fights.",
+    "keywords": ["monster party", "silly sweets", "ice cream fun", "goofy creatures", "dessert celebration"]
   },
   {
-    "title": "Rodeo Horse in Action",
-    "description": "A horse mid-jump during a rodeo show, with excited spectators cheering.",
-    "keywords": ["rodeo", "jumping", "arena", "performance", "crowd", "western"]
+    "title": "Robot Ice Cream Shop",
+    "description": "Robots serving ice cream at a futuristic dessert parlor with mechanical scoops and sprinkle dispensers.",
+    "keywords": ["robot dessert", "futuristic ice cream", "sci-fi treats", "robot cafe", "sprinkle bots"]
   },
   {
-    "title": "Princess and Her Pony",
-    "description": "A royal pony with bows and glitter standing beside a princess in a garden.",
-    "keywords": ["princess", "pony", "castle", "glitter", "fairy tale", "flowers"]
+    "title": "Unicorn Ice Cream Dreams",
+    "description": "Unicorns lounging in clouds of cotton candy enjoying magical rainbow ice cream.",
+    "keywords": ["unicorn dessert", "rainbow theme", "magic treats", "cloud sweets", "fantasy fun"]
   },
   {
-    "title": "Horses in the Snow",
-    "description": "Horses playing and trotting in a snowy forest with snowflakes falling.",
-    "keywords": ["snow", "winter", "forest", "cold", "snowflakes", "seasonal"]
+    "title": "Zoo Ice Cream Day",
+    "description": "Animals at the zoo enjoying their favorite ice cream flavors—giraffes with banana splits, penguins with snow cones, etc.",
+    "keywords": ["zoo fun", "animal treats", "flavored fun", "zoo day dessert", "sweet safari"]
   },
   {
-    "title": "Horses at the Beach",
-    "description": "Two horses enjoying the beach, splashing in the waves and feeling the breeze.",
-    "keywords": ["beach", "ocean", "waves", "summer", "sand", "vacation"]
+    "title": "Ice Cream Carnival",
+    "description": "A vibrant carnival with ice cream rides, games, and fun desserts everywhere.",
+    "keywords": ["carnival treats", "fair sweets", "ice cream rides", "sundae booth", "scoop festival"]
   },
   {
-    "title": "Carousel Horses",
-    "description": "A classic carousel with beautifully decorated horses spinning around.",
-    "keywords": ["carousel", "amusement park", "vintage", "decorated", "festival"]
+    "title": "Build Your Own Ice Cream",
+    "description": "Interactive coloring page where kids can mix and match cones, scoops, toppings, and syrups.",
+    "keywords": ["dessert customization", "DIY treats", "sundae building", "create your flavor", "cone toppings"]
   },
   {
-    "title": "Horses Under the Stars",
-    "description": "A pair of horses standing on a hilltop under a glowing starry night sky.",
-    "keywords": ["stars", "night", "moon", "peaceful", "sky", "constellations"]
+    "title": "Ice Cream Alphabet",
+    "description": "Each letter of the alphabet designed with ice cream-themed decorations and patterns.",
+    "keywords": ["alphabet fun", "letter treats", "ABC coloring", "educational sweet", "ice cream learning"]
   },
   {
-    "title": "Rainy Day Ponies",
-    "description": "Ponies playing in puddles while wearing cute rain boots and coats.",
-    "keywords": ["rain", "puddles", "boots", "coat", "weather", "spring"]
+    "title": "Fairy Ice Cream Garden",
+    "description": "A magical garden where fairies tend to giant ice cream flowers and candy sprinkles grow like grass.",
+    "keywords": ["fairyland treats", "magical garden", "fantasy flora", "candy plants", "whimsical world"]
   },
   {
-    "title": "Horse Parade Festival",
-    "description": "Horses in fancy costumes marching in a festive town parade.",
-    "keywords": ["parade", "festival", "costume", "celebration", "music"]
+    "title": "Dinosaur Ice Cream Picnic",
+    "description": "Dinosaurs having a fun picnic with melting ice cream sundaes and dino-shaped popsicles.",
+    "keywords": ["dino dessert", "prehistoric fun", "fossil sundaes", "ice cream picnic", "treat time"]
   },
   {
-    "title": "Horse and Baby Foal",
-    "description": "A gentle adult horse nuzzling its adorable baby foal in a field.",
-    "keywords": ["foal", "mother", "caring", "baby animal", "pasture"]
+    "title": "Holiday Ice Cream Specials",
+    "description": "Seasonal ice cream ideas: snowflake cones, pumpkin swirl scoops, and heart-shaped sundaes.",
+    "keywords": ["holiday sweets", "seasonal dessert", "festive ice cream", "winter cone", "valentine treat"]
   },
   {
-    "title": "Horse Stable Life",
-    "description": "Scenes from a busy stable with feeding, grooming, and playful moments.",
-    "keywords": ["stable", "grooming", "feeding", "hay", "daily life"]
+    "title": "Ice Cream Circus",
+    "description": "Clowns, acrobats, and animals at a circus with all the props made from ice cream.",
+    "keywords": ["circus fun", "acrobatic treats", "ice cream clowns", "dessert show", "sweet animals"]
   },
   {
-    "title": "Knight’s Horse in Armor",
-    "description": "A majestic horse in full armor ready for a medieval adventure.",
-    "keywords": ["knight", "armor", "castle", "medieval", "brave"]
+    "title": "Dessert Island Adventure",
+    "description": "A treasure hunt on a tropical island filled with hidden sundaes and palm trees made of ice cream cones.",
+    "keywords": ["tropical treat", "dessert island", "pirate sweets", "ice cream treasure", "cone coconut"]
   },
   {
-    "title": "Race Day Horses",
-    "description": "Energetic racehorses at the starting line, ready to run.",
-    "keywords": ["racing", "speed", "competition", "track", "energy"]
+    "title": "Koala's Ice Cream Stand",
+    "description": "A cute koala running a jungle-themed ice cream stand serving wild berry cones to forest friends.",
+    "keywords": ["animal vendor", "koala treat", "jungle dessert", "cute stand", "forest fun"]
   },
   {
-    "title": "Boho Wild Horses",
-    "description": "Stylish horses with feathers and tribal patterns running free.",
-    "keywords": ["boho", "feathers", "tribal", "freedom", "decorative"]
+    "title": "Alien Ice Cream Invasion",
+    "description": "Aliens landing on Earth to collect the best ice cream from different cities.",
+    "keywords": ["alien dessert", "intergalactic ice cream", "UFO treat", "cosmic scoops", "space invasion"]
   },
   {
-    "title": "Horse Picnic Day",
-    "description": "A group of horses enjoying a sunny picnic with baskets and blankets.",
-    "keywords": ["picnic", "blanket", "food", "relaxing", "sunny"]
+    "title": "Royal Ice Cream Feast",
+    "description": "A royal banquet with a king, queen, and knights enjoying ice cream goblets and cone scepters.",
+    "keywords": ["royalty sweets", "castle dessert", "ice cream throne", "knight cones", "medieval fun"]
   },
   {
-    "title": "Magic Horse in the Clouds",
-    "description": "A dreamy horse walking on fluffy clouds with sparkles and moonlight.",
-    "keywords": ["dream", "clouds", "moonlight", "fantasy", "soft"]
+    "title": "Rainy Day Sundaes",
+    "description": "A rainy scene where clouds rain sprinkles and everyone enjoys warm waffles with cold ice cream.",
+    "keywords": ["rain and dessert", "waffle sundaes", "sprinkle showers", "cozy treat", "sweet weather"]
   },
   {
-    "title": "Circus Performing Horse",
-    "description": "A trained horse performing tricks under a circus tent.",
-    "keywords": ["circus", "performance", "tent", "entertainment", "show"]
+    "title": "Backyard Ice Cream Party",
+    "description": "A summer backyard party with kids, balloons, ice cream games, and lots of toppings.",
+    "keywords": ["backyard fun", "summer dessert", "party treats", "outdoor sweets", "topping bar"]
   },
   {
-    "title": "Horse and Butterfly Friends",
-    "description": "A horse gently watching butterflies in a flower-filled field.",
-    "keywords": ["butterfly", "gentle", "flowers", "peaceful", "nature"]
+    "title": "Fantasy Ice Cream Map",
+    "description": "A treasure map of an imaginary land made of ice cream mountains, rivers of syrup, and sprinkle trails.",
+    "keywords": ["fantasy map", "dessert land", "ice cream geography", "sweet adventure", "flavor paths"]
   },
   {
-    "title": "Horse in the Pumpkin Patch",
-    "description": "A fall-themed scene with a horse exploring a pumpkin patch.",
-    "keywords": ["pumpkin", "autumn", "harvest", "seasonal", "fall"]
+    "title": "Sports and Ice Cream",
+    "description": "Athletes enjoying ice cream cones after playing sports like soccer, basketball, or skating.",
+    "keywords": ["sports treats", "active fun", "sweet reward", "game dessert", "athlete snack"]
   },
   {
-    "title": "Camping with Horses",
-    "description": "Horses beside a tent and campfire, surrounded by pine trees and stars.",
-    "keywords": ["camping", "tent", "campfire", "pine", "outdoors"]
+    "title": "Historic Ice Cream Styles",
+    "description": "A visual timeline of how ice cream has looked through different eras—vintage, futuristic, and modern.",
+    "keywords": ["history of ice cream", "vintage sweets", "future treat", "timeline dessert", "retro cones"]
   },
   {
-    "title": "Horse Fairyland",
-    "description": "A magical world where horses fly with fairy wings among floating islands.",
-    "keywords": ["fairy", "wings", "islands", "imagination", "mystical"]
+    "title": "Magical Ice Cream Spells",
+    "description": "Wizards and witches casting spells to conjure delicious ice cream potions.",
+    "keywords": ["magic treat", "wizard dessert", "ice cream spellbook", "conjure sweets", "fantasy fun"]
   },
   {
-    "title": "Horse and Tractor Friends",
-    "description": "Farm horse playing beside a tractor with hay bales and tools.",
-    "keywords": ["tractor", "tools", "farm", "hay", "equipment"]
+    "title": "Emoji Ice Cream Faces",
+    "description": "Funny ice cream cones with expressive emoji faces—happy, silly, surprised, etc.",
+    "keywords": ["emoji treats", "cone faces", "funny dessert", "sweet expressions", "ice cream mood"]
   },
   {
-    "title": "Horse Birthday Party",
-    "description": "Horses celebrating with balloons, cupcakes, and party hats.",
-    "keywords": ["birthday", "balloons", "celebration", "cupcakes", "fun"]
+    "title": "Ice Cream Superheroes",
+    "description": "Superhero characters themed after flavors like chocolate, mint, and strawberry.",
+    "keywords": ["flavor heroes", "ice cream powers", "dessert defenders", "sweet costumes", "cone crusaders"]
   },
   {
-    "title": "Wild Mustang Adventure",
-    "description": "Strong wild mustangs galloping through canyons and rivers.",
-    "keywords": ["mustang", "wild", "canyon", "adventure", "river"]
+    "title": "Rainbow Ice Cream Sky",
+    "description": "A dreamy sky where rainbows are made of sherbet and clouds are whipped cream.",
+    "keywords": ["rainbow treat", "sky dessert", "dreamy sweets", "whipped cloud", "sherbet fantasy"]
   },
   {
-    "title": "Horse in a Flower Crown",
-    "description": "A sweet horse wearing a floral crown in a spring field.",
-    "keywords": ["flower crown", "spring", "sweet", "gentle", "bloom"]
+    "title": "Ice Cream Mazes",
+    "description": "Fun maze puzzles shaped like sundaes, cones, and ice cream carts.",
+    "keywords": ["dessert puzzle", "maze fun", "sundae maze", "cone labyrinth", "ice cream challenge"]
   },
   {
-    "title": "Horses Pulling a Sleigh",
-    "description": "Winter scene with horses pulling a sleigh across a snowy path.",
-    "keywords": ["sleigh", "snow", "holiday", "winter", "ride"]
+    "title": "Farm to Cone Journey",
+    "description": "A farm-to-table journey showing how milk turns into delicious ice cream in fun cartoon scenes.",
+    "keywords": ["ice cream process", "dairy dessert", "farm animals", "milk to treat", "educational sweets"]
   },
   {
-    "title": "Horse and Cat Friendship",
-    "description": "A horse lying in a field while a cat curls up on its back.",
-    "keywords": ["cat", "friendship", "cute", "animal pals", "companions"]
+    "title": "Tiny World of Ice Cream",
+    "description": "Miniature people living in a world made entirely of giant ice cream desserts.",
+    "keywords": ["tiny town", "giant treat", "sweet miniature", "dessert buildings", "micro fun"]
   },
   {
-    "title": "Horse Reading Time",
-    "description": "A silly horse with glasses reading a book under a tree.",
-    "keywords": ["reading", "tree", "glasses", "funny", "storytime"]
+    "title": "Haunted Ice Cream House",
+    "description": "A spooky mansion made of chocolate and sprinkles where ghosts enjoy ice cream.",
+    "keywords": ["spooky dessert", "haunted sweets", "ghost cones", "Halloween fun", "chocolate house"]
   },
   {
-    "title": "Horses and Hot Air Balloons",
-    "description": "Horses looking up at colorful hot air balloons in the sky.",
-    "keywords": ["balloons", "sky", "colorful", "travel", "wonder"]
+    "title": "Ice Cream Balloon Festival",
+    "description": "Hot air balloons shaped like popsicles and cones floating in a candy sky.",
+    "keywords": ["balloon treats", "sky sweets", "cone balloon", "air float", "festival fun"]
   },
   {
-    "title": "Horse Yoga Poses",
-    "description": "Playful horses trying yoga poses on mats in a peaceful park.",
-    "keywords": ["yoga", "stretching", "relax", "exercise", "peace"]
+    "title": "Space Ice Cream Lab",
+    "description": "Astronauts making experimental space-flavored ice cream in zero gravity.",
+    "keywords": ["space dessert lab", "zero gravity sweets", "galactic flavors", "astronaut cone", "cosmic kitchen"]
   },
   {
-    "title": "Horse Carnival Night",
-    "description": "Bright lights, games, and horses enjoying a festive carnival.",
-    "keywords": ["carnival", "night", "games", "rides", "festival"]
+    "title": "Food Truck Frenzy",
+    "description": "A busy street filled with all kinds of dessert trucks serving crazy ice cream flavors.",
+    "keywords": ["dessert truck", "sweet city", "food truck parade", "flavor festival", "urban ice cream"]
   },
   {
-    "title": "Horses and Dinosaurs",
-    "description": "A time-travel scene with horses and dinosaurs roaming together.",
-    "keywords": ["dinosaurs", "prehistoric", "fantasy", "time travel"]
+    "title": "Penguin Ice Cream Olympics",
+    "description": "Penguins competing in ice cream-themed winter sports like cone curling and sundae sliding.",
+    "keywords": ["penguin fun", "ice cream sports", "frozen games", "winter dessert", "snowy treat"]
   },
   {
-    "title": "Pony School Day",
-    "description": "Ponies sitting at desks, reading books and learning letters.",
-    "keywords": ["school", "learning", "books", "education", "alphabet"]
+    "title": "Color by Flavor",
+    "description": "Kids guess the flavor and color in a fun fill-in-the-blank coloring activity.",
+    "keywords": ["flavor guessing", "educational sweet", "color and learn", "interactive treat", "flavor game"]
   },
   {
-    "title": "Horses in Outer Space",
-    "description": "Space horses with helmets floating past stars and planets.",
-    "keywords": ["space", "stars", "planets", "astronaut", "sci-fi"]
+    "title": "Scoops Around the World",
+    "description": "Ice cream styles from different cultures like mochi, kulfi, gelato, and more.",
+    "keywords": ["international dessert", "cultural sweets", "world ice cream", "global treats", "flavor travel"]
   },
   {
-    "title": "Horse Garden Helpers",
-    "description": "Helpful horses planting flowers and watering plants in a garden.",
-    "keywords": ["gardening", "plants", "helping", "flowers", "nature"]
+    "title": "Fantasy Flavor Lab",
+    "description": "Kids design their own wacky ice cream flavors using fun patterns and imaginary ingredients.",
+    "keywords": ["DIY treat", "creative dessert", "flavor invention", "sweet lab", "imagination scoop"]
   },
   {
-    "title": "Fantasy Ice Horses",
-    "description": "Beautiful icy-blue horses trotting on frozen lakes under snowflakes.",
-    "keywords": ["ice", "frozen", "winter", "fantasy", "blue"]
+    "title": "Birthday Ice Cream Bash",
+    "description": "A birthday party scene packed with ice cream cakes, gifts, and party hats.",
+    "keywords": ["birthday dessert", "party sweets", "celebration fun", "cake and cones", "sweet surprise"]
   },
   {
-    "title": "Horses in Love",
-    "description": "Two horses forming a heart with their tails under a sunset sky.",
-    "keywords": ["love", "heart", "romantic", "sunset", "together"]
+    "title": "Baking Ice Cream Treats",
+    "description": "Dessert chefs baking treats like brownie sundaes and cookie cones.",
+    "keywords": ["dessert chef", "ice cream baking", "sundae brownie", "sweet oven", "kitchen fun"]
   },
   {
-    "title": "Royal Coach Horses",
-    "description": "Elegant horses pulling a royal carriage through a magical kingdom.",
-    "keywords": ["carriage", "royal", "kingdom", "elegant", "princess"]
+    "title": "Cupcake Meets Ice Cream",
+    "description": "Mashup treats like cupcake cones and sundae-filled muffins.",
+    "keywords": ["cupcake dessert", "hybrid treat", "fun combo", "muffin sundae", "creative sweets"]
   },
   {
-    "title": "Safari Horse Adventure",
-    "description": "Horses exploring the savannah with zebras, lions, and giraffes.",
-    "keywords": ["safari", "savannah", "adventure", "animals", "exploration"]
+    "title": "Ice Cream Monster Trucks",
+    "description": "Huge trucks shaped like cones and sundaes racing across dessert terrain.",
+    "keywords": ["monster truck fun", "dessert vehicle", "cone racer", "sweet race", "ice cream adventure"]
   },
   {
-    "title": "Firefighter Horse Hero",
-    "description": "A brave horse dressed as a firefighter rescuing animals from a barn.",
-    "keywords": ["firefighter", "hero", "rescue", "brave", "emergency"]
-  },
-  {
-    "title": "Horse Ice Cream Truck",
-    "description": "A playful horse running an ice cream stand with happy customers.",
-    "keywords": ["ice cream", "treat", "summer", "stand", "dessert"]
-  },
-  {
-    "title": "Horses in Fairy Tale Forest",
-    "description": "Horses exploring an enchanted forest with mushrooms and glowing trees.",
-    "keywords": ["fairy tale", "forest", "magic", "glow", "enchanted"]
-  },
-  {
-    "title": "Knight’s Jousting Horse",
-    "description": "A powerful horse in a jousting competition with armor and flags.",
-    "keywords": ["jousting", "competition", "medieval", "flags", "battle"]
+    "title": "Rainforest Ice Cream Picnic",
+    "description": "Monkeys, parrots, and jungle animals enjoying tropical flavored ice cream.",
+    "keywords": ["rainforest fun", "animal dessert", "jungle picnic", "tropical cone", "sweet animals"]
   }
 ]
-
 ,
-  "pinterestBoard": "Horses - Free Printable Coloring Pages",
-  "categoryId": "51dfaa83-d5e2-424b-b6f3-c1520a5ee6b9",
+  "pinterestBoard": "Ice Cream - Free Printable Coloring Pages",
+  "categoryId": "604a8561-2dff-4fa0-a239-b267ebd90c7a",
   "batchSize": 1,
   "outDir": "images",
   "model": "gpt-image-1",

@@ -14,8 +14,5 @@ module.exports = {
         allow: '/',
       },
     ],
-    additionalSitemaps: [
-      'https://www.colormypage.com/server-sitemap.xml',
-    ],
   },
 }
